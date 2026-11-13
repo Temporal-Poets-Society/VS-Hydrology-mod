@@ -1,0 +1,1 @@
+{ "type": "code", "modid": "wateraudit", "name": "Water audit (Hydrology tests only)", "version": "0.1.0", "side": "Server", "requiredOnClient": false, "dependencies": { "game": "" } }

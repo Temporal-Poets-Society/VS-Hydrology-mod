@@ -1,0 +1,21 @@
+light: vanilla 21762.7, hydrology-0.1.3 12460.3
+round 1: current 192.1 (hydrology-0.1.3+Survival=1,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,LevelRelax=1,WakeEdgesOnNewSource=1,RapidSourceSheet=1,LoneVertical=1,RefillOnSource=3)
+       180.3  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3,WakeOnFallLabel=1
+       189.4  hydrology-0.1.3+RapidReach=4,Survival=1,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3
+       191.0  hydrology-0.1.3+RapidReach=5,Survival=1,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3
+       192.1  hydrology-0.1.3+WakeSourcesBeside=0,Survival=1,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3
+       192.1  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallLabel=1,AboveFeeds=1,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3
+heavy round: 13 rule sets, 1 seeds x (0 pokes + 0 sequences) per scene
+      160.7  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3,WakeOnFallLabel=1  fail=0 loops=0 float=0+0 seq=0/0 pokes=0/0/0 diff=156
+      160.7  hydrology-0.1.3+Survival=1,FallLabel=1,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3,WakeOnFallLabel=1  fail=0 loops=0 float=0+0 seq=0/0 pokes=0/0/0 diff=156
+      160.7  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3,WakeOnFallLabel=1  fail=0 loops=0 float=0+0 seq=0/0 pokes=0/0/0 diff=156
+      160.7  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,RapidSourceSheet=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3,WakeOnFallLabel=1  fail=0 loops=0 float=0+0 seq=0/0 pokes=0/0/0 diff=156
+      160.7  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,LevelRelax=1,RefillOnSource=3,WakeOnFallLabel=1  fail=0 loops=0 float=0+0 seq=0/0 pokes=0/0/0 diff=156
+      160.7  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,WakeOnFallLabel=1  fail=0 loops=0 float=0+0 seq=0/0 pokes=0/0/0 diff=156
+      160.7  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3  fail=0 loops=0 float=0+0 seq=0/0 pokes=0/0/0 diff=156
+     1159.8  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallLabel=1,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3,WakeOnFallLabel=1  fail=1 loops=0 float=0+0 seq=0/0 pokes=0/0/0 diff=156
+     1159.8  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,RefillOnSource=3,WakeOnFallLabel=1  fail=1 loops=0 float=0+0 seq=0/0 pokes=0/0/0 diff=156
+     2310.7  hydrology-0.1.3+SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3,WakeOnFallLabel=1  fail=2 loops=0 float=3+0 seq=0/0 pokes=0/0/0 diff=156
+     4859.1  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3,WakeOnFallLabel=1  fail=4 loops=0 float=14+0 seq=0/0 pokes=0/0/0 diff=157
+     4973.0  hydrology-0.1.3  fail=4 loops=0 float=16+0 seq=0/0 pokes=0/0/0 diff=171
+    19515.2  vanilla  fail=16 loops=0 float=37+24 seq=0/0 pokes=0/0/0 diff=437

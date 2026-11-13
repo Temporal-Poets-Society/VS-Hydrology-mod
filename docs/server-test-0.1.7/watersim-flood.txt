@@ -1,0 +1,16 @@
+step           recommended generated: 0 new; 80 breaks, 0 add water, worst 0 at 
+step           recommended,FillVessels=1 generated: 0 new; 80 breaks, 6 add water, worst 64 at 14,7,4
+step           recommended,FillVessels=1,VesselsDepth=1,VesselsContained=1 generated: 0 new; 80 breaks, 0 add water, worst 0 at 
+chute          recommended generated: 0 new; 126 breaks, 0 add water, worst 0 at 
+chute          recommended,FillVessels=1 generated: 0 new; 126 breaks, 12 add water, worst 68 at 17,8,4
+chute          recommended,FillVessels=1,VesselsDepth=1,VesselsContained=1 generated: 0 new; 126 breaks, 2 add water, worst 12 at 14,9,4
+step-diagonal  recommended generated: 0 new; 70 breaks, 0 add water, worst 0 at 
+step-diagonal  recommended,FillVessels=1 generated: 0 new; 70 breaks, 4 add water, worst 83 at 15,7,18
+step-diagonal  recommended,FillVessels=1,VesselsDepth=1,VesselsContained=1 generated: 0 new; 70 breaks, 0 add water, worst 0 at 
+tapered-step   recommended generated: 0 new; 106 breaks, 0 add water, worst 0 at 
+tapered-step   recommended,FillVessels=1 generated: 0 new; 106 breaks, 10 add water, worst 132 at 15,7,3
+tapered-step   recommended,FillVessels=1,VesselsDepth=1,VesselsContained=1 generated: 0 new; 106 breaks, 2 add water, worst 6 at 15,7,3
+tapered-chute  recommended generated: 0 new; 316 breaks, 0 add water, worst 0 at 
+tapered-chute  recommended,FillVessels=1 generated: 0 new; 316 breaks, 30 add water, worst 34 at 24,7,3
+tapered-chute  recommended,FillVessels=1,VesselsDepth=1,VesselsContained=1 generated: 0 new; 316 breaks, 6 add water, worst 7 at 24,7,3
+[2.9 s]

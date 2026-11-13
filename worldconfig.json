@@ -1,0 +1,6 @@
+{
+  "playStyles": [],
+  "worldConfigAttributes": [
+    {"category": "earth", "code": "hydrologyFlooding", "dataType": "bool", "default": "true", "onlyDuringWorldCreate": false}
+  ]
+}

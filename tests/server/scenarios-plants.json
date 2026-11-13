@@ -1,0 +1,10 @@
+[
+  {"Name": "lab_step_none", "Kind": "lab_step", "ShapeCheck": true, "Offset": [0, 0]},
+  {"Name": "lab_step_seaweed", "Kind": "lab_step", "ShapeCheck": true, "Offset": [80, 0], "EdgePlant": "seaweed-top"},
+  {"Name": "lab_step_seagrass", "Kind": "lab_step", "ShapeCheck": true, "Offset": [160, 0], "EdgePlant": "aquatic-seagrass-green-top"},
+  {"Name": "lab_step_tallplant", "Kind": "lab_step", "ShapeCheck": true, "Offset": [240, 0], "EdgePlant": "tallplant-coopersreed-water-normal-free"},
+  {"Name": "lab_chute_none", "Kind": "lab_chute", "ShapeCheck": true, "Offset": [0, 60], "Spacing": 3},
+  {"Name": "lab_chute_seaweed", "Kind": "lab_chute", "ShapeCheck": true, "Offset": [80, 60], "EdgePlant": "seaweed-top", "Spacing": 3},
+  {"Name": "lab_chute_seagrass", "Kind": "lab_chute", "ShapeCheck": true, "Offset": [160, 60], "EdgePlant": "aquatic-seagrass-green-top", "Spacing": 3},
+  {"Name": "lab_chute_tallplant", "Kind": "lab_chute", "ShapeCheck": true, "Offset": [240, 60], "EdgePlant": "tallplant-coopersreed-water-normal-free", "Spacing": 3}
+]

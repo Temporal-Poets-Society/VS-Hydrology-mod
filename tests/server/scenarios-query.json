@@ -1,0 +1,12 @@
+[
+  {"Name": "step_touch_ctrl", "Kind": "lab_step", "Touching": true, "ShapeCheck": true, "Offset": [0, 0]},
+  {"Name": "step_touch_river", "Kind": "lab_step", "Touching": true, "ShapeCheck": true, "QueryRiver": "lab", "Offset": [0, 80]},
+  {"Name": "step_touch_rapids", "Kind": "lab_step", "Touching": true, "ShapeCheck": true, "QueryRiver": "lab", "QueryRapids": true, "Offset": [0, 160]},
+  {"Name": "canal_ctrl", "Kind": "lab_trench", "Width": 2, "Length": 30, "Order": "in", "Depth": 3, "PoolDepth": 4, "Offset": [80, 0]},
+  {"Name": "canal_pool_river", "Kind": "lab_trench", "Width": 2, "Length": 30, "Order": "in", "Depth": 3, "PoolDepth": 4, "QueryRiver": "pool", "Offset": [80, 80]},
+  {"Name": "canal_all_river", "Kind": "lab_trench", "Width": 2, "Length": 30, "Order": "in", "Depth": 3, "PoolDepth": 4, "QueryRiver": "lab", "Offset": [80, 160]},
+  {"Name": "chute_wheel_ctrl", "Kind": "lab_chute", "Wheel": true, "Spacing": 3, "Offset": [160, 0]},
+  {"Name": "chute_wheel_river", "Kind": "lab_chute", "Wheel": true, "Spacing": 3, "QueryRiver": "lab", "QueryRapids": true, "QuerySlope": 0.02, "QueryDischarge": 1000, "Offset": [160, 80]},
+  {"Name": "chute_s9_rapids", "Kind": "lab_chute", "Spacing": 9, "ShapeCheck": true, "QueryRiver": "lab", "QueryRapids": true, "Offset": [160, 160]},
+  {"Name": "chute_s9_ctrl", "Kind": "lab_chute", "Spacing": 9, "ShapeCheck": true, "Offset": [240, 0]}
+]

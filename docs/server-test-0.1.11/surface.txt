@@ -1,0 +1,7 @@
+play-test-save congo                  water cols 12254  faces >0.3:   65  >0.55:   55  max 1.12 | top sources: rapid still     0, rapid with flow  8699, ordinary    70; flowing tops 3435, falling  50
+c-l9-gen   congo                  water cols  9690  faces >0.3:  118  >0.55:   81  max 1.12 | top sources: rapid still     0, rapid with flow  6244, ordinary     0; flowing tops 3364, falling  82
+c-l9-end   congo                  water cols  9690  faces >0.3:  118  >0.55:   81  max 1.12 | top sources: rapid still     0, rapid with flow  6244, ordinary     0; flowing tops 3364, falling  82
+c-l10b-gen congo                  water cols  9690  faces >0.3:  105  >0.55:   56  max 2.00 | top sources: rapid still     0, rapid with flow  5976, ordinary     0; flowing tops 3710, falling   4
+c-l10b-end congo                  water cols  9690  faces >0.3:  104  >0.55:   53  max 1.12 | top sources: rapid still     0, rapid with flow  5976, ordinary     0; flowing tops 3676, falling  38
+c-l10c-gen congo                  water cols  9690  faces >0.3:   73  >0.55:   15  max 2.00 | top sources: rapid still     0, rapid with flow  6069, ordinary     0; flowing tops 3617, falling   4
+c-l10c-end congo                  water cols  9690  faces >0.3:   67  >0.55:   41  max 1.12 | top sources: rapid still     0, rapid with flow  6018, ordinary     0; flowing tops 3634, falling  38

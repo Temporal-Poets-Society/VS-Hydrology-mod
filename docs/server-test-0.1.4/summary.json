@@ -1,0 +1,8106 @@
+{
+ "vessels-off": {
+  "world": {
+   "sea": 110,
+   "h": 256,
+   "seed": 386217,
+   "earth": false,
+   "hydrology": true,
+   "realisticwater": false,
+   "realisticrapids": false,
+   "noLiquidSourceTransport": true,
+   "noLiquidSourceTransportSet": true,
+   "bucketSpills": "water-still-3",
+   "fullBucketSpills": "water-still-3"
+  },
+  "plan": [
+   {
+    "x": 512064,
+    "z": 512064,
+    "wt": 149,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 1,
+    "name": "lab_canal_w1_d1_p3_in",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 20
+   },
+   {
+    "x": 512144,
+    "z": 512064,
+    "wt": 151,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 1,
+    "name": "lab_canal_w2_d1_p3_in",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 40
+   },
+   {
+    "x": 512224,
+    "z": 512064,
+    "wt": 161,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 1,
+    "name": "lab_canal_w3_d1_p3_in",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 60
+   },
+   {
+    "x": 512304,
+    "z": 512064,
+    "wt": 158,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_canal_w1_d2_p3_in",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 40
+   },
+   {
+    "x": 512384,
+    "z": 512064,
+    "wt": 147,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_canal_w1_d2_p3_out",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512464,
+    "z": 512064,
+    "wt": 141,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_canal_w2_d2_p3_in",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 80
+   },
+   {
+    "x": 512544,
+    "z": 512064,
+    "wt": 137,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_canal_w2_d2_p3_out",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512624,
+    "z": 512064,
+    "wt": 145,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 2,
+    "name": "lab_canal_w3_d2_p3_in",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 120
+   },
+   {
+    "x": 512064,
+    "z": 512124,
+    "wt": 157,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 2,
+    "name": "lab_canal_w3_d2_p3_out",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512144,
+    "z": 512124,
+    "wt": 142,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_canal_w1_d3_p3_in",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 60
+   },
+   {
+    "x": 512224,
+    "z": 512124,
+    "wt": 151,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_canal_w1_d3_p3_out",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512304,
+    "z": 512124,
+    "wt": 148,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_canal_w2_d3_p3_in",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 120
+   },
+   {
+    "x": 512384,
+    "z": 512124,
+    "wt": 152,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_canal_w2_d3_p3_out",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512464,
+    "z": 512124,
+    "wt": 146,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 3,
+    "name": "lab_canal_w3_d3_p3_in",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 180
+   },
+   {
+    "x": 512544,
+    "z": 512124,
+    "wt": 125,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 3,
+    "name": "lab_canal_w3_d3_p3_out",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512624,
+    "z": 512124,
+    "wt": 144,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 1,
+    "name": "lab_canal_w1_d1_p1_in",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 20
+   },
+   {
+    "x": 512064,
+    "z": 512184,
+    "wt": 134,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 1,
+    "name": "lab_canal_w2_d1_p1_in",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 40
+   },
+   {
+    "x": 512144,
+    "z": 512184,
+    "wt": 140,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 1,
+    "name": "lab_canal_w3_d1_p1_in",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 60
+   },
+   {
+    "x": 512224,
+    "z": 512184,
+    "wt": 145,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_canal_w1_d2_p1_in",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 40
+   },
+   {
+    "x": 512304,
+    "z": 512184,
+    "wt": 136,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_canal_w1_d2_p1_out",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512384,
+    "z": 512184,
+    "wt": 141,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_canal_w2_d2_p1_in",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 80
+   },
+   {
+    "x": 512464,
+    "z": 512184,
+    "wt": 140,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_canal_w2_d2_p1_out",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512544,
+    "z": 512184,
+    "wt": 133,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 2,
+    "name": "lab_canal_w3_d2_p1_in",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 120
+   },
+   {
+    "x": 512624,
+    "z": 512184,
+    "wt": 138,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 2,
+    "name": "lab_canal_w3_d2_p1_out",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512064,
+    "z": 512244,
+    "wt": 149,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_canal_w1_d3_p1_in",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 60
+   },
+   {
+    "x": 512144,
+    "z": 512244,
+    "wt": 141,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_canal_w1_d3_p1_out",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512224,
+    "z": 512244,
+    "wt": 155,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_canal_w2_d3_p1_in",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 120
+   },
+   {
+    "x": 512304,
+    "z": 512244,
+    "wt": 143,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_canal_w2_d3_p1_out",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512384,
+    "z": 512244,
+    "wt": 145,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 3,
+    "name": "lab_canal_w3_d3_p1_in",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 180
+   },
+   {
+    "x": 512464,
+    "z": 512244,
+    "wt": 141,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 3,
+    "name": "lab_canal_w3_d3_p1_out",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512544,
+    "z": 512244,
+    "wt": 135,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 1,
+    "name": "lab_salt_w1_d1_p3_in",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "in",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 20
+   },
+   {
+    "x": 512624,
+    "z": 512244,
+    "wt": 131,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 1,
+    "name": "lab_salt_w2_d1_p3_in",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "in",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 40
+   },
+   {
+    "x": 512064,
+    "z": 512304,
+    "wt": 144,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_salt_w1_d2_p3_in",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "in",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 40
+   },
+   {
+    "x": 512144,
+    "z": 512304,
+    "wt": 155,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_salt_w1_d2_p3_out",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "out",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512224,
+    "z": 512304,
+    "wt": 144,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_salt_w2_d2_p3_in",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "in",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 80
+   },
+   {
+    "x": 512304,
+    "z": 512304,
+    "wt": 128,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_salt_w2_d2_p3_out",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "out",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512384,
+    "z": 512304,
+    "wt": 130,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_salt_w1_d3_p3_in",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "in",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 60
+   },
+   {
+    "x": 512464,
+    "z": 512304,
+    "wt": 144,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_salt_w1_d3_p3_out",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "out",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512544,
+    "z": 512304,
+    "wt": 129,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_salt_w2_d3_p3_in",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "in",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 120
+   },
+   {
+    "x": 512624,
+    "z": 512304,
+    "wt": 149,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_salt_w2_d3_p3_out",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "out",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512064,
+    "z": 512364,
+    "wt": 128,
+    "k0": -10,
+    "k1": 17,
+    "w0": -6,
+    "w1": 10,
+    "name": "lab_step_sill",
+    "kind": "lab_step",
+    "width": 2,
+    "length": 30,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 8
+   },
+   {
+    "x": 512144,
+    "z": 512364,
+    "wt": 129,
+    "k0": -10,
+    "k1": 17,
+    "w0": -6,
+    "w1": 10,
+    "name": "lab_step_touching",
+    "kind": "lab_step",
+    "width": 2,
+    "length": 30,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 8
+   },
+   {
+    "x": 512224,
+    "z": 512364,
+    "wt": 148,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "name": "lab_chute_sill",
+    "kind": "lab_chute",
+    "width": 2,
+    "length": 30,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512304,
+    "z": 512364,
+    "wt": 236,
+    "k0": -10,
+    "k1": 9,
+    "w0": -6,
+    "w1": 20,
+    "name": "lab_stepchannel",
+    "kind": "lab_stepchannel",
+    "width": 2,
+    "length": 30,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   }
+  ],
+  "profiles": {
+   "lab_canal_w1_d1_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t30": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t60": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t90": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t120": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t180": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t300": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    }
+   },
+   "lab_canal_w2_d1_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    }
+   },
+   "lab_canal_w3_d1_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    }
+   },
+   "lab_canal_w1_d2_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    }
+   },
+   "lab_canal_w1_d2_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    }
+   },
+   "lab_canal_w2_d2_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t30": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t60": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t90": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t120": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t180": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t300": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    }
+   },
+   "lab_canal_w2_d2_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSS..........",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t30": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t60": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t90": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t120": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t180": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t300": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    }
+   },
+   "lab_canal_w3_d2_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "fffff...............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t30": {
+     "trench": "fffff...............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t60": {
+     "trench": "fffff...............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t90": {
+     "trench": "fffff...............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t120": {
+     "trench": "fffff...............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t180": {
+     "trench": "fffff...............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t300": {
+     "trench": "fffff...............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    }
+   },
+   "lab_canal_w3_d2_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSS..........",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t30": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t60": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t90": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t120": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t180": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t300": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    }
+   },
+   "lab_canal_w1_d3_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    }
+   },
+   "lab_canal_w1_d3_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    }
+   },
+   "lab_canal_w2_d3_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    }
+   },
+   "lab_canal_w2_d3_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSS..........",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    }
+   },
+   "lab_canal_w3_d3_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    }
+   },
+   "lab_canal_w3_d3_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSS..........",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    }
+   },
+   "lab_canal_w1_d1_p1_in": {
+    "t0": {
+     "trench": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t30": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t60": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t90": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t120": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t180": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t300": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    }
+   },
+   "lab_canal_w2_d1_p1_in": {
+    "t0": {
+     "trench": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    }
+   },
+   "lab_canal_w3_d1_p1_in": {
+    "t0": {
+     "trench": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    }
+   },
+   "lab_canal_w1_d2_p1_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    }
+   },
+   "lab_canal_w1_d2_p1_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    }
+   },
+   "lab_canal_w2_d2_p1_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    }
+   },
+   "lab_canal_w2_d2_p1_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    }
+   },
+   "lab_canal_w3_d2_p1_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    }
+   },
+   "lab_canal_w3_d2_p1_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    }
+   },
+   "lab_canal_w1_d3_p1_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    }
+   },
+   "lab_canal_w1_d3_p1_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    }
+   },
+   "lab_canal_w2_d3_p1_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    }
+   },
+   "lab_canal_w2_d3_p1_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    }
+   },
+   "lab_canal_w3_d3_p1_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    }
+   },
+   "lab_canal_w3_d3_p1_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    }
+   },
+   "lab_salt_w1_d1_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t10": {
+     "trench": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t30": {
+     "trench": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t60": {
+     "trench": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t90": {
+     "trench": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t120": {
+     "trench": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t180": {
+     "trench": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t300": {
+     "trench": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    }
+   },
+   "lab_salt_w2_d1_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSSSfffff....",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    }
+   },
+   "lab_salt_w1_d2_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    }
+   },
+   "lab_salt_w1_d2_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    }
+   },
+   "lab_salt_w2_d2_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t10": {
+     "trench": "fffff...............",
+     "trench-1": "SSSSSSSSSSSSSff.....",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t30": {
+     "trench": "fffff...............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t60": {
+     "trench": "fffff...............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t90": {
+     "trench": "fffff...............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t120": {
+     "trench": "fffff...............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t180": {
+     "trench": "fffff...............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t300": {
+     "trench": "fffff...............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    }
+   },
+   "lab_salt_w2_d2_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t10": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSf..........",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t30": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t60": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t90": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t120": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t180": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t300": {
+     "trench": "ffffff..............",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    }
+   },
+   "lab_salt_w1_d3_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    }
+   },
+   "lab_salt_w1_d3_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    }
+   },
+   "lab_salt_w2_d3_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSfff....",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    }
+   },
+   "lab_salt_w2_d3_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSS..........",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    }
+   },
+   "lab_step_sill": {
+    "t0": {
+     "center": "S . . . . . . . . . . .",
+     "centerBelow": ". S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {},
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t10": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": ". S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t30": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": ". S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t60": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": ". S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t90": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": ". S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t120": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": ". S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t180": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": ". S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t300": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": ". S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    }
+   },
+   "lab_step_touching": {
+    "t0": {
+     "center": "S . . . . . . . . . . .",
+     "centerBelow": "S S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {},
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t10": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": "S S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t30": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": "S S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t60": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": "S S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t90": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": "S S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t120": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": "S S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t180": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": "S S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t300": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": "S S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    }
+   },
+   "lab_chute_sill": {
+    "t0": {
+     "y-0": "S . . . . . . . . . . .",
+     "y-1": ". S S S . . . . . . . .",
+     "y-2": ". . . . S S S . . . . .",
+     "y-3": ". . . . . . . S S S S S",
+     "edges": "SS SS SS",
+     "all": {
+      "water-source": 112
+     },
+     "cells": "k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t10": {
+     "y-0": "R r6 r5 r4 r3 . . . . . . .",
+     "y-1": ". S S R r6 r5 r4 r3 . . . .",
+     "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+     "y-3": ". . . . . . . S S S S S",
+     "edges": "RR RR RR",
+     "all": {
+      "water-source": 106,
+      "rapid-source": 6,
+      "rapid-flowing": 28
+     },
+     "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t30": {
+     "y-0": "R r6 r5 r4 r3 . . . . . . .",
+     "y-1": ". S S R r6 r5 r4 r3 . . . .",
+     "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+     "y-3": ". . . . . . . S S S S S",
+     "edges": "RR RR RR",
+     "all": {
+      "water-source": 106,
+      "rapid-source": 6,
+      "rapid-flowing": 28
+     },
+     "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t60": {
+     "y-0": "R r6 r5 r4 r3 . . . . . . .",
+     "y-1": ". S S R r6 r5 r4 r3 . . . .",
+     "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+     "y-3": ". . . . . . . S S S S S",
+     "edges": "RR RR RR",
+     "all": {
+      "water-source": 106,
+      "rapid-source": 6,
+      "rapid-flowing": 28
+     },
+     "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t90": {
+     "y-0": "R r6 r5 r4 r3 . . . . . . .",
+     "y-1": ". S S R r6 r5 r4 r3 . . . .",
+     "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+     "y-3": ". . . . . . . S S S S S",
+     "edges": "RR RR RR",
+     "all": {
+      "water-source": 106,
+      "rapid-source": 6,
+      "rapid-flowing": 28
+     },
+     "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t120": {
+     "y-0": "R r6 r5 r4 r3 . . . . . . .",
+     "y-1": ". S S R r6 r5 r4 r3 . . . .",
+     "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+     "y-3": ". . . . . . . S S S S S",
+     "edges": "RR RR RR",
+     "all": {
+      "water-source": 106,
+      "rapid-source": 6,
+      "rapid-flowing": 28
+     },
+     "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t180": {
+     "y-0": "R r6 r5 r4 r3 . . . . . . .",
+     "y-1": ". S S R r6 r5 r4 r3 . . . .",
+     "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+     "y-3": ". . . . . . . S S S S S",
+     "edges": "RR RR RR",
+     "all": {
+      "water-source": 106,
+      "rapid-source": 6,
+      "rapid-flowing": 28
+     },
+     "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t300": {
+     "y-0": "R r6 r5 r4 r3 . . . . . . .",
+     "y-1": ". S S R r6 r5 r4 r3 . . . .",
+     "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+     "y-3": ". . . . . . . S S S S S",
+     "edges": "RR RR RR",
+     "all": {
+      "water-source": 106,
+      "rapid-source": 6,
+      "rapid-flowing": 28
+     },
+     "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    }
+   },
+   "lab_stepchannel": {
+    "t0": {
+     "leg1": ". . . . . .",
+     "cross": ". . . . . . . . . . . . . .",
+     "crossBelow": ". . . . . . .",
+     "leg3": ". . . . . .",
+     "leg3Above": ". . . . . .",
+     "upperPool": {
+      "water-source": 54
+     },
+     "lowerPool": {
+      "water-source": 54
+     },
+     "aboveLowerHalf": {}
+    },
+    "t10": {
+     "leg1": ". . . . . .",
+     "cross": ". . . . . . . . . . . . . .",
+     "crossBelow": ". S S S S S S",
+     "leg3": "S S S S S S",
+     "leg3Above": ". . . . . .",
+     "upperPool": {
+      "water-source": 54
+     },
+     "lowerPool": {
+      "water-source": 54
+     },
+     "aboveLowerHalf": {}
+    },
+    "t30": {
+     "leg1": "S S S S S S",
+     "cross": "S S S S S S S w6 w5 w4 w3 w2 w1 .",
+     "crossBelow": "S S S S S S S",
+     "leg3": "S S S S S S",
+     "leg3Above": ". . . . w1 w1",
+     "upperPool": {
+      "water-source": 54
+     },
+     "lowerPool": {
+      "water-source": 54
+     },
+     "aboveLowerHalf": {
+      "water-flowing": 12
+     }
+    },
+    "t60": {
+     "leg1": "S S S S S S",
+     "cross": "S S S S S S S w6 w5 w4 w3 w2 w1 .",
+     "crossBelow": "S S S S S S S",
+     "leg3": "S S S S S S",
+     "leg3Above": ". . . . w1 w1",
+     "upperPool": {
+      "water-source": 54
+     },
+     "lowerPool": {
+      "water-source": 54
+     },
+     "aboveLowerHalf": {
+      "water-flowing": 12
+     }
+    },
+    "t90": {
+     "leg1": "S S S S S S",
+     "cross": "S S S S S S S w6 w5 w4 w3 w2 w1 .",
+     "crossBelow": "S S S S S S S",
+     "leg3": "S S S S S S",
+     "leg3Above": ". . . . w1 w1",
+     "upperPool": {
+      "water-source": 54
+     },
+     "lowerPool": {
+      "water-source": 54
+     },
+     "aboveLowerHalf": {
+      "water-flowing": 12
+     }
+    },
+    "t120": {
+     "leg1": "S S S S S S",
+     "cross": "S S S S S S S w6 w5 w4 w3 w2 w1 .",
+     "crossBelow": "S S S S S S S",
+     "leg3": "S S S S S S",
+     "leg3Above": ". . . . w1 w1",
+     "upperPool": {
+      "water-source": 54
+     },
+     "lowerPool": {
+      "water-source": 54
+     },
+     "aboveLowerHalf": {
+      "water-flowing": 12
+     }
+    },
+    "t180": {
+     "leg1": "S S S S S S",
+     "cross": "S S S S S S S w6 w5 w4 w3 w2 w1 .",
+     "crossBelow": "S S S S S S S",
+     "leg3": "S S S S S S",
+     "leg3Above": ". . . . w1 w1",
+     "upperPool": {
+      "water-source": 54
+     },
+     "lowerPool": {
+      "water-source": 54
+     },
+     "aboveLowerHalf": {
+      "water-flowing": 12
+     }
+    },
+    "t300": {
+     "leg1": "S S S S S S",
+     "cross": "S S S S S S S w6 w5 w4 w3 w2 w1 .",
+     "crossBelow": "S S S S S S S",
+     "leg3": "S S S S S S",
+     "leg3Above": ". . . . w1 w1",
+     "upperPool": {
+      "water-source": 54
+     },
+     "lowerPool": {
+      "water-source": 54
+     },
+     "aboveLowerHalf": {
+      "water-flowing": 12
+     }
+    }
+   }
+  },
+  "wheels": [],
+  "lag": [
+   {
+    "tag": "ops",
+    "n": 0
+   },
+   {
+    "tag": "t10",
+    "n": 214,
+    "mean": 0.04702336370736082,
+    "p99": 0.04800000041723251,
+    "max": 0.04899999871850014,
+    "over100ms": 0
+   },
+   {
+    "tag": "t30",
+    "n": 425,
+    "mean": 0.04697176402106005,
+    "p99": 0.04899999871850014,
+    "max": 0.04899999871850014,
+    "over100ms": 0
+   },
+   {
+    "tag": "t60",
+    "n": 638,
+    "mean": 0.0470344820775115,
+    "p99": 0.04899999871850014,
+    "max": 0.05299999937415123,
+    "over100ms": 0
+   },
+   {
+    "tag": "t90",
+    "n": 637,
+    "mean": 0.047092620932513166,
+    "p99": 0.04899999871850014,
+    "max": 0.04899999871850014,
+    "over100ms": 0
+   },
+   {
+    "tag": "t120",
+    "n": 636,
+    "mean": 0.04717609982164401,
+    "p99": 0.04899999871850014,
+    "max": 0.04899999871850014,
+    "over100ms": 0
+   },
+   {
+    "tag": "t180",
+    "n": 1275,
+    "mean": 0.04707999926863932,
+    "p99": 0.04899999871850014,
+    "max": 0.05900000035762787,
+    "over100ms": 0
+   },
+   {
+    "tag": "t300",
+    "n": 2552,
+    "mean": 0.04701959176228431,
+    "p99": 0.04899999871850014,
+    "max": 0.05999999865889549,
+    "over100ms": 0
+   }
+  ],
+  "stats": [
+   {
+    "tag": "ops",
+    "Updates": 824,
+    "Ticks": 135190,
+    "DrainsRefused": 21,
+    "RemovalsRefused": 138,
+    "Filled": 0,
+    "FilledVessels": 0,
+    "MadeFalling": 0,
+    "RapidSources": 12,
+    "RapidSourcesReverted": 0,
+    "MadeRapid": 12,
+    "MadeOrdinary": 0
+   },
+   {
+    "tag": "t10",
+    "Updates": 6212,
+    "Ticks": 673457,
+    "DrainsRefused": 879,
+    "RemovalsRefused": 240,
+    "Filled": 613,
+    "FilledVessels": 0,
+    "MadeFalling": 3,
+    "RapidSources": 109,
+    "RapidSourcesReverted": 56,
+    "MadeRapid": 123,
+    "MadeOrdinary": 4
+   },
+   {
+    "tag": "t30",
+    "Updates": 7127,
+    "Ticks": 713329,
+    "DrainsRefused": 891,
+    "RemovalsRefused": 240,
+    "Filled": 823,
+    "FilledVessels": 0,
+    "MadeFalling": 3,
+    "RapidSources": 109,
+    "RapidSourcesReverted": 56,
+    "MadeRapid": 123,
+    "MadeOrdinary": 4
+   },
+   {
+    "tag": "t60",
+    "Updates": 7127,
+    "Ticks": 713329,
+    "DrainsRefused": 891,
+    "RemovalsRefused": 240,
+    "Filled": 823,
+    "FilledVessels": 0,
+    "MadeFalling": 3,
+    "RapidSources": 109,
+    "RapidSourcesReverted": 56,
+    "MadeRapid": 123,
+    "MadeOrdinary": 4
+   },
+   {
+    "tag": "t90",
+    "Updates": 7127,
+    "Ticks": 713329,
+    "DrainsRefused": 891,
+    "RemovalsRefused": 240,
+    "Filled": 823,
+    "FilledVessels": 0,
+    "MadeFalling": 3,
+    "RapidSources": 109,
+    "RapidSourcesReverted": 56,
+    "MadeRapid": 123,
+    "MadeOrdinary": 4
+   },
+   {
+    "tag": "t120",
+    "Updates": 7127,
+    "Ticks": 713329,
+    "DrainsRefused": 891,
+    "RemovalsRefused": 240,
+    "Filled": 823,
+    "FilledVessels": 0,
+    "MadeFalling": 3,
+    "RapidSources": 109,
+    "RapidSourcesReverted": 56,
+    "MadeRapid": 123,
+    "MadeOrdinary": 4
+   },
+   {
+    "tag": "t180",
+    "Updates": 7127,
+    "Ticks": 713329,
+    "DrainsRefused": 891,
+    "RemovalsRefused": 240,
+    "Filled": 823,
+    "FilledVessels": 0,
+    "MadeFalling": 3,
+    "RapidSources": 109,
+    "RapidSourcesReverted": 56,
+    "MadeRapid": 123,
+    "MadeOrdinary": 4
+   },
+   {
+    "tag": "t300",
+    "Updates": 7127,
+    "Ticks": 713329,
+    "DrainsRefused": 891,
+    "RemovalsRefused": 240,
+    "Filled": 823,
+    "FilledVessels": 0,
+    "MadeFalling": 3,
+    "RapidSources": 109,
+    "RapidSourcesReverted": 56,
+    "MadeRapid": 123,
+    "MadeOrdinary": 4
+   }
+  ]
+ },
+ "vessels-on": {
+  "world": {
+   "sea": 110,
+   "h": 256,
+   "seed": 386217,
+   "earth": false,
+   "hydrology": true,
+   "realisticwater": false,
+   "realisticrapids": false,
+   "noLiquidSourceTransport": true,
+   "noLiquidSourceTransportSet": true,
+   "bucketSpills": "water-still-3",
+   "fullBucketSpills": "water-still-3"
+  },
+  "plan": [
+   {
+    "x": 512064,
+    "z": 512064,
+    "wt": 149,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 1,
+    "name": "lab_canal_w1_d1_p3_in",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 20
+   },
+   {
+    "x": 512144,
+    "z": 512064,
+    "wt": 151,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 1,
+    "name": "lab_canal_w2_d1_p3_in",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 40
+   },
+   {
+    "x": 512224,
+    "z": 512064,
+    "wt": 161,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 1,
+    "name": "lab_canal_w3_d1_p3_in",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 60
+   },
+   {
+    "x": 512304,
+    "z": 512064,
+    "wt": 158,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_canal_w1_d2_p3_in",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 40
+   },
+   {
+    "x": 512384,
+    "z": 512064,
+    "wt": 147,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_canal_w1_d2_p3_out",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512464,
+    "z": 512064,
+    "wt": 141,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_canal_w2_d2_p3_in",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 80
+   },
+   {
+    "x": 512544,
+    "z": 512064,
+    "wt": 137,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_canal_w2_d2_p3_out",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512624,
+    "z": 512064,
+    "wt": 145,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 2,
+    "name": "lab_canal_w3_d2_p3_in",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 120
+   },
+   {
+    "x": 512064,
+    "z": 512124,
+    "wt": 157,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 2,
+    "name": "lab_canal_w3_d2_p3_out",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512144,
+    "z": 512124,
+    "wt": 142,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_canal_w1_d3_p3_in",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 60
+   },
+   {
+    "x": 512224,
+    "z": 512124,
+    "wt": 151,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_canal_w1_d3_p3_out",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512304,
+    "z": 512124,
+    "wt": 148,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_canal_w2_d3_p3_in",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 120
+   },
+   {
+    "x": 512384,
+    "z": 512124,
+    "wt": 152,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_canal_w2_d3_p3_out",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512464,
+    "z": 512124,
+    "wt": 146,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 3,
+    "name": "lab_canal_w3_d3_p3_in",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 180
+   },
+   {
+    "x": 512544,
+    "z": 512124,
+    "wt": 125,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 3,
+    "name": "lab_canal_w3_d3_p3_out",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512624,
+    "z": 512124,
+    "wt": 144,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 1,
+    "name": "lab_canal_w1_d1_p1_in",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 20
+   },
+   {
+    "x": 512064,
+    "z": 512184,
+    "wt": 134,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 1,
+    "name": "lab_canal_w2_d1_p1_in",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 40
+   },
+   {
+    "x": 512144,
+    "z": 512184,
+    "wt": 140,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 1,
+    "name": "lab_canal_w3_d1_p1_in",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 60
+   },
+   {
+    "x": 512224,
+    "z": 512184,
+    "wt": 145,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_canal_w1_d2_p1_in",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 40
+   },
+   {
+    "x": 512304,
+    "z": 512184,
+    "wt": 136,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_canal_w1_d2_p1_out",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512384,
+    "z": 512184,
+    "wt": 141,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_canal_w2_d2_p1_in",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 80
+   },
+   {
+    "x": 512464,
+    "z": 512184,
+    "wt": 140,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_canal_w2_d2_p1_out",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512544,
+    "z": 512184,
+    "wt": 133,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 2,
+    "name": "lab_canal_w3_d2_p1_in",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 120
+   },
+   {
+    "x": 512624,
+    "z": 512184,
+    "wt": 138,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 2,
+    "name": "lab_canal_w3_d2_p1_out",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512064,
+    "z": 512244,
+    "wt": 149,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_canal_w1_d3_p1_in",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 60
+   },
+   {
+    "x": 512144,
+    "z": 512244,
+    "wt": 141,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_canal_w1_d3_p1_out",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512224,
+    "z": 512244,
+    "wt": 155,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_canal_w2_d3_p1_in",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 120
+   },
+   {
+    "x": 512304,
+    "z": 512244,
+    "wt": 143,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_canal_w2_d3_p1_out",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512384,
+    "z": 512244,
+    "wt": 145,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 3,
+    "name": "lab_canal_w3_d3_p1_in",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 180
+   },
+   {
+    "x": 512464,
+    "z": 512244,
+    "wt": 141,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 9,
+    "depth": 3,
+    "name": "lab_canal_w3_d3_p1_out",
+    "kind": "lab_trench",
+    "width": 3,
+    "length": 20,
+    "order": "out",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512544,
+    "z": 512244,
+    "wt": 135,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 1,
+    "name": "lab_salt_w1_d1_p3_in",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "in",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 20
+   },
+   {
+    "x": 512624,
+    "z": 512244,
+    "wt": 131,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 1,
+    "name": "lab_salt_w2_d1_p3_in",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "in",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 40
+   },
+   {
+    "x": 512064,
+    "z": 512304,
+    "wt": 144,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_salt_w1_d2_p3_in",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "in",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 40
+   },
+   {
+    "x": 512144,
+    "z": 512304,
+    "wt": 155,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_salt_w1_d2_p3_out",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "out",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512224,
+    "z": 512304,
+    "wt": 144,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_salt_w2_d2_p3_in",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "in",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 80
+   },
+   {
+    "x": 512304,
+    "z": 512304,
+    "wt": 128,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 2,
+    "name": "lab_salt_w2_d2_p3_out",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "out",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512384,
+    "z": 512304,
+    "wt": 130,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_salt_w1_d3_p3_in",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "in",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 60
+   },
+   {
+    "x": 512464,
+    "z": 512304,
+    "wt": 144,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_salt_w1_d3_p3_out",
+    "kind": "lab_trench",
+    "width": 1,
+    "length": 20,
+    "order": "out",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512544,
+    "z": 512304,
+    "wt": 129,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_salt_w2_d3_p3_in",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "in",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 120
+   },
+   {
+    "x": 512624,
+    "z": 512304,
+    "wt": 149,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "depth": 3,
+    "name": "lab_salt_w2_d3_p3_out",
+    "kind": "lab_trench",
+    "width": 2,
+    "length": 20,
+    "order": "out",
+    "liquid": "saltwater",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512064,
+    "z": 512364,
+    "wt": 128,
+    "k0": -10,
+    "k1": 17,
+    "w0": -6,
+    "w1": 10,
+    "name": "lab_step_sill",
+    "kind": "lab_step",
+    "width": 2,
+    "length": 30,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 8
+   },
+   {
+    "x": 512144,
+    "z": 512364,
+    "wt": 129,
+    "k0": -10,
+    "k1": 17,
+    "w0": -6,
+    "w1": 10,
+    "name": "lab_step_touching",
+    "kind": "lab_step",
+    "width": 2,
+    "length": 30,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 8
+   },
+   {
+    "x": 512224,
+    "z": 512364,
+    "wt": 148,
+    "k0": -10,
+    "k1": 23,
+    "w0": -6,
+    "w1": 8,
+    "name": "lab_chute_sill",
+    "kind": "lab_chute",
+    "width": 2,
+    "length": 30,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   },
+   {
+    "x": 512304,
+    "z": 512364,
+    "wt": 236,
+    "k0": -10,
+    "k1": 9,
+    "w0": -6,
+    "w1": 20,
+    "name": "lab_stepchannel",
+    "kind": "lab_stepchannel",
+    "width": 2,
+    "length": 30,
+    "order": "in",
+    "liquid": "water",
+    "drop": 2,
+    "wheel": false,
+    "refillAtSec": 0,
+    "spacing": 3,
+    "stonesAtSec": 0,
+    "broken": 0
+   }
+  ],
+  "profiles": {
+   "lab_canal_w1_d1_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t30": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t60": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t90": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t120": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t180": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t300": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    }
+   },
+   "lab_canal_w2_d1_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    }
+   },
+   "lab_canal_w3_d1_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    }
+   },
+   "lab_canal_w1_d2_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    }
+   },
+   "lab_canal_w1_d2_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    }
+   },
+   "lab_canal_w2_d2_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    }
+   },
+   "lab_canal_w2_d2_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSS..........",
+     "trench-1": "SSSSSSSSSS..........",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    }
+   },
+   "lab_canal_w3_d2_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    }
+   },
+   "lab_canal_w3_d2_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSS..........",
+     "trench-1": "SSSSSSSSSS..........",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    }
+   },
+   "lab_canal_w1_d3_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    }
+   },
+   "lab_canal_w1_d3_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    }
+   },
+   "lab_canal_w2_d3_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSSSS........",
+     "trench-1": "SSSSSSSSSSSSSSSf....",
+     "trench-2": "SSSSSSSSSSSSSSSf....",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    }
+   },
+   "lab_canal_w2_d3_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSf..........",
+     "trench-1": "SSSSSSSSSf..........",
+     "trench-2": "SSSSSSSSSS..........",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    }
+   },
+   "lab_canal_w3_d3_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSSSSSSff....",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSf",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSf",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    }
+   },
+   "lab_canal_w3_d3_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSf..........",
+     "trench-1": "SSSSSSSSSf..........",
+     "trench-2": "SSSSSSSSSS..........",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    }
+   },
+   "lab_canal_w1_d1_p1_in": {
+    "t0": {
+     "trench": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t30": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t60": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t90": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t120": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t180": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t300": {
+     "trench": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    }
+   },
+   "lab_canal_w2_d1_p1_in": {
+    "t0": {
+     "trench": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 90
+     }
+    }
+   },
+   "lab_canal_w3_d1_p1_in": {
+    "t0": {
+     "trench": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "water-source": 99
+     }
+    }
+   },
+   "lab_canal_w1_d2_p1_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    }
+   },
+   "lab_canal_w1_d2_p1_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 81
+     }
+    }
+   },
+   "lab_canal_w2_d2_p1_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    }
+   },
+   "lab_canal_w2_d2_p1_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 90
+     }
+    }
+   },
+   "lab_canal_w3_d2_p1_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    }
+   },
+   "lab_canal_w3_d2_p1_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "water-source": 99
+     }
+    }
+   },
+   "lab_canal_w1_d3_p1_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    }
+   },
+   "lab_canal_w1_d3_p1_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 80,
+      "rapid-source": 1
+     }
+    }
+   },
+   "lab_canal_w2_d3_p1_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    }
+   },
+   "lab_canal_w2_d3_p1_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 90
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 88,
+      "rapid-source": 2
+     }
+    }
+   },
+   "lab_canal_w3_d3_p1_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "fffff...............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    }
+   },
+   "lab_canal_w3_d3_p1_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "water-source": 99
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "water-source": 96,
+      "rapid-source": 3
+     }
+    }
+   },
+   "lab_salt_w1_d1_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t10": {
+     "trench": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t30": {
+     "trench": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t60": {
+     "trench": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t90": {
+     "trench": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t120": {
+     "trench": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t180": {
+     "trench": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t300": {
+     "trench": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    }
+   },
+   "lab_salt_w2_d1_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSSSSSSSSffff",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    }
+   },
+   "lab_salt_w1_d2_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    }
+   },
+   "lab_salt_w1_d2_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    }
+   },
+   "lab_salt_w2_d2_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSff.........",
+     "trench-1": "SSSSSSSSSSff........",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    }
+   },
+   "lab_salt_w2_d2_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSS..........",
+     "trench-1": "SSSSSSSSSS..........",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    }
+   },
+   "lab_salt_w1_d3_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    }
+   },
+   "lab_salt_w1_d3_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t10": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t30": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t60": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t90": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t120": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t180": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    },
+    "t300": {
+     "trench": "f...................",
+     "trench-1": "f...................",
+     "trench-2": "ffffff..............",
+     "pool": {
+      "saltwater-source": 81
+     }
+    }
+   },
+   "lab_salt_w2_d3_p3_in": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSSSSSSSSSf....",
+     "trench-1": "SSSSSSSSSSSSSSSff...",
+     "trench-2": "SSSSSSSSSSSSSSSSffff",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSfSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSfSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSfSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSfSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSfSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSfSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    }
+   },
+   "lab_salt_w2_d3_p3_out": {
+    "t0": {
+     "trench": "....................",
+     "trench-1": "....................",
+     "trench-2": "....................",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t10": {
+     "trench": "SSSSSSSfff..........",
+     "trench-1": "SSSSSSSfff..........",
+     "trench-2": "SSSSSSSSSf..........",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t30": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t60": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t90": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t120": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t180": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    },
+    "t300": {
+     "trench": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-1": "SSSSSSSSSSSSSSSSSSSS",
+     "trench-2": "SSSSSSSSSSSSSSSSSSSS",
+     "pool": {
+      "saltwater-source": 90
+     }
+    }
+   },
+   "lab_step_sill": {
+    "t0": {
+     "center": "S . . . . . . . . . . .",
+     "centerBelow": ". S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {},
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t10": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": ". S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t30": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": ". S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t60": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": ". S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t90": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": ". S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t120": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": ". S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t180": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": ". S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t300": {
+     "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+     "centerBelow": ". S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-flowing": 48
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    }
+   },
+   "lab_step_touching": {
+    "t0": {
+     "center": "S . . . . . . . . . . .",
+     "centerBelow": "S S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {},
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t10": {
+     "center": "S S S S S S S S S S S S",
+     "centerBelow": "S S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-source": 112
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t30": {
+     "center": "S S S S S S S S S S S S",
+     "centerBelow": "S S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-source": 112
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t60": {
+     "center": "S S S S S S S S S S S S",
+     "centerBelow": "S S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-source": 112
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t90": {
+     "center": "S S S S S S S S S S S S",
+     "centerBelow": "S S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-source": 112
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t120": {
+     "center": "S S S S S S S S S S S S",
+     "centerBelow": "S S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-source": 112
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t180": {
+     "center": "S S S S S S S S S S S S",
+     "centerBelow": "S S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-source": 112
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    },
+    "t300": {
+     "center": "S S S S S S S S S S S S",
+     "centerBelow": "S S S S S S S S S S S S",
+     "upperPool": {
+      "water-source": 72
+     },
+     "aboveLowerPool": {
+      "water-source": 112
+     },
+     "lowerPool": {
+      "water-source": 112
+     }
+    }
+   },
+   "lab_chute_sill": {
+    "t0": {
+     "y-0": "S . . . . . . . . . . .",
+     "y-1": ". S S S . . . . . . . .",
+     "y-2": ". . . . S S S . . . . .",
+     "y-3": ". . . . . . . S S S S S",
+     "edges": "SS SS SS",
+     "all": {
+      "water-source": 112
+     },
+     "cells": "k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t10": {
+     "y-0": "R r6 r5 r4 r3 . . . . . . .",
+     "y-1": ". S S R r6 r5 r4 r3 . . . .",
+     "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+     "y-3": ". . . . . . . S S S S S",
+     "edges": "RR RR RR",
+     "all": {
+      "water-source": 106,
+      "rapid-source": 6,
+      "rapid-flowing": 28
+     },
+     "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t30": {
+     "y-0": "R r6 r5 r4 r3 . . . . . . .",
+     "y-1": ". S S R r6 r5 r4 r3 . . . .",
+     "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+     "y-3": ". . . . . . . S S S S S",
+     "edges": "RR RR RR",
+     "all": {
+      "water-source": 106,
+      "rapid-source": 6,
+      "rapid-flowing": 28
+     },
+     "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t60": {
+     "y-0": "R r6 r5 r4 r3 . . . . . . .",
+     "y-1": ". S S R r6 r5 r4 r3 . . . .",
+     "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+     "y-3": ". . . . . . . S S S S S",
+     "edges": "RR RR RR",
+     "all": {
+      "water-source": 106,
+      "rapid-source": 6,
+      "rapid-flowing": 28
+     },
+     "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t90": {
+     "y-0": "R r6 r5 r4 r3 . . . . . . .",
+     "y-1": ". S S R r6 r5 r4 r3 . . . .",
+     "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+     "y-3": ". . . . . . . S S S S S",
+     "edges": "RR RR RR",
+     "all": {
+      "water-source": 106,
+      "rapid-source": 6,
+      "rapid-flowing": 28
+     },
+     "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t120": {
+     "y-0": "R r6 r5 r4 r3 . . . . . . .",
+     "y-1": ". S S R r6 r5 r4 r3 . . . .",
+     "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+     "y-3": ". . . . . . . S S S S S",
+     "edges": "RR RR RR",
+     "all": {
+      "water-source": 106,
+      "rapid-source": 6,
+      "rapid-flowing": 28
+     },
+     "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t180": {
+     "y-0": "R r6 r5 r4 r3 . . . . . . .",
+     "y-1": ". S S R r6 r5 r4 r3 . . . .",
+     "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+     "y-3": ". . . . . . . S S S S S",
+     "edges": "RR RR RR",
+     "all": {
+      "water-source": 106,
+      "rapid-source": 6,
+      "rapid-flowing": 28
+     },
+     "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t300": {
+     "y-0": "R r6 r5 r4 r3 . . . . . . .",
+     "y-1": ". S S R r6 r5 r4 r3 . . . .",
+     "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+     "y-3": ". . . . . . . S S S S S",
+     "edges": "RR RR RR",
+     "all": {
+      "water-source": 106,
+      "rapid-source": 6,
+      "rapid-flowing": 28
+     },
+     "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    }
+   },
+   "lab_stepchannel": {
+    "t0": {
+     "leg1": ". . . . . .",
+     "cross": ". . . . . . . . . . . . . .",
+     "crossBelow": ". . . . . . .",
+     "leg3": ". . . . . .",
+     "leg3Above": ". . . . . .",
+     "upperPool": {
+      "water-source": 54
+     },
+     "lowerPool": {
+      "water-source": 54
+     },
+     "aboveLowerHalf": {}
+    },
+    "t10": {
+     "leg1": ". . . . . .",
+     "cross": ". . . . . . . . . . . . . .",
+     "crossBelow": ". S S S S S S",
+     "leg3": "S S S S S S",
+     "leg3Above": ". . . . . .",
+     "upperPool": {
+      "water-source": 54
+     },
+     "lowerPool": {
+      "water-source": 54
+     },
+     "aboveLowerHalf": {}
+    },
+    "t30": {
+     "leg1": "S S S S S S",
+     "cross": "S S S S S S S w6 w5 w4 w3 w2 w1 .",
+     "crossBelow": "S S S S S S S",
+     "leg3": "S S S S S S",
+     "leg3Above": ". . . . w1 w1",
+     "upperPool": {
+      "water-source": 54
+     },
+     "lowerPool": {
+      "water-source": 54
+     },
+     "aboveLowerHalf": {
+      "water-flowing": 12
+     }
+    },
+    "t60": {
+     "leg1": "S S S S S S",
+     "cross": "S S S S S S S w6 w5 w4 w3 w2 w1 .",
+     "crossBelow": "S S S S S S S",
+     "leg3": "S S S S S S",
+     "leg3Above": ". . . . w1 w1",
+     "upperPool": {
+      "water-source": 54
+     },
+     "lowerPool": {
+      "water-source": 54
+     },
+     "aboveLowerHalf": {
+      "water-flowing": 12
+     }
+    },
+    "t90": {
+     "leg1": "S S S S S S",
+     "cross": "S S S S S S S w6 w5 w4 w3 w2 w1 .",
+     "crossBelow": "S S S S S S S",
+     "leg3": "S S S S S S",
+     "leg3Above": ". . . . w1 w1",
+     "upperPool": {
+      "water-source": 54
+     },
+     "lowerPool": {
+      "water-source": 54
+     },
+     "aboveLowerHalf": {
+      "water-flowing": 12
+     }
+    },
+    "t120": {
+     "leg1": "S S S S S S",
+     "cross": "S S S S S S S w6 w5 w4 w3 w2 w1 .",
+     "crossBelow": "S S S S S S S",
+     "leg3": "S S S S S S",
+     "leg3Above": ". . . . w1 w1",
+     "upperPool": {
+      "water-source": 54
+     },
+     "lowerPool": {
+      "water-source": 54
+     },
+     "aboveLowerHalf": {
+      "water-flowing": 12
+     }
+    },
+    "t180": {
+     "leg1": "S S S S S S",
+     "cross": "S S S S S S S w6 w5 w4 w3 w2 w1 .",
+     "crossBelow": "S S S S S S S",
+     "leg3": "S S S S S S",
+     "leg3Above": ". . . . w1 w1",
+     "upperPool": {
+      "water-source": 54
+     },
+     "lowerPool": {
+      "water-source": 54
+     },
+     "aboveLowerHalf": {
+      "water-flowing": 12
+     }
+    },
+    "t300": {
+     "leg1": "S S S S S S",
+     "cross": "S S S S S S S w6 w5 w4 w3 w2 w1 .",
+     "crossBelow": "S S S S S S S",
+     "leg3": "S S S S S S",
+     "leg3Above": ". . . . w1 w1",
+     "upperPool": {
+      "water-source": 54
+     },
+     "lowerPool": {
+      "water-source": 54
+     },
+     "aboveLowerHalf": {
+      "water-flowing": 12
+     }
+    }
+   }
+  },
+  "wheels": [],
+  "lag": [
+   {
+    "tag": "ops",
+    "n": 0
+   },
+   {
+    "tag": "t10",
+    "n": 213,
+    "mean": 0.047126759753120896,
+    "p99": 0.04899999871850014,
+    "max": 0.04899999871850014,
+    "over100ms": 0
+   },
+   {
+    "tag": "t30",
+    "n": 425,
+    "mean": 0.046988234633908554,
+    "p99": 0.04899999871850014,
+    "max": 0.04899999871850014,
+    "over100ms": 0
+   },
+   {
+    "tag": "t60",
+    "n": 638,
+    "mean": 0.047031347286598434,
+    "p99": 0.04899999871850014,
+    "max": 0.05299999937415123,
+    "over100ms": 0
+   },
+   {
+    "tag": "t90",
+    "n": 637,
+    "mean": 0.047091051053074505,
+    "p99": 0.04899999871850014,
+    "max": 0.05900000035762787,
+    "over100ms": 0
+   },
+   {
+    "tag": "t120",
+    "n": 636,
+    "mean": 0.047174527532415196,
+    "p99": 0.04899999871850014,
+    "max": 0.04899999871850014,
+    "over100ms": 0
+   },
+   {
+    "tag": "t180",
+    "n": 1275,
+    "mean": 0.04708156788758203,
+    "p99": 0.04899999871850014,
+    "max": 0.057999998331069946,
+    "over100ms": 0
+   },
+   {
+    "tag": "t300",
+    "n": 2552,
+    "mean": 0.047015281386825265,
+    "p99": 0.04899999871850014,
+    "max": 0.05999999865889549,
+    "over100ms": 0
+   }
+  ],
+  "stats": [
+   {
+    "tag": "ops",
+    "Updates": 846,
+    "Ticks": 128060,
+    "DrainsRefused": 17,
+    "RemovalsRefused": 138,
+    "Filled": 0,
+    "FilledVessels": 0,
+    "MadeFalling": 0,
+    "RapidSources": 12,
+    "RapidSourcesReverted": 0,
+    "MadeRapid": 12,
+    "MadeOrdinary": 0
+   },
+   {
+    "tag": "t10",
+    "Updates": 8710,
+    "Ticks": 1166498,
+    "DrainsRefused": 731,
+    "RemovalsRefused": 237,
+    "Filled": 1256,
+    "FilledVessels": 639,
+    "MadeFalling": 3,
+    "RapidSources": 313,
+    "RapidSourcesReverted": 252,
+    "MadeRapid": 321,
+    "MadeOrdinary": 8
+   },
+   {
+    "tag": "t30",
+    "Updates": 11792,
+    "Ticks": 1550532,
+    "DrainsRefused": 1032,
+    "RemovalsRefused": 238,
+    "Filled": 1766,
+    "FilledVessels": 941,
+    "MadeFalling": 3,
+    "RapidSources": 440,
+    "RapidSourcesReverted": 413,
+    "MadeRapid": 436,
+    "MadeOrdinary": 12
+   },
+   {
+    "tag": "t60",
+    "Updates": 11792,
+    "Ticks": 1550532,
+    "DrainsRefused": 1032,
+    "RemovalsRefused": 238,
+    "Filled": 1766,
+    "FilledVessels": 941,
+    "MadeFalling": 3,
+    "RapidSources": 440,
+    "RapidSourcesReverted": 413,
+    "MadeRapid": 436,
+    "MadeOrdinary": 12
+   },
+   {
+    "tag": "t90",
+    "Updates": 11792,
+    "Ticks": 1550532,
+    "DrainsRefused": 1032,
+    "RemovalsRefused": 238,
+    "Filled": 1766,
+    "FilledVessels": 941,
+    "MadeFalling": 3,
+    "RapidSources": 440,
+    "RapidSourcesReverted": 413,
+    "MadeRapid": 436,
+    "MadeOrdinary": 12
+   },
+   {
+    "tag": "t120",
+    "Updates": 11792,
+    "Ticks": 1550532,
+    "DrainsRefused": 1032,
+    "RemovalsRefused": 238,
+    "Filled": 1766,
+    "FilledVessels": 941,
+    "MadeFalling": 3,
+    "RapidSources": 440,
+    "RapidSourcesReverted": 413,
+    "MadeRapid": 436,
+    "MadeOrdinary": 12
+   },
+   {
+    "tag": "t180",
+    "Updates": 11792,
+    "Ticks": 1550532,
+    "DrainsRefused": 1032,
+    "RemovalsRefused": 238,
+    "Filled": 1766,
+    "FilledVessels": 941,
+    "MadeFalling": 3,
+    "RapidSources": 440,
+    "RapidSourcesReverted": 413,
+    "MadeRapid": 436,
+    "MadeOrdinary": 12
+   },
+   {
+    "tag": "t300",
+    "Updates": 11792,
+    "Ticks": 1550532,
+    "DrainsRefused": 1032,
+    "RemovalsRefused": 238,
+    "Filled": 1766,
+    "FilledVessels": 941,
+    "MadeFalling": 3,
+    "RapidSources": 440,
+    "RapidSourcesReverted": 413,
+    "MadeRapid": 436,
+    "MadeOrdinary": 12
+   }
+  ]
+ }
+}

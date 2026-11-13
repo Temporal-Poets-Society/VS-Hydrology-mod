@@ -1,0 +1,908 @@
+{
+  "congo_rapids_edge": {
+    "t0": {
+      "near": {
+        "water-source": 2923,
+        "rapid-source": 841,
+        "rapid-flowing": 381,
+        "rapid-falling": 38
+      }
+    },
+    "t10": {
+      "near": {
+        "water-source": 2923,
+        "rapid-source": 841,
+        "rapid-flowing": 381,
+        "rapid-falling": 38
+      }
+    },
+    "t30": {
+      "near": {
+        "water-source": 2924,
+        "rapid-source": 841,
+        "rapid-flowing": 381,
+        "rapid-falling": 38
+      }
+    },
+    "t60": {
+      "near": {
+        "water-source": 2924,
+        "rapid-source": 841,
+        "rapid-flowing": 381,
+        "rapid-falling": 38
+      }
+    },
+    "t90": {
+      "near": {
+        "water-source": 2923,
+        "rapid-source": 841,
+        "rapid-flowing": 381,
+        "rapid-falling": 38
+      }
+    },
+    "t120": {
+      "near": {
+        "water-source": 2923,
+        "rapid-source": 841,
+        "rapid-flowing": 381,
+        "rapid-falling": 38
+      }
+    },
+    "t180": {
+      "near": {
+        "water-source": 2923,
+        "rapid-source": 841,
+        "rapid-flowing": 381,
+        "rapid-falling": 38
+      }
+    },
+    "t300": {
+      "near": {
+        "water-source": 2923,
+        "rapid-source": 841,
+        "rapid-flowing": 381,
+        "rapid-falling": 38
+      }
+    }
+  },
+  "congo_rapids_ramp_bed": {
+    "t0": {
+      "near": {
+        "water-source": 2437,
+        "rapid-source": 841,
+        "rapid-flowing": 411,
+        "rapid-falling": 26
+      }
+    },
+    "t10": {
+      "near": {
+        "water-source": 2437,
+        "rapid-source": 841,
+        "rapid-flowing": 411,
+        "rapid-falling": 26
+      }
+    },
+    "t30": {
+      "near": {
+        "water-source": 2438,
+        "rapid-source": 841,
+        "rapid-flowing": 411,
+        "rapid-falling": 26
+      }
+    },
+    "t60": {
+      "near": {
+        "water-source": 2438,
+        "rapid-source": 841,
+        "rapid-flowing": 411,
+        "rapid-falling": 26
+      }
+    },
+    "t90": {
+      "near": {
+        "water-source": 2437,
+        "rapid-source": 841,
+        "rapid-flowing": 411,
+        "rapid-falling": 26
+      }
+    },
+    "t120": {
+      "near": {
+        "water-source": 2437,
+        "rapid-source": 841,
+        "rapid-flowing": 411,
+        "rapid-falling": 26
+      }
+    },
+    "t180": {
+      "near": {
+        "water-source": 2437,
+        "rapid-source": 841,
+        "rapid-flowing": 411,
+        "rapid-falling": 26
+      }
+    },
+    "t300": {
+      "near": {
+        "water-source": 2437,
+        "rapid-source": 841,
+        "rapid-flowing": 411,
+        "rapid-falling": 26
+      }
+    }
+  },
+  "congo_rapids_bank": {
+    "t0": {
+      "near": {
+        "water-source": 3507,
+        "rapid-source": 759,
+        "rapid-flowing": 155
+      }
+    },
+    "t10": {
+      "near": {
+        "water-source": 3507,
+        "rapid-source": 759,
+        "rapid-flowing": 155
+      }
+    },
+    "t30": {
+      "near": {
+        "water-source": 3507,
+        "rapid-source": 759,
+        "rapid-flowing": 155
+      }
+    },
+    "t60": {
+      "near": {
+        "water-source": 3507,
+        "rapid-source": 759,
+        "rapid-flowing": 155
+      }
+    },
+    "t90": {
+      "near": {
+        "water-source": 3507,
+        "rapid-source": 759,
+        "rapid-flowing": 155
+      }
+    },
+    "t120": {
+      "near": {
+        "water-source": 3507,
+        "rapid-source": 759,
+        "rapid-flowing": 155
+      }
+    },
+    "t180": {
+      "near": {
+        "water-source": 3507,
+        "rapid-source": 759,
+        "rapid-flowing": 155
+      }
+    },
+    "t300": {
+      "near": {
+        "water-source": 3507,
+        "rapid-source": 759,
+        "rapid-flowing": 155
+      }
+    }
+  },
+  "congo_step_edge": {
+    "t0": {
+      "near": {
+        "water-source": 3423,
+        "rapid-source": 841,
+        "rapid-flowing": 312,
+        "rapid-falling": 28
+      }
+    },
+    "t10": {
+      "near": {
+        "water-source": 3423,
+        "rapid-source": 841,
+        "rapid-flowing": 312,
+        "rapid-falling": 28
+      }
+    },
+    "t30": {
+      "near": {
+        "water-source": 3423,
+        "rapid-source": 841,
+        "rapid-flowing": 312,
+        "rapid-falling": 28
+      }
+    },
+    "t60": {
+      "near": {
+        "water-source": 3423,
+        "rapid-source": 841,
+        "rapid-flowing": 312,
+        "rapid-falling": 28
+      }
+    },
+    "t90": {
+      "near": {
+        "water-source": 3423,
+        "rapid-source": 841,
+        "rapid-flowing": 312,
+        "rapid-falling": 28
+      }
+    },
+    "t120": {
+      "near": {
+        "water-source": 3423,
+        "rapid-source": 841,
+        "rapid-flowing": 312,
+        "rapid-falling": 28
+      }
+    },
+    "t180": {
+      "near": {
+        "water-source": 3423,
+        "rapid-source": 841,
+        "rapid-flowing": 312,
+        "rapid-falling": 28
+      }
+    },
+    "t300": {
+      "near": {
+        "water-source": 3423,
+        "rapid-source": 841,
+        "rapid-flowing": 312,
+        "rapid-falling": 28
+      }
+    }
+  },
+  "congo_step_mid_bed": {
+    "t0": {
+      "near": {
+        "water-source": 5365,
+        "water-flowing": 161
+      }
+    },
+    "t10": {
+      "near": {
+        "water-source": 5365,
+        "water-flowing": 161
+      }
+    },
+    "t30": {
+      "near": {
+        "water-source": 5365,
+        "water-flowing": 161
+      }
+    },
+    "t60": {
+      "near": {
+        "water-source": 5365,
+        "water-flowing": 161
+      }
+    },
+    "t90": {
+      "near": {
+        "water-source": 5365,
+        "water-flowing": 161
+      }
+    },
+    "t120": {
+      "near": {
+        "water-source": 5365,
+        "water-flowing": 161
+      }
+    },
+    "t180": {
+      "near": {
+        "water-source": 5365,
+        "water-flowing": 161
+      }
+    },
+    "t300": {
+      "near": {
+        "water-source": 5365,
+        "water-flowing": 161
+      }
+    }
+  },
+  "rhine_chute_edge": {
+    "t0": {
+      "near": {
+        "water-source": 1340,
+        "rapid-source": 555,
+        "rapid-flowing": 174,
+        "rapid-falling": 28
+      }
+    },
+    "t10": {
+      "near": {
+        "water-source": 1340,
+        "rapid-source": 555,
+        "rapid-flowing": 174,
+        "rapid-falling": 28
+      }
+    },
+    "t30": {
+      "near": {
+        "water-source": 1341,
+        "rapid-source": 555,
+        "rapid-flowing": 174,
+        "rapid-falling": 28
+      }
+    },
+    "t60": {
+      "near": {
+        "water-source": 1341,
+        "rapid-source": 555,
+        "rapid-flowing": 174,
+        "rapid-falling": 28
+      }
+    },
+    "t90": {
+      "near": {
+        "water-source": 1341,
+        "rapid-source": 555,
+        "rapid-flowing": 174,
+        "rapid-falling": 28
+      }
+    },
+    "t120": {
+      "near": {
+        "water-source": 1341,
+        "rapid-source": 555,
+        "rapid-flowing": 174,
+        "rapid-falling": 28
+      }
+    },
+    "t180": {
+      "near": {
+        "water-source": 1341,
+        "rapid-source": 555,
+        "rapid-flowing": 174,
+        "rapid-falling": 28
+      }
+    },
+    "t300": {
+      "near": {
+        "water-source": 1341,
+        "rapid-source": 555,
+        "rapid-flowing": 174,
+        "rapid-falling": 28
+      }
+    }
+  },
+  "daugava_step_edge": {
+    "t0": {
+      "near": {
+        "water-source": 2981,
+        "rapid-source": 632,
+        "rapid-flowing": 112
+      }
+    },
+    "t10": {
+      "near": {
+        "water-source": 2981,
+        "rapid-source": 632,
+        "rapid-flowing": 112
+      }
+    },
+    "t30": {
+      "near": {
+        "water-source": 2981,
+        "rapid-source": 632,
+        "rapid-flowing": 112
+      }
+    },
+    "t60": {
+      "near": {
+        "water-source": 2981,
+        "rapid-source": 632,
+        "rapid-flowing": 112
+      }
+    },
+    "t90": {
+      "near": {
+        "water-source": 2981,
+        "rapid-source": 632,
+        "rapid-flowing": 112
+      }
+    },
+    "t120": {
+      "near": {
+        "water-source": 2981,
+        "rapid-source": 632,
+        "rapid-flowing": 112
+      }
+    },
+    "t180": {
+      "near": {
+        "water-source": 2981,
+        "rapid-source": 632,
+        "rapid-flowing": 112
+      }
+    },
+    "t300": {
+      "near": {
+        "water-source": 2981,
+        "rapid-source": 632,
+        "rapid-flowing": 112
+      }
+    }
+  },
+  "victoria_fall": {
+    "t0": {
+      "hanging": 4,
+      "edge": "R",
+      "fall": "rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 r6 R",
+      "fallRaw": "rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-se-6 rapidwater-still-7",
+      "fallSide": "R R . . . . . . . . . . . . . . . . . . . . .",
+      "fallSideRaw": "rapidwater-se-7 rapidwater-se-7 air air air air",
+      "near": {
+        "water-source": 158,
+        "rapid-source": 183,
+        "rapid-flowing": 66,
+        "rapid-falling": 273
+      }
+    },
+    "t10": {
+      "hanging": 4,
+      "edge": "R",
+      "fall": "rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 r6 R",
+      "fallRaw": "rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-s-6 rapidwater-still-7",
+      "fallSide": "R R . . . . . . . . . . . . . . . . . . . . .",
+      "fallSideRaw": "rapidwater-s-7 rapidwater-s-7 air air air air",
+      "near": {
+        "water-source": 158,
+        "rapid-source": 183,
+        "rapid-flowing": 66,
+        "rapid-falling": 273
+      }
+    },
+    "t30": {
+      "hanging": 4,
+      "edge": "R",
+      "fall": "rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 r6 R",
+      "fallRaw": "rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-s-6 rapidwater-still-7",
+      "fallSide": "R R . . . . . . . . . . . . . . . . . . . . .",
+      "fallSideRaw": "rapidwater-s-7 rapidwater-s-7 air air air air",
+      "near": {
+        "water-source": 158,
+        "rapid-source": 183,
+        "rapid-flowing": 66,
+        "rapid-falling": 273
+      }
+    },
+    "t60": {
+      "hanging": 2,
+      "edge": "R",
+      "fall": ". . . . . . . . . . . . . . . . . . . . . r3 R",
+      "fallRaw": "air air air air air air air air air air air air air air air air air air air air air rapidwater-n-3 rapidwater-still-7",
+      "fallSide": ". . . . . . . . . . . . . . . . . . . . . . .",
+      "fallSideRaw": "air air air air air air",
+      "near": {
+        "water-source": 158,
+        "rapid-source": 181,
+        "rapid-flowing": 63,
+        "rapid-falling": 210
+      }
+    },
+    "t90": {
+      "hanging": 2,
+      "edge": "R",
+      "fall": "rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 r6 R",
+      "fallRaw": "rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-s-6 rapidwater-still-7",
+      "fallSide": "rd6 rd6 rd6 r6 . . . . . . . . . . . . . . . . . . .",
+      "fallSideRaw": "rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-s-6 air air",
+      "near": {
+        "water-source": 158,
+        "rapid-source": 181,
+        "rapid-flowing": 67,
+        "rapid-falling": 273
+      }
+    },
+    "t120": {
+      "hanging": 2,
+      "edge": "R",
+      "fall": "rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 r6 R",
+      "fallRaw": "rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-s-6 rapidwater-still-7",
+      "fallSide": "rd6 rd6 rd6 r6 . . . . . . . . . . . . . . . . . . .",
+      "fallSideRaw": "rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-s-6 air air",
+      "near": {
+        "water-source": 158,
+        "rapid-source": 181,
+        "rapid-flowing": 67,
+        "rapid-falling": 273
+      }
+    },
+    "t180": {
+      "hanging": 2,
+      "edge": "R",
+      "fall": "rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 r6 R",
+      "fallRaw": "rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-s-6 rapidwater-still-7",
+      "fallSide": "rd6 rd6 rd6 r6 . . . . . . . . . . . . . . . . . . .",
+      "fallSideRaw": "rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-s-6 air air",
+      "near": {
+        "water-source": 158,
+        "rapid-source": 181,
+        "rapid-flowing": 67,
+        "rapid-falling": 273
+      }
+    },
+    "t300": {
+      "hanging": 2,
+      "edge": "R",
+      "fall": "rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 r6 R",
+      "fallRaw": "rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-s-6 rapidwater-still-7",
+      "fallSide": "rd6 rd6 rd6 r6 . . . . . . . . . . . . . . . . . . .",
+      "fallSideRaw": "rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-s-6 air air",
+      "near": {
+        "water-source": 158,
+        "rapid-source": 181,
+        "rapid-flowing": 67,
+        "rapid-falling": 273
+      }
+    }
+  },
+  "niagara_fall": {
+    "t0": {
+      "hanging": 4,
+      "edge": "R",
+      "fall": "rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 r6 R",
+      "fallRaw": "rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-nw-6 rapidwater-still-7",
+      "fallSide": ". . . . . . . . . . r5 R",
+      "fallSideRaw": "air air air air air air",
+      "near": {
+        "water-source": 174,
+        "rapid-source": 164,
+        "rapid-flowing": 74,
+        "rapid-falling": 130
+      }
+    },
+    "t10": {
+      "hanging": 4,
+      "edge": "R",
+      "fall": "rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 r6 R",
+      "fallRaw": "rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-n-6 rapidwater-d-7",
+      "fallSide": ". . . . . . . . . . r5 R",
+      "fallSideRaw": "air air air air air air",
+      "near": {
+        "water-source": 174,
+        "rapid-source": 164,
+        "rapid-flowing": 74,
+        "rapid-falling": 130
+      }
+    },
+    "t30": {
+      "hanging": 4,
+      "edge": "R",
+      "fall": "rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 r6 R",
+      "fallRaw": "rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-n-6 rapidwater-d-7",
+      "fallSide": ". . . . . . . . . . r5 R",
+      "fallSideRaw": "air air air air air air",
+      "near": {
+        "water-source": 174,
+        "rapid-source": 164,
+        "rapid-flowing": 74,
+        "rapid-falling": 130
+      }
+    },
+    "t60": {
+      "hanging": 2,
+      "edge": "R",
+      "fall": ". . . . . . . . . . r5 R",
+      "fallRaw": "air air air air air air air air air air rapidwater-s-5 rapidwater-d-7",
+      "fallSide": ". . . . . . . . . . r5 R",
+      "fallSideRaw": "air air air air air air",
+      "near": {
+        "water-source": 174,
+        "rapid-source": 162,
+        "rapid-flowing": 74,
+        "rapid-falling": 120
+      }
+    },
+    "t90": {
+      "hanging": 2,
+      "edge": "R",
+      "fall": "rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 r6 R",
+      "fallRaw": "rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-n-6 rapidwater-d-7",
+      "fallSide": ". . . . . . . . . . r5 R",
+      "fallSideRaw": "air air air air air air",
+      "near": {
+        "water-source": 174,
+        "rapid-source": 162,
+        "rapid-flowing": 74,
+        "rapid-falling": 134
+      }
+    },
+    "t120": {
+      "hanging": 2,
+      "edge": "R",
+      "fall": "rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 r6 R",
+      "fallRaw": "rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-n-6 rapidwater-d-7",
+      "fallSide": ". . . . . . . . . . r5 R",
+      "fallSideRaw": "air air air air air air",
+      "near": {
+        "water-source": 174,
+        "rapid-source": 162,
+        "rapid-flowing": 74,
+        "rapid-falling": 134
+      }
+    },
+    "t180": {
+      "hanging": 2,
+      "edge": "R",
+      "fall": "rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 r6 R",
+      "fallRaw": "rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-n-6 rapidwater-d-7",
+      "fallSide": ". . . . . . . . . . r5 R",
+      "fallSideRaw": "air air air air air air",
+      "near": {
+        "water-source": 174,
+        "rapid-source": 162,
+        "rapid-flowing": 74,
+        "rapid-falling": 134
+      }
+    },
+    "t300": {
+      "hanging": 2,
+      "edge": "R",
+      "fall": "rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 rd6 r6 R",
+      "fallRaw": "rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-d-6 rapidwater-n-6 rapidwater-d-7",
+      "fallSide": ". . . . . . . . . . r5 R",
+      "fallSideRaw": "air air air air air air",
+      "near": {
+        "water-source": 174,
+        "rapid-source": 162,
+        "rapid-flowing": 74,
+        "rapid-falling": 134
+      }
+    }
+  },
+  "river_canal_d2_in": {
+    "t0": {
+      "trench": "..............................",
+      "trench-1": "..............................",
+      "near": {
+        "water-source": 569,
+        "water-flowing": 20
+      }
+    },
+    "t10": {
+      "trench": "..............................",
+      "trench-1": "..............................",
+      "near": {
+        "water-source": 569,
+        "water-flowing": 20
+      }
+    },
+    "t30": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSff.....",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSfffff.",
+      "near": {
+        "water-source": 601,
+        "water-flowing": 20
+      }
+    },
+    "t60": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "near": {
+        "water-source": 601,
+        "water-flowing": 20
+      }
+    },
+    "t90": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "near": {
+        "water-source": 601,
+        "water-flowing": 20
+      }
+    },
+    "t120": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "near": {
+        "water-source": 601,
+        "water-flowing": 20
+      }
+    },
+    "t180": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "near": {
+        "water-source": 601,
+        "water-flowing": 20
+      }
+    },
+    "t300": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "near": {
+        "water-source": 601,
+        "water-flowing": 20
+      }
+    }
+  },
+  "river_canal_d2_out": {
+    "t0": {
+      "trench": "..............................",
+      "trench-1": "..............................",
+      "near": {
+        "water-source": 515
+      }
+    },
+    "t10": {
+      "trench": "..............................",
+      "trench-1": "..............................",
+      "near": {
+        "water-source": 515
+      }
+    },
+    "t30": {
+      "trench": "SSSSSSSSSS....................",
+      "trench-1": "SSSSSSSSSS....................",
+      "near": {
+        "water-source": 563
+      }
+    },
+    "t60": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "near": {
+        "water-source": 563
+      }
+    },
+    "t90": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "near": {
+        "water-source": 563
+      }
+    },
+    "t120": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "near": {
+        "water-source": 563
+      }
+    },
+    "t180": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "near": {
+        "water-source": 563
+      }
+    },
+    "t300": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "near": {
+        "water-source": 563
+      }
+    }
+  },
+  "rapids_canal_d2_in": {
+    "t0": {
+      "trench": "..............................",
+      "trench-1": "..............................",
+      "near": {
+        "water-source": 291,
+        "rapid-source": 125
+      }
+    },
+    "t10": {
+      "trench": "..............................",
+      "trench-1": "..............................",
+      "near": {
+        "water-source": 291,
+        "rapid-source": 125
+      }
+    },
+    "t30": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSf........",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSff......",
+      "near": {
+        "water-source": 323,
+        "rapid-source": 125
+      }
+    },
+    "t60": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "near": {
+        "water-source": 323,
+        "rapid-source": 125
+      }
+    },
+    "t90": {
+      "trench": "..............................",
+      "trench-1": "..............................",
+      "near": {
+        "water-source": 291,
+        "rapid-source": 125
+      }
+    },
+    "t120": {
+      "trench": "..............................",
+      "trench-1": "..............................",
+      "near": {
+        "water-source": 291,
+        "rapid-source": 125
+      }
+    },
+    "t180": {
+      "trench": "..............................",
+      "trench-1": "..............................",
+      "near": {
+        "water-source": 291,
+        "rapid-source": 125
+      }
+    },
+    "t300": {
+      "trench": "..............................",
+      "trench-1": "..............................",
+      "near": {
+        "water-source": 291,
+        "rapid-source": 125
+      }
+    }
+  },
+  "sea_canal_d2_in": {
+    "t0": {
+      "trench": "..............................",
+      "trench-1": "..............................",
+      "near": {
+        "saltwater-source": 574
+      }
+    },
+    "t10": {
+      "trench": "..............................",
+      "trench-1": "..............................",
+      "near": {
+        "saltwater-source": 574
+      }
+    },
+    "t30": {
+      "trench": "SSSSSSSSSSSff.................",
+      "trench-1": "SSSSSSSSSSSSfffff.............",
+      "near": {
+        "saltwater-source": 606
+      }
+    },
+    "t60": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "near": {
+        "saltwater-source": 606
+      }
+    },
+    "t90": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "near": {
+        "saltwater-source": 606
+      }
+    },
+    "t120": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "near": {
+        "saltwater-source": 606
+      }
+    },
+    "t180": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "near": {
+        "saltwater-source": 606
+      }
+    },
+    "t300": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "near": {
+        "saltwater-source": 606
+      }
+    }
+  }
+}

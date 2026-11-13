@@ -1,0 +1,205 @@
+[
+ {
+  "Name": "rhine_chute_edge",
+  "Kind": "step_break",
+  "Target": "sill",
+  "Sites": [
+   [
+    50.3199,
+    7.5307
+   ]
+  ]
+ },
+ {
+  "Name": "daugava_step_edge",
+  "Kind": "step_break",
+  "Target": "sill",
+  "Sites": [
+   [
+    56.61,
+    25.345
+   ]
+  ]
+ },
+ {
+  "Name": "victoria_fall",
+  "Kind": "fall_poke",
+  "StonesAtSec": 20,
+  "Sites": [
+   [
+    -17.9252,
+    25.8437
+   ],
+   [
+    -17.924,
+    25.857
+   ]
+  ]
+ },
+ {
+  "Name": "niagara_fall",
+  "Kind": "fall_poke",
+  "StonesAtSec": 20,
+  "Sites": [
+   [
+    43.0796,
+    -79.0763
+   ],
+   [
+    43.0773,
+    -79.0753
+   ]
+  ]
+ },
+ {
+  "Name": "river_canal_d2_in",
+  "Kind": "river_trench",
+  "Width": 2,
+  "Depth": 2,
+  "Length": 30,
+  "Order": "in",
+  "Sites": [
+   [
+    56.4985,
+    25.8613
+   ],
+   [
+    52.13,
+    11.65
+   ]
+  ]
+ },
+ {
+  "Name": "river_canal_d2_out",
+  "Kind": "river_trench",
+  "Width": 3,
+  "Depth": 2,
+  "Length": 30,
+  "Order": "out",
+  "Sites": [
+   [
+    52.13,
+    11.65
+   ],
+   [
+    56.4985,
+    25.8613
+   ]
+  ]
+ },
+ {
+  "Name": "sea_canal_d2_in",
+  "Kind": "sea_trench",
+  "Width": 2,
+  "Depth": 2,
+  "Length": 30,
+  "Order": "in",
+  "Sites": [
+   [
+    56.97,
+    23.77
+   ],
+   [
+    57.4,
+    21.55
+   ],
+   [
+    38.78,
+    -9.48
+   ]
+  ]
+ },
+ {
+  "Name": "congo_rapids_edge",
+  "Kind": "step_break",
+  "Target": "sill",
+  "Sites": [
+   [
+    -5.543,
+    13.605
+   ],
+   [
+    -5.6,
+    13.6
+   ]
+  ]
+ },
+ {
+  "Name": "congo_rapids_ramp_bed",
+  "Kind": "step_break",
+  "Target": "ramp_bed",
+  "Sites": [
+   [
+    -5.71,
+    13.55
+   ],
+   [
+    -5.6,
+    13.6
+   ]
+  ]
+ },
+ {
+  "Name": "congo_rapids_bank",
+  "Kind": "step_break",
+  "Target": "bank",
+  "Sites": [
+   [
+    -5.65,
+    13.58
+   ],
+   [
+    -5.6,
+    13.6
+   ]
+  ]
+ },
+ {
+  "Name": "congo_step_edge",
+  "Kind": "step_break",
+  "Target": "sill",
+  "Sites": [
+   [
+    -4.9,
+    14.5
+   ],
+   [
+    -5.2,
+    14.0
+   ]
+  ]
+ },
+ {
+  "Name": "congo_step_mid_bed",
+  "Kind": "step_break",
+  "Target": "mid_bed",
+  "Sites": [
+   [
+    -5.2,
+    14.0
+   ],
+   [
+    -4.9,
+    14.5
+   ]
+  ]
+ },
+ {
+  "Name": "rapids_canal_d2_in",
+  "Kind": "river_trench",
+  "Width": 2,
+  "Depth": 2,
+  "Length": 30,
+  "Order": "in",
+  "Sites": [
+   [
+    -5.55,
+    13.7
+   ],
+   [
+    -5.75,
+    13.5
+   ]
+  ]
+ }
+]

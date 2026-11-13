@@ -1,0 +1,17 @@
+# build output
+bin/
+obj/
+tests/*/bin/
+tests/*/obj/
+# release zips (built by `dotnet build -c Release`)
+release/
+# server test runs (tests/server/mkrun.py): worlds, logs and wateraudit results, about 0.3-1 GB each
+testruns/
+# editor files
+.vs/
+.vscode/
+*.user
+
+# agent worktrees and stopped test runs
+.claude/
+testruns-killed/

@@ -1,0 +1,15 @@
+user-save  ticino_sesto(#3)       water cols  1596  faces >0.3:   10  >0.55:   10  max 0.88 | top sources: rapid still  1147, rapid with flow    56, ordinary    78; flowing tops  308, falling   7
+user-save  ticino_bellinzona(#4)  water cols   848  faces >0.3:   19  >0.55:   19  max 0.88 | top sources: rapid still   740, rapid with flow     8, ordinary     1; flowing tops   82, falling  17
+user-save  congo                  water cols  9571  faces >0.3:  238  >0.55:  134  max 0.88 | top sources: rapid still  7671, rapid with flow   152, ordinary     0; flowing tops 1560, falling 188
+l8-generated ticino_sesto(#3)       water cols  1596  faces >0.3:   10  >0.55:   10  max 0.88 | top sources: rapid still  1147, rapid with flow    56, ordinary    78; flowing tops  308, falling   7
+l8-generated ticino_bellinzona(#4)  water cols   848  faces >0.3:   19  >0.55:   19  max 0.88 | top sources: rapid still   740, rapid with flow     8, ordinary     1; flowing tops   82, falling  17
+l8-generated congo                  water cols  9571  faces >0.3:  238  >0.55:  134  max 0.88 | top sources: rapid still  7671, rapid with flow   152, ordinary     0; flowing tops 1560, falling 188
+l8-end     ticino_sesto(#3)       water cols  1596  faces >0.3:   10  >0.55:   10  max 0.88 | top sources: rapid still  1146, rapid with flow    57, ordinary    78; flowing tops  308, falling   7
+l8-end     ticino_bellinzona(#4)  water cols   848  faces >0.3:   19  >0.55:   19  max 0.88 | top sources: rapid still   739, rapid with flow     9, ordinary     1; flowing tops   82, falling  17
+l8-end     congo                  water cols  9571  faces >0.3:  238  >0.55:  134  max 0.88 | top sources: rapid still  7663, rapid with flow   160, ordinary     0; flowing tops 1560, falling 188
+l9-generated ticino_sesto(#3)       water cols  1596  faces >0.3:    0  >0.55:    0  max 0.25 | top sources: rapid still     0, rapid with flow  1284, ordinary    78; flowing tops  234, falling   0
+l9-generated ticino_bellinzona(#4)  water cols   848  faces >0.3:    1  >0.55:    0  max 0.38 | top sources: rapid still     0, rapid with flow   723, ordinary     1; flowing tops  124, falling   0
+l9-generated congo                  water cols  9651  faces >0.3:   75  >0.55:   51  max 1.88 | top sources: rapid still     0, rapid with flow  7591, ordinary    76; flowing tops 1947, falling  37
+l9-end     ticino_sesto(#3)       water cols  1596  faces >0.3:    0  >0.55:    0  max 0.25 | top sources: rapid still     0, rapid with flow  1283, ordinary    78; flowing tops  235, falling   0
+l9-end     ticino_bellinzona(#4)  water cols   848  faces >0.3:    0  >0.55:    0  max 0.25 | top sources: rapid still     0, rapid with flow   725, ordinary     1; flowing tops  122, falling   0
+l9-end     congo                  water cols  9651  faces >0.3:   75  >0.55:   51  max 1.88 | top sources: rapid still     0, rapid with flow  7592, ordinary    76; flowing tops 1946, falling  37

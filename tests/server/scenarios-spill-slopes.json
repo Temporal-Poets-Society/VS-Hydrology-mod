@@ -1,0 +1,12 @@
+[
+  {"Name": "spill_salt_d1", "Kind": "lab_spill", "Liquid": "saltwater", "Drop": 1, "Spacing": 2, "Offset": [0, 0]},
+  {"Name": "spill_salt_d3", "Kind": "lab_spill", "Liquid": "saltwater", "Drop": 3, "Spacing": 2, "Offset": [0, 80]},
+  {"Name": "spill_salt_d3_flat", "Kind": "lab_spill", "Liquid": "saltwater", "Drop": 3, "Spacing": 4, "Offset": [0, 160]},
+  {"Name": "spill_fresh_d1", "Kind": "lab_spill", "Liquid": "water", "Drop": 1, "Spacing": 2, "Offset": [80, 0]},
+  {"Name": "spill_fresh_d3", "Kind": "lab_spill", "Liquid": "water", "Drop": 3, "Spacing": 2, "Offset": [80, 80]},
+  {"Name": "spill_fresh_d3_flat", "Kind": "lab_spill", "Liquid": "water", "Drop": 3, "Spacing": 4, "Offset": [80, 160]},
+  {"Name": "spill_mixed_d1", "Kind": "lab_spill", "Liquid": "saltwater", "SpillLiquid": "water", "Drop": 1, "Spacing": 2, "Offset": [160, 0]},
+  {"Name": "spill_mixed_d3", "Kind": "lab_spill", "Liquid": "saltwater", "SpillLiquid": "water", "Drop": 3, "Spacing": 2, "Offset": [160, 80]},
+  {"Name": "spill_salt_bay_d2", "Kind": "lab_spill", "Liquid": "saltwater", "Drop": 2, "Spacing": 2, "Length": 4, "Offset": [160, 160]},
+  {"Name": "spill_fresh_bay_d2", "Kind": "lab_spill", "Liquid": "water", "Drop": 2, "Spacing": 2, "Length": 4, "Offset": [240, 0]}
+]

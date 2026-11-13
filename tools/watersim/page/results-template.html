@@ -1,0 +1,473 @@
+<title>Hydrology Water Rules Study</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a field report. Verdict first, then the voxel bench (two synced views), then the numbers. */
+:root {
+  --bg: #f3f4f1; --panel: #ffffff; --ink: #1d2328; --muted: #5d666d; --line: #d8dcd6;
+  --accent: #1f6f8b; --good: #2f7d4f; --bad: #b4462f; --warn: #a8771a;
+  --stone: #b8b1a4; --placed: #e07a2f; --canvas: #e7eae5; --ring: #c2185b;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #15191c; --panel: #1d2226; --ink: #e5e8e6; --muted: #9aa3a8; --line: #31383d;
+  --accent: #5fb4d1; --good: #6cc191; --bad: #e7826b; --warn: #e0b153;
+  --stone: #6f6b63; --placed: #f08a3c; --canvas: #101416; --ring: #ff6fa8; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #15191c; --panel: #1d2226; --ink: #e5e8e6; --muted: #9aa3a8; --line: #31383d;
+  --accent: #5fb4d1; --good: #6cc191; --bad: #e7826b; --warn: #e0b153;
+  --stone: #6f6b63; --placed: #f08a3c; --canvas: #101416; --ring: #ff6fa8; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.55; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-block: 28px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 36px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h1 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; }
+h2 { font-size: 22px; font-weight: 700; }
+h3 { font-size: 16px; font-weight: 700; }
+p { margin: 0; max-width: 68ch; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+header { display: grid; gap: 10px; }
+.lede { font-size: 18px; color: var(--ink); }
+section { display: grid; gap: 14px; min-width: 0; }
+.verdict { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.rule { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; display: grid; gap: 4px; align-content: start; }
+.rule b { font-family: var(--display); font-weight: 700; }
+.rule .tag { font-family: var(--mono); font-size: 11px; color: var(--accent); }
+.rule.new { border-color: var(--accent); }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+.kpi { border-top: 3px solid var(--line); padding-top: 8px; display: grid; gap: 2px; }
+.kpi .v { font-family: var(--mono); font-size: 15px; font-variant-numeric: tabular-nums; }
+.kpi .v span { display: block; }
+.kpi .k { font-size: 13px; color: var(--muted); }
+.good { color: var(--good); } .bad { color: var(--bad); } .warn { color: var(--warn); }
+.bench { display: grid; gap: 12px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-family: var(--display); font-size: 13px; padding: 6px 10px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); border-radius: 999px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.chip:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; flex-wrap: wrap; }
+.seg button { font-family: var(--display); font-size: 13px; padding: 6px 10px; border: 0; background: var(--panel); color: var(--ink); cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+label.inline { font-size: 14px; color: var(--muted); display: inline-flex; align-items: center; gap: 8px; }
+.scene-desc { color: var(--muted); font-size: 15px; }
+.views { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 760px) { .views { grid-template-columns: 1fr; } }
+.view { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; display: grid; min-width: 0; }
+.view .head { display: flex; justify-content: space-between; gap: 8px; padding: 10px 12px; border-bottom: 1px solid var(--line); align-items: baseline; flex-wrap: wrap; }
+.view canvas { width: 100%; height: 380px; display: block; background: var(--canvas); touch-action: none; }
+.stats { padding: 10px 12px; font-family: var(--mono); font-size: 12.5px; display: grid; gap: 3px; font-variant-numeric: tabular-nums; }
+.stats .row { display: flex; justify-content: space-between; gap: 12px; }
+.stats .row span:first-child { color: var(--muted); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; color: var(--muted); }
+.legend i { display: inline-block; width: 12px; height: 12px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; border: 1px solid rgba(0,0,0,.15); }
+.tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { padding: 8px 10px; text-align: right; border-bottom: 1px solid var(--line); white-space: nowrap; font-variant-numeric: tabular-nums; }
+th { font-family: var(--display); font-weight: 700; font-size: 12.5px; color: var(--muted); }
+td:first-child, th:first-child { text-align: left; white-space: normal; min-width: 220px; }
+td { font-family: var(--mono); }
+td:first-child { font-family: var(--body); }
+tr.rec td:first-child { font-weight: 600; }
+tr.rec { background: color-mix(in srgb, var(--accent) 9%, transparent); }
+.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+.notes div { display: grid; gap: 8px; align-content: start; min-width: 0; }
+ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+code { font-family: var(--mono); font-size: 0.88em; }
+.hint { font-size: 13px; color: var(--muted); }
+.muted { color: var(--muted); }
+.legend i.ring { background: transparent; border: 2px solid var(--ring); }
+.chiprow { display: grid; gap: 6px; }
+.timeline { display: grid; gap: 6px; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; }
+.tl-top { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+.btn { font-family: var(--display); font-size: 13px; padding: 6px 12px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); border-radius: 6px; cursor: pointer; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); min-width: 64px; }
+.track { position: relative; }
+.track input { width: 100%; margin: 0; }
+.marks { position: relative; height: 10px; }
+.marks i { position: absolute; top: 0; width: 2px; height: 10px; background: var(--placed); transform: translateX(-1px); }
+#tv, #editlog { font-family: var(--mono); font-size: 12.5px; font-variant-numeric: tabular-nums; }
+select { font-family: var(--display); font-size: 13px; padding: 4px 6px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); border-radius: 4px; max-width: 100%; }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Hydrology · offline voxel study · 2026-10-23</div>
+    <h1>Water rules study</h1>
+    <p class="lede">A simulator of vanilla 1.22.7's water spreading, with Hydrology 0.1.3's rules and the candidate Game-of-Life rules as switches, run on Earth 0.16.5's river shapes. A search over the switches picked the rule set below. Compare it with 0.1.3 scene by scene in the two views.</p>
+  </header>
+
+  <section aria-labelledby="v-h">
+    <h2 id="v-h">Recommended rules</h2>
+    <p>Hydrology 0.1.3's rules H1 to H6 stay as they are. These local rules are added (each runs inside a cell's own update and reads at most its neighbours, its column, or H4's existing bounded search):</p>
+    <div class="verdict" id="rules"></div>
+    <div class="kpis" id="kpis"></div>
+  </section>
+
+  <section class="bench" aria-labelledby="b-h">
+    <h2 id="b-h">Watch the rules act</h2>
+    <p>Each view replays one run frame by frame: a frame at every 100 ms server pulse that changed something, and one right after each edit. Cells that changed in the current frame are outlined. Both views run on the same clock.</p>
+    <div class="chiprow"><span class="eyebrow">Study scenes</span><div class="chips" id="scenes" role="group" aria-label="Study scene"></div></div>
+    <div class="chiprow"><span class="eyebrow">Synthetic cases</span><div class="chips" id="cases" role="group" aria-label="Synthetic case"></div></div>
+    <p class="scene-desc" id="desc"></p>
+    <div class="timeline">
+      <div class="tl-top">
+        <button class="btn" id="back" type="button">&#9664; Frame</button>
+        <button class="btn primary" id="play" type="button">Play</button>
+        <button class="btn" id="step" type="button">Frame &#9654;</button>
+        <div class="seg" id="speeds" role="group" aria-label="Speed"></div>
+        <span id="tv"></span>
+      </div>
+      <div class="track"><label class="hint" for="time" hidden>Time</label><input type="range" id="time" min="0" max="1000" step="10" value="0"><div class="marks" id="marks"></div></div>
+      <span id="editlog"></span>
+    </div>
+    <div class="controls">
+      <div class="seg" id="modes" role="group" aria-label="What to show"></div>
+      <label class="inline" for="cut">Cut at row <input type="range" id="cut" min="0" max="15" value="6"> <span id="cutv"></span></label>
+    </div>
+    <div class="legend" id="legend"></div>
+    <div class="views">
+      <div class="view"><div class="head"><select id="leftSel" aria-label="Left view"></select><span class="eyebrow" id="ls"></span></div><h3 id="lt" hidden></h3><canvas id="c0"></canvas><div class="stats" id="s0"></div></div>
+      <div class="view"><div class="head"><select id="rightSel" aria-label="Right view"></select><span class="eyebrow" id="rs"></span></div><h3 id="rt" hidden></h3><canvas id="c1"></canvas><div class="stats" id="s1"></div></div>
+    </div>
+    <p class="hint">Drag to turn, scroll or pinch to zoom; the two views move together. The cut hides everything nearer than the chosen row, so curtains and ramps show in section. Orange blocks are stones the edits put in; orange ticks on the time line are the edits. Text frames for the same runs: <code>watersim play &lt;scene&gt; &lt;rules&gt; --frames &lt;folder&gt;</code>.</p>
+  </section>
+
+  <section aria-labelledby="r-h">
+    <h2 id="r-h">Ranking</h2>
+    <p>3 seeds × 1000 random edit sequences per scene (1 to 6 blocks placed or broken, at player speed, then undone in reverse), plus place-and-remove pokes beside the water, on the 12 study scenes. Lower score is better. Rows below the first three take one rule away from the recommended set (or add containment), to show what each rule does.</p>
+    <div class="tablewrap"><table id="rank"></table></div>
+  </section>
+
+  <section class="notes" aria-labelledby="n-h">
+    <div>
+      <h2 id="n-h">What Earth should generate</h2>
+      <p>Earth 0.16.5 generates ordinary sources at a lip and ordinary falling water in the curtain, which turn rapid at the first update (seen at Niagara). Its step already stays as generated. If Earth draws its drops as below, nothing changes on the first update or after any of 1,796 pokes, under the recommended rules and under 0.1.3 (labels aside):</p>
+      <ul>
+        <li>curtain lip: every source beside the curtain, both layers of the 2-deep lip, as <code>rapidwater-&lt;dir&gt;-7</code>;</li>
+        <li>curtain: <code>rapidwater-d-6</code> up to the upper water's level, top cell included;</li>
+        <li>curtain bottom cell, on the plunge pool: <code>rapidwater-&lt;dir&gt;-6</code>; the ramp 5 to 1 after it as now;</li>
+        <li>chute step edge: the upper segment's top source as <code>rapidwater-&lt;dir&gt;-7</code>;</li>
+        <li>chute spill: <code>rapidwater-d-3</code> above the first ramp cell of the next segment;</li>
+        <li>1-block step edge: <code>water-&lt;dir&gt;-7</code> (label only).</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Remaining risks</h2>
+      <ul>
+        <li>3.7% of undone edit sequences still end in a different state. Under 0.1.3 it was 13.7%. Most leave a ramp one height off. Some sources are made on a floor a player put in and then took away, which moves a step by one cell. A dead-end channel beside a ramp stays dry, because vanilla sends water only toward a drop.</li>
+        <li>Every result here is from the simulator, not the game. The port follows the decompiled 1.22.7 behaviour and reproduces the known in-game results, but the server test harness has to confirm it.</li>
+        <li>Later targets (ponds, diversions, dam failure, locks, long runs, power) were played with crude prototype rules: none is blocked by the recommended set (see the report). Long runs need new liquid blocks for sub-levels.</li>
+        <li>The scenes run along one axis. Diagonal rivers, frozen water, water wheels as blocks and chunk edges were not modelled. Pool layout 4's lake rim is modelled from its description, not from Earth's code.</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+const DATA = /*__DATA__*/null;
+const RULES = [
+  { n: "Survival", t: "Survival=1, SurvivalContained=0", d: "A source stays a source only while solid ground or a source is right under it. Otherwise it turns into flowing water and drains. This removes sources left in the air after their floor goes." },
+  { n: "Fall label", t: "FallLabel", d: "Water resting on neither ground nor a source is labelled falling, by vanilla's own label function. A column of water in the air is then always a falling column. Of all the rules, leaving this one out costs the most." },
+  { n: "No side feed from falling water", t: "FallingFeedsSideways=0", d: "Falling water still in the air feeds only the cell below it, so a curtain can no longer hold up a second curtain beside it. Once it lands it feeds its sides as in vanilla." },
+  { n: "Wake on the fall label", t: "WakeOnFallLabel", d: "A cell whose label turns falling wakes its lower flowing neighbours, which it no longer feeds. Without it, a stray column beside a curtain is never re-checked." },
+  { n: "Level relax", t: "LevelRelax", d: "A flowing cell lower than its feeders allow is raised (6 under water, else one less than its highest feeder). Ramps then end up the same whatever order the cells updated in." },
+  { n: "Refill on a source", t: "RefillOnSource=3", d: "A flowing cell on a source with 3 source sides becomes a source. Vanilla has this rule but never reaches it beside a drop, so a knocked-out lip cell never came back." },
+  { n: "Rapid sources as sheets", t: "RapidSourceSheet", d: "A rapid source that has a source beside it spreads to all sides, like ordinary water. Lone rapid springs keep vanilla's single stream." },
+  { n: "Wake edges on a new source", t: "WakeEdgesOnNewSource", d: "A cell that has just become a source wakes the rapid edges within H4's reach, so an edge that went rapid during a passing hole turns back." },
+  { n: "Not lone with water above or below", t: "LoneVertical", d: "A rapid source with a source above or below it is not a lone spring, so H4 can revert it (for example in a shaft)." },
+];
+const NOT = [
+  "Containment (every side solid, a source, or water it flows into) was tried and left out. It adds nothing once the other rules are in. Without them it caused 26 never-ending update runs.",
+  "Feeding only from falling water or a source above, filling on any source, and waking every lower neighbour (WakeLowerSides) made no difference or flooded steps.",
+];
+
+const KIND = { 1: "water", 2: "rapid", 3: "salt" };
+const PAL = {
+  water: { src: 0x2f6fd0, flow: 0x72b6ee, fall: 0xd3e9fb },
+  rapid: { src: 0x0f9a86, flow: 0x45d5b9, fall: 0xbdf3e6 },
+  salt:  { src: 0x4a4fb3, flow: 0x9096ea, fall: 0xd9dbfb },
+};
+const MODES = [["play", "Playback"], ["generated", "As generated"], ["settled", "Every cell woken once"]];
+const SPEEDS = [1, 4, 16];
+const S = DATA.scenes;
+const sel = { i: 0, mode: "play", cut: null, left: 0, right: 1, t: 0, playing: false, speed: 4 };
+
+function css(v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
+const $ = id => document.getElementById(id);
+
+// ---------------------------------------------------------------- verdict and ranking
+$("rules").innerHTML = RULES.map(r => `<div class="rule new"><b>${r.n}</b><span class="tag">${r.t}</span><span>${r.d}</span></div>`).join("") +
+  `<div class="rule"><b>Left out</b><span>${NOT.join(" ")}</span></div>`;
+const byName = Object.fromEntries(DATA.scores.map(s => [s.name, s]));
+const pct = x => (100 * x).toFixed(1) + "%";
+function kpi(label, f, fmt) {
+  const a = byName["Hydrology 0.1.3"], b = byName["Recommended"], c = byName["Vanilla 1.22.7"];
+  return `<div class="kpi"><div class="v"><span class="good">${fmt(f(b))} recommended</span><span>${fmt(f(a))} in 0.1.3</span><span class="muted">${fmt(f(c))} vanilla</span></div><div class="k">${label}</div></div>`;
+}
+$("kpis").innerHTML = [
+  kpi("function checks failed (fill, rapid edges, wheels, lake levels, curtains, Victoria)", s => s.fail, x => x),
+  kpi("runs whose updates never stopped (3 min of game time)", s => s.loops, x => x),
+  kpi("cells of water standing in the air after the scripts (3 seeds)", s => s.floating, x => x),
+  kpi("undone edit sequences that did not come back", s => s.fuzzChanged / s.fuzz, pct),
+].join("");
+$("rank").innerHTML = `<thead><tr><th>Rule set</th><th>Score</th><th>Checks failed</th><th>Never stopped</th><th>Standing water</th><th>Sequences changed</th><th>Pokes changed (settled)</th><th>Pokes changed (Earth shape)</th><th>Sources gained / lost</th><th>Updates per edit</th></tr></thead><tbody>` +
+  DATA.scores.map(s => `<tr class="${s.kind === "rec" ? "rec" : ""}"><td>${s.name}</td><td>${s.score.toFixed(0)}</td><td class="${s.fail ? "bad" : ""}">${s.fail}</td><td class="${s.loops ? "bad" : ""}">${s.loops}</td><td class="${s.floating ? "bad" : ""}">${s.floating}</td><td>${pct(s.fuzzChanged / s.fuzz)}</td><td>${s.pokesSettled} / ${s.pokes}</td><td>${s.pokesEarth} / ${s.pokes}</td><td>${s.gained} / ${s.lost}</td><td>${s.updates.toFixed(1)}</td></tr>`).join("") + "</tbody>";
+
+$("legend").innerHTML = [
+  ["source", PAL.water.src], ["flowing", PAL.water.flow], ["falling", PAL.water.fall],
+  ["rapid source", PAL.rapid.src], ["rapid flowing", PAL.rapid.flow], ["rapid falling", PAL.rapid.fall],
+  ["salt source", PAL.salt.src], ["salt flowing", PAL.salt.flow],
+].map(([n, c]) => `<span><i style="background:#${c.toString(16).padStart(6, "0")}"></i>${n}</span>`).join("") +
+  `<span><i style="background:var(--stone)"></i>stone</span><span><i style="background:var(--placed)"></i>stone put in by the edits</span><span><i class="ring"></i>changed in this frame</span>`;
+
+// ---------------------------------------------------------------- scene state
+function decodeFull(list, n) { const a = new Int16Array(n); for (let k = 0; k < list.length; k += 2) a[list[k]] = list[k + 1]; return a; }
+function applyPairs(a, list) { for (let k = 0; k < list.length; k += 2) a[list[k]] = list[k + 1]; }
+const cache = new Map();
+function runData(sc, run) {
+  const key = sc.name + "|" + run.key;
+  if (cache.has(key)) return cache.get(key);
+  const n = sc.sx * sc.sy * sc.sz;
+  const start = decodeFull(run.alt ? sc.alt : sc.earth, n);
+  const keys = [];               // keyframe every 40 frames: state after frame k
+  const a = start.slice();
+  run.frames.forEach((f, k) => { applyPairs(a, f.c); if (k % 40 === 39) keys.push([k, a.slice()]); });
+  const d = { start, keys, n };
+  cache.set(key, d);
+  return d;
+}
+function stateAt(sc, run, k) {
+  const d = runData(sc, run);
+  let a = d.start, from = 0;
+  for (const [kk, arr] of d.keys) if (kk <= k) { a = arr; from = kk + 1; }
+  a = a.slice();
+  for (let j = from; j <= k; j++) applyPairs(a, run.frames[j].c);
+  return a;
+}
+function frameAt(run, t) { let k = -1; for (let j = 0; j < run.frames.length; j++) { if (run.frames[j].t <= t) k = j; else break; } return k; }
+function sceneEnd(sc) { return Math.max(...[sel.left, sel.right].map(i => { const f = sc.runs[i].frames; return f.length ? f[f.length - 1].t : 0; })); }
+function editTimes(sc) {
+  const out = [];
+  for (const f of sc.runs[sel.left].frames) if (f.e >= 0) out.push([f.t, f.e]);
+  return out;
+}
+
+// ---------------------------------------------------------------- 3D
+const views = [0, 1].map(i => makeView($("c" + i)));
+let syncing = false;
+views.forEach((v, i) => v.controls.addEventListener("change", () => {
+  if (syncing) return; syncing = true;
+  const o = views[1 - i];
+  o.camera.position.copy(v.camera.position); o.controls.target.copy(v.controls.target); o.controls.update();
+  syncing = false; draw();
+}));
+function makeView(canvas) {
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+  renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 500);
+  const controls = new THREE.OrbitControls(camera, canvas);
+  scene.add(new THREE.AmbientLight(0xffffff, 0.62));
+  const sun = new THREE.DirectionalLight(0xffffff, 0.55); sun.position.set(0.6, 1, 0.8); scene.add(sun);
+  const group = new THREE.Group(); scene.add(group);
+  return { renderer, scene, camera, controls, group, canvas };
+}
+const box = new THREE.BoxGeometry(1, 1, 1);
+const ringGeo = new THREE.EdgesGeometry(new THREE.BoxGeometry(1.04, 1.04, 1.04));
+
+function buildInto(v, sc, cells, startCells, changed, cutZ) {
+  while (v.group.children.length) { const c = v.group.children.pop(); if (c.material) c.material.dispose(); }
+  const { sx, sy, sz } = sc;
+  const idx = (x, y, z) => (y * sz + z) * sx + x;
+  const solid = (x, y, z) => x < 0 || y < 0 || z < 0 || x >= sx || y >= sy || z >= sz ? false : cells[idx(x, y, z)] === -1;
+  const stones = [], placed = [], water = [];
+  for (let y = 0; y < sy; y++) for (let z = 0; z <= cutZ; z++) for (let x = 0; x < sx; x++) {
+    const i = idx(x, y, z), c = cells[i];
+    if (c === -1) {
+      const exposed = z === cutZ || !solid(x + 1, y, z) || !solid(x - 1, y, z) || !solid(x, y + 1, z) || !solid(x, y, z + 1) || !solid(x, y, z - 1);
+      if (exposed) (startCells[i] === -1 ? stones : placed).push([x, y, z]);
+    } else if (c > 0) water.push([x, y, z, c]);
+  }
+  const m = new THREE.Matrix4(), s = new THREE.Matrix4(), col = new THREE.Color();
+  const ox = -sx / 2, oz = -sz / 2;
+  function inst(list, color) {
+    if (!list.length) return;
+    const mesh = new THREE.InstancedMesh(box, new THREE.MeshLambertMaterial({ color }), list.length);
+    list.forEach(([x, y, z], k) => { m.makeTranslation(x + ox + 0.5, y + 0.5, z + oz + 0.5); mesh.setMatrixAt(k, m); });
+    v.group.add(mesh);
+  }
+  inst(stones, new THREE.Color(css("--stone")));
+  inst(placed, new THREE.Color(css("--placed")));
+  if (water.length) {
+    const mesh = new THREE.InstancedMesh(box, new THREE.MeshLambertMaterial({ transparent: true, opacity: 0.86 }), water.length);
+    water.forEach(([x, y, z, code], k) => {
+      const kind = KIND[Math.floor(code / 1000)], flow = Math.floor(code / 10) % 100, lvl = code % 10;
+      const above = y + 1 < sy ? cells[idx(x, y + 1, z)] > 0 : false;
+      let h, w = 1, cls;
+      if (lvl === 7) { cls = "src"; h = above ? 1 : 0.92; }
+      else if (flow === 9) { cls = "fall"; h = 1; w = 0.72; }
+      else { cls = "flow"; h = above ? 1 : Math.max(0.12, lvl / 7 * 0.9); }
+      s.makeScale(w, h, w); m.makeTranslation(x + ox + 0.5, y + h / 2, z + oz + 0.5); m.multiply(s);
+      mesh.setMatrixAt(k, m); mesh.setColorAt(k, col.setHex(PAL[kind][cls]));
+    });
+    v.group.add(mesh);
+  }
+  if (changed && changed.length) {
+    const mat = new THREE.LineBasicMaterial({ color: new THREE.Color(css("--ring")) });
+    for (let k = 0; k < changed.length; k += 2) {
+      const i = changed[k];
+      const x = i % sx, z = Math.floor(i / sx) % sz, y = Math.floor(i / (sx * sz));
+      if (z > cutZ) continue;
+      const seg = new THREE.LineSegments(ringGeo, mat);
+      seg.position.set(x + ox + 0.5, y + 0.5, z + oz + 0.5);
+      v.group.add(seg);
+    }
+  }
+}
+function fitCameras(sc) {
+  const d = Math.max(sc.sx, sc.sy * 1.4) * 1.25;
+  views.forEach(v => { v.camera.position.set(d * 0.35, sc.sy * 1.15, d * 0.95); v.controls.target.set(0, sc.sy * 0.42, 0); v.controls.update(); });
+}
+function draw() {
+  views.forEach(v => {
+    const w = v.canvas.clientWidth, h = v.canvas.clientHeight;
+    if (v.canvas.width !== Math.floor(w * v.renderer.getPixelRatio())) { v.renderer.setSize(w, h, false); v.camera.aspect = w / h; v.camera.updateProjectionMatrix(); }
+  });
+  const bg = new THREE.Color(css("--canvas"));
+  views.forEach(v => { v.scene.background = bg; v.renderer.render(v.scene, v.camera); });
+}
+
+// ---------------------------------------------------------------- controls
+function chipRow(el, list) {
+  list.forEach(([s, i]) => {
+    const b = document.createElement("button");
+    b.className = "chip"; b.textContent = s.title; b.id = "scene-" + s.name; b.dataset.i = i;
+    b.addEventListener("click", () => selectScene(i));
+    el.appendChild(b);
+  });
+}
+chipRow($("scenes"), S.scenes.map((s, i) => [s, i]).filter(([s]) => s.study));
+chipRow($("cases"), S.scenes.map((s, i) => [s, i]).filter(([s]) => !s.study));
+MODES.forEach(([k, n]) => {
+  const b = document.createElement("button");
+  b.textContent = n; b.dataset.k = k; b.id = "mode-" + k;
+  b.addEventListener("click", () => { sel.mode = k; render(); });
+  $("modes").appendChild(b);
+});
+SPEEDS.forEach(sp => {
+  const b = document.createElement("button");
+  b.textContent = sp + "00d7"; b.dataset.s = sp; b.id = "speed-" + sp;
+  b.addEventListener("click", () => { sel.speed = sp; render(false); });
+  $("speeds").appendChild(b);
+});
+$("leftSel").addEventListener("change", () => { sel.left = +$("leftSel").value; render(); });
+$("rightSel").addEventListener("change", () => { sel.right = +$("rightSel").value; render(); });
+$("cut").addEventListener("input", () => { sel.cut = +$("cut").value; render(false); });
+$("time").addEventListener("input", () => { sel.t = +$("time").value; sel.mode = "play"; stop(); render(false); });
+$("play").addEventListener("click", () => {
+  const sc = S.scenes[sel.i];
+  if (sel.playing) { stop(); return; }
+  sel.mode = "play";
+  if (sel.t >= sceneEnd(sc)) sel.t = 0;
+  sel.playing = true; last = null; requestAnimationFrame(tick); render(false);
+});
+$("step").addEventListener("click", () => {
+  const sc = S.scenes[sel.i]; stop(); sel.mode = "play";
+  let next = Infinity;
+  for (const i of [sel.left, sel.right]) for (const f of sc.runs[i].frames) if (f.t > sel.t) { next = Math.min(next, f.t); break; }
+  if (next < Infinity) sel.t = next;
+  render(false);
+});
+$("back").addEventListener("click", () => {
+  const sc = S.scenes[sel.i]; stop(); sel.mode = "play";
+  let prev = 0;
+  for (const i of [sel.left, sel.right]) for (const f of sc.runs[i].frames) if (f.t < sel.t) prev = Math.max(prev, f.t);
+  sel.t = prev; render(false);
+});
+function stop() { sel.playing = false; $("play").textContent = "Play"; }
+let last = null;
+function tick(ts) {
+  if (!sel.playing) return;
+  const sc = S.scenes[sel.i];
+  if (last != null) sel.t = Math.min(sceneEnd(sc), sel.t + (ts - last) * sel.speed);
+  last = ts;
+  render(false);
+  if (sel.t >= sceneEnd(sc)) { stop(); return; }
+  requestAnimationFrame(tick);
+}
+function selectScene(i) {
+  stop();
+  sel.i = i; sel.cut = null; sel.t = 0; sel.left = 0; sel.right = Math.min(1, S.scenes[i].runs.length - 1);
+  const sc = S.scenes[i];
+  for (const [id, cur] of [["leftSel", sel.left], ["rightSel", sel.right]]) {
+    const el = $(id); el.innerHTML = "";
+    sc.runs.forEach((r, k) => el.add(new Option(r.label, k, false, k === cur)));
+  }
+  try { history.replaceState(null, "", "#" + sc.name); } catch (e) {}
+  render();
+}
+
+// ---------------------------------------------------------------- render
+let lastScene = -1;
+function render(refit = true) {
+  const sc = S.scenes[sel.i];
+  document.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", +b.dataset.i === sel.i));
+  [...$("modes").children].forEach(b => b.setAttribute("aria-pressed", b.dataset.k === sel.mode));
+  [...$("speeds").children].forEach(b => b.setAttribute("aria-pressed", +b.dataset.s === sel.speed));
+  $("desc").textContent = sc.description + (sc.how === "script" ? "" : ` Edits: a random sequence of ${sc.edits.length / 2} blocks, undone again (the worst of 300 for 0.1.3; the same one in every view).`);
+  if (sel.cut == null) sel.cut = Math.min(sc.sz - 1, sc.section);
+  $("cut").max = sc.sz - 1; $("cut").value = sel.cut; $("cutv").textContent = sel.cut;
+  const end = sceneEnd(sc);
+  $("time").max = end; $("time").value = Math.min(sel.t, end);
+  $("tv").textContent = `${(sel.t / 1000).toFixed(2)} s of ${(end / 1000).toFixed(1)} s`;
+  $("play").textContent = sel.playing ? "Pause" : "Play";
+  // edit marks on the time line, and the edit log
+  const marks = editTimes(sc);
+  $("marks").innerHTML = marks.map(([t, e]) => `<i style="left:${end ? (100 * t / end).toFixed(2) : 0}%" title="${sc.edits[e].v} ${sc.edits[e].x},${sc.edits[e].y},${sc.edits[e].z} at ${(t / 1000).toFixed(1)} s"></i>`).join("");
+  const done = marks.filter(([t]) => t <= sel.t);
+  $("editlog").textContent = !marks.length ? "No edits." : done.length
+    ? `Edit ${done.length} of ${marks.length}: ${sc.edits[done[done.length - 1][1]].v} ${sc.edits[done[done.length - 1][1]].x},${sc.edits[done[done.length - 1][1]].y},${sc.edits[done[done.length - 1][1]].z} at ${(done[done.length - 1][0] / 1000).toFixed(1)} s`
+    : `First edit at ${(marks[0][0] / 1000).toFixed(1)} s`;
+  [sel.left, sel.right].forEach((ri, k) => {
+    const run = sc.runs[ri];
+    const d = runData(sc, run);
+    let cells, changed = null, label, fk = -1;
+    if (sel.mode === "generated") { cells = d.start; label = "as generated"; }
+    else if (sel.mode === "settled") { cells = d.start.slice(); applyPairs(cells, run.settled); label = "every cell woken once"; changed = run.settled; }
+    else {
+      fk = frameAt(run, sel.t);
+      cells = fk < 0 ? d.start : stateAt(sc, run, fk);
+      if (fk >= 0 && run.frames[fk].t > sel.t - 101) changed = run.frames[fk].c;
+      label = fk < 0 ? "start" : `frame ${fk + 1} of ${run.frames.length}`;
+    }
+    buildInto(views[k], sc, cells, d.start, changed, sel.cut);
+    $(k ? "rt" : "lt").textContent = run.label;
+    $(k ? "rs" : "ls").textContent = label;
+    const fails = run.checks.filter(c => c.fail);
+    const row = (a, b, cls) => `<div class="row"><span>${a}</span><span class="${cls || ""}">${b}</span></div>`;
+    const fr = fk >= 0 ? run.frames[fk] : null;
+    $("s" + k).innerHTML =
+      (sel.mode === "play" ? row("this frame", fr ? `${fr.c.length / 2} cells changed, ${fr.u} updates` : "nothing yet") : "") +
+      row("at the end", `${run.after_vs_start} cells differ from the start`) +
+      row("every cell woken once", `${run.settled_vs_start} cells differ from the start`) +
+      row("water in the air at the end", run.floating_text, run.floating ? "bad" : "good") +
+      row("updates", run.updates + (run.stopped ? "" : " (never stopped)"), run.stopped ? "" : "bad") +
+      (run.info ? row("read-out", run.info) : "") +
+      (fails.length ? fails.map(c => row(c.name, c.fail, "bad")).join("") : row("checks", run.checks.length ? "all pass" : "none", "good"));
+  });
+  if (refit && lastScene !== sel.i) { fitCameras(sc); lastScene = sel.i; }
+  draw();
+}
+
+const startName = (location.hash || "#victoria").slice(1);
+const startIdx = S.scenes.findIndex(s => s.name === startName);
+window.addEventListener("resize", draw);
+try { matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => render(false)); } catch (e) {}
+new MutationObserver(() => render(false)).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+selectScene(startIdx >= 0 ? startIdx : 0);
+</script>

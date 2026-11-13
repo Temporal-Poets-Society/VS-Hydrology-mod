@@ -1,0 +1,23 @@
+== 0.1.7, no sills
+== drops in the Hydrology shape
+  step      first update: 0 cells, 0 visible labels changed; pokes: 6 of 392 change cells, 0 more change only visible labels, 0 never stop
+  chute     first update: 20 cells, 4 visible labels changed; pokes: 38 of 424 change cells, 0 more change only visible labels, 4 never stop
+== query rules, no sills
+== drops in the Hydrology shape
+  step      first update: 0 cells, 0 visible labels changed; pokes: 0 of 392 change cells, 0 more change only visible labels, 0 never stop
+  chute     first update: 0 cells, 0 visible labels changed; pokes: 0 of 424 change cells, 0 more change only visible labels, 0 never stop
+  fall      first update: 0 cells, 0 visible labels changed; pokes: 0 of 428 change cells, 0 more change only visible labels, 0 never stop
+  victoria  first update: 0 cells, 0 visible labels changed; pokes: 0 of 552 change cells, 0 more change only visible labels, 0 never stop
+[1.1 s]
+== flood, no sills
+step           017 generated: 0 new; 72 breaks, 0 add water, worst 0 at 
+step           017,QueryNoVessels=1,QueryRapids=1 generated: 0 new; 72 breaks, 0 add water, worst 0 at 
+chute          017 generated: 0 new; 116 breaks, 8 add water, worst 36 at 17,7,5
+chute          017,QueryNoVessels=1,QueryRapids=1 generated: 0 new; 116 breaks, 0 add water, worst 0 at 
+step-diagonal  017 generated: 0 new; 70 breaks, 0 add water, worst 0 at 
+step-diagonal  017,QueryNoVessels=1,QueryRapids=1 generated: 0 new; 70 breaks, 0 add water, worst 0 at 
+tapered-step   017 generated: 0 new; 92 breaks, 10 add water, worst 132 at 15,5,5
+tapered-step   017,QueryNoVessels=1,QueryRapids=1 generated: 0 new; 92 breaks, 0 add water, worst 0 at 
+tapered-chute  017 generated: 0 new; 260 breaks, 30 add water, worst 34 at 24,5,5
+tapered-chute  017,QueryNoVessels=1,QueryRapids=1 generated: 0 new; 260 breaks, 0 add water, worst 0 at 
+[2.3 s]

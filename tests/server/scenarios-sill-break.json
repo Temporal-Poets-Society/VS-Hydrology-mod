@@ -1,0 +1,210 @@
+[
+ {
+  "Name": "congo_rapids_sill",
+  "Kind": "step_break",
+  "Target": "sill",
+  "Sites": [
+   [
+    -5.543,
+    13.605
+   ],
+   [
+    -5.6,
+    13.6
+   ]
+  ]
+ },
+ {
+  "Name": "congo_rapids_ramp_bed",
+  "Kind": "step_break",
+  "Target": "ramp_bed",
+  "Sites": [
+   [
+    -5.543,
+    13.605
+   ],
+   [
+    -5.6,
+    13.6
+   ]
+  ]
+ },
+ {
+  "Name": "congo_rapids_bank",
+  "Kind": "step_break",
+  "Target": "bank",
+  "Sites": [
+   [
+    -5.543,
+    13.605
+   ],
+   [
+    -5.6,
+    13.6
+   ]
+  ]
+ },
+ {
+  "Name": "congo_rapids_mid_bed",
+  "Kind": "step_break",
+  "Target": "mid_bed",
+  "Sites": [
+   [
+    -5.543,
+    13.605
+   ],
+   [
+    -5.6,
+    13.6
+   ]
+  ]
+ },
+ {
+  "Name": "congo_step_sill",
+  "Kind": "step_break",
+  "Target": "sill",
+  "Sites": [
+   [
+    -4.9,
+    14.5
+   ],
+   [
+    -5.2,
+    14.0
+   ]
+  ]
+ },
+ {
+  "Name": "congo_step_ramp_bed",
+  "Kind": "step_break",
+  "Target": "ramp_bed",
+  "Sites": [
+   [
+    -4.9,
+    14.5
+   ],
+   [
+    -5.2,
+    14.0
+   ]
+  ]
+ },
+ {
+  "Name": "congo_step_bank",
+  "Kind": "step_break",
+  "Target": "bank",
+  "Sites": [
+   [
+    -4.9,
+    14.5
+   ],
+   [
+    -5.2,
+    14.0
+   ]
+  ]
+ },
+ {
+  "Name": "congo_step_mid_bed",
+  "Kind": "step_break",
+  "Target": "mid_bed",
+  "Sites": [
+   [
+    -4.9,
+    14.5
+   ],
+   [
+    -5.2,
+    14.0
+   ]
+  ]
+ },
+ {
+  "Name": "rhine_chute_sill",
+  "Kind": "step_break",
+  "Target": "sill",
+  "Sites": [
+   [
+    50.3199,
+    7.5307
+   ]
+  ]
+ },
+ {
+  "Name": "rhine_chute_ramp_bed",
+  "Kind": "step_break",
+  "Target": "ramp_bed",
+  "Sites": [
+   [
+    50.3199,
+    7.5307
+   ]
+  ]
+ },
+ {
+  "Name": "rhine_chute_bank",
+  "Kind": "step_break",
+  "Target": "bank",
+  "Sites": [
+   [
+    50.3199,
+    7.5307
+   ]
+  ]
+ },
+ {
+  "Name": "rhine_chute_mid_bed",
+  "Kind": "step_break",
+  "Target": "mid_bed",
+  "Sites": [
+   [
+    50.3199,
+    7.5307
+   ]
+  ]
+ },
+ {
+  "Name": "daugava_step_sill",
+  "Kind": "step_break",
+  "Target": "sill",
+  "Sites": [
+   [
+    56.61,
+    25.345
+   ]
+  ]
+ },
+ {
+  "Name": "daugava_step_ramp_bed",
+  "Kind": "step_break",
+  "Target": "ramp_bed",
+  "Sites": [
+   [
+    56.61,
+    25.345
+   ]
+  ]
+ },
+ {
+  "Name": "daugava_step_bank",
+  "Kind": "step_break",
+  "Target": "bank",
+  "Sites": [
+   [
+    56.61,
+    25.345
+   ]
+  ]
+ },
+ {
+  "Name": "daugava_step_mid_bed",
+  "Kind": "step_break",
+  "Target": "mid_bed",
+  "Sites": [
+   [
+    56.61,
+    25.345
+   ]
+  ]
+ }
+]

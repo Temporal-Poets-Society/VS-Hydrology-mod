@@ -1,0 +1,25 @@
+== vanilla-control: earth=False hydrology=False noLiquidSourceTransport=False (set=True) full bucket spills water-still-7
+== vanilla-hydro: earth=False hydrology=True noLiquidSourceTransport=True (set=True) full bucket spills water-still-3
+
+--- lab_bucket (lab_bucket)
+  ledge:
+       t0  vanilla-control: .  |  vanilla-hydro: .
+      t10  vanilla-control: S  |  vanilla-hydro: .
+      t30  vanilla-control: S  |  vanilla-hydro: .
+      t60  vanilla-control: S  |  vanilla-hydro: .
+  pit:
+       t0  vanilla-control:   |  vanilla-hydro: 
+      t10  vanilla-control: water-falling 2, water-flowing 13  |  vanilla-hydro: 
+      t30  vanilla-control: water-falling 2, water-flowing 13  |  vanilla-hydro: 
+      t60  vanilla-control: water-falling 2, water-flowing 13  |  vanilla-hydro: 
+
+--- wheels (flowRate / power source cells, every 4 s)
+
+--- server tick (s): mean / p99 / max / ticks over 100 ms, per window since the previous sample
+  vanilla-control: t10 52.1/438/680 ms/2; t30 48.7/49/410 ms/2; t60 46.9/48/50 ms/0
+  vanilla-hydro: t10 52.0/431/677 ms/2; t30 48.6/49/406 ms/2; t60 46.9/48/49 ms/0
+  vanilla-control: overall mean 48.28 ms over 1243 ticks, worst p99 438 ms, ticks over 100 ms 4
+  vanilla-hydro: overall mean 48.27 ms over 1244 ticks, worst p99 431 ms, ticks over 100 ms 4
+
+--- Hydrology counters (cumulative)
+  vanilla-hydro: at t60: Updates 380, DrainsRefused 6, RemovalsRefused 34, Filled 0, RapidSources 2, RapidSourcesReverted 0, MadeRapid 2, MadeOrdinary 0, time in rules 4.3 ms

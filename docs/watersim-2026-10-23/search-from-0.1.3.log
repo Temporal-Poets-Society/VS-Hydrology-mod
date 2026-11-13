@@ -1,0 +1,58 @@
+light: vanilla 21698.4, hydrology-0.1.3 6946.7
+round 1: current 6946.7 (hydrology-0.1.3)
+      2401.4  hydrology-0.1.3+FallLabel=1
+      5212.4  hydrology-0.1.3+RapidSourceSheet=1
+      5669.7  hydrology-0.1.3+RapidReach=4
+      5696.5  hydrology-0.1.3+H3SpreadOnLowerWater=0
+      5717.7  hydrology-0.1.3+H3FallsInAir=0
+round 2: current 2401.4 (hydrology-0.1.3+FallLabel=1)
+      2386.8  hydrology-0.1.3+FallLabel=1,LevelRelax=1
+      2386.9  hydrology-0.1.3+FallLabel=1,FallingFeedsSideways=0
+      2391.6  hydrology-0.1.3+FallLabel=1,WakeEdgesOnNewSource=1
+      2394.6  hydrology-0.1.3+RapidReach=4,FallLabel=1
+      2399.5  hydrology-0.1.3+RapidReach=5,FallLabel=1
+round 3: current 2386.8 (hydrology-0.1.3+FallLabel=1,LevelRelax=1)
+      2372.2  hydrology-0.1.3+FallLabel=1,WakeEdgesOnNewSource=1,LevelRelax=1
+      2380.6  hydrology-0.1.3+RapidReach=4,FallLabel=1,LevelRelax=1
+      2383.4  hydrology-0.1.3+RapidReach=5,FallLabel=1,LevelRelax=1
+      2385.1  hydrology-0.1.3+FallLabel=1,FallingFeedsSideways=0,LevelRelax=1
+      2385.5  hydrology-0.1.3+WakeSourcesBeside=0,FallLabel=1,LevelRelax=1
+round 4: current 2372.2 (hydrology-0.1.3+FallLabel=1,WakeEdgesOnNewSource=1,LevelRelax=1)
+      2286.3  hydrology-0.1.3+RapidReach=5,FallLabel=1,WakeEdgesOnNewSource=1,LevelRelax=1
+      2288.9  hydrology-0.1.3+WakeSourcesBeside=0,FallLabel=1,WakeEdgesOnNewSource=1,LevelRelax=1
+      2368.2  hydrology-0.1.3+RapidReach=4,FallLabel=1,WakeEdgesOnNewSource=1,LevelRelax=1
+      2371.3  hydrology-0.1.3+FallLabel=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1
+      2372.2  hydrology-0.1.3+SurvivalContained=0,FallLabel=1,WakeEdgesOnNewSource=1,LevelRelax=1
+round 5: current 2286.3 (hydrology-0.1.3+RapidReach=5,FallLabel=1,WakeEdgesOnNewSource=1,LevelRelax=1)
+      2285.0  hydrology-0.1.3+RapidReach=5,FallLabel=1,FallingFeedsSideways=0,WakeEdgesOnNewSource=1,LevelRelax=1
+      2285.4  hydrology-0.1.3+RapidReach=5,FallLabel=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1
+      2286.3  hydrology-0.1.3+RapidReach=5,SurvivalContained=0,FallLabel=1,WakeEdgesOnNewSource=1,LevelRelax=1
+      2286.3  hydrology-0.1.3+RapidReach=5,SurvivalSourceSupports=0,FallLabel=1,WakeEdgesOnNewSource=1,LevelRelax=1
+      2286.3  hydrology-0.1.3+RapidReach=5,FallLabel=1,SurvivalBirth=1,WakeEdgesOnNewSource=1,LevelRelax=1
+round 6: current 2285.0 (hydrology-0.1.3+RapidReach=5,FallLabel=1,FallingFeedsSideways=0,WakeEdgesOnNewSource=1,LevelRelax=1)
+      2284.1  hydrology-0.1.3+RapidReach=5,FallLabel=1,FallingFeedsSideways=0,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1
+      2285.0  hydrology-0.1.3+RapidReach=5,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,WakeEdgesOnNewSource=1,LevelRelax=1
+      2285.0  hydrology-0.1.3+RapidReach=5,SurvivalSourceSupports=0,FallLabel=1,FallingFeedsSideways=0,WakeEdgesOnNewSource=1,LevelRelax=1
+      2285.0  hydrology-0.1.3+RapidReach=5,FallLabel=1,FallingFeedsSideways=0,SurvivalBirth=1,WakeEdgesOnNewSource=1,LevelRelax=1
+      2285.0  hydrology-0.1.3+RapidReach=5,FallLabel=1,FallingFeedsSideways=0,SurvivalBirth=2,WakeEdgesOnNewSource=1,LevelRelax=1
+round 7: current 2284.1 (hydrology-0.1.3+RapidReach=5,FallLabel=1,FallingFeedsSideways=0,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1)
+      2284.1  hydrology-0.1.3+RapidReach=5,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1
+      2284.1  hydrology-0.1.3+RapidReach=5,SurvivalSourceSupports=0,FallLabel=1,FallingFeedsSideways=0,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1
+      2284.1  hydrology-0.1.3+RapidReach=5,FallLabel=1,FallingFeedsSideways=0,SurvivalBirth=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1
+      2284.1  hydrology-0.1.3+RapidReach=5,FallLabel=1,FallingFeedsSideways=0,SurvivalBirth=2,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1
+      2284.1  hydrology-0.1.3+RapidReach=5,FallLabel=1,AboveFeeds=1,FallingFeedsSideways=0,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1
+   no better change: stop
+heavy round: 13 rule sets, 1 seeds x (0 pokes + 0 sequences) per scene
+     2259.8  hydrology-0.1.3+RapidReach=5,FallLabel=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1  fail=2 loops=0 float=2+0 seq=0/0 pokes=0/0/0 diff=156
+     2259.8  hydrology-0.1.3+RapidReach=5,FallLabel=1,FallingFeedsSideways=0,LoneVertical=1,WakeEdgesOnNewSource=1  fail=2 loops=0 float=2+0 seq=0/0 pokes=0/0/0 diff=156
+     2260.7  hydrology-0.1.3+RapidReach=5,FallLabel=1,FallingFeedsSideways=0,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1  fail=2 loops=0 float=2+0 seq=0/0 pokes=0/0/0 diff=156
+     2260.7  hydrology-0.1.3+RapidReach=5,FallLabel=1,FallingFeedsSideways=0,WakeEdgesOnNewSource=1,LevelRelax=1  fail=2 loops=0 float=2+0 seq=0/0 pokes=0/0/0 diff=156
+     2260.7  hydrology-0.1.3+FallLabel=1,FallingFeedsSideways=0,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1  fail=2 loops=0 float=2+0 seq=0/0 pokes=0/0/0 diff=156
+     2260.7  hydrology-0.1.3+RapidReach=5,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1  fail=2 loops=0 float=2+0 seq=0/0 pokes=0/0/0 diff=156
+     2260.7  hydrology-0.1.3+RapidReach=5,SurvivalSourceSupports=0,FallLabel=1,FallingFeedsSideways=0,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1  fail=2 loops=0 float=2+0 seq=0/0 pokes=0/0/0 diff=156
+     2260.7  hydrology-0.1.3+RapidReach=5,FallLabel=1,FallingFeedsSideways=0,SurvivalBirth=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1  fail=2 loops=0 float=2+0 seq=0/0 pokes=0/0/0 diff=156
+     2260.7  hydrology-0.1.3+RapidReach=5,FallLabel=1,FallingFeedsSideways=0,SurvivalBirth=2,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1  fail=2 loops=0 float=2+0 seq=0/0 pokes=0/0/0 diff=156
+     2310.7  hydrology-0.1.3+RapidReach=5,FallLabel=1,FallingFeedsSideways=0,LoneVertical=1,LevelRelax=1  fail=2 loops=0 float=3+0 seq=0/0 pokes=0/0/0 diff=156
+     4973.0  hydrology-0.1.3  fail=4 loops=0 float=16+0 seq=0/0 pokes=0/0/0 diff=171
+     5159.1  hydrology-0.1.3+RapidReach=5,FallingFeedsSideways=0,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1  fail=4 loops=0 float=20+0 seq=0/0 pokes=0/0/0 diff=157
+    19515.2  vanilla  fail=16 loops=0 float=37+24 seq=0/0 pokes=0/0/0 diff=437

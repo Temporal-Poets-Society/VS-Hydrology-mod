@@ -1,0 +1,6 @@
+[
+  {"Name": "olt_racovita", "Kind": "river_poke", "Sites": [[45.5637, 24.2618]]},
+  {"Name": "tanaro_report", "Kind": "river_poke", "Sites": [[45.0277, 8.8445]]},
+  {"Name": "aare_bern", "Kind": "river_poke", "Sites": [[46.95, 7.45]]},
+  {"Name": "congo_rapids", "Kind": "river_poke", "Sites": [[-5.60, 13.60]]}
+]

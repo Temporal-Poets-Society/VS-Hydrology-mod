@@ -1,0 +1,1 @@
+{ "type": "code", "modid": "cylinderworld", "name": "Fake Cylinder World (Hydrology tests only: CW geometry without its runtime)", "version": "1.0.4", "side": "Universal", "requiredOnClient": false, "dependencies": { "game": "" } }

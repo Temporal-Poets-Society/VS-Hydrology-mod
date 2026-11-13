@@ -1,0 +1,82 @@
+== drops as Earth 0.16.5 places them
+  step      first update: 0 cells, 6 visible labels changed; pokes: 0 of 392 change cells, 30 more change only visible labels, 0 never stop
+  chute     first update: 30 cells, 0 visible labels changed; pokes: 108 of 420 change cells, 8 more change only visible labels, 0 never stop
+  fall      first update: 54 cells, 6 visible labels changed; pokes: 80 of 428 change cells, 8 more change only visible labels, 0 never stop
+  victoria  first update: 72 cells, 8 visible labels changed; pokes: 104 of 552 change cells, 10 more change only visible labels, 0 never stop
+== drops in the Hydrology shape
+  step      first update: 0 cells, 0 visible labels changed; pokes: 0 of 392 change cells, 0 more change only visible labels, 0 never stop
+  chute     first update: 0 cells, 0 visible labels changed; pokes: 0 of 424 change cells, 0 more change only visible labels, 0 never stop
+  fall      first update: 0 cells, 0 visible labels changed; pokes: 0 of 428 change cells, 0 more change only visible labels, 0 never stop
+  victoria  first update: 0 cells, 0 visible labels changed; pokes: 0 of 552 change cells, 0 more change only visible labels, 0 never stop
+
+== drops as Earth 0.16.5 places them
+  step      first update: 0 cells, 6 visible labels changed; pokes: 0 of 392 change cells, 30 more change only visible labels, 0 never stop
+  chute     first update: 30 cells, 0 visible labels changed; pokes: 108 of 420 change cells, 8 more change only visible labels, 0 never stop
+  fall      first update: 59 cells, 0 visible labels changed; pokes: 80 of 428 change cells, 8 more change only visible labels, 0 never stop
+  victoria  first update: 82 cells, 0 visible labels changed; pokes: 104 of 552 change cells, 10 more change only visible labels, 0 never stop
+== drops in the Hydrology shape
+  step      first update: 0 cells, 0 visible labels changed; pokes: 0 of 392 change cells, 0 more change only visible labels, 0 never stop
+  chute     first update: 0 cells, 12 visible labels changed; pokes: 0 of 424 change cells, 104 more change only visible labels, 0 never stop
+    18,8,4: water-still-7 -> water-d-7
+    18,8,5: water-still-7 -> water-d-7
+    18,8,6: water-still-7 -> water-d-7
+    18,8,7: water-still-7 -> water-d-7
+    18,8,8: water-still-7 -> water-d-7
+    18,8,9: water-still-7 -> water-d-7
+    15,9,4: water-still-7 -> water-d-7
+    15,9,5: water-still-7 -> water-d-7
+    15,9,6: water-still-7 -> water-d-7
+    15,9,7: water-still-7 -> water-d-7
+    15,9,8: water-still-7 -> water-d-7
+    15,9,9: water-still-7 -> water-d-7
+    18,10,4: rapidwater-d-3 -> rapidwater-e-3
+    18,10,5: rapidwater-d-3 -> rapidwater-e-3
+    18,10,6: rapidwater-d-3 -> rapidwater-e-3
+    18,10,7: rapidwater-d-3 -> rapidwater-e-3
+    18,10,8: rapidwater-d-3 -> rapidwater-e-3
+    18,10,9: rapidwater-d-3 -> rapidwater-e-3
+    15,11,4: rapidwater-d-3 -> rapidwater-e-3
+    15,11,5: rapidwater-d-3 -> rapidwater-e-3
+    ... 24 cells
+  fall      first update: 0 cells, 12 visible labels changed; pokes: 0 of 428 change cells, 46 more change only visible labels, 0 never stop
+    13,8,4: water-still-7 -> water-d-7
+    13,8,5: water-still-7 -> water-d-7
+    13,8,6: water-still-7 -> water-d-7
+    13,8,7: water-still-7 -> water-d-7
+    13,8,8: water-still-7 -> water-d-7
+    13,8,9: water-still-7 -> water-d-7
+    13,15,4: rapidwater-d-6 -> rapidwater-e-6
+    13,15,5: rapidwater-d-6 -> rapidwater-e-6
+    13,15,6: rapidwater-d-6 -> rapidwater-e-6
+    13,15,7: rapidwater-d-6 -> rapidwater-e-6
+    13,15,8: rapidwater-d-6 -> rapidwater-e-6
+    13,15,9: rapidwater-d-6 -> rapidwater-e-6
+    13,16,4: rapidwater-d-6 -> rapidwater-e-6
+    13,16,5: rapidwater-d-6 -> rapidwater-e-6
+    13,16,6: rapidwater-d-6 -> rapidwater-e-6
+    13,16,7: rapidwater-d-6 -> rapidwater-e-6
+    13,16,8: rapidwater-d-6 -> rapidwater-e-6
+    13,16,9: rapidwater-d-6 -> rapidwater-e-6
+  victoria  first update: 0 cells, 16 visible labels changed; pokes: 0 of 552 change cells, 60 more change only visible labels, 0 never stop
+    13,8,4: water-still-7 -> water-d-7
+    13,8,5: water-still-7 -> water-d-7
+    13,8,6: water-still-7 -> water-d-7
+    13,8,7: water-still-7 -> water-d-7
+    13,8,8: water-still-7 -> water-d-7
+    13,8,9: water-still-7 -> water-d-7
+    13,8,10: water-still-7 -> water-d-7
+    13,8,11: water-still-7 -> water-d-7
+    13,15,4: rapidwater-d-6 -> rapidwater-e-6
+    13,15,5: rapidwater-d-6 -> rapidwater-e-6
+    13,15,6: rapidwater-d-6 -> rapidwater-e-6
+    13,15,7: rapidwater-d-6 -> rapidwater-e-6
+    13,15,8: rapidwater-d-6 -> rapidwater-e-6
+    13,15,9: rapidwater-d-6 -> rapidwater-e-6
+    13,15,10: rapidwater-d-6 -> rapidwater-e-6
+    13,15,11: rapidwater-d-6 -> rapidwater-e-6
+    13,16,4: rapidwater-d-6 -> rapidwater-e-6
+    13,16,5: rapidwater-d-6 -> rapidwater-e-6
+    13,16,6: rapidwater-d-6 -> rapidwater-e-6
+    13,16,7: rapidwater-d-6 -> rapidwater-e-6
+    ... 24 cells
+

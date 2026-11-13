@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>12</LangVersion>
+    <AssemblyName>FakeCylinder</AssemblyName>
+    <OutputPath>bin\mod\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <VintageStoryPath>$(APPDATA)\Vintagestory</VintageStoryPath>
+    <NetCoreRuntimeDir>$([System.IO.Directory]::GetDirectories('$(NetCoreRoot)shared\Microsoft.NETCore.App', '10.*')[0])</NetCoreRuntimeDir>
+    <NoWarn>$(NoWarn);CA1416</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="src\**\*.cs" />
+    <None Include="modinfo.json" CopyToOutputDirectory="PreserveNewest" />
+    <Reference Include="$(NetCoreRuntimeDir)\System.*.dll" Exclude="$(NetCoreRuntimeDir)\System.Private.*.dll;$(NetCoreRuntimeDir)\System.IO.Compression.Native.dll" Private="false" />
+    <Reference Include="$(NetCoreRuntimeDir)\System.Private.CoreLib.dll" Private="false" />
+    <Reference Include="$(NetCoreRuntimeDir)\netstandard.dll" Private="false" />
+    <Reference Include="$(NetCoreRuntimeDir)\mscorlib.dll" Private="false" />
+    <Reference Include="VintagestoryAPI"><HintPath>$(VintageStoryPath)\VintagestoryAPI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="VSEssentials"><HintPath>$(VintageStoryPath)\Mods\VSEssentials.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="VSSurvivalMod"><HintPath>$(VintageStoryPath)\Mods\VSSurvivalMod.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

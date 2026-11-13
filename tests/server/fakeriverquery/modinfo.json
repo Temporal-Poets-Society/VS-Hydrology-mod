@@ -1,0 +1,1 @@
+{ "type": "code", "modid": "fakeriverquery", "name": "Fake river query (Hydrology tests only, never beside Earth)", "version": "0.1.0", "side": "Server", "requiredOnClient": false, "dependencies": { "game": "" } }

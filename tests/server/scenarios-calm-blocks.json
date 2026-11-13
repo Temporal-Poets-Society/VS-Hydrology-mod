@@ -1,0 +1,5 @@
+[
+  {"Name": "olt_block", "Kind": "river_block", "Sites": [[45.5637, 24.2618]]},
+  {"Name": "tanaro_block", "Kind": "river_block", "Sites": [[45.0277, 8.8445]]},
+  {"Name": "congo_block", "Kind": "river_block", "Sites": [[-5.60, 13.60]]}
+]

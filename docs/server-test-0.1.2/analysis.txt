@@ -1,0 +1,1147 @@
+== earth-hydro: earth=True hydrology=True noLiquidSourceTransport=True (set=True) full bucket spills water-still-3
+== earth-control: earth=True hydrology=False noLiquidSourceTransport=False (set=True) full bucket spills water-still-7
+== vanilla-hydro: earth=False hydrology=True noLiquidSourceTransport=True (set=True) full bucket spills water-still-3
+== vanilla-control: earth=False hydrology=False noLiquidSourceTransport=False (set=True) full bucket spills water-still-7
+
+--- lab_trench2_in (lab_trench)
+  trench:
+       t0  earth-hydro: ..............................  |  earth-control: ..............................  |  vanilla-hydro: ..............................  |  vanilla-control: ..............................
+      t10  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSf  |  vanilla-control: ffffff........................
+      t30  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+      t60  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+      t90  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+     t120  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+     t180  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+     t300  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+  pool:
+       t0  earth-hydro: water-source 90  |  earth-control: water-source 90  |  vanilla-hydro: water-source 90  |  vanilla-control: water-source 90
+      t10  earth-hydro: water-source 90  |  earth-control: water-source 90  |  vanilla-hydro: water-source 90  |  vanilla-control: water-source 90
+      t30  earth-hydro: water-source 90  |  earth-control: water-source 90  |  vanilla-hydro: water-source 90  |  vanilla-control: water-source 90
+      t60  earth-hydro: water-source 90  |  earth-control: water-source 90  |  vanilla-hydro: water-source 90  |  vanilla-control: water-source 90
+      t90  earth-hydro: water-source 90  |  earth-control: water-source 90  |  vanilla-hydro: water-source 90  |  vanilla-control: water-source 90
+     t120  earth-hydro: water-source 90  |  earth-control: water-source 90  |  vanilla-hydro: water-source 90  |  vanilla-control: water-source 90
+     t180  earth-hydro: water-source 90  |  earth-control: water-source 90  |  vanilla-hydro: water-source 90  |  vanilla-control: water-source 90
+     t300  earth-hydro: water-source 90  |  earth-control: water-source 90  |  vanilla-hydro: water-source 90  |  vanilla-control: water-source 90
+
+--- lab_trench2_out (lab_trench)
+  trench:
+       t0  earth-hydro: ..............................  |  earth-control: ..............................  |  vanilla-hydro: ..............................  |  vanilla-control: ..............................
+      t10  earth-hydro: SSSSSSSSSS....................  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSS....................  |  vanilla-control: ffffff........................
+      t30  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+      t60  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+      t90  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+     t120  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+     t180  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+     t300  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+  pool:
+       t0  earth-hydro: water-source 90  |  earth-control: water-source 90  |  vanilla-hydro: water-source 90  |  vanilla-control: water-source 90
+      t10  earth-hydro: water-source 90  |  earth-control: water-source 90  |  vanilla-hydro: water-source 90  |  vanilla-control: water-source 90
+      t30  earth-hydro: water-source 90  |  earth-control: water-source 90  |  vanilla-hydro: water-source 90  |  vanilla-control: water-source 90
+      t60  earth-hydro: water-source 90  |  earth-control: water-source 90  |  vanilla-hydro: water-source 90  |  vanilla-control: water-source 90
+      t90  earth-hydro: water-source 90  |  earth-control: water-source 90  |  vanilla-hydro: water-source 90  |  vanilla-control: water-source 90
+     t120  earth-hydro: water-source 90  |  earth-control: water-source 90  |  vanilla-hydro: water-source 90  |  vanilla-control: water-source 90
+     t180  earth-hydro: water-source 90  |  earth-control: water-source 90  |  vanilla-hydro: water-source 90  |  vanilla-control: water-source 90
+     t300  earth-hydro: water-source 90  |  earth-control: water-source 90  |  vanilla-hydro: water-source 90  |  vanilla-control: water-source 90
+
+--- lab_trench1_in (lab_trench)
+  trench:
+       t0  earth-hydro: ..............................  |  earth-control: ..............................  |  vanilla-hydro: ..............................  |  vanilla-control: ..............................
+      t10  earth-hydro: ffffff........................  |  earth-control: ffffff........................  |  vanilla-hydro: ffffff........................  |  vanilla-control: ffffff........................
+      t30  earth-hydro: ffffff........................  |  earth-control: ffffff........................  |  vanilla-hydro: ffffff........................  |  vanilla-control: ffffff........................
+      t60  earth-hydro: ffffff........................  |  earth-control: ffffff........................  |  vanilla-hydro: ffffff........................  |  vanilla-control: ffffff........................
+      t90  earth-hydro: ffffff........................  |  earth-control: ffffff........................  |  vanilla-hydro: ffffff........................  |  vanilla-control: ffffff........................
+     t120  earth-hydro: ffffff........................  |  earth-control: ffffff........................  |  vanilla-hydro: ffffff........................  |  vanilla-control: ffffff........................
+     t180  earth-hydro: ffffff........................  |  earth-control: ffffff........................  |  vanilla-hydro: ffffff........................  |  vanilla-control: ffffff........................
+     t300  earth-hydro: ffffff........................  |  earth-control: ffffff........................  |  vanilla-hydro: ffffff........................  |  vanilla-control: ffffff........................
+  pool:
+       t0  earth-hydro: water-source 81  |  earth-control: water-source 81  |  vanilla-hydro: water-source 81  |  vanilla-control: water-source 81
+      t10  earth-hydro: water-source 81  |  earth-control: water-source 81  |  vanilla-hydro: water-source 81  |  vanilla-control: water-source 81
+      t30  earth-hydro: water-source 81  |  earth-control: water-source 81  |  vanilla-hydro: water-source 81  |  vanilla-control: water-source 81
+      t60  earth-hydro: water-source 81  |  earth-control: water-source 81  |  vanilla-hydro: water-source 81  |  vanilla-control: water-source 81
+      t90  earth-hydro: water-source 81  |  earth-control: water-source 81  |  vanilla-hydro: water-source 81  |  vanilla-control: water-source 81
+     t120  earth-hydro: water-source 81  |  earth-control: water-source 81  |  vanilla-hydro: water-source 81  |  vanilla-control: water-source 81
+     t180  earth-hydro: water-source 81  |  earth-control: water-source 81  |  vanilla-hydro: water-source 81  |  vanilla-control: water-source 81
+     t300  earth-hydro: water-source 81  |  earth-control: water-source 81  |  vanilla-hydro: water-source 81  |  vanilla-control: water-source 81
+
+--- lab_salt2_in (lab_trench)
+  trench:
+       t0  earth-hydro: ..............................  |  earth-control: ..............................  |  vanilla-hydro: ..............................  |  vanilla-control: ..............................
+      t10  earth-hydro: SSSSSSSSSSSSSfff..............  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSf...............  |  vanilla-control: ffffff........................
+      t30  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+      t60  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+      t90  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+     t120  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+     t180  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+     t300  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+  pool:
+       t0  earth-hydro: saltwater-source 90  |  earth-control: saltwater-source 90  |  vanilla-hydro: saltwater-source 90  |  vanilla-control: saltwater-source 90
+      t10  earth-hydro: saltwater-source 90  |  earth-control: saltwater-source 90  |  vanilla-hydro: saltwater-source 90  |  vanilla-control: saltwater-source 90
+      t30  earth-hydro: saltwater-source 90  |  earth-control: saltwater-source 90  |  vanilla-hydro: saltwater-source 90  |  vanilla-control: saltwater-source 90
+      t60  earth-hydro: saltwater-source 90  |  earth-control: saltwater-source 90  |  vanilla-hydro: saltwater-source 90  |  vanilla-control: saltwater-source 90
+      t90  earth-hydro: saltwater-source 90  |  earth-control: saltwater-source 90  |  vanilla-hydro: saltwater-source 90  |  vanilla-control: saltwater-source 90
+     t120  earth-hydro: saltwater-source 90  |  earth-control: saltwater-source 90  |  vanilla-hydro: saltwater-source 90  |  vanilla-control: saltwater-source 90
+     t180  earth-hydro: saltwater-source 90  |  earth-control: saltwater-source 90  |  vanilla-hydro: saltwater-source 90  |  vanilla-control: saltwater-source 90
+     t300  earth-hydro: saltwater-source 90  |  earth-control: saltwater-source 90  |  vanilla-hydro: saltwater-source 90  |  vanilla-control: saltwater-source 90
+
+--- lab_salt2_out (lab_trench)
+  trench:
+       t0  earth-hydro: ..............................  |  earth-control: ..............................  |  vanilla-hydro: ..............................  |  vanilla-control: ..............................
+      t10  earth-hydro: SSSSSSSSSS....................  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSS....................  |  vanilla-control: ffffff........................
+      t30  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+      t60  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+      t90  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+     t120  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+     t180  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+     t300  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff........................  |  vanilla-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  vanilla-control: ffffff........................
+  pool:
+       t0  earth-hydro: saltwater-source 90  |  earth-control: saltwater-source 90  |  vanilla-hydro: saltwater-source 90  |  vanilla-control: saltwater-source 90
+      t10  earth-hydro: saltwater-source 90  |  earth-control: saltwater-source 90  |  vanilla-hydro: saltwater-source 90  |  vanilla-control: saltwater-source 90
+      t30  earth-hydro: saltwater-source 90  |  earth-control: saltwater-source 90  |  vanilla-hydro: saltwater-source 90  |  vanilla-control: saltwater-source 90
+      t60  earth-hydro: saltwater-source 90  |  earth-control: saltwater-source 90  |  vanilla-hydro: saltwater-source 90  |  vanilla-control: saltwater-source 90
+      t90  earth-hydro: saltwater-source 90  |  earth-control: saltwater-source 90  |  vanilla-hydro: saltwater-source 90  |  vanilla-control: saltwater-source 90
+     t120  earth-hydro: saltwater-source 90  |  earth-control: saltwater-source 90  |  vanilla-hydro: saltwater-source 90  |  vanilla-control: saltwater-source 90
+     t180  earth-hydro: saltwater-source 90  |  earth-control: saltwater-source 90  |  vanilla-hydro: saltwater-source 90  |  vanilla-control: saltwater-source 90
+     t300  earth-hydro: saltwater-source 90  |  earth-control: saltwater-source 90  |  vanilla-hydro: saltwater-source 90  |  vanilla-control: saltwater-source 90
+
+--- lab_salt1_out (lab_trench)
+  trench:
+       t0  earth-hydro: ..............................  |  earth-control: ..............................  |  vanilla-hydro: ..............................  |  vanilla-control: ..............................
+      t10  earth-hydro: ffffff........................  |  earth-control: ffffff........................  |  vanilla-hydro: ffffff........................  |  vanilla-control: ffffff........................
+      t30  earth-hydro: ffffff........................  |  earth-control: ffffff........................  |  vanilla-hydro: ffffff........................  |  vanilla-control: ffffff........................
+      t60  earth-hydro: ffffff........................  |  earth-control: ffffff........................  |  vanilla-hydro: ffffff........................  |  vanilla-control: ffffff........................
+      t90  earth-hydro: ffffff........................  |  earth-control: ffffff........................  |  vanilla-hydro: ffffff........................  |  vanilla-control: ffffff........................
+     t120  earth-hydro: ffffff........................  |  earth-control: ffffff........................  |  vanilla-hydro: ffffff........................  |  vanilla-control: ffffff........................
+     t180  earth-hydro: ffffff........................  |  earth-control: ffffff........................  |  vanilla-hydro: ffffff........................  |  vanilla-control: ffffff........................
+     t300  earth-hydro: ffffff........................  |  earth-control: ffffff........................  |  vanilla-hydro: ffffff........................  |  vanilla-control: ffffff........................
+  pool:
+       t0  earth-hydro: saltwater-source 81  |  earth-control: saltwater-source 81  |  vanilla-hydro: saltwater-source 81  |  vanilla-control: saltwater-source 81
+      t10  earth-hydro: saltwater-source 81  |  earth-control: saltwater-source 81  |  vanilla-hydro: saltwater-source 81  |  vanilla-control: saltwater-source 81
+      t30  earth-hydro: saltwater-source 81  |  earth-control: saltwater-source 81  |  vanilla-hydro: saltwater-source 81  |  vanilla-control: saltwater-source 81
+      t60  earth-hydro: saltwater-source 81  |  earth-control: saltwater-source 81  |  vanilla-hydro: saltwater-source 81  |  vanilla-control: saltwater-source 81
+      t90  earth-hydro: saltwater-source 81  |  earth-control: saltwater-source 81  |  vanilla-hydro: saltwater-source 81  |  vanilla-control: saltwater-source 81
+     t120  earth-hydro: saltwater-source 81  |  earth-control: saltwater-source 81  |  vanilla-hydro: saltwater-source 81  |  vanilla-control: saltwater-source 81
+     t180  earth-hydro: saltwater-source 81  |  earth-control: saltwater-source 81  |  vanilla-hydro: saltwater-source 81  |  vanilla-control: saltwater-source 81
+     t300  earth-hydro: saltwater-source 81  |  earth-control: saltwater-source 81  |  vanilla-hydro: saltwater-source 81  |  vanilla-control: saltwater-source 81
+
+--- lab_step (lab_step)
+  center:
+       t0  earth-hydro: S . . . . . . . . . . .  |  earth-control: S . . . . . . . . . . .  |  vanilla-hydro: S . . . . . . . . . . .  |  vanilla-control: S . . . . . . . . . . .
+      t10  earth-hydro: S w6 w5 w4 w3 w2 w1 . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: S w6 w5 w4 w3 w2 w1 . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+      t30  earth-hydro: S w6 w5 w4 w3 w2 w1 . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: S w6 w5 w4 w3 w2 w1 . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+      t60  earth-hydro: S w6 w5 w4 w3 w2 w1 . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: S w6 w5 w4 w3 w2 w1 . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+      t90  earth-hydro: S w6 w5 w4 w3 w2 w1 . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: S w6 w5 w4 w3 w2 w1 . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+     t120  earth-hydro: S w6 w5 w4 w3 w2 w1 . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: S w6 w5 w4 w3 w2 w1 . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+     t180  earth-hydro: S w6 w5 w4 w3 w2 w1 . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: S w6 w5 w4 w3 w2 w1 . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+     t300  earth-hydro: S w6 w5 w4 w3 w2 w1 . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: S w6 w5 w4 w3 w2 w1 . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+  centerBelow:
+       t0  earth-hydro: . S S S S S S S S S S S  |  earth-control: . S S S S S S S S S S S  |  vanilla-hydro: . S S S S S S S S S S S  |  vanilla-control: . S S S S S S S S S S S
+      t10  earth-hydro: . S S S S S S S S S S S  |  earth-control: . w6 S S S S S S S S S S  |  vanilla-hydro: . S S S S S S S S S S S  |  vanilla-control: . w6 S S S S S S S S S S
+      t30  earth-hydro: . S S S S S S S S S S S  |  earth-control: . w6 S S S S S S S S S S  |  vanilla-hydro: . S S S S S S S S S S S  |  vanilla-control: . w6 S S S S S S S S S S
+      t60  earth-hydro: . S S S S S S S S S S S  |  earth-control: . w6 S S S S S S S S S S  |  vanilla-hydro: . S S S S S S S S S S S  |  vanilla-control: . w6 S S S S S S S S S S
+      t90  earth-hydro: . S S S S S S S S S S S  |  earth-control: . w6 S S S S S S S S S S  |  vanilla-hydro: . S S S S S S S S S S S  |  vanilla-control: . w6 S S S S S S S S S S
+     t120  earth-hydro: . S S S S S S S S S S S  |  earth-control: . w6 S S S S S S S S S S  |  vanilla-hydro: . S S S S S S S S S S S  |  vanilla-control: . w6 S S S S S S S S S S
+     t180  earth-hydro: . S S S S S S S S S S S  |  earth-control: . w6 S S S S S S S S S S  |  vanilla-hydro: . S S S S S S S S S S S  |  vanilla-control: . w6 S S S S S S S S S S
+     t300  earth-hydro: . S S S S S S S S S S S  |  earth-control: . w6 S S S S S S S S S S  |  vanilla-hydro: . S S S S S S S S S S S  |  vanilla-control: . w6 S S S S S S S S S S
+  upperPool:
+       t0  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t10  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t30  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t60  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t90  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+     t120  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+     t180  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+     t300  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+  aboveLowerPool:
+       t0  earth-hydro:   |  earth-control:   |  vanilla-hydro:   |  vanilla-control: 
+      t10  earth-hydro: water-flowing 48  |  earth-control: water-flowing 8  |  vanilla-hydro: water-flowing 48  |  vanilla-control: water-flowing 8
+      t30  earth-hydro: water-flowing 48  |  earth-control: water-flowing 8  |  vanilla-hydro: water-flowing 48  |  vanilla-control: water-flowing 8
+      t60  earth-hydro: water-flowing 48  |  earth-control: water-flowing 8  |  vanilla-hydro: water-flowing 48  |  vanilla-control: water-flowing 8
+      t90  earth-hydro: water-flowing 48  |  earth-control: water-flowing 8  |  vanilla-hydro: water-flowing 48  |  vanilla-control: water-flowing 8
+     t120  earth-hydro: water-flowing 48  |  earth-control: water-flowing 8  |  vanilla-hydro: water-flowing 48  |  vanilla-control: water-flowing 8
+     t180  earth-hydro: water-flowing 48  |  earth-control: water-flowing 8  |  vanilla-hydro: water-flowing 48  |  vanilla-control: water-flowing 8
+     t300  earth-hydro: water-flowing 48  |  earth-control: water-flowing 8  |  vanilla-hydro: water-flowing 48  |  vanilla-control: water-flowing 8
+  lowerPool:
+       t0  earth-hydro: water-source 112  |  earth-control: water-source 112  |  vanilla-hydro: water-source 112  |  vanilla-control: water-source 112
+      t10  earth-hydro: water-source 112  |  earth-control: water-flowing 8, water-source 104  |  vanilla-hydro: water-source 112  |  vanilla-control: water-flowing 8, water-source 104
+      t30  earth-hydro: water-source 112  |  earth-control: water-flowing 8, water-source 104  |  vanilla-hydro: water-source 112  |  vanilla-control: water-flowing 8, water-source 104
+      t60  earth-hydro: water-source 112  |  earth-control: water-flowing 8, water-source 104  |  vanilla-hydro: water-source 112  |  vanilla-control: water-flowing 8, water-source 104
+      t90  earth-hydro: water-source 112  |  earth-control: water-flowing 8, water-source 104  |  vanilla-hydro: water-source 112  |  vanilla-control: water-flowing 8, water-source 104
+     t120  earth-hydro: water-source 112  |  earth-control: water-flowing 8, water-source 104  |  vanilla-hydro: water-source 112  |  vanilla-control: water-flowing 8, water-source 104
+     t180  earth-hydro: water-source 112  |  earth-control: water-flowing 8, water-source 104  |  vanilla-hydro: water-source 112  |  vanilla-control: water-flowing 8, water-source 104
+     t300  earth-hydro: water-source 112  |  earth-control: water-flowing 8, water-source 104  |  vanilla-hydro: water-source 112  |  vanilla-control: water-flowing 8, water-source 104
+
+--- lab_stepchannel (lab_stepchannel)
+  leg1:
+       t0  earth-hydro: . . . . . .  |  earth-control: . . . . . .  |  vanilla-hydro: . . . . . .  |  vanilla-control: . . . . . .
+      t10  earth-hydro: . . . . . .  |  earth-control: . . . . . .  |  vanilla-hydro: . . . . . .  |  vanilla-control: . . . . . .
+      t30  earth-hydro: S S S S S S  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S S  |  vanilla-control: w6 w5 w4 w3 w2 w1
+      t60  earth-hydro: S S S S S S  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S S  |  vanilla-control: w6 w5 w4 w3 w2 w1
+      t90  earth-hydro: S S S S S S  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S S  |  vanilla-control: w6 w5 w4 w3 w2 w1
+     t120  earth-hydro: S S S S S S  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S S  |  vanilla-control: w6 w5 w4 w3 w2 w1
+     t180  earth-hydro: S S S S S S  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S S  |  vanilla-control: w6 w5 w4 w3 w2 w1
+     t300  earth-hydro: S S S S S S  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S S  |  vanilla-control: w6 w5 w4 w3 w2 w1
+  cross:
+       t0  earth-hydro: . . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: . . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t10  earth-hydro: . . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: . . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t30  earth-hydro: S S S S S S S w6 w5 w4 w3 w2 w1 .  |  earth-control: w1 . . . . . . . . . . . . .  |  vanilla-hydro: S S S S S S S w6 w5 w4 w3 w2 w1 .  |  vanilla-control: w1 . . . . . . . . . . . . .
+      t60  earth-hydro: S S S S S S S w6 w5 w4 w3 w2 w1 .  |  earth-control: w1 . . . . . . . . . . . . .  |  vanilla-hydro: S S S S S S S w6 w5 w4 w3 w2 w1 .  |  vanilla-control: w1 . . . . . . . . . . . . .
+      t90  earth-hydro: S S S S S S S w6 w5 w4 w3 w2 w1 .  |  earth-control: w1 . . . . . . . . . . . . .  |  vanilla-hydro: S S S S S S S w6 w5 w4 w3 w2 w1 .  |  vanilla-control: w1 . . . . . . . . . . . . .
+     t120  earth-hydro: S S S S S S S w6 w5 w4 w3 w2 w1 .  |  earth-control: w1 . . . . . . . . . . . . .  |  vanilla-hydro: S S S S S S S w6 w5 w4 w3 w2 w1 .  |  vanilla-control: w1 . . . . . . . . . . . . .
+     t180  earth-hydro: S S S S S S S w6 w5 w4 w3 w2 w1 .  |  earth-control: w1 . . . . . . . . . . . . .  |  vanilla-hydro: S S S S S S S w6 w5 w4 w3 w2 w1 .  |  vanilla-control: w1 . . . . . . . . . . . . .
+     t300  earth-hydro: S S S S S S S w6 w5 w4 w3 w2 w1 .  |  earth-control: w1 . . . . . . . . . . . . .  |  vanilla-hydro: S S S S S S S w6 w5 w4 w3 w2 w1 .  |  vanilla-control: w1 . . . . . . . . . . . . .
+  crossBelow:
+       t0  earth-hydro: . . . . . . .  |  earth-control: . . . . . . .  |  vanilla-hydro: . . . . . . .  |  vanilla-control: . . . . . . .
+      t10  earth-hydro: . S S S S S S  |  earth-control: . . . . w1 w2 w2  |  vanilla-hydro: . S S S S S S  |  vanilla-control: . . . . w1 w2 w2
+      t30  earth-hydro: S S S S S S S  |  earth-control: . . . . w1 w2 w2  |  vanilla-hydro: S S S S S S S  |  vanilla-control: . . . . w1 w2 w2
+      t60  earth-hydro: S S S S S S S  |  earth-control: . . . . w1 w2 w2  |  vanilla-hydro: S S S S S S S  |  vanilla-control: . . . . w1 w2 w2
+      t90  earth-hydro: S S S S S S S  |  earth-control: . . . . w1 w2 w2  |  vanilla-hydro: S S S S S S S  |  vanilla-control: . . . . w1 w2 w2
+     t120  earth-hydro: S S S S S S S  |  earth-control: . . . . w1 w2 w2  |  vanilla-hydro: S S S S S S S  |  vanilla-control: . . . . w1 w2 w2
+     t180  earth-hydro: S S S S S S S  |  earth-control: . . . . w1 w2 w2  |  vanilla-hydro: S S S S S S S  |  vanilla-control: . . . . w1 w2 w2
+     t300  earth-hydro: S S S S S S S  |  earth-control: . . . . w1 w2 w2  |  vanilla-hydro: S S S S S S S  |  vanilla-control: . . . . w1 w2 w2
+  leg3:
+       t0  earth-hydro: . . . . . .  |  earth-control: . . . . . .  |  vanilla-hydro: . . . . . .  |  vanilla-control: . . . . . .
+      t10  earth-hydro: S S S S S S  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S S  |  vanilla-control: w6 w5 w4 w3 w2 w1
+      t30  earth-hydro: S S S S S S  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S S  |  vanilla-control: w6 w5 w4 w3 w2 w1
+      t60  earth-hydro: S S S S S S  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S S  |  vanilla-control: w6 w5 w4 w3 w2 w1
+      t90  earth-hydro: S S S S S S  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S S  |  vanilla-control: w6 w5 w4 w3 w2 w1
+     t120  earth-hydro: S S S S S S  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S S  |  vanilla-control: w6 w5 w4 w3 w2 w1
+     t180  earth-hydro: S S S S S S  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S S  |  vanilla-control: w6 w5 w4 w3 w2 w1
+     t300  earth-hydro: S S S S S S  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S S  |  vanilla-control: w6 w5 w4 w3 w2 w1
+  leg3Above:
+       t0  earth-hydro: . . . . . .  |  earth-control: . . . . . .  |  vanilla-hydro: . . . . . .  |  vanilla-control: . . . . . .
+      t10  earth-hydro: . . . . . .  |  earth-control: . . . . . .  |  vanilla-hydro: . . . . . .  |  vanilla-control: . . . . . .
+      t30  earth-hydro: . . . . w1 w1  |  earth-control: . . . . . .  |  vanilla-hydro: . . . . w1 w1  |  vanilla-control: . . . . . .
+      t60  earth-hydro: . . . . w1 w1  |  earth-control: . . . . . .  |  vanilla-hydro: . . . . w1 w1  |  vanilla-control: . . . . . .
+      t90  earth-hydro: . . . . w1 w1  |  earth-control: . . . . . .  |  vanilla-hydro: . . . . w1 w1  |  vanilla-control: . . . . . .
+     t120  earth-hydro: . . . . w1 w1  |  earth-control: . . . . . .  |  vanilla-hydro: . . . . w1 w1  |  vanilla-control: . . . . . .
+     t180  earth-hydro: . . . . w1 w1  |  earth-control: . . . . . .  |  vanilla-hydro: . . . . w1 w1  |  vanilla-control: . . . . . .
+     t300  earth-hydro: . . . . w1 w1  |  earth-control: . . . . . .  |  vanilla-hydro: . . . . w1 w1  |  vanilla-control: . . . . . .
+  upperPool:
+       t0  earth-hydro: water-source 54  |  earth-control: water-source 54  |  vanilla-hydro: water-source 54  |  vanilla-control: water-source 54
+      t10  earth-hydro: water-source 54  |  earth-control: water-source 54  |  vanilla-hydro: water-source 54  |  vanilla-control: water-source 54
+      t30  earth-hydro: water-source 54  |  earth-control: water-source 54  |  vanilla-hydro: water-source 54  |  vanilla-control: water-source 54
+      t60  earth-hydro: water-source 54  |  earth-control: water-source 54  |  vanilla-hydro: water-source 54  |  vanilla-control: water-source 54
+      t90  earth-hydro: water-source 54  |  earth-control: water-source 54  |  vanilla-hydro: water-source 54  |  vanilla-control: water-source 54
+     t120  earth-hydro: water-source 54  |  earth-control: water-source 54  |  vanilla-hydro: water-source 54  |  vanilla-control: water-source 54
+     t180  earth-hydro: water-source 54  |  earth-control: water-source 54  |  vanilla-hydro: water-source 54  |  vanilla-control: water-source 54
+     t300  earth-hydro: water-source 54  |  earth-control: water-source 54  |  vanilla-hydro: water-source 54  |  vanilla-control: water-source 54
+  lowerPool:
+       t0  earth-hydro: water-source 54  |  earth-control: water-source 54  |  vanilla-hydro: water-source 54  |  vanilla-control: water-source 54
+      t10  earth-hydro: water-source 54  |  earth-control: water-source 54  |  vanilla-hydro: water-source 54  |  vanilla-control: water-source 54
+      t30  earth-hydro: water-source 54  |  earth-control: water-source 54  |  vanilla-hydro: water-source 54  |  vanilla-control: water-source 54
+      t60  earth-hydro: water-source 54  |  earth-control: water-source 54  |  vanilla-hydro: water-source 54  |  vanilla-control: water-source 54
+      t90  earth-hydro: water-source 54  |  earth-control: water-source 54  |  vanilla-hydro: water-source 54  |  vanilla-control: water-source 54
+     t120  earth-hydro: water-source 54  |  earth-control: water-source 54  |  vanilla-hydro: water-source 54  |  vanilla-control: water-source 54
+     t180  earth-hydro: water-source 54  |  earth-control: water-source 54  |  vanilla-hydro: water-source 54  |  vanilla-control: water-source 54
+     t300  earth-hydro: water-source 54  |  earth-control: water-source 54  |  vanilla-hydro: water-source 54  |  vanilla-control: water-source 54
+  aboveLowerHalf:
+       t0  earth-hydro:   |  earth-control:   |  vanilla-hydro:   |  vanilla-control: 
+      t10  earth-hydro:   |  earth-control:   |  vanilla-hydro:   |  vanilla-control: 
+      t30  earth-hydro: water-flowing 12  |  earth-control:   |  vanilla-hydro: water-flowing 12  |  vanilla-control: 
+      t60  earth-hydro: water-flowing 12  |  earth-control:   |  vanilla-hydro: water-flowing 12  |  vanilla-control: 
+      t90  earth-hydro: water-flowing 12  |  earth-control:   |  vanilla-hydro: water-flowing 12  |  vanilla-control: 
+     t120  earth-hydro: water-flowing 12  |  earth-control:   |  vanilla-hydro: water-flowing 12  |  vanilla-control: 
+     t180  earth-hydro: water-flowing 12  |  earth-control:   |  vanilla-hydro: water-flowing 12  |  vanilla-control: 
+     t300  earth-hydro: water-flowing 12  |  earth-control:   |  vanilla-hydro: water-flowing 12  |  vanilla-control: 
+
+--- lab_bucket (lab_bucket)
+  ledge:
+       t0  earth-hydro: .  |  earth-control: .  |  vanilla-hydro: .  |  vanilla-control: .
+      t10  earth-hydro: .  |  earth-control: S  |  vanilla-hydro: .  |  vanilla-control: S
+      t30  earth-hydro: .  |  earth-control: S  |  vanilla-hydro: .  |  vanilla-control: S
+      t60  earth-hydro: .  |  earth-control: S  |  vanilla-hydro: .  |  vanilla-control: S
+      t90  earth-hydro: .  |  earth-control: S  |  vanilla-hydro: .  |  vanilla-control: S
+     t120  earth-hydro: .  |  earth-control: S  |  vanilla-hydro: .  |  vanilla-control: S
+     t180  earth-hydro: .  |  earth-control: S  |  vanilla-hydro: .  |  vanilla-control: S
+     t300  earth-hydro: .  |  earth-control: S  |  vanilla-hydro: .  |  vanilla-control: S
+  pit:
+       t0  earth-hydro:   |  earth-control:   |  vanilla-hydro:   |  vanilla-control: 
+      t10  earth-hydro:   |  earth-control: water-falling 2, water-flowing 13  |  vanilla-hydro:   |  vanilla-control: water-falling 2, water-flowing 13
+      t30  earth-hydro:   |  earth-control: water-falling 2, water-flowing 13  |  vanilla-hydro:   |  vanilla-control: water-falling 2, water-flowing 13
+      t60  earth-hydro:   |  earth-control: water-falling 2, water-flowing 13  |  vanilla-hydro:   |  vanilla-control: water-falling 2, water-flowing 13
+      t90  earth-hydro:   |  earth-control: water-falling 2, water-flowing 13  |  vanilla-hydro:   |  vanilla-control: water-falling 2, water-flowing 13
+     t120  earth-hydro:   |  earth-control: water-falling 2, water-flowing 13  |  vanilla-hydro:   |  vanilla-control: water-falling 2, water-flowing 13
+     t180  earth-hydro:   |  earth-control: water-falling 2, water-flowing 13  |  vanilla-hydro:   |  vanilla-control: water-falling 2, water-flowing 13
+     t300  earth-hydro:   |  earth-control: water-falling 2, water-flowing 13  |  vanilla-hydro:   |  vanilla-control: water-falling 2, water-flowing 13
+
+--- lab_drop2_wheel (lab_drop)
+  channel:
+       t0  earth-hydro: . . . . . .  |  earth-control: . . . . . .  |  vanilla-hydro: . . . . . .  |  vanilla-control: . . . . . .
+      t10  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+      t30  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+      t60  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+      t90  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+     t120  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+     t180  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+     t300  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+  edge:
+       t0  earth-hydro: . .  |  earth-control: . .  |  vanilla-hydro: . .  |  vanilla-control: . .
+      t10  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+      t30  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+      t60  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+      t90  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+     t120  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+     t180  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+     t300  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+  fall:
+       t0  earth-hydro: . . .  |  earth-control: . . .  |  vanilla-hydro: . . .  |  vanilla-control: . . .
+      t10  earth-hydro: r6 r6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 rd6 r6  |  vanilla-control: . . .
+      t30  earth-hydro: r6 r6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 rd6 r6  |  vanilla-control: . . .
+      t60  earth-hydro: r6 r6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 rd6 r6  |  vanilla-control: . . .
+      t90  earth-hydro: r6 r6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 rd6 r6  |  vanilla-control: . . .
+     t120  earth-hydro: r6 r6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 rd6 r6  |  vanilla-control: . . .
+     t180  earth-hydro: r6 r6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 rd6 r6  |  vanilla-control: . . .
+     t300  earth-hydro: r6 r6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 rd6 r6  |  vanilla-control: . . .
+  fall1:
+       t0  earth-hydro: . . .  |  earth-control: . . .  |  vanilla-hydro: . . .  |  vanilla-control: . . .
+      t10  earth-hydro: r6 rd6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 r6 r6  |  vanilla-control: . . .
+      t30  earth-hydro: r6 rd6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 r6 r6  |  vanilla-control: . . .
+      t60  earth-hydro: r6 rd6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 r6 r6  |  vanilla-control: . . .
+      t90  earth-hydro: r6 rd6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 r6 r6  |  vanilla-control: . . .
+     t120  earth-hydro: r6 rd6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 r6 r6  |  vanilla-control: . . .
+     t180  earth-hydro: r6 rd6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 r6 r6  |  vanilla-control: . . .
+     t300  earth-hydro: r6 rd6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 r6 r6  |  vanilla-control: . . .
+  fallSolid:
+       t0  earth-hydro: air air air  |  earth-control: air air air  |  vanilla-hydro: air air air  |  vanilla-control: air air air
+      t10  earth-hydro: air air air  |  earth-control: air air air  |  vanilla-hydro: air air air  |  vanilla-control: air air air
+      t30  earth-hydro: air air air  |  earth-control: air air air  |  vanilla-hydro: air air air  |  vanilla-control: air air air
+      t60  earth-hydro: air air air  |  earth-control: air air air  |  vanilla-hydro: air air air  |  vanilla-control: air air air
+      t90  earth-hydro: air air air  |  earth-control: air air air  |  vanilla-hydro: air air air  |  vanilla-control: air air air
+     t120  earth-hydro: air air air  |  earth-control: air air air  |  vanilla-hydro: air air air  |  vanilla-control: air air air
+     t180  earth-hydro: air air air  |  earth-control: air air air  |  vanilla-hydro: air air air  |  vanilla-control: air air air
+     t300  earth-hydro: air air air  |  earth-control: air air air  |  vanilla-hydro: air air air  |  vanilla-control: air air air
+  below:
+       t0  earth-hydro: . . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: . . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t10  earth-hydro: r6 r5 r4 r3 r2 . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r1 . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t30  earth-hydro: r6 r5 r4 r3 r2 . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r1 . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t60  earth-hydro: r6 r5 r4 r3 r2 . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t90  earth-hydro: r6 r5 r4 r3 r2 . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t120  earth-hydro: r6 r5 r4 r3 r2 . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r1 . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t180  earth-hydro: r6 r5 r4 w3 r2 . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r1 . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t300  earth-hydro: r6 r5 r4 r3 r2 . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r1 . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+  belowUp1:
+       t0  earth-hydro: . . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: . . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t10  earth-hydro: r6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t30  earth-hydro: r6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t60  earth-hydro: r6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t90  earth-hydro: r6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t120  earth-hydro: r6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t180  earth-hydro: r6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t300  earth-hydro: r6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+  lower:
+       t0  earth-hydro:   |  earth-control:   |  vanilla-hydro:   |  vanilla-control: 
+      t10  earth-hydro: rapid-falling 1, rapid-flowing 12  |  earth-control:   |  vanilla-hydro: rapid-falling 1, rapid-flowing 11  |  vanilla-control: 
+      t30  earth-hydro: rapid-falling 1, rapid-flowing 12  |  earth-control:   |  vanilla-hydro: rapid-falling 1, rapid-flowing 11  |  vanilla-control: 
+      t60  earth-hydro: rapid-falling 1, rapid-flowing 12  |  earth-control:   |  vanilla-hydro: rapid-falling 1, rapid-flowing 10  |  vanilla-control: 
+      t90  earth-hydro: rapid-falling 1, rapid-flowing 12  |  earth-control:   |  vanilla-hydro: rapid-falling 1, rapid-flowing 10  |  vanilla-control: 
+     t120  earth-hydro: rapid-falling 1, rapid-flowing 12  |  earth-control:   |  vanilla-hydro: rapid-falling 1, rapid-flowing 11  |  vanilla-control: 
+     t180  earth-hydro: rapid-falling 1, rapid-flowing 11, water-flowing 1  |  earth-control:   |  vanilla-hydro: rapid-falling 1, rapid-flowing 11  |  vanilla-control: 
+     t300  earth-hydro: rapid-falling 1, rapid-flowing 12  |  earth-control:   |  vanilla-hydro: rapid-falling 1, rapid-flowing 11  |  vanilla-control: 
+  pool:
+       t0  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t10  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t30  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t60  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t90  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+     t120  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+     t180  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+     t300  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+
+--- lab_drop3_wheel (lab_drop)
+  channel:
+       t0  earth-hydro: . . . . . .  |  earth-control: . . . . . .  |  vanilla-hydro: . . . . . .  |  vanilla-control: . . . . . .
+      t10  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+      t30  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+      t60  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+      t90  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+     t120  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+     t180  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+     t300  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+  edge:
+       t0  earth-hydro: . .  |  earth-control: . .  |  vanilla-hydro: . .  |  vanilla-control: . .
+      t10  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+      t30  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+      t60  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+      t90  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+     t120  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+     t180  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+     t300  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+  fall:
+       t0  earth-hydro: . . . .  |  earth-control: . . . .  |  vanilla-hydro: . . . .  |  vanilla-control: . . . .
+      t10  earth-hydro: r6 rd6 rd6 r6  |  earth-control: . . . .  |  vanilla-hydro: r6 rd6 rd6 r6  |  vanilla-control: . . . .
+      t30  earth-hydro: r6 rd6 rd6 r6  |  earth-control: . . . .  |  vanilla-hydro: r6 rd6 rd6 r6  |  vanilla-control: . . . .
+      t60  earth-hydro: r6 rd6 rd6 r6  |  earth-control: . . . .  |  vanilla-hydro: r6 rd6 rd6 r6  |  vanilla-control: . . . .
+      t90  earth-hydro: r6 rd6 rd6 r6  |  earth-control: . . . .  |  vanilla-hydro: r6 rd6 rd6 r6  |  vanilla-control: . . . .
+     t120  earth-hydro: r6 rd6 rd6 r6  |  earth-control: . . . .  |  vanilla-hydro: r6 rd6 rd6 r6  |  vanilla-control: . . . .
+     t180  earth-hydro: r6 rd6 rd6 r6  |  earth-control: . . . .  |  vanilla-hydro: r6 rd6 rd6 r6  |  vanilla-control: . . . .
+     t300  earth-hydro: r6 rd6 rd6 r6  |  earth-control: . . . .  |  vanilla-hydro: r6 rd6 rd6 r6  |  vanilla-control: . . . .
+  fall1:
+       t0  earth-hydro: . . . .  |  earth-control: . . . .  |  vanilla-hydro: . . . .  |  vanilla-control: . . . .
+      t10  earth-hydro: r6 rd6 rd6 r6  |  earth-control: . . . .  |  vanilla-hydro: r6 rd6 rd6 r6  |  vanilla-control: . . . .
+      t30  earth-hydro: r6 rd6 rd6 r6  |  earth-control: . . . .  |  vanilla-hydro: r6 rd6 rd6 r6  |  vanilla-control: . . . .
+      t60  earth-hydro: r6 rd6 rd6 r6  |  earth-control: . . . .  |  vanilla-hydro: r6 rd6 rd6 r6  |  vanilla-control: . . . .
+      t90  earth-hydro: r6 rd6 rd6 r6  |  earth-control: . . . .  |  vanilla-hydro: r6 rd6 rd6 r6  |  vanilla-control: . . . .
+     t120  earth-hydro: r6 rd6 rd6 r6  |  earth-control: . . . .  |  vanilla-hydro: r6 rd6 rd6 r6  |  vanilla-control: . . . .
+     t180  earth-hydro: r6 rd6 rd6 r6  |  earth-control: . . . .  |  vanilla-hydro: r6 rd6 rd6 r6  |  vanilla-control: . . . .
+     t300  earth-hydro: r6 rd6 rd6 r6  |  earth-control: . . . .  |  vanilla-hydro: r6 rd6 rd6 r6  |  vanilla-control: . . . .
+  fallSolid:
+       t0  earth-hydro: air air air air  |  earth-control: air air air air  |  vanilla-hydro: air air air air  |  vanilla-control: air air air air
+      t10  earth-hydro: air air air air  |  earth-control: air air air air  |  vanilla-hydro: air air air air  |  vanilla-control: air air air air
+      t30  earth-hydro: air air air air  |  earth-control: air air air air  |  vanilla-hydro: air air air air  |  vanilla-control: air air air air
+      t60  earth-hydro: air air air air  |  earth-control: air air air air  |  vanilla-hydro: air air air air  |  vanilla-control: air air air air
+      t90  earth-hydro: air air air air  |  earth-control: air air air air  |  vanilla-hydro: air air air air  |  vanilla-control: air air air air
+     t120  earth-hydro: air air air air  |  earth-control: air air air air  |  vanilla-hydro: air air air air  |  vanilla-control: air air air air
+     t180  earth-hydro: air air air air  |  earth-control: air air air air  |  vanilla-hydro: air air air air  |  vanilla-control: air air air air
+     t300  earth-hydro: air air air air  |  earth-control: air air air air  |  vanilla-hydro: air air air air  |  vanilla-control: air air air air
+  below:
+       t0  earth-hydro: . . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: . . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t10  earth-hydro: r6 r5 r4 . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t30  earth-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t60  earth-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t90  earth-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t120  earth-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r3 . r1 . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t180  earth-hydro: r6 r5 r4 w3 . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t300  earth-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+  belowUp1:
+       t0  earth-hydro: . . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: . . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t10  earth-hydro: rd6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t30  earth-hydro: rd6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t60  earth-hydro: rd6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t90  earth-hydro: rd6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t120  earth-hydro: rd6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t180  earth-hydro: rd6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t300  earth-hydro: rd6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+  lower:
+       t0  earth-hydro:   |  earth-control:   |  vanilla-hydro:   |  vanilla-control: 
+      t10  earth-hydro: rapid-falling 4, rapid-flowing 8  |  earth-control:   |  vanilla-hydro: rapid-falling 4, rapid-flowing 11  |  vanilla-control: 
+      t30  earth-hydro: rapid-falling 4, rapid-flowing 11  |  earth-control:   |  vanilla-hydro: rapid-falling 4, rapid-flowing 11  |  vanilla-control: 
+      t60  earth-hydro: rapid-falling 4, rapid-flowing 11  |  earth-control:   |  vanilla-hydro: rapid-falling 4, rapid-flowing 11  |  vanilla-control: 
+      t90  earth-hydro: rapid-falling 4, rapid-flowing 11  |  earth-control:   |  vanilla-hydro: rapid-falling 4, rapid-flowing 11  |  vanilla-control: 
+     t120  earth-hydro: rapid-falling 4, rapid-flowing 11  |  earth-control:   |  vanilla-hydro: rapid-falling 4, rapid-flowing 11  |  vanilla-control: 
+     t180  earth-hydro: rapid-falling 4, rapid-flowing 10, water-flowing 1  |  earth-control:   |  vanilla-hydro: rapid-falling 4, rapid-flowing 11  |  vanilla-control: 
+     t300  earth-hydro: rapid-falling 4, rapid-flowing 11  |  earth-control:   |  vanilla-hydro: rapid-falling 4, rapid-flowing 11  |  vanilla-control: 
+  pool:
+       t0  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t10  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t30  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t60  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t90  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+     t120  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+     t180  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+     t300  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+
+--- lab_drop2_refill (lab_drop)
+  channel:
+       t0  earth-hydro: . . . . . .  |  earth-control: . . . . . .  |  vanilla-hydro: . . . . . .  |  vanilla-control: . . . . . .
+      t10  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+      t30  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+      t60  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+      t90  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+     t120  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+     t180  earth-hydro: S S S S S S  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S S  |  vanilla-control: w6 w5 w4 w3 w2 w1
+     t300  earth-hydro: S S S S S S  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S S  |  vanilla-control: w6 w5 w4 w3 w2 w1
+  edge:
+       t0  earth-hydro: . .  |  earth-control: . .  |  vanilla-hydro: . .  |  vanilla-control: . .
+      t10  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+      t30  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+      t60  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+      t90  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+     t120  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+     t180  earth-hydro: S S  |  earth-control: w1 w1  |  vanilla-hydro: S S  |  vanilla-control: w1 w1
+     t300  earth-hydro: S S  |  earth-control: w1 w1  |  vanilla-hydro: S S  |  vanilla-control: w1 w1
+  fall:
+       t0  earth-hydro: . . .  |  earth-control: . . .  |  vanilla-hydro: . . .  |  vanilla-control: . . .
+      t10  earth-hydro: r6 r6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 rd6 r6  |  vanilla-control: . . .
+      t30  earth-hydro: r6 r6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 rd6 r6  |  vanilla-control: . . .
+      t60  earth-hydro: r6 r6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 rd6 r6  |  vanilla-control: . . .
+      t90  earth-hydro: r6 r6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 rd6 r6  |  vanilla-control: . . .
+     t120  earth-hydro: r6 r6 .  |  earth-control: . . .  |  vanilla-hydro: r6 rd6 .  |  vanilla-control: . . .
+     t180  earth-hydro: w6 w6 .  |  earth-control: . . .  |  vanilla-hydro: w6 w6 .  |  vanilla-control: . . .
+     t300  earth-hydro: w6 w6 .  |  earth-control: . . .  |  vanilla-hydro: w6 w6 .  |  vanilla-control: . . .
+  fall1:
+       t0  earth-hydro: . . .  |  earth-control: . . .  |  vanilla-hydro: . . .  |  vanilla-control: . . .
+      t10  earth-hydro: r6 rd6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 r6 r6  |  vanilla-control: . . .
+      t30  earth-hydro: r6 rd6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 r6 r6  |  vanilla-control: . . .
+      t60  earth-hydro: r6 rd6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 r6 r6  |  vanilla-control: . . .
+      t90  earth-hydro: r6 rd6 r6  |  earth-control: . . .  |  vanilla-hydro: r6 r6 r6  |  vanilla-control: . . .
+     t120  earth-hydro: r6 rd6 .  |  earth-control: . . .  |  vanilla-hydro: r6 r6 .  |  vanilla-control: . . .
+     t180  earth-hydro: w6 w6 .  |  earth-control: . . .  |  vanilla-hydro: w6 w6 .  |  vanilla-control: . . .
+     t300  earth-hydro: w6 w6 .  |  earth-control: . . .  |  vanilla-hydro: w6 w6 .  |  vanilla-control: . . .
+  fallSolid:
+       t0  earth-hydro: air air air  |  earth-control: air air air  |  vanilla-hydro: air air air  |  vanilla-control: air air air
+      t10  earth-hydro: air air air  |  earth-control: air air air  |  vanilla-hydro: air air air  |  vanilla-control: air air air
+      t30  earth-hydro: air air air  |  earth-control: air air air  |  vanilla-hydro: air air air  |  vanilla-control: air air air
+      t60  earth-hydro: air air air  |  earth-control: air air air  |  vanilla-hydro: air air air  |  vanilla-control: air air air
+      t90  earth-hydro: air air air  |  earth-control: air air air  |  vanilla-hydro: air air air  |  vanilla-control: air air air
+     t120  earth-hydro: air air cobblestone-granite  |  earth-control: air air cobblestone-granite  |  vanilla-hydro: air air cobblestone-granite  |  vanilla-control: air air cobblestone-granite
+     t180  earth-hydro: air air cobblestone-granite  |  earth-control: air air cobblestone-granite  |  vanilla-hydro: air air cobblestone-granite  |  vanilla-control: air air cobblestone-granite
+     t300  earth-hydro: air air cobblestone-granite  |  earth-control: air air cobblestone-granite  |  vanilla-hydro: air air cobblestone-granite  |  vanilla-control: air air cobblestone-granite
+  below:
+       t0  earth-hydro: . . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: . . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t10  earth-hydro: r6 r5 r3 r2 r1 . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t30  earth-hydro: r6 r5 r3 r2 r1 . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t60  earth-hydro: r6 r5 r3 r2 r1 . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t90  earth-hydro: r6 r5 r3 r2 r1 . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t120  earth-hydro: . . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: . . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t180  earth-hydro: . . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: . . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t300  earth-hydro: . . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: . . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+  belowUp1:
+       t0  earth-hydro: . . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: . . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t10  earth-hydro: r6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t30  earth-hydro: r6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t60  earth-hydro: r6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t90  earth-hydro: r6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t120  earth-hydro: r6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t180  earth-hydro: w6 w5 w4 w3 w2 w1 . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: w6 w5 w4 w3 w2 w1 . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t300  earth-hydro: w6 w5 w4 w3 w2 w1 . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: w6 w5 w4 w3 w2 w1 . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+  lower:
+       t0  earth-hydro:   |  earth-control:   |  vanilla-hydro:   |  vanilla-control: 
+      t10  earth-hydro: rapid-falling 1, rapid-flowing 11  |  earth-control:   |  vanilla-hydro: rapid-falling 1, rapid-flowing 12  |  vanilla-control: 
+      t30  earth-hydro: rapid-falling 1, rapid-flowing 11  |  earth-control:   |  vanilla-hydro: rapid-falling 1, rapid-flowing 12  |  vanilla-control: 
+      t60  earth-hydro: rapid-falling 1, rapid-flowing 11  |  earth-control:   |  vanilla-hydro: rapid-falling 1, rapid-flowing 12  |  vanilla-control: 
+      t90  earth-hydro: rapid-falling 1, rapid-flowing 11  |  earth-control:   |  vanilla-hydro: rapid-falling 1, rapid-flowing 12  |  vanilla-control: 
+     t120  earth-hydro: rapid-falling 1, rapid-flowing 3  |  earth-control:   |  vanilla-hydro: rapid-falling 1, rapid-flowing 3  |  vanilla-control: 
+     t180  earth-hydro: water-flowing 14  |  earth-control:   |  vanilla-hydro: water-flowing 14  |  vanilla-control: 
+     t300  earth-hydro: water-flowing 14  |  earth-control:   |  vanilla-hydro: water-flowing 14  |  vanilla-control: 
+  pool:
+       t0  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t10  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t30  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t60  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t90  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+     t120  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+     t180  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+     t300  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+
+--- lab_drop5 (lab_drop)
+  channel:
+       t0  earth-hydro: . . . . . .  |  earth-control: . . . . . .  |  vanilla-hydro: . . . . . .  |  vanilla-control: . . . . . .
+      t10  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+      t30  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+      t60  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+      t90  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+     t120  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+     t180  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+     t300  earth-hydro: S S S S S R  |  earth-control: w6 w5 w4 w3 w2 w1  |  vanilla-hydro: S S S S S R  |  vanilla-control: w6 w5 w4 w3 w2 w1
+  edge:
+       t0  earth-hydro: . .  |  earth-control: . .  |  vanilla-hydro: . .  |  vanilla-control: . .
+      t10  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+      t30  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+      t60  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+      t90  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+     t120  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+     t180  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+     t300  earth-hydro: R R  |  earth-control: w1 w1  |  vanilla-hydro: R R  |  vanilla-control: w1 w1
+  fall:
+       t0  earth-hydro: . . . . . .  |  earth-control: . . . . . .  |  vanilla-hydro: . . . . . .  |  vanilla-control: . . . . . .
+      t10  earth-hydro: r6 rd6 rd6 rd6 rd6 r6  |  earth-control: . . . . . .  |  vanilla-hydro: r6 rd6 rd6 rd6 rd6 r6  |  vanilla-control: . . . . . .
+      t30  earth-hydro: r6 rd6 rd6 rd6 rd6 r6  |  earth-control: . . . . . .  |  vanilla-hydro: r6 rd6 rd6 rd6 rd6 r6  |  vanilla-control: . . . . . .
+      t60  earth-hydro: r6 rd6 rd6 rd6 rd6 r6  |  earth-control: . . . . . .  |  vanilla-hydro: r6 rd6 rd6 rd6 rd6 r6  |  vanilla-control: . . . . . .
+      t90  earth-hydro: r6 rd6 rd6 rd6 rd6 r6  |  earth-control: . . . . . .  |  vanilla-hydro: r6 rd6 rd6 rd6 rd6 r6  |  vanilla-control: . . . . . .
+     t120  earth-hydro: r6 rd6 rd6 rd6 rd6 r6  |  earth-control: . . . . . .  |  vanilla-hydro: r6 rd6 rd6 rd6 rd6 r6  |  vanilla-control: . . . . . .
+     t180  earth-hydro: r6 rd6 rd6 rd6 rd6 r6  |  earth-control: . . . . . .  |  vanilla-hydro: r6 rd6 rd6 rd6 rd6 r6  |  vanilla-control: . . . . . .
+     t300  earth-hydro: r6 rd6 rd6 rd6 rd6 r6  |  earth-control: . . . . . .  |  vanilla-hydro: r6 rd6 rd6 rd6 rd6 r6  |  vanilla-control: . . . . . .
+  fall1:
+       t0  earth-hydro: . . . . . .  |  earth-control: . . . . . .  |  vanilla-hydro: . . . . . .  |  vanilla-control: . . . . . .
+      t10  earth-hydro: r6 rd6 rd6 rd6 rd6 r6  |  earth-control: . . . . . .  |  vanilla-hydro: r6 rd6 rd6 rd6 rd6 r6  |  vanilla-control: . . . . . .
+      t30  earth-hydro: r6 rd6 rd6 rd6 rd6 r6  |  earth-control: . . . . . .  |  vanilla-hydro: r6 rd6 rd6 rd6 rd6 r6  |  vanilla-control: . . . . . .
+      t60  earth-hydro: r6 rd6 rd6 rd6 rd6 r6  |  earth-control: . . . . . .  |  vanilla-hydro: r6 rd6 rd6 rd6 rd6 r6  |  vanilla-control: . . . . . .
+      t90  earth-hydro: r6 rd6 rd6 rd6 rd6 r6  |  earth-control: . . . . . .  |  vanilla-hydro: r6 rd6 rd6 rd6 rd6 r6  |  vanilla-control: . . . . . .
+     t120  earth-hydro: r6 rd6 rd6 rd6 rd6 r6  |  earth-control: . . . . . .  |  vanilla-hydro: r6 rd6 rd6 rd6 rd6 r6  |  vanilla-control: . . . . . .
+     t180  earth-hydro: r6 rd6 rd6 rd6 rd6 r6  |  earth-control: . . . . . .  |  vanilla-hydro: r6 rd6 rd6 rd6 rd6 r6  |  vanilla-control: . . . . . .
+     t300  earth-hydro: r6 rd6 rd6 rd6 rd6 r6  |  earth-control: . . . . . .  |  vanilla-hydro: r6 rd6 rd6 rd6 rd6 r6  |  vanilla-control: . . . . . .
+  fallSolid:
+       t0  earth-hydro: air air air air air air  |  earth-control: air air air air air air  |  vanilla-hydro: air air air air air air  |  vanilla-control: air air air air air air
+      t10  earth-hydro: air air air air air air  |  earth-control: air air air air air air  |  vanilla-hydro: air air air air air air  |  vanilla-control: air air air air air air
+      t30  earth-hydro: air air air air air air  |  earth-control: air air air air air air  |  vanilla-hydro: air air air air air air  |  vanilla-control: air air air air air air
+      t60  earth-hydro: air air air air air air  |  earth-control: air air air air air air  |  vanilla-hydro: air air air air air air  |  vanilla-control: air air air air air air
+      t90  earth-hydro: air air air air air air  |  earth-control: air air air air air air  |  vanilla-hydro: air air air air air air  |  vanilla-control: air air air air air air
+     t120  earth-hydro: air air air air air air  |  earth-control: air air air air air air  |  vanilla-hydro: air air air air air air  |  vanilla-control: air air air air air air
+     t180  earth-hydro: air air air air air air  |  earth-control: air air air air air air  |  vanilla-hydro: air air air air air air  |  vanilla-control: air air air air air air
+     t300  earth-hydro: air air air air air air  |  earth-control: air air air air air air  |  vanilla-hydro: air air air air air air  |  vanilla-control: air air air air air air
+  below:
+       t0  earth-hydro: . . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: . . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t10  earth-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r3 r2 . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t30  earth-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r3 r2 . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t60  earth-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r3 r2 . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t90  earth-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r3 r2 . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t120  earth-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r3 r2 . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t180  earth-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r3 r2 . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t300  earth-hydro: r6 r5 r4 r3 . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: r6 r5 r4 r3 r2 . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+  belowUp1:
+       t0  earth-hydro: . . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: . . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t10  earth-hydro: rd6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t30  earth-hydro: rd6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t60  earth-hydro: rd6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+      t90  earth-hydro: rd6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t120  earth-hydro: rd6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t180  earth-hydro: rd6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+     t300  earth-hydro: rd6 . . . . . . . . . . . . .  |  earth-control: . . . . . . . . . . . . . .  |  vanilla-hydro: rd6 . . . . . . . . . . . . .  |  vanilla-control: . . . . . . . . . . . . . .
+  lower:
+       t0  earth-hydro:   |  earth-control:   |  vanilla-hydro:   |  vanilla-control: 
+      t10  earth-hydro: rapid-falling 8, rapid-flowing 10  |  earth-control:   |  vanilla-hydro: rapid-falling 8, rapid-flowing 12  |  vanilla-control: 
+      t30  earth-hydro: rapid-falling 8, rapid-flowing 10  |  earth-control:   |  vanilla-hydro: rapid-falling 8, rapid-flowing 12  |  vanilla-control: 
+      t60  earth-hydro: rapid-falling 8, rapid-flowing 10  |  earth-control:   |  vanilla-hydro: rapid-falling 8, rapid-flowing 12  |  vanilla-control: 
+      t90  earth-hydro: rapid-falling 8, rapid-flowing 10  |  earth-control:   |  vanilla-hydro: rapid-falling 8, rapid-flowing 12  |  vanilla-control: 
+     t120  earth-hydro: rapid-falling 8, rapid-flowing 10  |  earth-control:   |  vanilla-hydro: rapid-falling 8, rapid-flowing 12  |  vanilla-control: 
+     t180  earth-hydro: rapid-falling 8, rapid-flowing 10  |  earth-control:   |  vanilla-hydro: rapid-falling 8, rapid-flowing 12  |  vanilla-control: 
+     t300  earth-hydro: rapid-falling 8, rapid-flowing 10  |  earth-control:   |  vanilla-hydro: rapid-falling 8, rapid-flowing 12  |  vanilla-control: 
+  pool:
+       t0  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t10  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t30  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t60  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+      t90  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+     t120  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+     t180  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+     t300  earth-hydro: water-source 72  |  earth-control: water-source 72  |  vanilla-hydro: water-source 72  |  vanilla-control: water-source 72
+
+--- lab_chute (lab_chute)
+  y-0:
+       t0  earth-hydro: S . . . . . . . . . . .  |  earth-control: S . . . . . . . . . . .  |  vanilla-hydro: S . . . . . . . . . . .  |  vanilla-control: S . . . . . . . . . . .
+      t10  earth-hydro: R r6 r5 r4 r3 . . . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: R r6 r5 r4 r3 . . . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+      t30  earth-hydro: R r6 r5 r4 r3 . . . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: R r6 r5 r4 r3 . . . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+      t60  earth-hydro: R r6 r5 r4 r3 . . . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: R r6 r5 r4 r3 . . . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+      t90  earth-hydro: R r6 r5 r4 r3 . . . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: R r6 r5 r4 r3 . . . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+     t120  earth-hydro: R r6 r5 r4 r3 . . . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: R r6 r5 r4 r3 . . . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+     t180  earth-hydro: R r6 r5 r4 r3 . . . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: R r6 r5 r4 r3 . . . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+     t300  earth-hydro: R r6 r5 r4 r3 . . . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: R r6 r5 r4 r3 . . . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+  y-1:
+       t0  earth-hydro: . S S S . . . . . . . .  |  earth-control: . S S S . . . . . . . .  |  vanilla-hydro: . S S S . . . . . . . .  |  vanilla-control: . S S S . . . . . . . .
+      t10  earth-hydro: . S S R r6 r5 r4 r3 . . . .  |  earth-control: . w6 S S . . . . . . . .  |  vanilla-hydro: . S S R r6 r5 r4 r3 . . . .  |  vanilla-control: . w6 S S . . . . . . . .
+      t30  earth-hydro: . S S R r6 r5 r4 r3 . . . .  |  earth-control: . w6 S S . . . . . . . .  |  vanilla-hydro: . S S R r6 r5 r4 r3 . . . .  |  vanilla-control: . w6 S S . . . . . . . .
+      t60  earth-hydro: . S S R r6 r5 r4 r3 . . . .  |  earth-control: . w6 S S . . . . . . . .  |  vanilla-hydro: . S S R r6 r5 r4 r3 . . . .  |  vanilla-control: . w6 S S . . . . . . . .
+      t90  earth-hydro: . S S R r6 r5 r4 r3 . . . .  |  earth-control: . w6 S S . . . . . . . .  |  vanilla-hydro: . S S R r6 r5 r4 r3 . . . .  |  vanilla-control: . w6 S S . . . . . . . .
+     t120  earth-hydro: . S S R r6 r5 r4 r3 . . . .  |  earth-control: . w6 S S . . . . . . . .  |  vanilla-hydro: . S S R r6 r5 r4 r3 . . . .  |  vanilla-control: . w6 S S . . . . . . . .
+     t180  earth-hydro: . S S R r6 r5 r4 r3 . . . .  |  earth-control: . w6 S S . . . . . . . .  |  vanilla-hydro: . S S R r6 r5 r4 r3 . . . .  |  vanilla-control: . w6 S S . . . . . . . .
+     t300  earth-hydro: . S S R r6 r5 r4 r3 . . . .  |  earth-control: . w6 S S . . . . . . . .  |  vanilla-hydro: . S S R r6 r5 r4 r3 . . . .  |  vanilla-control: . w6 S S . . . . . . . .
+  y-2:
+       t0  earth-hydro: . . . . S S S . . . . .  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S S . . . . .  |  vanilla-control: . . . . S S S . . . . .
+      t10  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . S S S . . . . .
+      t30  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . S S S . . . . .
+      t60  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . S S S . . . . .
+      t90  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . S S S . . . . .
+     t120  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . S S S . . . . .
+     t180  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . S S S . . . . .
+     t300  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . S S S . . . . .
+  y-3:
+       t0  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+      t10  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+      t30  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+      t60  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+      t90  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+     t120  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+     t180  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+     t300  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+  edges:
+       t0  earth-hydro: SS SS SS  |  earth-control: SS SS SS  |  vanilla-hydro: SS SS SS  |  vanilla-control: SS SS SS
+      t10  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+      t30  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+      t60  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+      t90  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+     t120  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+     t180  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+     t300  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+  all:
+       t0  earth-hydro: water-source 112  |  earth-control: water-source 112  |  vanilla-hydro: water-source 112  |  vanilla-control: water-source 112
+      t10  earth-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+      t30  earth-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+      t60  earth-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+      t90  earth-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+     t120  earth-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+     t180  earth-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+     t300  earth-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+  cells:
+       t0  earth-hydro: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+      t10  earth-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+      t30  earth-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+      t60  earth-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+      t90  earth-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+     t120  earth-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+     t180  earth-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+     t300  earth-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+
+--- lab_chute_wheel (lab_chute)
+  y-0:
+       t0  earth-hydro: S . . . . . . . . . . .  |  earth-control: S . . . . . . . . . . .  |  vanilla-hydro: S . . . . . . . . . . .  |  vanilla-control: S . . . . . . . . . . .
+      t10  earth-hydro: R r6 r5 r4 r3 . . . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: R r6 r5 r4 r3 . . . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+      t30  earth-hydro: R r6 r5 r4 r3 . . . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: R r6 r5 r4 r3 . . . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+      t60  earth-hydro: R r6 r5 r4 r3 . . . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: R r6 r5 r4 r3 . . . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+      t90  earth-hydro: R r6 r5 r4 r3 . . . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: R r6 r5 r4 r3 . . . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+     t120  earth-hydro: R r6 r5 r4 r3 . . . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: R r6 r5 r4 r3 . . . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+     t180  earth-hydro: R r6 r5 r4 r3 . . . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: R r6 r5 r4 r3 . . . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+     t300  earth-hydro: R r6 r5 r4 r3 . . . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: R r6 r5 r4 r3 . . . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+  y-1:
+       t0  earth-hydro: . S S S . . . . . . . .  |  earth-control: . S S S . . . . . . . .  |  vanilla-hydro: . S S S . . . . . . . .  |  vanilla-control: . S S S . . . . . . . .
+      t10  earth-hydro: . S S R r6 r5 r4 r3 . . . .  |  earth-control: . w6 S S . . . . . . . .  |  vanilla-hydro: . S S R r6 r5 r4 r3 . . . .  |  vanilla-control: . w6 S S . . . . . . . .
+      t30  earth-hydro: . S S R r6 r5 r4 r3 . . . .  |  earth-control: . w6 S S . . . . . . . .  |  vanilla-hydro: . S S R r6 r5 r4 r3 . . . .  |  vanilla-control: . w6 S S . . . . . . . .
+      t60  earth-hydro: . S S R r6 r5 r4 r3 . . . .  |  earth-control: . w6 S S . . . . . . . .  |  vanilla-hydro: . S S R r6 r5 r4 r3 . . . .  |  vanilla-control: . w6 S S . . . . . . . .
+      t90  earth-hydro: . S S R r6 r5 r4 r3 . . . .  |  earth-control: . w6 S S . . . . . . . .  |  vanilla-hydro: . S S R r6 r5 r4 r3 . . . .  |  vanilla-control: . w6 S S . . . . . . . .
+     t120  earth-hydro: . S S R r6 r5 r4 r3 . . . .  |  earth-control: . w6 S S . . . . . . . .  |  vanilla-hydro: . S S R r6 r5 r4 r3 . . . .  |  vanilla-control: . w6 S S . . . . . . . .
+     t180  earth-hydro: . S S R r6 r5 r4 r3 . . . .  |  earth-control: . w6 S S . . . . . . . .  |  vanilla-hydro: . S S R r6 r5 r4 r3 . . . .  |  vanilla-control: . w6 S S . . . . . . . .
+     t300  earth-hydro: . S S R r6 r5 r4 r3 . . . .  |  earth-control: . w6 S S . . . . . . . .  |  vanilla-hydro: . S S R r6 r5 r4 r3 . . . .  |  vanilla-control: . w6 S S . . . . . . . .
+  y-2:
+       t0  earth-hydro: . . . . S S S . . . . .  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S S . . . . .  |  vanilla-control: . . . . S S S . . . . .
+      t10  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . S S S . . . . .
+      t30  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . S S S . . . . .
+      t60  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . S S S . . . . .
+      t90  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . S S S . . . . .
+     t120  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . S S S . . . . .
+     t180  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . S S S . . . . .
+     t300  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . S S S . . . . .
+  y-3:
+       t0  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+      t10  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+      t30  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+      t60  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+      t90  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+     t120  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+     t180  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+     t300  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+  edges:
+       t0  earth-hydro: SS SS SS  |  earth-control: SS SS SS  |  vanilla-hydro: SS SS SS  |  vanilla-control: SS SS SS
+      t10  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+      t30  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+      t60  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+      t90  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+     t120  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+     t180  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+     t300  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+  all:
+       t0  earth-hydro: water-source 112  |  earth-control: water-source 112  |  vanilla-hydro: water-source 112  |  vanilla-control: water-source 112
+      t10  earth-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+      t30  earth-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+      t60  earth-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+      t90  earth-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+     t120  earth-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+     t180  earth-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+     t300  earth-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+  cells:
+       t0  earth-hydro: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+      t10  earth-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+      t30  earth-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+      t60  earth-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+      t90  earth-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+     t120  earth-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+     t180  earth-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+     t300  earth-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+
+--- lab_chute_refill (lab_chute)
+  y-0:
+       t0  earth-hydro: S . . . . . . . . . . .  |  earth-control: S . . . . . . . . . . .  |  vanilla-hydro: S . . . . . . . . . . .  |  vanilla-control: S . . . . . . . . . . .
+      t10  earth-hydro: R r6 r5 r4 r3 . . . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: R r6 r5 r4 r3 . . . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+      t30  earth-hydro: R r6 r5 r4 r3 . . . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: R r6 r5 r4 r3 . . . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+      t60  earth-hydro: R r6 r5 r4 r3 . . . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: R r6 r5 r4 r3 . . . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+      t90  earth-hydro: R r6 r5 r4 r3 . . . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: R r6 r5 r4 r3 . . . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+     t120  earth-hydro: R r6 r5 r4 r3 . . . . . . .  |  earth-control: S w6 . . . . . . . . . .  |  vanilla-hydro: R r6 r5 r4 r3 . . . . . . .  |  vanilla-control: S w6 . . . . . . . . . .
+     t180  earth-hydro: S S S R r6 . . . . . . .  |  earth-control: S w6 w5 w4 w3 . . . . . . .  |  vanilla-hydro: S S S R r6 . . . . . . .  |  vanilla-control: S w6 w5 w4 w3 . . . . . . .
+     t300  earth-hydro: S S S R r6 . . . . . . .  |  earth-control: S w6 w5 w4 w3 . . . . . . .  |  vanilla-hydro: S S S R r6 . . . . . . .  |  vanilla-control: S w6 w5 w4 w3 . . . . . . .
+  y-1:
+       t0  earth-hydro: . S S S . . . . . . . .  |  earth-control: . S S S . . . . . . . .  |  vanilla-hydro: . S S S . . . . . . . .  |  vanilla-control: . S S S . . . . . . . .
+      t10  earth-hydro: . S S R r6 r5 r4 r3 . . . .  |  earth-control: . w6 S S . . . . . . . .  |  vanilla-hydro: . S S R r6 r5 r4 r3 . . . .  |  vanilla-control: . w6 S S . . . . . . . .
+      t30  earth-hydro: . S S R r6 r5 r4 r3 . . . .  |  earth-control: . w6 S S . . . . . . . .  |  vanilla-hydro: . S S R r6 r5 r4 r3 . . . .  |  vanilla-control: . w6 S S . . . . . . . .
+      t60  earth-hydro: . S S R r6 r5 r4 r3 . . . .  |  earth-control: . w6 S S . . . . . . . .  |  vanilla-hydro: . S S R r6 r5 r4 r3 . . . .  |  vanilla-control: . w6 S S . . . . . . . .
+      t90  earth-hydro: . S S R r6 r5 r4 r3 . . . .  |  earth-control: . w6 S S . . . . . . . .  |  vanilla-hydro: . S S R r6 r5 r4 r3 . . . .  |  vanilla-control: . w6 S S . . . . . . . .
+     t120  earth-hydro: . . . . r6 r5 r4 r3 . . . .  |  earth-control: . . . . . . . . . . . .  |  vanilla-hydro: . . . . r6 r5 r4 r3 . . . .  |  vanilla-control: . . . . . . . . . . . .
+     t180  earth-hydro: . . . . r6 r5 r4 r3 . . . .  |  earth-control: . . . . wd6 . . . . . . .  |  vanilla-hydro: . . . . r6 r5 r4 r3 . . . .  |  vanilla-control: . . . . wd6 . . . . . . .
+     t300  earth-hydro: . . . . r6 r5 r4 r3 . . . .  |  earth-control: . . . . wd6 . . . . . . .  |  vanilla-hydro: . . . . r6 r5 r4 r3 . . . .  |  vanilla-control: . . . . wd6 . . . . . . .
+  y-2:
+       t0  earth-hydro: . . . . S S S . . . . .  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S S . . . . .  |  vanilla-control: . . . . S S S . . . . .
+      t10  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . S S S . . . . .
+      t30  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . S S S . . . . .
+      t60  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . S S S . . . . .
+      t90  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . S S S . . . . .
+     t120  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . S S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . S S S . . . . .
+     t180  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . w6 S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . w6 S S . . . . .
+     t300  earth-hydro: . . . . S S R r6 r5 r4 r3 r2  |  earth-control: . . . . w6 S S . . . . .  |  vanilla-hydro: . . . . S S R r6 r5 r4 r3 r2  |  vanilla-control: . . . . w6 S S . . . . .
+  y-3:
+       t0  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+      t10  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+      t30  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+      t60  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+      t90  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+     t120  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+     t180  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+     t300  earth-hydro: . . . . . . . S S S S S  |  earth-control: . . . . . . . S S S S S  |  vanilla-hydro: . . . . . . . S S S S S  |  vanilla-control: . . . . . . . S S S S S
+  edges:
+       t0  earth-hydro: SS SS SS  |  earth-control: SS SS SS  |  vanilla-hydro: SS SS SS  |  vanilla-control: SS SS SS
+      t10  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+      t30  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+      t60  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+      t90  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+     t120  earth-hydro: RR .. RR  |  earth-control: SS .. SS  |  vanilla-hydro: RR .. RR  |  vanilla-control: SS .. SS
+     t180  earth-hydro: SS .. RR  |  earth-control: SS .. SS  |  vanilla-hydro: SS .. RR  |  vanilla-control: SS .. SS
+     t300  earth-hydro: SS .. RR  |  earth-control: SS .. SS  |  vanilla-hydro: SS .. RR  |  vanilla-control: SS .. SS
+  all:
+       t0  earth-hydro: water-source 112  |  earth-control: water-source 112  |  vanilla-hydro: water-source 112  |  vanilla-control: water-source 112
+      t10  earth-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+      t30  earth-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+      t60  earth-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+      t90  earth-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 28, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+     t120  earth-hydro: rapid-flowing 28, rapid-source 4, water-source 102  |  earth-control: water-flowing 1, water-source 106  |  vanilla-hydro: rapid-flowing 28, rapid-source 4, water-source 102  |  vanilla-control: water-flowing 1, water-source 106
+     t180  earth-hydro: rapid-flowing 22, rapid-source 4, water-source 108  |  earth-control: water-falling 2, water-flowing 10, water-source 104  |  vanilla-hydro: rapid-flowing 22, rapid-source 4, water-source 108  |  vanilla-control: water-falling 2, water-flowing 10, water-source 104
+     t300  earth-hydro: rapid-flowing 22, rapid-source 4, water-source 108  |  earth-control: water-falling 2, water-flowing 10, water-source 104  |  vanilla-hydro: rapid-flowing 22, rapid-source 4, water-source 108  |  vanilla-control: water-falling 2, water-flowing 10, water-source 104
+  cells:
+       t0  earth-hydro: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+      t10  earth-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+      t30  earth-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+      t60  earth-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+      t90  earth-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+     t120  earth-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:cobblestone-granite/. k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:cobblestone-granite/. k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/. k2y-1:cobblestone-granite/. k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:cobblestone-granite/. k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/r5 k2y-1:cobblestone-granite/. k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:cobblestone-granite/. k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/. k2y-1:cobblestone-granite/. k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:cobblestone-granite/. k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/.
+     t180  earth-hydro: k2y--1:air/. k2y-0:air/S k2y-1:cobblestone-granite/. k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/R k3y-1:cobblestone-granite/. k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r6 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/w5 k2y-1:cobblestone-granite/. k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/w4 k3y-1:cobblestone-granite/. k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/w3 k4y-1:air/wd6 k4y-2:air/w6 k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/S k2y-1:cobblestone-granite/. k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/R k3y-1:cobblestone-granite/. k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r6 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/w5 k2y-1:cobblestone-granite/. k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/w4 k3y-1:cobblestone-granite/. k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/w3 k4y-1:air/wd6 k4y-2:air/w6 k4y-3:rock-granite/.
+     t300  earth-hydro: k2y--1:air/. k2y-0:air/S k2y-1:cobblestone-granite/. k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/R k3y-1:cobblestone-granite/. k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r6 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  earth-control: k2y--1:air/. k2y-0:air/w5 k2y-1:cobblestone-granite/. k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/w4 k3y-1:cobblestone-granite/. k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/w3 k4y-1:air/wd6 k4y-2:air/w6 k4y-3:rock-granite/.  |  vanilla-hydro: k2y--1:air/. k2y-0:air/S k2y-1:cobblestone-granite/. k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/R k3y-1:cobblestone-granite/. k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/r6 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/.  |  vanilla-control: k2y--1:air/. k2y-0:air/w5 k2y-1:cobblestone-granite/. k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/w4 k3y-1:cobblestone-granite/. k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:air/w3 k4y-1:air/wd6 k4y-2:air/w6 k4y-3:rock-granite/.
+
+--- lab_chute_s2 (lab_chute)
+  y-0:
+       t0  earth-hydro: S . . . . . . . .  |  earth-control: S . . . . . . . .  |  vanilla-hydro: S . . . . . . . .  |  vanilla-control: S . . . . . . . .
+      t10  earth-hydro: R r6 r5 r4 . . . . .  |  earth-control: S w6 . . . . . . .  |  vanilla-hydro: R r6 r5 r4 . . . . .  |  vanilla-control: S w6 . . . . . . .
+      t30  earth-hydro: R r6 r5 r4 . . . . .  |  earth-control: S w6 . . . . . . .  |  vanilla-hydro: R r6 r5 r4 . . . . .  |  vanilla-control: S w6 . . . . . . .
+      t60  earth-hydro: R r6 r5 r4 . . . . .  |  earth-control: S w6 . . . . . . .  |  vanilla-hydro: R r6 r5 r4 . . . . .  |  vanilla-control: S w6 . . . . . . .
+      t90  earth-hydro: R r6 r5 r4 . . . . .  |  earth-control: S w6 . . . . . . .  |  vanilla-hydro: R r6 r5 r4 . . . . .  |  vanilla-control: S w6 . . . . . . .
+     t120  earth-hydro: R r6 r5 r4 . . . . .  |  earth-control: S w6 . . . . . . .  |  vanilla-hydro: R r6 r5 r4 . . . . .  |  vanilla-control: S w6 . . . . . . .
+     t180  earth-hydro: R r6 r5 r4 . . . . .  |  earth-control: S w6 . . . . . . .  |  vanilla-hydro: R r6 r5 r4 . . . . .  |  vanilla-control: S w6 . . . . . . .
+     t300  earth-hydro: R r6 r5 r4 . . . . .  |  earth-control: S w6 . . . . . . .  |  vanilla-hydro: R r6 r5 r4 . . . . .  |  vanilla-control: S w6 . . . . . . .
+  y-1:
+       t0  earth-hydro: . S S . . . . . .  |  earth-control: . S S . . . . . .  |  vanilla-hydro: . S S . . . . . .  |  vanilla-control: . S S . . . . . .
+      t10  earth-hydro: . S R r6 r5 r4 . . .  |  earth-control: . w6 S . . . . . .  |  vanilla-hydro: . S R r6 r5 r4 . . .  |  vanilla-control: . w6 S . . . . . .
+      t30  earth-hydro: . S R r6 r5 r4 . . .  |  earth-control: . w6 S . . . . . .  |  vanilla-hydro: . S R r6 r5 r4 . . .  |  vanilla-control: . w6 S . . . . . .
+      t60  earth-hydro: . S R r6 r5 r4 . . .  |  earth-control: . w6 S . . . . . .  |  vanilla-hydro: . S R r6 r5 r4 . . .  |  vanilla-control: . w6 S . . . . . .
+      t90  earth-hydro: . S R r6 r5 r4 . . .  |  earth-control: . w6 S . . . . . .  |  vanilla-hydro: . S R r6 r5 r4 . . .  |  vanilla-control: . w6 S . . . . . .
+     t120  earth-hydro: . S R r6 r5 r4 . . .  |  earth-control: . w6 S . . . . . .  |  vanilla-hydro: . S R r6 r5 r4 . . .  |  vanilla-control: . w6 S . . . . . .
+     t180  earth-hydro: . S R r6 r5 r4 . . .  |  earth-control: . w6 S . . . . . .  |  vanilla-hydro: . S R r6 r5 r4 . . .  |  vanilla-control: . w6 S . . . . . .
+     t300  earth-hydro: . S R r6 r5 r4 . . .  |  earth-control: . w6 S . . . . . .  |  vanilla-hydro: . S R r6 r5 r4 . . .  |  vanilla-control: . w6 S . . . . . .
+  y-2:
+       t0  earth-hydro: . . . S S . . . .  |  earth-control: . . . S S . . . .  |  vanilla-hydro: . . . S S . . . .  |  vanilla-control: . . . S S . . . .
+      t10  earth-hydro: . . . S R r6 r5 r4 r3  |  earth-control: . . . S S . . . .  |  vanilla-hydro: . . . S R r6 r5 r4 r3  |  vanilla-control: . . . S S . . . .
+      t30  earth-hydro: . . . S R r6 r5 r4 r3  |  earth-control: . . . S S . . . .  |  vanilla-hydro: . . . S R r6 r5 r4 r3  |  vanilla-control: . . . S S . . . .
+      t60  earth-hydro: . . . S R r6 r5 r4 r3  |  earth-control: . . . S S . . . .  |  vanilla-hydro: . . . S R r6 r5 r4 r3  |  vanilla-control: . . . S S . . . .
+      t90  earth-hydro: . . . S R r6 r5 r4 r3  |  earth-control: . . . S S . . . .  |  vanilla-hydro: . . . S R r6 r5 r4 r3  |  vanilla-control: . . . S S . . . .
+     t120  earth-hydro: . . . S R r6 r5 r4 r3  |  earth-control: . . . S S . . . .  |  vanilla-hydro: . . . S R r6 r5 r4 r3  |  vanilla-control: . . . S S . . . .
+     t180  earth-hydro: . . . S R r6 r5 r4 r3  |  earth-control: . . . S S . . . .  |  vanilla-hydro: . . . S R r6 r5 r4 r3  |  vanilla-control: . . . S S . . . .
+     t300  earth-hydro: . . . S R r6 r5 r4 r3  |  earth-control: . . . S S . . . .  |  vanilla-hydro: . . . S R r6 r5 r4 r3  |  vanilla-control: . . . S S . . . .
+  y-3:
+       t0  earth-hydro: . . . . . S S S S  |  earth-control: . . . . . S S S S  |  vanilla-hydro: . . . . . S S S S  |  vanilla-control: . . . . . S S S S
+      t10  earth-hydro: . . . . . S S S S  |  earth-control: . . . . . S S S S  |  vanilla-hydro: . . . . . S S S S  |  vanilla-control: . . . . . S S S S
+      t30  earth-hydro: . . . . . S S S S  |  earth-control: . . . . . S S S S  |  vanilla-hydro: . . . . . S S S S  |  vanilla-control: . . . . . S S S S
+      t60  earth-hydro: . . . . . S S S S  |  earth-control: . . . . . S S S S  |  vanilla-hydro: . . . . . S S S S  |  vanilla-control: . . . . . S S S S
+      t90  earth-hydro: . . . . . S S S S  |  earth-control: . . . . . S S S S  |  vanilla-hydro: . . . . . S S S S  |  vanilla-control: . . . . . S S S S
+     t120  earth-hydro: . . . . . S S S S  |  earth-control: . . . . . S S S S  |  vanilla-hydro: . . . . . S S S S  |  vanilla-control: . . . . . S S S S
+     t180  earth-hydro: . . . . . S S S S  |  earth-control: . . . . . S S S S  |  vanilla-hydro: . . . . . S S S S  |  vanilla-control: . . . . . S S S S
+     t300  earth-hydro: . . . . . S S S S  |  earth-control: . . . . . S S S S  |  vanilla-hydro: . . . . . S S S S  |  vanilla-control: . . . . . S S S S
+  edges:
+       t0  earth-hydro: SS SS SS  |  earth-control: SS SS SS  |  vanilla-hydro: SS SS SS  |  vanilla-control: SS SS SS
+      t10  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+      t30  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+      t60  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+      t90  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+     t120  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+     t180  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+     t300  earth-hydro: RR RR RR  |  earth-control: SS SS SS  |  vanilla-hydro: RR RR RR  |  vanilla-control: SS SS SS
+  all:
+       t0  earth-hydro: water-source 112  |  earth-control: water-source 112  |  vanilla-hydro: water-source 112  |  vanilla-control: water-source 112
+      t10  earth-hydro: rapid-flowing 24, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 24, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+      t30  earth-hydro: rapid-flowing 24, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 24, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+      t60  earth-hydro: rapid-flowing 24, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 24, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+      t90  earth-hydro: rapid-flowing 24, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 24, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+     t120  earth-hydro: rapid-flowing 24, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 24, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+     t180  earth-hydro: rapid-flowing 24, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 24, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+     t300  earth-hydro: rapid-flowing 24, rapid-source 6, water-source 106  |  earth-control: water-flowing 2, water-source 111  |  vanilla-hydro: rapid-flowing 24, rapid-source 6, water-source 106  |  vanilla-control: water-flowing 2, water-source 111
+  cells:
+       t0  earth-hydro: k1y--1:air/. k1y-0:air/. k1y-1:air/S k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/. k3y-2:air/S k3y-3:rock-granite/.  |  earth-control: k1y--1:air/. k1y-0:air/. k1y-1:air/S k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/. k3y-2:air/S k3y-3:rock-granite/.  |  vanilla-hydro: k1y--1:air/. k1y-0:air/. k1y-1:air/S k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/. k3y-2:air/S k3y-3:rock-granite/.  |  vanilla-control: k1y--1:air/. k1y-0:air/. k1y-1:air/S k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/. k3y-2:air/S k3y-3:rock-granite/.
+      t10  earth-hydro: k1y--1:air/. k1y-0:air/r6 k1y-1:air/S k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/r6 k3y-2:air/S k3y-3:rock-granite/.  |  earth-control: k1y--1:air/. k1y-0:air/w6 k1y-1:air/w6 k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/. k3y-2:air/S k3y-3:rock-granite/.  |  vanilla-hydro: k1y--1:air/. k1y-0:air/r6 k1y-1:air/S k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/r6 k3y-2:air/S k3y-3:rock-granite/.  |  vanilla-control: k1y--1:air/. k1y-0:air/w6 k1y-1:air/w6 k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/. k3y-2:air/S k3y-3:rock-granite/.
+      t30  earth-hydro: k1y--1:air/. k1y-0:air/r6 k1y-1:air/S k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/r6 k3y-2:air/S k3y-3:rock-granite/.  |  earth-control: k1y--1:air/. k1y-0:air/w6 k1y-1:air/w6 k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/. k3y-2:air/S k3y-3:rock-granite/.  |  vanilla-hydro: k1y--1:air/. k1y-0:air/r6 k1y-1:air/S k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/r6 k3y-2:air/S k3y-3:rock-granite/.  |  vanilla-control: k1y--1:air/. k1y-0:air/w6 k1y-1:air/w6 k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/. k3y-2:air/S k3y-3:rock-granite/.
+      t60  earth-hydro: k1y--1:air/. k1y-0:air/r6 k1y-1:air/S k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/r6 k3y-2:air/S k3y-3:rock-granite/.  |  earth-control: k1y--1:air/. k1y-0:air/w6 k1y-1:air/w6 k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/. k3y-2:air/S k3y-3:rock-granite/.  |  vanilla-hydro: k1y--1:air/. k1y-0:air/r6 k1y-1:air/S k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/r6 k3y-2:air/S k3y-3:rock-granite/.  |  vanilla-control: k1y--1:air/. k1y-0:air/w6 k1y-1:air/w6 k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/. k3y-2:air/S k3y-3:rock-granite/.
+      t90  earth-hydro: k1y--1:air/. k1y-0:air/r6 k1y-1:air/S k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/r6 k3y-2:air/S k3y-3:rock-granite/.  |  earth-control: k1y--1:air/. k1y-0:air/w6 k1y-1:air/w6 k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/. k3y-2:air/S k3y-3:rock-granite/.  |  vanilla-hydro: k1y--1:air/. k1y-0:air/r6 k1y-1:air/S k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/r6 k3y-2:air/S k3y-3:rock-granite/.  |  vanilla-control: k1y--1:air/. k1y-0:air/w6 k1y-1:air/w6 k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/. k3y-2:air/S k3y-3:rock-granite/.
+     t120  earth-hydro: k1y--1:air/. k1y-0:air/r6 k1y-1:air/S k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/r6 k3y-2:air/S k3y-3:rock-granite/.  |  earth-control: k1y--1:air/. k1y-0:air/w6 k1y-1:air/w6 k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/. k3y-2:air/S k3y-3:rock-granite/.  |  vanilla-hydro: k1y--1:air/. k1y-0:air/r6 k1y-1:air/S k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/r6 k3y-2:air/S k3y-3:rock-granite/.  |  vanilla-control: k1y--1:air/. k1y-0:air/w6 k1y-1:air/w6 k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/. k3y-2:air/S k3y-3:rock-granite/.
+     t180  earth-hydro: k1y--1:air/. k1y-0:air/r6 k1y-1:air/S k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/r6 k3y-2:air/S k3y-3:rock-granite/.  |  earth-control: k1y--1:air/. k1y-0:air/w6 k1y-1:air/w6 k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/. k3y-2:air/S k3y-3:rock-granite/.  |  vanilla-hydro: k1y--1:air/. k1y-0:air/r6 k1y-1:air/S k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/r6 k3y-2:air/S k3y-3:rock-granite/.  |  vanilla-control: k1y--1:air/. k1y-0:air/w6 k1y-1:air/w6 k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/. k3y-2:air/S k3y-3:rock-granite/.
+     t300  earth-hydro: k1y--1:air/. k1y-0:air/r6 k1y-1:air/S k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/r6 k3y-2:air/S k3y-3:rock-granite/.  |  earth-control: k1y--1:air/. k1y-0:air/w6 k1y-1:air/w6 k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/. k3y-2:air/S k3y-3:rock-granite/.  |  vanilla-hydro: k1y--1:air/. k1y-0:air/r6 k1y-1:air/S k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/r6 k3y-2:air/S k3y-3:rock-granite/.  |  vanilla-control: k1y--1:air/. k1y-0:air/w6 k1y-1:air/w6 k1y-2:rock-granite/. k1y-3:rock-granite/. k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/. k3y-2:air/S k3y-3:rock-granite/.
+
+--- river_trench2_in (river_trench) at 56.4985,25.8613
+  trench:
+       t0  earth-hydro: ........................................  |  earth-control: ........................................
+      t10  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSffff..  |  earth-control: ffffff..................................
+      t30  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+      t60  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+      t90  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+     t120  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+     t180  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+     t300  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+  near:
+       t0  earth-hydro: water-flowing 20, water-source 569  |  earth-control: water-flowing 20, water-source 569
+      t10  earth-hydro: water-flowing 20, water-source 585  |  earth-control: water-flowing 32, water-source 569
+      t30  earth-hydro: water-flowing 20, water-source 585  |  earth-control: water-flowing 32, water-source 569
+      t60  earth-hydro: water-flowing 20, water-source 585  |  earth-control: water-flowing 32, water-source 569
+      t90  earth-hydro: water-flowing 20, water-source 585  |  earth-control: water-flowing 32, water-source 569
+     t120  earth-hydro: water-flowing 20, water-source 585  |  earth-control: water-flowing 32, water-source 569
+     t180  earth-hydro: water-flowing 20, water-source 585  |  earth-control: water-flowing 32, water-source 569
+     t300  earth-hydro: water-flowing 20, water-source 585  |  earth-control: water-flowing 32, water-source 569
+
+--- river_trench2_out (river_trench) at 56.4985,25.8613
+  trench:
+       t0  earth-hydro: ........................................  |  earth-control: ........................................
+      t10  earth-hydro: SSSSSSSSSS..............................  |  earth-control: ffffff..................................
+      t30  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS..........  |  earth-control: ffffff..................................
+      t60  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+      t90  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+     t120  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+     t180  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+     t300  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+  near:
+       t0  earth-hydro: water-source 571  |  earth-control: water-source 571
+      t10  earth-hydro: water-source 587  |  earth-control: water-flowing 12, water-source 571
+      t30  earth-hydro: water-source 587  |  earth-control: water-flowing 12, water-source 571
+      t60  earth-hydro: water-source 587  |  earth-control: water-flowing 12, water-source 571
+      t90  earth-hydro: water-source 587  |  earth-control: water-flowing 12, water-source 571
+     t120  earth-hydro: water-source 587  |  earth-control: water-flowing 12, water-source 571
+     t180  earth-hydro: water-source 587  |  earth-control: water-flowing 12, water-source 571
+     t300  earth-hydro: water-source 587  |  earth-control: water-flowing 12, water-source 571
+
+--- river_trench1_in (river_trench) at 56.4985,25.8613
+  trench:
+       t0  earth-hydro: ........................................  |  earth-control: ........................................
+      t10  earth-hydro: ffffff..................................  |  earth-control: ffffff..................................
+      t30  earth-hydro: ffffff..................................  |  earth-control: ffffff..................................
+      t60  earth-hydro: ffffff..................................  |  earth-control: ffffff..................................
+      t90  earth-hydro: ffffff..................................  |  earth-control: ffffff..................................
+     t120  earth-hydro: ffffff..................................  |  earth-control: ffffff..................................
+     t180  earth-hydro: ffffff..................................  |  earth-control: ffffff..................................
+     t300  earth-hydro: ffffff..................................  |  earth-control: ffffff..................................
+  near:
+       t0  earth-hydro: water-source 550  |  earth-control: water-source 550
+      t10  earth-hydro: water-flowing 6, water-source 550  |  earth-control: water-flowing 6, water-source 550
+      t30  earth-hydro: water-flowing 6, water-source 550  |  earth-control: water-flowing 6, water-source 550
+      t60  earth-hydro: water-flowing 6, water-source 550  |  earth-control: water-flowing 6, water-source 550
+      t90  earth-hydro: water-flowing 6, water-source 550  |  earth-control: water-flowing 6, water-source 550
+     t120  earth-hydro: water-flowing 6, water-source 550  |  earth-control: water-flowing 6, water-source 550
+     t180  earth-hydro: water-flowing 6, water-source 550  |  earth-control: water-flowing 6, water-source 550
+     t300  earth-hydro: water-flowing 6, water-source 550  |  earth-control: water-flowing 6, water-source 550
+
+--- sea_trench2_in (sea_trench) at 57.4,21.55
+  trench:
+       t0  earth-hydro: ........................................  |  earth-control: ........................................
+      t10  earth-hydro: SSSSSSSSSSSSSSff........................  |  earth-control: ffffff..................................
+      t30  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+      t60  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+      t90  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+     t120  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+     t180  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+     t300  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+  near:
+       t0  earth-hydro: saltwater-source 574  |  earth-control: saltwater-source 574
+      t10  earth-hydro: saltwater-source 590  |  earth-control: saltwater-flowing 12, saltwater-source 574
+      t30  earth-hydro: saltwater-source 590  |  earth-control: saltwater-flowing 12, saltwater-source 574
+      t60  earth-hydro: saltwater-source 590  |  earth-control: saltwater-flowing 12, saltwater-source 574
+      t90  earth-hydro: saltwater-source 590  |  earth-control: saltwater-flowing 12, saltwater-source 574
+     t120  earth-hydro: saltwater-source 590  |  earth-control: saltwater-flowing 12, saltwater-source 574
+     t180  earth-hydro: saltwater-source 590  |  earth-control: saltwater-flowing 12, saltwater-source 574
+     t300  earth-hydro: saltwater-source 590  |  earth-control: saltwater-flowing 12, saltwater-source 574
+
+--- sea_trench2_out (sea_trench) at 57.4,21.55
+  trench:
+       t0  earth-hydro: ........................................  |  earth-control: ........................................
+      t10  earth-hydro: SSSSSSSSSS..............................  |  earth-control: ffffff..................................
+      t30  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS..........  |  earth-control: ffffff..................................
+      t60  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+      t90  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+     t120  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+     t180  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+     t300  earth-hydro: SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS  |  earth-control: ffffff..................................
+  near:
+       t0  earth-hydro: saltwater-source 412  |  earth-control: saltwater-source 412
+      t10  earth-hydro: saltwater-source 428  |  earth-control: saltwater-flowing 12, saltwater-source 412
+      t30  earth-hydro: saltwater-source 428  |  earth-control: saltwater-flowing 12, saltwater-source 412
+      t60  earth-hydro: saltwater-source 428  |  earth-control: saltwater-flowing 12, saltwater-source 412
+      t90  earth-hydro: saltwater-source 428  |  earth-control: saltwater-flowing 12, saltwater-source 412
+     t120  earth-hydro: saltwater-source 428  |  earth-control: saltwater-flowing 12, saltwater-source 412
+     t180  earth-hydro: saltwater-source 428  |  earth-control: saltwater-flowing 12, saltwater-source 412
+     t300  earth-hydro: saltwater-source 428  |  earth-control: saltwater-flowing 12, saltwater-source 412
+
+--- sea_trench1_out (sea_trench) at 57.4,21.55
+  trench:
+       t0  earth-hydro: ........................................  |  earth-control: ........................................
+      t10  earth-hydro: ffffff..................................  |  earth-control: ffffff..................................
+      t30  earth-hydro: ffffff..................................  |  earth-control: ffffff..................................
+      t60  earth-hydro: ffffff..................................  |  earth-control: ffffff..................................
+      t90  earth-hydro: ffffff..................................  |  earth-control: ffffff..................................
+     t120  earth-hydro: ffffff..................................  |  earth-control: ffffff..................................
+     t180  earth-hydro: ffffff..................................  |  earth-control: ffffff..................................
+     t300  earth-hydro: ffffff..................................  |  earth-control: ffffff..................................
+  near:
+       t0  earth-hydro: saltwater-source 488, water-source 337  |  earth-control: saltwater-source 488, water-source 337
+      t10  earth-hydro: saltwater-flowing 6, saltwater-source 488, water-source 337  |  earth-control: saltwater-flowing 6, saltwater-source 488, water-source 337
+      t30  earth-hydro: saltwater-flowing 6, saltwater-source 488, water-source 337  |  earth-control: saltwater-flowing 6, saltwater-source 488, water-source 337
+      t60  earth-hydro: saltwater-flowing 6, saltwater-source 488, water-source 337  |  earth-control: saltwater-flowing 6, saltwater-source 488, water-source 337
+      t90  earth-hydro: saltwater-flowing 6, saltwater-source 488, water-source 337  |  earth-control: saltwater-flowing 6, saltwater-source 488, water-source 337
+     t120  earth-hydro: saltwater-flowing 6, saltwater-source 488, water-source 337  |  earth-control: saltwater-flowing 6, saltwater-source 488, water-source 337
+     t180  earth-hydro: saltwater-flowing 6, saltwater-source 488, water-source 337  |  earth-control: saltwater-flowing 6, saltwater-source 488, water-source 337
+     t300  earth-hydro: saltwater-flowing 6, saltwater-source 488, water-source 337  |  earth-control: saltwater-flowing 6, saltwater-source 488, water-source 337
+
+--- ramp (ramp) at 56.61,25.345
+  near:
+       t0  earth-hydro: water-flowing 98, water-source 1736  |  earth-control: water-flowing 98, water-source 1736
+      t10  earth-hydro: water-flowing 98, water-source 1736  |  earth-control: water-falling 5, water-flowing 173, water-source 1655
+      t30  earth-hydro: water-flowing 98, water-source 1736  |  earth-control: water-falling 5, water-flowing 173, water-source 1655
+      t60  earth-hydro: water-flowing 98, water-source 1736  |  earth-control: water-falling 5, water-flowing 173, water-source 1655
+      t90  earth-hydro: water-flowing 98, water-source 1736  |  earth-control: water-falling 5, water-flowing 173, water-source 1655
+     t120  earth-hydro: water-flowing 98, water-source 1736  |  earth-control: water-falling 5, water-flowing 173, water-source 1655
+     t180  earth-hydro: water-flowing 98, water-source 1736  |  earth-control: water-falling 5, water-flowing 173, water-source 1655
+     t300  earth-hydro: water-flowing 98, water-source 1736  |  earth-control: water-falling 5, water-flowing 173, water-source 1655
+
+--- rapids_poke (rapids_poke) at -5.543,13.605
+  edge:
+       t0  earth-hydro: S  |  earth-control: S
+      t10  earth-hydro: R  |  earth-control: S
+      t30  earth-hydro: R  |  earth-control: S
+      t60  earth-hydro: R  |  earth-control: S
+      t90  earth-hydro: R  |  earth-control: S
+     t120  earth-hydro: R  |  earth-control: S
+     t180  earth-hydro: R  |  earth-control: S
+     t300  earth-hydro: R  |  earth-control: S
+  fall:
+       t0  earth-hydro: r6 wd6 wd6 wd6 wd6 wd6 S  |  earth-control: r6 wd6 wd6 wd6 wd6 wd6 S
+      t10  earth-hydro: r6 r6 rd6 rd6 rd6 rd6 S  |  earth-control: w6 w6 wd6 wd6 wd6 wd6 S
+      t30  earth-hydro: r6 r6 rd6 rd6 rd6 rd6 S  |  earth-control: w6 w6 wd6 wd6 wd6 wd6 S
+      t60  earth-hydro: r6 r6 rd6 rd6 rd6 rd6 S  |  earth-control: w6 w6 wd6 wd6 wd6 wd6 S
+      t90  earth-hydro: r6 r6 rd6 rd6 rd6 rd6 S  |  earth-control: w6 w6 wd6 wd6 wd6 wd6 S
+     t120  earth-hydro: r6 r6 rd6 rd6 rd6 rd6 S  |  earth-control: w6 w6 wd6 wd6 wd6 wd6 S
+     t180  earth-hydro: r6 r6 rd6 rd6 rd6 rd6 S  |  earth-control: w6 w6 wd6 wd6 wd6 wd6 S
+     t300  earth-hydro: r6 r6 rd6 rd6 rd6 rd6 S  |  earth-control: w6 w6 wd6 wd6 wd6 wd6 S
+  near:
+       t0  earth-hydro: rapid-flowing 86, water-falling 65, water-source 338  |  earth-control: rapid-flowing 86, water-falling 65, water-source 338
+      t10  earth-hydro: rapid-falling 43, rapid-flowing 106, rapid-source 26, water-source 312  |  earth-control: rapid-flowing 82, water-falling 59, water-flowing 10, water-source 338
+      t30  earth-hydro: rapid-falling 43, rapid-flowing 106, rapid-source 26, water-source 312  |  earth-control: rapid-flowing 82, water-falling 59, water-flowing 10, water-source 338
+      t60  earth-hydro: rapid-falling 43, rapid-flowing 106, rapid-source 26, water-source 312  |  earth-control: rapid-flowing 82, water-falling 59, water-flowing 10, water-source 338
+      t90  earth-hydro: rapid-falling 43, rapid-flowing 106, rapid-source 26, water-source 312  |  earth-control: rapid-flowing 82, water-falling 59, water-flowing 10, water-source 338
+     t120  earth-hydro: rapid-falling 43, rapid-flowing 106, rapid-source 26, water-source 312  |  earth-control: rapid-flowing 82, water-falling 59, water-flowing 10, water-source 338
+     t180  earth-hydro: rapid-falling 43, rapid-flowing 106, rapid-source 26, water-source 312  |  earth-control: rapid-flowing 82, water-falling 59, water-flowing 10, water-source 338
+     t300  earth-hydro: rapid-falling 43, rapid-flowing 106, rapid-source 26, water-source 312  |  earth-control: rapid-flowing 82, water-falling 59, water-flowing 10, water-source 338
+
+--- chute_poke_congo (chute_poke) at -5.6,13.6
+  edge:
+       t0  earth-hydro: S r6  |  earth-control: S r6
+      t10  earth-hydro: R r6  |  earth-control: S w6
+      t30  earth-hydro: R r6  |  earth-control: S w6
+      t60  earth-hydro: R r6  |  earth-control: S w6
+      t90  earth-hydro: R r6  |  earth-control: S w6
+     t120  earth-hydro: R r6  |  earth-control: S w6
+     t180  earth-hydro: R r6  |  earth-control: S w6
+     t300  earth-hydro: R r6  |  earth-control: S w6
+  edges:
+       t0  earth-hydro: 0 rapid / 64 ordinary  |  earth-control: 0 rapid / 70 ordinary
+      t10  earth-hydro: 54 rapid / 10 ordinary  |  earth-control: 0 rapid / 256 ordinary
+      t30  earth-hydro: 54 rapid / 10 ordinary  |  earth-control: 0 rapid / 256 ordinary
+      t60  earth-hydro: 54 rapid / 10 ordinary  |  earth-control: 0 rapid / 256 ordinary
+      t90  earth-hydro: 54 rapid / 10 ordinary  |  earth-control: 0 rapid / 256 ordinary
+     t120  earth-hydro: 54 rapid / 10 ordinary  |  earth-control: 0 rapid / 256 ordinary
+     t180  earth-hydro: 54 rapid / 10 ordinary  |  earth-control: 0 rapid / 256 ordinary
+     t300  earth-hydro: 54 rapid / 10 ordinary  |  earth-control: 0 rapid / 256 ordinary
+  near:
+       t0  earth-hydro: rapid-flowing 460, water-source 1624  |  earth-control: rapid-flowing 460, water-source 1624
+      t10  earth-hydro: rapid-flowing 434, rapid-source 54, water-flowing 47, water-source 1570  |  earth-control: rapid-flowing 315, water-falling 24, water-flowing 157, water-source 1506
+      t30  earth-hydro: rapid-flowing 434, rapid-source 54, water-flowing 47, water-source 1570  |  earth-control: rapid-flowing 315, water-falling 24, water-flowing 157, water-source 1506
+      t60  earth-hydro: rapid-flowing 434, rapid-source 54, water-flowing 47, water-source 1570  |  earth-control: rapid-flowing 315, water-falling 24, water-flowing 157, water-source 1506
+      t90  earth-hydro: rapid-flowing 434, rapid-source 54, water-flowing 47, water-source 1570  |  earth-control: rapid-flowing 315, water-falling 24, water-flowing 157, water-source 1506
+     t120  earth-hydro: rapid-flowing 434, rapid-source 54, water-flowing 47, water-source 1570  |  earth-control: rapid-flowing 315, water-falling 24, water-flowing 157, water-source 1506
+     t180  earth-hydro: rapid-flowing 434, rapid-source 54, water-flowing 47, water-source 1570  |  earth-control: rapid-flowing 315, water-falling 24, water-flowing 157, water-source 1506
+     t300  earth-hydro: rapid-flowing 434, rapid-source 54, water-flowing 47, water-source 1570  |  earth-control: rapid-flowing 315, water-falling 24, water-flowing 157, water-source 1506
+
+--- chute_poke_rhine (chute_poke) at 50.3199,7.5307
+  edge:
+       t0  earth-hydro: S r6  |  earth-control: S r6
+      t10  earth-hydro: R r6  |  earth-control: S w6
+      t30  earth-hydro: R r6  |  earth-control: S w6
+      t60  earth-hydro: R r6  |  earth-control: S w6
+      t90  earth-hydro: R r6  |  earth-control: S w6
+     t120  earth-hydro: R r6  |  earth-control: S w6
+     t180  earth-hydro: R r6  |  earth-control: S w6
+     t300  earth-hydro: R r6  |  earth-control: S w6
+  edges:
+       t0  earth-hydro: 0 rapid / 33 ordinary  |  earth-control: 0 rapid / 31 ordinary
+      t10  earth-hydro: 32 rapid / 1 ordinary  |  earth-control: 0 rapid / 49 ordinary
+      t30  earth-hydro: 32 rapid / 1 ordinary  |  earth-control: 0 rapid / 49 ordinary
+      t60  earth-hydro: 32 rapid / 1 ordinary  |  earth-control: 0 rapid / 49 ordinary
+      t90  earth-hydro: 32 rapid / 1 ordinary  |  earth-control: 0 rapid / 49 ordinary
+     t120  earth-hydro: 32 rapid / 1 ordinary  |  earth-control: 0 rapid / 49 ordinary
+     t180  earth-hydro: 32 rapid / 1 ordinary  |  earth-control: 0 rapid / 49 ordinary
+     t300  earth-hydro: 32 rapid / 1 ordinary  |  earth-control: 0 rapid / 49 ordinary
+  near:
+       t0  earth-hydro: rapid-flowing 164, water-source 1693  |  earth-control: rapid-flowing 164, water-source 1693
+      t10  earth-hydro: rapid-flowing 182, rapid-source 32, water-flowing 1, water-source 1661  |  earth-control: rapid-flowing 144, water-falling 2, water-flowing 21, water-source 1680
+      t30  earth-hydro: rapid-flowing 182, rapid-source 32, water-flowing 1, water-source 1661  |  earth-control: rapid-flowing 144, water-falling 2, water-flowing 21, water-source 1680
+      t60  earth-hydro: rapid-flowing 182, rapid-source 32, water-flowing 1, water-source 1661  |  earth-control: rapid-flowing 144, water-falling 2, water-flowing 21, water-source 1680
+      t90  earth-hydro: rapid-flowing 182, rapid-source 32, water-flowing 1, water-source 1661  |  earth-control: rapid-flowing 144, water-falling 2, water-flowing 21, water-source 1680
+     t120  earth-hydro: rapid-flowing 182, rapid-source 32, water-flowing 1, water-source 1661  |  earth-control: rapid-flowing 144, water-falling 2, water-flowing 21, water-source 1680
+     t180  earth-hydro: rapid-flowing 182, rapid-source 32, water-flowing 1, water-source 1661  |  earth-control: rapid-flowing 144, water-falling 2, water-flowing 21, water-source 1680
+     t300  earth-hydro: rapid-flowing 182, rapid-source 32, water-flowing 1, water-source 1661  |  earth-control: rapid-flowing 144, water-falling 2, water-flowing 21, water-source 1680
+
+--- wheel (wheel) at -5.6,13.6
+  near:
+       t0  earth-hydro: rapid-flowing 223, water-source 1005  |  earth-control: rapid-flowing 223, water-source 1005
+      t10  earth-hydro: rapid-falling 1, rapid-flowing 73, rapid-source 13, water-flowing 80, water-source 992  |  earth-control: rapid-flowing 75, water-falling 5, water-flowing 62, water-source 968
+      t30  earth-hydro: rapid-falling 1, rapid-flowing 73, rapid-source 13, water-flowing 80, water-source 992  |  earth-control: rapid-flowing 75, water-falling 5, water-flowing 62, water-source 968
+      t60  earth-hydro: rapid-falling 1, rapid-flowing 73, rapid-source 13, water-flowing 80, water-source 992  |  earth-control: rapid-flowing 75, water-falling 5, water-flowing 62, water-source 968
+      t90  earth-hydro: rapid-falling 1, rapid-flowing 73, rapid-source 13, water-flowing 80, water-source 992  |  earth-control: rapid-flowing 75, water-falling 5, water-flowing 62, water-source 968
+     t120  earth-hydro: rapid-falling 1, rapid-flowing 73, rapid-source 13, water-flowing 80, water-source 992  |  earth-control: rapid-flowing 75, water-falling 5, water-flowing 62, water-source 968
+     t180  earth-hydro: rapid-falling 1, rapid-flowing 73, rapid-source 13, water-flowing 80, water-source 992  |  earth-control: rapid-flowing 75, water-falling 5, water-flowing 62, water-source 968
+     t300  earth-hydro: rapid-falling 1, rapid-flowing 73, rapid-source 13, water-flowing 80, water-source 992  |  earth-control: rapid-flowing 75, water-falling 5, water-flowing 62, water-source 968
+  map:
+       t0  earth-hydro: ['S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'r6@0 r6@0 r6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'r5@0 r5@0 r5@0 r6@0 r6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', '. . r5@0 r5@0 r5@0 r6@0 r6@0 . S@0 S@0 S@0 S@0 S@0', 'r5@0 r5@0 r5@0 r5@0 . r5@0 r5@0 r5@0 . r6@0 r6@0 S@0 S@0', 'r4@0 r5@0 r5@0 r5@0 r5@0 r5@0 # r5@0 . r5@0 r5@0 r6@0 r6@0', 'r4@0 r4@0 r4@0 r5@0 r5@0 r5@0 r5@0 r5@0 . r5@0 r5@0 r5@0 r5@0', 'r4@0 r4@0 r4@0 r4@0 r4@0 r5@0 r5@0 r5@0 r5@0 r5@0 r5@0 r5@0 r5@0', 'r4@0 r4@0 r4@0 r4@0 r4@0 r4@0 r4@0 r5@0 r5@0 r5@0 r5@0 r5@0 .', 'r4@0 r4@0 r4@0 . r4@0 r4@0 r4@0 r4@0 r5@0 r5@0 r5@0 r5@0 r5@0', 'r4@0 r4@0 r4@0 r4@0 r4@0 r4@0 r4@0 r4@0 r4@0 r4@0 . r5@0 r5@0', 'r6@-1 r6@-1 r6@-1 r4@0 r4@0 . r4@0 r4@0 r4@0 r4@0 r4@0 r4@0 .']  |  earth-control: ['S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'r6@0 r6@0 r6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'r5@0 r5@0 r5@0 r6@0 r6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', '. . r5@0 r5@0 r5@0 r6@0 r6@0 . S@0 S@0 S@0 S@0 S@0', 'r5@0 r5@0 r5@0 r5@0 . r5@0 r5@0 r5@0 . r6@0 r6@0 S@0 S@0', 'r4@0 r5@0 r5@0 r5@0 r5@0 r5@0 # r5@0 . r5@0 r5@0 r6@0 r6@0', 'r4@0 r4@0 r4@0 r5@0 r5@0 r5@0 r5@0 r5@0 . r5@0 r5@0 r5@0 r5@0', 'r4@0 r4@0 r4@0 r4@0 r4@0 r5@0 r5@0 r5@0 r5@0 r5@0 r5@0 r5@0 r5@0', 'r4@0 r4@0 r4@0 r4@0 r4@0 r4@0 r4@0 r5@0 r5@0 r5@0 r5@0 r5@0 .', 'r4@0 r4@0 r4@0 . r4@0 r4@0 r4@0 r4@0 r5@0 r5@0 r5@0 r5@0 r5@0', 'r4@0 r4@0 r4@0 r4@0 r4@0 r4@0 r4@0 r4@0 r4@0 r4@0 . r5@0 r5@0', 'r6@-1 r6@-1 r6@-1 r4@0 r4@0 . r4@0 r4@0 r4@0 r4@0 r4@0 r4@0 .']
+      t10  earth-hydro: ['S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'w6@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'w5@0 w5@0 w5@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', '. . w4@0 w5@0 w5@0 w6@0 w6@0 . S@0 S@0 S@0 S@0 S@0', 'r3@0 r2@0 w3@0 w4@0 . w5@0 w5@0 w4@0 . w6@0 w5@0 S@0 S@0', 'r2@0 r1@0 w2@0 w3@0 w3@0 w4@0 # w3@0 . w5@0 w5@0 w6@0 w6@0', 'r1@0 S@-1 w1@0 w1@0 w2@0 w3@0 w3@0 w2@0 . w4@0 w4@0 w5@0 w5@0', 'S@-1 S@-1 S@-1 S@-1 w1@0 w2@0 w2@0 w1@0 w2@0 w3@0 w3@0 w4@0 w4@0', 'S@-1 S@-1 S@-1 S@-1 S@-1 w1@0 w1@0 S@-1 w1@0 w2@0 w2@0 w3@0 .', 'S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 w1@0 w1@0 w2@0 w1@0', 'S@-1 R@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 . w1@0 S@-1', 'w6@-1 r5@-1 r6@-1 R@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .']  |  earth-control: ['S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'r6@0 r6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'r5@0 r5@0 r5@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', '. . r4@0 r3@0 r2@0 w6@0 w6@0 . S@0 S@0 S@0 S@0 S@0', 'r3@0 r2@0 r3@0 r2@0 . S@-1 S@-1 S@-1 . w6@0 w6@0 S@0 S@0', 'r2@0 r1@0 r2@0 r1@0 S@-1 S@-1 # S@-1 . S@-1 S@-1 w6@0 w6@0', 'r1@0 S@-1 r1@0 S@-1 S@-1 S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .', 'S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 . S@-1 S@-1', 'w6@-1 w6@-1 w6@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .']
+      t30  earth-hydro: ['S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'w6@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'w5@0 w5@0 w5@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', '. . w4@0 w5@0 w5@0 w6@0 w6@0 . S@0 S@0 S@0 S@0 S@0', 'r3@0 r2@0 w3@0 w4@0 . w5@0 w5@0 w4@0 . w6@0 w5@0 S@0 S@0', 'r2@0 r1@0 w2@0 w3@0 w3@0 w4@0 # w3@0 . w5@0 w5@0 w6@0 w6@0', 'r1@0 S@-1 w1@0 w1@0 w2@0 w3@0 w3@0 w2@0 . w4@0 w4@0 w5@0 w5@0', 'S@-1 S@-1 S@-1 S@-1 w1@0 w2@0 w2@0 w1@0 w2@0 w3@0 w3@0 w4@0 w4@0', 'S@-1 S@-1 S@-1 S@-1 S@-1 w1@0 w1@0 S@-1 w1@0 w2@0 w2@0 w3@0 .', 'S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 w1@0 w1@0 w2@0 w1@0', 'S@-1 R@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 . w1@0 S@-1', 'w6@-1 r5@-1 r6@-1 R@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .']  |  earth-control: ['S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'r6@0 r6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'r5@0 r5@0 r5@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', '. . r4@0 r3@0 r2@0 w6@0 w6@0 . S@0 S@0 S@0 S@0 S@0', 'r3@0 r2@0 r3@0 r2@0 . S@-1 S@-1 S@-1 . w6@0 w6@0 S@0 S@0', 'r2@0 r1@0 r2@0 r1@0 S@-1 S@-1 # S@-1 . S@-1 S@-1 w6@0 w6@0', 'r1@0 S@-1 r1@0 S@-1 S@-1 S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .', 'S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 . S@-1 S@-1', 'w6@-1 w6@-1 w6@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .']
+      t60  earth-hydro: ['S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'w6@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'w5@0 w5@0 w5@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', '. . w4@0 w5@0 w5@0 w6@0 w6@0 . S@0 S@0 S@0 S@0 S@0', 'r3@0 r2@0 w3@0 w4@0 . w5@0 w5@0 w4@0 . w6@0 w5@0 S@0 S@0', 'r2@0 r1@0 w2@0 w3@0 w3@0 w4@0 # w3@0 . w5@0 w5@0 w6@0 w6@0', 'r1@0 S@-1 w1@0 w1@0 w2@0 w3@0 w3@0 w2@0 . w4@0 w4@0 w5@0 w5@0', 'S@-1 S@-1 S@-1 S@-1 w1@0 w2@0 w2@0 w1@0 w2@0 w3@0 w3@0 w4@0 w4@0', 'S@-1 S@-1 S@-1 S@-1 S@-1 w1@0 w1@0 S@-1 w1@0 w2@0 w2@0 w3@0 .', 'S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 w1@0 w1@0 w2@0 w1@0', 'S@-1 R@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 . w1@0 S@-1', 'w6@-1 r5@-1 r6@-1 R@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .']  |  earth-control: ['S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'r6@0 r6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'r5@0 r5@0 r5@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', '. . r4@0 r3@0 r2@0 w6@0 w6@0 . S@0 S@0 S@0 S@0 S@0', 'r3@0 r2@0 r3@0 r2@0 . S@-1 S@-1 S@-1 . w6@0 w6@0 S@0 S@0', 'r2@0 r1@0 r2@0 r1@0 S@-1 S@-1 # S@-1 . S@-1 S@-1 w6@0 w6@0', 'r1@0 S@-1 r1@0 S@-1 S@-1 S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .', 'S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 . S@-1 S@-1', 'w6@-1 w6@-1 w6@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .']
+      t90  earth-hydro: ['S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'w6@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'w5@0 w5@0 w5@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', '. . w4@0 w5@0 w5@0 w6@0 w6@0 . S@0 S@0 S@0 S@0 S@0', 'r3@0 r2@0 w3@0 w4@0 . w5@0 w5@0 w4@0 . w6@0 w5@0 S@0 S@0', 'r2@0 r1@0 w2@0 w3@0 w3@0 w4@0 # w3@0 . w5@0 w5@0 w6@0 w6@0', 'r1@0 S@-1 w1@0 w1@0 w2@0 w3@0 w3@0 w2@0 . w4@0 w4@0 w5@0 w5@0', 'S@-1 S@-1 S@-1 S@-1 w1@0 w2@0 w2@0 w1@0 w2@0 w3@0 w3@0 w4@0 w4@0', 'S@-1 S@-1 S@-1 S@-1 S@-1 w1@0 w1@0 S@-1 w1@0 w2@0 w2@0 w3@0 .', 'S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 w1@0 w1@0 w2@0 w1@0', 'S@-1 R@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 . w1@0 S@-1', 'w6@-1 r5@-1 r6@-1 R@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .']  |  earth-control: ['S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'r6@0 r6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'r5@0 r5@0 r5@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', '. . r4@0 r3@0 r2@0 w6@0 w6@0 . S@0 S@0 S@0 S@0 S@0', 'r3@0 r2@0 r3@0 r2@0 . S@-1 S@-1 S@-1 . w6@0 w6@0 S@0 S@0', 'r2@0 r1@0 r2@0 r1@0 S@-1 S@-1 # S@-1 . S@-1 S@-1 w6@0 w6@0', 'r1@0 S@-1 r1@0 S@-1 S@-1 S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .', 'S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 . S@-1 S@-1', 'w6@-1 w6@-1 w6@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .']
+     t120  earth-hydro: ['S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'w6@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'w5@0 w5@0 w5@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', '. . w4@0 w5@0 w5@0 w6@0 w6@0 . S@0 S@0 S@0 S@0 S@0', 'r3@0 r2@0 w3@0 w4@0 . w5@0 w5@0 w4@0 . w6@0 w5@0 S@0 S@0', 'r2@0 r1@0 w2@0 w3@0 w3@0 w4@0 # w3@0 . w5@0 w5@0 w6@0 w6@0', 'r1@0 S@-1 w1@0 w1@0 w2@0 w3@0 w3@0 w2@0 . w4@0 w4@0 w5@0 w5@0', 'S@-1 S@-1 S@-1 S@-1 w1@0 w2@0 w2@0 w1@0 w2@0 w3@0 w3@0 w4@0 w4@0', 'S@-1 S@-1 S@-1 S@-1 S@-1 w1@0 w1@0 S@-1 w1@0 w2@0 w2@0 w3@0 .', 'S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 w1@0 w1@0 w2@0 w1@0', 'S@-1 R@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 . w1@0 S@-1', 'w6@-1 r5@-1 r6@-1 R@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .']  |  earth-control: ['S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'r6@0 r6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'r5@0 r5@0 r5@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', '. . r4@0 r3@0 r2@0 w6@0 w6@0 . S@0 S@0 S@0 S@0 S@0', 'r3@0 r2@0 r3@0 r2@0 . S@-1 S@-1 S@-1 . w6@0 w6@0 S@0 S@0', 'r2@0 r1@0 r2@0 r1@0 S@-1 S@-1 # S@-1 . S@-1 S@-1 w6@0 w6@0', 'r1@0 S@-1 r1@0 S@-1 S@-1 S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .', 'S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 . S@-1 S@-1', 'w6@-1 w6@-1 w6@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .']
+     t180  earth-hydro: ['S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'w6@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'w5@0 w5@0 w5@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', '. . w4@0 w5@0 w5@0 w6@0 w6@0 . S@0 S@0 S@0 S@0 S@0', 'r3@0 r2@0 w3@0 w4@0 . w5@0 w5@0 w4@0 . w6@0 w5@0 S@0 S@0', 'r2@0 r1@0 w2@0 w3@0 w3@0 w4@0 # w3@0 . w5@0 w5@0 w6@0 w6@0', 'r1@0 S@-1 w1@0 w1@0 w2@0 w3@0 w3@0 w2@0 . w4@0 w4@0 w5@0 w5@0', 'S@-1 S@-1 S@-1 S@-1 w1@0 w2@0 w2@0 w1@0 w2@0 w3@0 w3@0 w4@0 w4@0', 'S@-1 S@-1 S@-1 S@-1 S@-1 w1@0 w1@0 S@-1 w1@0 w2@0 w2@0 w3@0 .', 'S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 w1@0 w1@0 w2@0 w1@0', 'S@-1 R@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 . w1@0 S@-1', 'w6@-1 r5@-1 r6@-1 R@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .']  |  earth-control: ['S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'r6@0 r6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'r5@0 r5@0 r5@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', '. . r4@0 r3@0 r2@0 w6@0 w6@0 . S@0 S@0 S@0 S@0 S@0', 'r3@0 r2@0 r3@0 r2@0 . S@-1 S@-1 S@-1 . w6@0 w6@0 S@0 S@0', 'r2@0 r1@0 r2@0 r1@0 S@-1 S@-1 # S@-1 . S@-1 S@-1 w6@0 w6@0', 'r1@0 S@-1 r1@0 S@-1 S@-1 S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .', 'S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 . S@-1 S@-1', 'w6@-1 w6@-1 w6@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .']
+     t300  earth-hydro: ['S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'w6@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'w5@0 w5@0 w5@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', '. . w4@0 w5@0 w5@0 w6@0 w6@0 . S@0 S@0 S@0 S@0 S@0', 'r3@0 r2@0 w3@0 w4@0 . w5@0 w5@0 w4@0 . w6@0 w5@0 S@0 S@0', 'r2@0 r1@0 w2@0 w3@0 w3@0 w4@0 # w3@0 . w5@0 w5@0 w6@0 w6@0', 'r1@0 S@-1 w1@0 w1@0 w2@0 w3@0 w3@0 w2@0 . w4@0 w4@0 w5@0 w5@0', 'S@-1 S@-1 S@-1 S@-1 w1@0 w2@0 w2@0 w1@0 w2@0 w3@0 w3@0 w4@0 w4@0', 'S@-1 S@-1 S@-1 S@-1 S@-1 w1@0 w1@0 S@-1 w1@0 w2@0 w2@0 w3@0 .', 'S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 w1@0 w1@0 w2@0 w1@0', 'S@-1 R@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 . w1@0 S@-1', 'w6@-1 r5@-1 r6@-1 R@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .']  |  earth-control: ['S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'r6@0 r6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', 'r5@0 r5@0 r5@0 w6@0 w6@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0 S@0', '. . r4@0 r3@0 r2@0 w6@0 w6@0 . S@0 S@0 S@0 S@0 S@0', 'r3@0 r2@0 r3@0 r2@0 . S@-1 S@-1 S@-1 . w6@0 w6@0 S@0 S@0', 'r2@0 r1@0 r2@0 r1@0 S@-1 S@-1 # S@-1 . S@-1 S@-1 w6@0 w6@0', 'r1@0 S@-1 r1@0 S@-1 S@-1 S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .', 'S@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1', 'S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 . S@-1 S@-1', 'w6@-1 w6@-1 w6@-1 S@-1 S@-1 . S@-1 S@-1 S@-1 S@-1 S@-1 S@-1 .']
+
+--- wheel_rhine (wheel) at 50.3199,7.5307
+  near:
+       t0  earth-hydro: rapid-flowing 18  |  earth-control: rapid-flowing 18
+      t10  earth-hydro: rapid-falling 1, rapid-flowing 17  |  earth-control: rapid-flowing 7, water-flowing 12
+      t30  earth-hydro: rapid-flowing 17, water-flowing 1  |  earth-control: rapid-flowing 7, water-flowing 12
+      t60  earth-hydro: rapid-falling 1, rapid-flowing 16, water-flowing 1  |  earth-control: rapid-flowing 7, water-flowing 12
+      t90  earth-hydro: rapid-flowing 18  |  earth-control: rapid-flowing 7, water-flowing 12
+     t120  earth-hydro: rapid-falling 1, rapid-flowing 17  |  earth-control: rapid-flowing 7, water-flowing 12
+     t180  earth-hydro: rapid-falling 2, rapid-flowing 16  |  earth-control: rapid-flowing 7, water-flowing 12
+     t300  earth-hydro: rapid-falling 2, rapid-flowing 16  |  earth-control: rapid-flowing 7, water-flowing 12
+  map:
+       t0  earth-hydro: ['. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . r4@-4 r3@-4', '. . . . . . # r5@-1 r5@-2 r5@-3 r4@-3 r5@-4 .', '. . . . . r5@1 r5@0 . . . . . .', '. . r5@5 r5@4 r5@3 r5@2 . . . . . . .', '. r5@7 r5@6 . . . . . . . . . .', 'r5@9 r5@8 . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .']  |  earth-control: ['. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . r3@-4', '. . . . . . # r5@-1 r5@-2 r5@-3 r4@-3 r5@-4 r4@-4', '. . . . . r5@1 r5@0 . . . . . .', '. . r5@5 r5@4 r5@3 r5@2 . . . . . . .', '. r5@7 r5@6 . . . . . . . . . .', 'r5@9 r5@8 . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .']
+      t10  earth-hydro: ['. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . r3@-4', '. . . . . . # r5@-1 r5@-2 r5@-3 r4@-3 r5@-4 r4@-4', '. . . . . r5@1 r5@0 . . . . . .', '. . r5@5 r5@4 r5@3 r5@2 . . . . . . .', '. r5@7 r5@6 . . . . . . . . . .', 'r5@9 r5@8 . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .']  |  earth-control: ['. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . w4@-4 w3@-4', '. . . . . . # w5@-1 w5@-2 w5@-3 w4@-3 w5@-4 w4@-4', '. . . . . r5@1 r5@0 . . . . . .', '. . r5@5 r5@4 r5@3 r5@2 . . . . . . .', '. r5@7 r5@6 . . . . . . . . . .', 'r5@9 r5@8 . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .']
+      t30  earth-hydro: ['. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . r4@-4 r3@-4', '. . . . . . # r5@-1 r5@-2 r5@-3 r4@-3 r5@-4 .', '. . . . . r5@1 r5@0 . . . . . .', '. . r5@5 r5@4 r5@3 r5@2 . . . . . . .', '. r5@7 r5@6 . . . . . . . . . .', 'r5@9 r5@8 . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .']  |  earth-control: ['. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . w4@-4 w3@-4', '. . . . . . # w5@-1 w5@-2 w5@-3 w4@-3 w5@-4 w4@-4', '. . . . . r5@1 r5@0 . . . . . .', '. . r5@5 r5@4 r5@3 r5@2 . . . . . . .', '. r5@7 r5@6 . . . . . . . . . .', 'r5@9 r5@8 . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .']
+      t60  earth-hydro: ['. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . r3@-4', '. . . . . . # r5@-1 r5@-2 r5@-3 r4@-3 r5@-4 r4@-4', '. . . . . r5@1 r5@0 . . . . . .', '. . r5@5 r5@4 r5@3 r5@2 . . . . . . .', '. r5@7 r5@6 . . . . . . . . . .', 'r5@9 r5@8 . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .']  |  earth-control: ['. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . w4@-4 w3@-4', '. . . . . . # w5@-1 w5@-2 w5@-3 w4@-3 w5@-4 w4@-4', '. . . . . r5@1 r5@0 . . . . . .', '. . r5@5 r5@4 r5@3 r5@2 . . . . . . .', '. r5@7 r5@6 . . . . . . . . . .', 'r5@9 r5@8 . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .']
+      t90  earth-hydro: ['. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . r4@-4 r3@-4', '. . . . . . # r5@-1 r5@-2 r5@-3 r4@-3 r5@-4 .', '. . . . . r5@1 r5@0 . . . . . .', '. . r5@5 r5@4 r5@3 r5@2 . . . . . . .', '. r5@7 r5@6 . . . . . . . . . .', 'r5@9 r5@8 . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .']  |  earth-control: ['. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . w4@-4 w3@-4', '. . . . . . # w5@-1 w5@-2 w5@-3 w4@-3 w5@-4 w4@-4', '. . . . . r5@1 r5@0 . . . . . .', '. . r5@5 r5@4 r5@3 r5@2 . . . . . . .', '. r5@7 r5@6 . . . . . . . . . .', 'r5@9 r5@8 . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .']
+     t120  earth-hydro: ['. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . r3@-4', '. . . . . . # r5@-1 r5@-2 r5@-3 r4@-3 r5@-4 r4@-4', '. . . . . r5@1 r5@0 . . . . . .', '. . r5@5 r5@4 r5@3 r5@2 . . . . . . .', '. r5@7 r5@6 . . . . . . . . . .', 'r5@9 r5@8 . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .']  |  earth-control: ['. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . w4@-4 w3@-4', '. . . . . . # w5@-1 w5@-2 w5@-3 w4@-3 w5@-4 w4@-4', '. . . . . r5@1 r5@0 . . . . . .', '. . r5@5 r5@4 r5@3 r5@2 . . . . . . .', '. r5@7 r5@6 . . . . . . . . . .', 'r5@9 r5@8 . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .']
+     t180  earth-hydro: ['. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . r3@-4', '. . . . . . # r5@-1 r5@-2 r5@-3 r4@-3 r5@-4 r4@-4', '. . . . . r5@1 r5@0 . . . . . .', '. . r5@5 r5@4 r5@3 r5@2 . . . . . . .', '. r5@7 r5@6 . . . . . . . . . .', 'r5@9 r5@8 . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .']  |  earth-control: ['. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . w4@-4 w3@-4', '. . . . . . # w5@-1 w5@-2 w5@-3 w4@-3 w5@-4 w4@-4', '. . . . . r5@1 r5@0 . . . . . .', '. . r5@5 r5@4 r5@3 r5@2 . . . . . . .', '. r5@7 r5@6 . . . . . . . . . .', 'r5@9 r5@8 . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .']
+     t300  earth-hydro: ['. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . r4@-4 r3@-4', '. . . . . . # r5@-1 r5@-2 r5@-3 r4@-3 r5@-4 .', '. . . . . r5@1 r5@0 . . . . . .', '. . r5@5 r5@4 r5@3 r5@2 . . . . . . .', '. r5@7 r5@6 . . . . . . . . . .', 'r5@9 r5@8 . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .']  |  earth-control: ['. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . w4@-4 w3@-4', '. . . . . . # w5@-1 w5@-2 w5@-3 w4@-3 w5@-4 w4@-4', '. . . . . r5@1 r5@0 . . . . . .', '. . r5@5 r5@4 r5@3 r5@2 . . . . . . .', '. r5@7 r5@6 . . . . . . . . . .', 'r5@9 r5@8 . . . . . . . . . . .', '. . . . . . . . . . . . .', '. . . . . . . . . . . . .']
+
+--- wheels (flowRate / power source cells, every 4 s)
+  earth-hydro lab_drop2_wheel: turning in 74 of 75 samples; 2s:0.00/0 6s:2.12/1 10s:5.12/4 14s:5.12/4 18s:5.12/4 22s:5.12/4 ... last 298s:5.12/4
+  earth-hydro lab_drop3_wheel: turning in 73 of 75 samples; 2s:0.00/0 6s:0.00/0 10s:12.80/5 14s:12.80/5 18s:14.92/5 22s:14.92/5 ... last 298s:14.92/5
+  earth-hydro lab_chute_wheel: turning in 74 of 75 samples; 2s:0.00/0 6s:7.24/4 10s:7.24/4 14s:7.24/4 18s:7.24/4 22s:7.24/4 ... last 298s:7.24/4
+  earth-hydro wheel: turning in 0 of 75 samples; 2s:0.00/0 6s:0.00/0 10s:0.00/0 14s:0.00/0 18s:0.00/0 22s:0.00/0 ... last 298s:0.00/0
+  earth-hydro wheel_rhine: turning in 75 of 75 samples; 2s:5.12/2 6s:5.12/2 10s:5.12/2 14s:5.12/2 18s:5.12/2 22s:5.12/2 ... last 298s:5.12/2
+  earth-control lab_drop2_wheel: turning in 0 of 75 samples; 2s:0.00/0 6s:0.00/0 10s:0.00/0 14s:0.00/0 18s:0.00/0 22s:0.00/0 ... last 298s:0.00/0
+  earth-control lab_drop3_wheel: turning in 0 of 75 samples; 2s:0.00/0 6s:0.00/0 10s:0.00/0 14s:0.00/0 18s:0.00/0 22s:0.00/0 ... last 298s:0.00/0
+  earth-control lab_chute_wheel: turning in 0 of 75 samples; 2s:0.00/0 6s:0.00/0 10s:0.00/0 14s:0.00/0 18s:0.00/0 22s:0.00/0 ... last 298s:0.00/0
+  earth-control wheel: turning in 0 of 75 samples; 2s:0.00/3 6s:0.00/0 10s:0.00/0 14s:0.00/0 18s:0.00/0 22s:0.00/0 ... last 298s:0.00/0
+  earth-control wheel_rhine: turning in 75 of 75 samples; 2s:5.12/2 6s:5.12/2 10s:5.12/2 14s:5.12/2 18s:5.12/2 22s:5.12/2 ... last 298s:5.12/2
+  vanilla-hydro lab_drop2_wheel: turning in 74 of 75 samples; 2s:0.00/0 6s:3.00/3 10s:9.62/5 14s:9.62/5 18s:9.62/5 22s:9.62/5 ... last 298s:9.62/5
+  vanilla-hydro lab_drop3_wheel: turning in 74 of 75 samples; 2s:0.00/0 6s:10.86/3 10s:14.92/5 14s:14.92/5 18s:14.92/5 22s:14.92/5 ... last 298s:14.92/5
+  vanilla-hydro lab_chute_wheel: turning in 74 of 75 samples; 2s:0.00/0 6s:7.24/4 10s:7.24/4 14s:7.24/4 18s:7.24/4 22s:7.24/4 ... last 298s:7.24/4
+  vanilla-control lab_drop2_wheel: turning in 0 of 75 samples; 2s:0.00/0 6s:0.00/0 10s:0.00/0 14s:0.00/0 18s:0.00/0 22s:0.00/0 ... last 298s:0.00/0
+  vanilla-control lab_drop3_wheel: turning in 0 of 75 samples; 2s:0.00/0 6s:0.00/0 10s:0.00/0 14s:0.00/0 18s:0.00/0 22s:0.00/0 ... last 298s:0.00/0
+  vanilla-control lab_chute_wheel: turning in 0 of 75 samples; 2s:0.00/0 6s:0.00/0 10s:0.00/0 14s:0.00/0 18s:0.00/0 22s:0.00/0 ... last 298s:0.00/0
+
+--- server tick (s): mean / p99 / max / ticks over 100 ms, per window since the previous sample
+  earth-hydro: t10 47.0/50/57 ms/0; t30 47.0/49/49 ms/0; t60 47.0/49/49 ms/0; t90 47.0/49/53 ms/0; t120 47.1/49/89 ms/0; t180 46.9/49/52 ms/0; t300 46.9/49/55 ms/0
+  earth-control: t10 47.0/49/57 ms/0; t30 47.0/49/49 ms/0; t60 46.9/49/49 ms/0; t90 47.0/49/49 ms/0; t120 47.0/49/61 ms/0; t180 46.9/49/50 ms/0; t300 46.9/49/49 ms/0
+  vanilla-hydro: t10 49.7/68/567 ms/1; t30 47.0/49/79 ms/0; t60 47.0/49/55 ms/0; t90 47.0/49/50 ms/0; t120 47.0/49/49 ms/0; t180 47.0/49/50 ms/0; t300 47.0/49/66 ms/0
+  vanilla-control: t10 49.0/53/482 ms/1; t30 46.9/49/58 ms/0; t60 47.0/49/54 ms/0; t90 47.0/49/49 ms/0; t120 47.0/48/49 ms/0; t180 47.0/49/49 ms/0; t300 47.0/49/62 ms/0
+  earth-hydro: overall mean 46.95 ms over 6390 ticks, worst p99 50 ms, ticks over 100 ms 0
+  earth-control: overall mean 46.95 ms over 6390 ticks, worst p99 49 ms, ticks over 100 ms 0
+  vanilla-hydro: overall mean 47.07 ms over 6374 ticks, worst p99 68 ms, ticks over 100 ms 1
+  vanilla-control: overall mean 47.04 ms over 6378 ticks, worst p99 53 ms, ticks over 100 ms 1
+
+--- Hydrology counters (cumulative)
+  earth-hydro: at t300: Updates 41861, DrainsRefused 9088, RemovalsRefused 255, Filled 662, RapidSources 509, RapidSourcesReverted 15, MadeRapid 2633, MadeOrdinary 310, time in rules 299.7 ms
+  vanilla-hydro: at t300: Updates 7233, DrainsRefused 528, RemovalsRefused 200, Filled 342, RapidSources 53, RapidSourcesReverted 16, MadeRapid 720, MadeOrdinary 10, time in rules 59.5 ms

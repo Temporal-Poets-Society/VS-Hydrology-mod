@@ -1,0 +1,6 @@
+[
+  {"Name": "spill_field2", "Kind": "lab_spill", "Liquid": "water", "Order": "field", "Spacing": 100, "Width": 2, "Offset": [0, 0]},
+  {"Name": "spill_field1", "Kind": "lab_spill", "Liquid": "water", "Order": "field", "Spacing": 100, "Width": 1, "Offset": [0, 80]},
+  {"Name": "spill_salt_field2", "Kind": "lab_spill", "Liquid": "saltwater", "Order": "field", "Spacing": 100, "Width": 2, "Offset": [0, 160]},
+  {"Name": "spill_terrace2", "Kind": "lab_spill", "Liquid": "water", "Order": "cliff", "Drop": 3, "Width": 2, "Spacing": 100, "Offset": [80, 0]}
+]

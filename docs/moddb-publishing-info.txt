@@ -1,0 +1,63 @@
+HYDROLOGY - MOD DB PUBLISHING INFORMATION
+Prepared 31 October 2026 for version 0.6.0, the first public development release.
+This file prepares the ModDB upload; the page and file have not been submitted by this chat.
+
+FORM FIELDS
+
+Name: Hydrology
+Category: Game Mod
+URL alias: hydrology, if available
+Tags: Mechanic, Realism, Immersion
+Side: Client and Server side mod; required on the server, optional on clients
+Mod ID: hydrology
+Game family: Vintage Story 1.22; select the versions verified with the uploaded file
+Declared dependencies: game 1.22.0 and the built-in Survival module
+Intended setup: a compatible Earth release; standalone gameplay outside Earth is not tested for this release
+Earth page: https://mods.vintagestory.at/earth
+Licence: GPL-3.0
+Author: andris.berzins-1
+Discord contact: ifeelveryunlucky
+Development: anyone who would like to join forces on development is welcome; get in touch on Discord.
+Release version: 0.6.0
+
+Summary (99 characters):
+Water mechanics for Earth's rivers: channel filling, smoother drops, rapids and working mill races.
+
+DESCRIPTION
+
+Use docs/moddb-description.html in the ModDB description editor's <> Source code view.
+Replace the source contents, apply, then save. Pasting raw HTML into the visual editor displays tags as text.
+The description leads with Earth river mechanics and includes the author's AI disclaimer.
+
+STRONGLY RECOMMENDED VANILLA SETTING
+
+In Customize > Survival challenges, enable Prevent liquid source transport by buckets.
+Hydrology does not enable, override or enforce this setting. Vanilla controls bucket source transport.
+Existing worlds and server configurations keep their choices. This replaces the earlier H6 default override.
+
+PACKAGE AND VERIFICATION
+
+Source basis: 0.1.13 candidate 10ce503, fast-forwarded into main before the 0.6.0 release changes.
+Upload package: release/hydrology-0.6.0.zip
+Release notes and actual verification results: docs/release-0.6.0.md
+Decision: docs/decisions/0003-public-release-and-vanilla-buckets.md
+Earlier ZIPs are preserved. This task does not install the new ZIP or modify player saves.
+Release source: main branch, annotated tag v0.6.0 in the existing private repository.
+Configured private repository: https://github.com/andrisberzins-1/VS-Hydrology-mod
+Do not advertise private source/issue URLs as publicly accessible ModDB links.
+
+SUGGESTED RELEASE NOTE
+
+First public development release: water mechanics for Earth's rivers, including channel filling, smoother drops,
+rapids, mill races, deep filling and the per-world Water flooding setting. Further water features, testing and
+compatibility improvements are planned. Bucket source transport follows vanilla settings; enabling Prevent liquid
+source transport by buckets is strongly recommended. Built for Earth; standalone gameplay is not tested.
+
+LOGO
+
+Ready to upload: docs/publishing-assets/hydrology-logo-moddb-480.png (480 x 480 PNG, verified).
+Original: docs/publishing-assets/hydrology-logo-master.png.
+Prompt and method: docs/publishing-assets/hydrology-logo-prompt.txt.
+Simple navy river-and-tributary mark with HYDROLOGY lettering on an off-white background.
+Created with the built-in image-generation tool and resized without cropping for the ModDB logo slot.
+Upload under Screenshots, then select it as the logo. This is graphic artwork, not an in-game screenshot.

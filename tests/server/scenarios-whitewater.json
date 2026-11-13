@@ -1,0 +1,7 @@
+[
+  {"Name": "lab_chute_wheel_s3", "Kind": "lab_chute", "Wheel": true, "Offset": [0, 0], "Spacing": 3},
+  {"Name": "lab_chute_wheel_s4", "Kind": "lab_chute", "Wheel": true, "Offset": [80, 0], "Spacing": 4},
+  {"Name": "lab_chute_wheel_s5", "Kind": "lab_chute", "Wheel": true, "Offset": [160, 0], "Spacing": 5},
+  {"Name": "lab_chute_s4", "Kind": "lab_chute", "Offset": [0, 80], "Spacing": 4},
+  {"Name": "lab_chute_s5", "Kind": "lab_chute", "Offset": [80, 80], "Spacing": 5}
+]

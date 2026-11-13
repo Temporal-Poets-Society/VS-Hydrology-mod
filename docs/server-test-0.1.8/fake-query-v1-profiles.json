@@ -1,0 +1,936 @@
+{
+  "step_touch_ctrl": {
+    "t0": {
+      "center": "S . . . . . . . . . . .",
+      "centerBelow": "S S S S S S S S S S S S",
+      "upperPool": {
+        "water-source": 72
+      },
+      "aboveLowerPool": {},
+      "lowerPool": {
+        "water-source": 112
+      }
+    },
+    "t10": {
+      "center": "S . . . . . . . . . . .",
+      "centerBelow": "S S S S S S S S S S S S",
+      "upperPool": {
+        "water-source": 72
+      },
+      "aboveLowerPool": {},
+      "lowerPool": {
+        "water-source": 112
+      }
+    },
+    "t30": {
+      "center": "S S S S S S S S S S S S",
+      "centerBelow": "S S S S S S S S S S S S",
+      "upperPool": {
+        "water-source": 72
+      },
+      "aboveLowerPool": {
+        "water-source": 112
+      },
+      "lowerPool": {
+        "water-source": 112
+      }
+    },
+    "t60": {
+      "center": "S S S S S S S S S S S S",
+      "centerBelow": "S S S S S S S S S S S S",
+      "upperPool": {
+        "water-source": 72
+      },
+      "aboveLowerPool": {
+        "water-source": 112
+      },
+      "lowerPool": {
+        "water-source": 112
+      }
+    },
+    "t90": {
+      "center": "S S S S S S S S S S S S",
+      "centerBelow": "S S S S S S S S S S S S",
+      "upperPool": {
+        "water-source": 72
+      },
+      "aboveLowerPool": {
+        "water-source": 112
+      },
+      "lowerPool": {
+        "water-source": 112
+      }
+    },
+    "t120": {
+      "center": "S S S S S S S S S S S S",
+      "centerBelow": "S S S S S S S S S S S S",
+      "upperPool": {
+        "water-source": 72
+      },
+      "aboveLowerPool": {
+        "water-source": 112
+      },
+      "lowerPool": {
+        "water-source": 112
+      }
+    },
+    "t180": {
+      "center": "S S S S S S S S S S S S",
+      "centerBelow": "S S S S S S S S S S S S",
+      "upperPool": {
+        "water-source": 72
+      },
+      "aboveLowerPool": {
+        "water-source": 112
+      },
+      "lowerPool": {
+        "water-source": 112
+      }
+    },
+    "t300": {
+      "center": "S S S S S S S S S S S S",
+      "centerBelow": "S S S S S S S S S S S S",
+      "upperPool": {
+        "water-source": 72
+      },
+      "aboveLowerPool": {
+        "water-source": 112
+      },
+      "lowerPool": {
+        "water-source": 112
+      }
+    }
+  },
+  "step_touch_river": {
+    "t0": {
+      "center": "S . . . . . . . . . . .",
+      "centerBelow": "S S S S S S S S S S S S",
+      "upperPool": {
+        "water-source": 72
+      },
+      "aboveLowerPool": {},
+      "lowerPool": {
+        "water-source": 112
+      }
+    },
+    "t10": {
+      "center": "S . . . . . . . . . . .",
+      "centerBelow": "S S S S S S S S S S S S",
+      "upperPool": {
+        "water-source": 72
+      },
+      "aboveLowerPool": {},
+      "lowerPool": {
+        "water-source": 112
+      }
+    },
+    "t30": {
+      "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+      "centerBelow": "S S S S S S S S S S S S",
+      "upperPool": {
+        "water-source": 72
+      },
+      "aboveLowerPool": {
+        "water-flowing": 48
+      },
+      "lowerPool": {
+        "water-source": 112
+      }
+    },
+    "t60": {
+      "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+      "centerBelow": "S S S S S S S S S S S S",
+      "upperPool": {
+        "water-source": 72
+      },
+      "aboveLowerPool": {
+        "water-flowing": 48
+      },
+      "lowerPool": {
+        "water-source": 112
+      }
+    },
+    "t90": {
+      "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+      "centerBelow": "S S S S S S S S S S S S",
+      "upperPool": {
+        "water-source": 72
+      },
+      "aboveLowerPool": {
+        "water-flowing": 48
+      },
+      "lowerPool": {
+        "water-source": 112
+      }
+    },
+    "t120": {
+      "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+      "centerBelow": "S S S S S S S S S S S S",
+      "upperPool": {
+        "water-source": 72
+      },
+      "aboveLowerPool": {
+        "water-flowing": 48
+      },
+      "lowerPool": {
+        "water-source": 112
+      }
+    },
+    "t180": {
+      "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+      "centerBelow": "S S S S S S S S S S S S",
+      "upperPool": {
+        "water-source": 72
+      },
+      "aboveLowerPool": {
+        "water-flowing": 48
+      },
+      "lowerPool": {
+        "water-source": 112
+      }
+    },
+    "t300": {
+      "center": "S w6 w5 w4 w3 w2 w1 . . . . .",
+      "centerBelow": "S S S S S S S S S S S S",
+      "upperPool": {
+        "water-source": 72
+      },
+      "aboveLowerPool": {
+        "water-flowing": 48
+      },
+      "lowerPool": {
+        "water-source": 112
+      }
+    }
+  },
+  "step_touch_rapids": {
+    "t0": {
+      "center": "S . . . . . . . . . . .",
+      "centerBelow": "S S S S S S S S S S S S",
+      "upperPool": {
+        "water-source": 72
+      },
+      "aboveLowerPool": {},
+      "lowerPool": {
+        "water-source": 112
+      }
+    },
+    "t10": {
+      "center": "R . . . . . . . . . . .",
+      "centerBelow": "S R R R R R R R R R R R",
+      "upperPool": {
+        "rapid-source": 72
+      },
+      "aboveLowerPool": {},
+      "lowerPool": {
+        "rapid-source": 112
+      }
+    },
+    "t30": {
+      "center": "R r6 r5 r4 r3 r2 r1 . . . . .",
+      "centerBelow": "S R R R R R R R R R R R",
+      "upperPool": {
+        "rapid-source": 72
+      },
+      "aboveLowerPool": {
+        "rapid-flowing": 48
+      },
+      "lowerPool": {
+        "rapid-source": 112
+      }
+    },
+    "t60": {
+      "center": "R r6 r5 r4 r3 r2 r1 . . . . .",
+      "centerBelow": "S R R R R R R R R R R R",
+      "upperPool": {
+        "rapid-source": 72
+      },
+      "aboveLowerPool": {
+        "rapid-flowing": 48
+      },
+      "lowerPool": {
+        "rapid-source": 112
+      }
+    },
+    "t90": {
+      "center": "R r6 r5 r4 r3 r2 r1 . . . . .",
+      "centerBelow": "S R R R R R R R R R R R",
+      "upperPool": {
+        "rapid-source": 72
+      },
+      "aboveLowerPool": {
+        "rapid-flowing": 48
+      },
+      "lowerPool": {
+        "rapid-source": 112
+      }
+    },
+    "t120": {
+      "center": "R r6 r5 r4 r3 r2 r1 . . . . .",
+      "centerBelow": "S R R R R R R R R R R R",
+      "upperPool": {
+        "rapid-source": 72
+      },
+      "aboveLowerPool": {
+        "rapid-flowing": 48
+      },
+      "lowerPool": {
+        "rapid-source": 112
+      }
+    },
+    "t180": {
+      "center": "R r6 r5 r4 r3 r2 r1 . . . . .",
+      "centerBelow": "S R R R R R R R R R R R",
+      "upperPool": {
+        "rapid-source": 72
+      },
+      "aboveLowerPool": {
+        "rapid-flowing": 48
+      },
+      "lowerPool": {
+        "rapid-source": 112
+      }
+    },
+    "t300": {
+      "center": "R r6 r5 r4 r3 r2 r1 . . . . .",
+      "centerBelow": "S R R R R R R R R R R R",
+      "upperPool": {
+        "rapid-source": 72
+      },
+      "aboveLowerPool": {
+        "rapid-flowing": 48
+      },
+      "lowerPool": {
+        "rapid-source": 112
+      }
+    }
+  },
+  "canal_ctrl": {
+    "t0": {
+      "trench": "..............................",
+      "trench-1": "..............................",
+      "trench-2": "..............................",
+      "pool": {
+        "water-source": 90
+      }
+    },
+    "t10": {
+      "trench": "SSSSSSSSSf....................",
+      "trench-1": "SSSSSSSSSf....................",
+      "trench-2": "SSSSSSSSSSSSf.................",
+      "pool": {
+        "water-source": 90
+      }
+    },
+    "t30": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-2": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "pool": {
+        "water-source": 90
+      }
+    },
+    "t60": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-2": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "pool": {
+        "water-source": 90
+      }
+    },
+    "t90": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-2": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "pool": {
+        "water-source": 90
+      }
+    },
+    "t120": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-2": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "pool": {
+        "water-source": 90
+      }
+    },
+    "t180": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-2": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "pool": {
+        "water-source": 90
+      }
+    },
+    "t300": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-2": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "pool": {
+        "water-source": 90
+      }
+    }
+  },
+  "canal_pool_river": {
+    "t0": {
+      "trench": "..............................",
+      "trench-1": "..............................",
+      "trench-2": "..............................",
+      "pool": {
+        "water-source": 90
+      }
+    },
+    "t10": {
+      "trench": "SSSSSSSSff....................",
+      "trench-1": "SSSSSSSSS.....................",
+      "trench-2": "SSSSSSSSSSSSSSfff.............",
+      "pool": {
+        "water-source": 90
+      }
+    },
+    "t30": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-2": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "pool": {
+        "water-source": 90
+      }
+    },
+    "t60": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-2": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "pool": {
+        "water-source": 90
+      }
+    },
+    "t90": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-2": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "pool": {
+        "water-source": 90
+      }
+    },
+    "t120": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-2": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "pool": {
+        "water-source": 90
+      }
+    },
+    "t180": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-2": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "pool": {
+        "water-source": 90
+      }
+    },
+    "t300": {
+      "trench": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-1": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "trench-2": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "pool": {
+        "water-source": 90
+      }
+    }
+  },
+  "canal_all_river": {
+    "t0": {
+      "trench": "..............................",
+      "trench-1": "..............................",
+      "trench-2": "..............................",
+      "pool": {
+        "water-source": 90
+      }
+    },
+    "t10": {
+      "trench": "f.............................",
+      "trench-1": "ffffff........................",
+      "trench-2": "SSSSSSSSSSSSSSSSSSSSSSSSSSSff.",
+      "pool": {
+        "water-source": 88,
+        "rapid-source": 2
+      }
+    },
+    "t30": {
+      "trench": "f.............................",
+      "trench-1": "ffffff........................",
+      "trench-2": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "pool": {
+        "water-source": 88,
+        "rapid-source": 2
+      }
+    },
+    "t60": {
+      "trench": "f.............................",
+      "trench-1": "ffffff........................",
+      "trench-2": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "pool": {
+        "water-source": 88,
+        "rapid-source": 2
+      }
+    },
+    "t90": {
+      "trench": "f.............................",
+      "trench-1": "ffffff........................",
+      "trench-2": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "pool": {
+        "water-source": 88,
+        "rapid-source": 2
+      }
+    },
+    "t120": {
+      "trench": "f.............................",
+      "trench-1": "ffffff........................",
+      "trench-2": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "pool": {
+        "water-source": 88,
+        "rapid-source": 2
+      }
+    },
+    "t180": {
+      "trench": "f.............................",
+      "trench-1": "ffffff........................",
+      "trench-2": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "pool": {
+        "water-source": 88,
+        "rapid-source": 2
+      }
+    },
+    "t300": {
+      "trench": "f.............................",
+      "trench-1": "ffffff........................",
+      "trench-2": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS",
+      "pool": {
+        "water-source": 88,
+        "rapid-source": 2
+      }
+    }
+  },
+  "chute_wheel_ctrl": {
+    "t0": {
+      "y-0": "S . . . . . . . . . . .",
+      "y-1": ". S S S . . . . . . . .",
+      "y-2": ". . . . S S S . . . . .",
+      "y-3": ". . . . . . . S S S S S",
+      "edges": "SS SS SS",
+      "all": {
+        "water-source": 112
+      },
+      "cells": "k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t10": {
+      "y-0": "R r6 r5 r4 rd3 . . . . . . .",
+      "y-1": ". S S R r6 r5 r4 rd3 . . . .",
+      "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+      "y-3": ". . . . . . . S S S S S",
+      "edges": "RR RR RR",
+      "all": {
+        "water-source": 106,
+        "rapid-source": 6,
+        "rapid-flowing": 24,
+        "rapid-falling": 4
+      },
+      "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/rd3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t30": {
+      "y-0": "R r6 r5 r4 rd3 . . . . . . .",
+      "y-1": ". S S R r6 r5 r4 rd3 . . . .",
+      "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+      "y-3": ". . . . . . . S S S S S",
+      "edges": "RR RR RR",
+      "all": {
+        "water-source": 106,
+        "rapid-source": 6,
+        "rapid-flowing": 24,
+        "rapid-falling": 4
+      },
+      "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/rd3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t60": {
+      "y-0": "R r6 r5 r4 rd3 . . . . . . .",
+      "y-1": ". S S R r6 r5 r4 rd3 . . . .",
+      "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+      "y-3": ". . . . . . . S S S S S",
+      "edges": "RR RR RR",
+      "all": {
+        "water-source": 106,
+        "rapid-source": 6,
+        "rapid-flowing": 24,
+        "rapid-falling": 4
+      },
+      "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/rd3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t90": {
+      "y-0": "R r6 r5 r4 rd3 . . . . . . .",
+      "y-1": ". S S R r6 r5 r4 rd3 . . . .",
+      "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+      "y-3": ". . . . . . . S S S S S",
+      "edges": "RR RR RR",
+      "all": {
+        "water-source": 106,
+        "rapid-source": 6,
+        "rapid-flowing": 24,
+        "rapid-falling": 4
+      },
+      "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/rd3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t120": {
+      "y-0": "R r6 r5 r4 rd3 . . . . . . .",
+      "y-1": ". S S R r6 r5 r4 rd3 . . . .",
+      "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+      "y-3": ". . . . . . . S S S S S",
+      "edges": "RR RR RR",
+      "all": {
+        "water-source": 106,
+        "rapid-source": 6,
+        "rapid-flowing": 24,
+        "rapid-falling": 4
+      },
+      "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/rd3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t180": {
+      "y-0": "R r6 r5 r4 rd3 . . . . . . .",
+      "y-1": ". S S R r6 r5 r4 rd3 . . . .",
+      "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+      "y-3": ". . . . . . . S S S S S",
+      "edges": "RR RR RR",
+      "all": {
+        "water-source": 106,
+        "rapid-source": 6,
+        "rapid-flowing": 24,
+        "rapid-falling": 4
+      },
+      "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/rd3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t300": {
+      "y-0": "R r6 r5 r4 rd3 . . . . . . .",
+      "y-1": ". S S R r6 r5 r4 rd3 . . . .",
+      "y-2": ". . . . S S R r6 r5 r4 r3 r2",
+      "y-3": ". . . . . . . S S S S S",
+      "edges": "RR RR RR",
+      "all": {
+        "water-source": 106,
+        "rapid-source": 6,
+        "rapid-flowing": 24,
+        "rapid-falling": 4
+      },
+      "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/rd3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    }
+  },
+  "chute_wheel_river": {
+    "t0": {
+      "y-0": "S . . . . . . . . . . .",
+      "y-1": ". S S S . . . . . . . .",
+      "y-2": ". . . . S S S . . . . .",
+      "y-3": ". . . . . . . S S S S S",
+      "edges": "SS SS SS",
+      "all": {
+        "water-source": 112
+      },
+      "cells": "k2y--1:air/. k2y-0:air/. k2y-1:air/S k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/. k3y-1:air/S k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/. k4y-1:air/. k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t10": {
+      "y-0": "R r6 r5 r4 rd3 . . . . . . .",
+      "y-1": ". R R R r6 r5 r4 rd3 . . . .",
+      "y-2": ". . . . S S S r6 r5 r4 r3 r2",
+      "y-3": ". . . . . . . S S S S S",
+      "edges": "RR RR SS",
+      "all": {
+        "rapid-source": 77,
+        "rapid-flowing": 24,
+        "water-source": 35,
+        "rapid-falling": 4
+      },
+      "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/rd3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t30": {
+      "y-0": "R r6 r5 r4 rd3 . . . . . . .",
+      "y-1": ". R R R r6 r5 r4 rd3 . . . .",
+      "y-2": ". . . . S S S r6 r5 r4 r3 r2",
+      "y-3": ". . . . . . . S S S S S",
+      "edges": "RR RR SS",
+      "all": {
+        "rapid-source": 77,
+        "rapid-flowing": 24,
+        "water-source": 35,
+        "rapid-falling": 4
+      },
+      "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/rd3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t60": {
+      "y-0": "R r6 r5 r4 rd3 . . . . . . .",
+      "y-1": ". R R R r6 r5 r4 rd3 . . . .",
+      "y-2": ". . . . S S S r6 r5 r4 r3 r2",
+      "y-3": ". . . . . . . S S S S S",
+      "edges": "RR RR SS",
+      "all": {
+        "rapid-source": 77,
+        "rapid-flowing": 24,
+        "water-source": 35,
+        "rapid-falling": 4
+      },
+      "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/rd3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t90": {
+      "y-0": "R r6 r5 r4 rd3 . . . . . . .",
+      "y-1": ". R R R r6 r5 r4 rd3 . . . .",
+      "y-2": ". . . . S S S r6 r5 r4 r3 r2",
+      "y-3": ". . . . . . . S S S S S",
+      "edges": "RR RR SS",
+      "all": {
+        "rapid-source": 77,
+        "rapid-flowing": 24,
+        "water-source": 35,
+        "rapid-falling": 4
+      },
+      "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/rd3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t120": {
+      "y-0": "R r6 r5 r4 rd3 . . . . . . .",
+      "y-1": ". R R R r6 r5 r4 rd3 . . . .",
+      "y-2": ". . . . S S S r6 r5 r4 r3 r2",
+      "y-3": ". . . . . . . S S S S S",
+      "edges": "RR RR SS",
+      "all": {
+        "rapid-source": 77,
+        "rapid-flowing": 24,
+        "water-source": 35,
+        "rapid-falling": 4
+      },
+      "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/rd3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t180": {
+      "y-0": "R r6 r5 r4 rd3 . . . . . . .",
+      "y-1": ". R R R r6 r5 r4 rd3 . . . .",
+      "y-2": ". . . . S S S r6 r5 r4 r3 r2",
+      "y-3": ". . . . . . . S S S S S",
+      "edges": "RR RR SS",
+      "all": {
+        "rapid-source": 77,
+        "rapid-flowing": 24,
+        "water-source": 35,
+        "rapid-falling": 4
+      },
+      "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/rd3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    },
+    "t300": {
+      "y-0": "R r6 r5 r4 rd3 . . . . . . .",
+      "y-1": ". R R R r6 r5 r4 rd3 . . . .",
+      "y-2": ". . . . S S S r6 r5 r4 r3 r2",
+      "y-3": ". . . . . . . S S S S S",
+      "edges": "RR RR SS",
+      "all": {
+        "rapid-source": 77,
+        "rapid-flowing": 24,
+        "water-source": 35,
+        "rapid-falling": 4
+      },
+      "cells": "k2y--1:air/. k2y-0:air/r5 k2y-1:air/R k2y-2:rock-granite/. k2y-3:rock-granite/. k3y--1:air/. k3y-0:air/r4 k3y-1:air/R k3y-2:rock-granite/. k3y-3:rock-granite/. k4y--1:air/. k4y-0:waterwheel-3m-north/rd3 k4y-1:air/r6 k4y-2:air/S k4y-3:rock-granite/."
+    }
+  },
+  "chute_s9_rapids": {
+    "t0": {
+      "y-0": "S . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+      "y-1": ". S S S S S S S S S . . . . . . . . . . . . . . . . . . . .",
+      "y-2": ". . . . . . . . . . S S S S S S S S S . . . . . . . . . . .",
+      "y-3": ". . . . . . . . . . . . . . . . . . . S S . . . . . . . . .",
+      "edges": "SS SS SS",
+      "all": {
+        "water-source": 112
+      },
+      "cells": "k8y--1:air/. k8y-0:air/. k8y-1:air/S k8y-2:rock-granite/. k8y-3:rock-granite/. k9y--1:air/. k9y-0:air/. k9y-1:air/S k9y-2:rock-granite/. k9y-3:rock-granite/. k10y--1:air/. k10y-0:air/. k10y-1:air/. k10y-2:air/S k10y-3:rock-granite/."
+    },
+    "t10": {
+      "y-0": "R r6 r5 r4 r3 r2 r1 . . . . . . . . . . . . . . . . . . . . . . .",
+      "y-1": ". S R R R R R R R R r6 r5 r4 r3 r2 r1 . . . . . . . . . . . . . .",
+      "y-2": ". . . . . . . . . . S R R R R R R R R r6 r5 . . . . . . . . .",
+      "y-3": ". . . . . . . . . . . . . . . . . . . S S . . . . . . . . .",
+      "edges": "RR RR RR",
+      "all": {
+        "rapid-source": 104,
+        "water-source": 8,
+        "rapid-flowing": 28
+      },
+      "cells": "k8y--1:air/. k8y-0:air/. k8y-1:air/R k8y-2:rock-granite/. k8y-3:rock-granite/. k9y--1:air/. k9y-0:air/. k9y-1:air/R k9y-2:rock-granite/. k9y-3:rock-granite/. k10y--1:air/. k10y-0:air/. k10y-1:air/r6 k10y-2:air/S k10y-3:rock-granite/."
+    },
+    "t30": {
+      "y-0": "R r6 r5 r4 r3 r2 r1 . . . . . . . . . . . . . . . . . . . . . . .",
+      "y-1": ". R R R R R R R R R r6 r5 r4 r3 r2 r1 . . . . . . . . . . . . . .",
+      "y-2": ". . . . . . . . . . S R R R R R R R R r6 r5 . . . . . . . . .",
+      "y-3": ". . . . . . . . . . . . . . . . . . . S S . . . . . . . . .",
+      "edges": "RR RR RR",
+      "all": {
+        "rapid-source": 105,
+        "rapid-flowing": 28,
+        "water-source": 7
+      },
+      "cells": "k8y--1:air/. k8y-0:air/. k8y-1:air/R k8y-2:rock-granite/. k8y-3:rock-granite/. k9y--1:air/. k9y-0:air/. k9y-1:air/R k9y-2:rock-granite/. k9y-3:rock-granite/. k10y--1:air/. k10y-0:air/. k10y-1:air/r6 k10y-2:air/S k10y-3:rock-granite/."
+    },
+    "t60": {
+      "y-0": "R r6 r5 r4 r3 r2 r1 . . . . . . . . . . . . . . . . . . . . . . .",
+      "y-1": ". R R R R R R R R R r6 r5 r4 r3 r2 r1 . . . . . . . . . . . . . .",
+      "y-2": ". . . . . . . . . . S R R R R R R R R r6 r5 . . . . . . . . .",
+      "y-3": ". . . . . . . . . . . . . . . . . . . S S . . . . . . . . .",
+      "edges": "RR RR RR",
+      "all": {
+        "rapid-source": 105,
+        "rapid-flowing": 28,
+        "water-source": 7
+      },
+      "cells": "k8y--1:air/. k8y-0:air/. k8y-1:air/R k8y-2:rock-granite/. k8y-3:rock-granite/. k9y--1:air/. k9y-0:air/. k9y-1:air/R k9y-2:rock-granite/. k9y-3:rock-granite/. k10y--1:air/. k10y-0:air/. k10y-1:air/r6 k10y-2:air/S k10y-3:rock-granite/."
+    },
+    "t90": {
+      "y-0": "R r6 r5 r4 r3 r2 r1 . . . . . . . . . . . . . . . . . . . . . . .",
+      "y-1": ". R R R R R R R R R r6 r5 r4 r3 r2 r1 . . . . . . . . . . . . . .",
+      "y-2": ". . . . . . . . . . S R R R R R R R R r6 r5 . . . . . . . . .",
+      "y-3": ". . . . . . . . . . . . . . . . . . . S S . . . . . . . . .",
+      "edges": "RR RR RR",
+      "all": {
+        "rapid-source": 105,
+        "rapid-flowing": 28,
+        "water-source": 7
+      },
+      "cells": "k8y--1:air/. k8y-0:air/. k8y-1:air/R k8y-2:rock-granite/. k8y-3:rock-granite/. k9y--1:air/. k9y-0:air/. k9y-1:air/R k9y-2:rock-granite/. k9y-3:rock-granite/. k10y--1:air/. k10y-0:air/. k10y-1:air/r6 k10y-2:air/S k10y-3:rock-granite/."
+    },
+    "t120": {
+      "y-0": "R r6 r5 r4 r3 r2 r1 . . . . . . . . . . . . . . . . . . . . . . .",
+      "y-1": ". R R R R R R R R R r6 r5 r4 r3 r2 r1 . . . . . . . . . . . . . .",
+      "y-2": ". . . . . . . . . . S R R R R R R R R r6 r5 . . . . . . . . .",
+      "y-3": ". . . . . . . . . . . . . . . . . . . S S . . . . . . . . .",
+      "edges": "RR RR RR",
+      "all": {
+        "rapid-source": 105,
+        "rapid-flowing": 28,
+        "water-source": 7
+      },
+      "cells": "k8y--1:air/. k8y-0:air/. k8y-1:air/R k8y-2:rock-granite/. k8y-3:rock-granite/. k9y--1:air/. k9y-0:air/. k9y-1:air/R k9y-2:rock-granite/. k9y-3:rock-granite/. k10y--1:air/. k10y-0:air/. k10y-1:air/r6 k10y-2:air/S k10y-3:rock-granite/."
+    },
+    "t180": {
+      "y-0": "R r6 r5 r4 r3 r2 r1 . . . . . . . . . . . . . . . . . . . . . . .",
+      "y-1": ". R R R R R R R R R r6 r5 r4 r3 r2 r1 . . . . . . . . . . . . . .",
+      "y-2": ". . . . . . . . . . S R R R R R R R R r6 r5 . . . . . . . . .",
+      "y-3": ". . . . . . . . . . . . . . . . . . . S S . . . . . . . . .",
+      "edges": "RR RR RR",
+      "all": {
+        "rapid-source": 105,
+        "rapid-flowing": 28,
+        "water-source": 7
+      },
+      "cells": "k8y--1:air/. k8y-0:air/. k8y-1:air/R k8y-2:rock-granite/. k8y-3:rock-granite/. k9y--1:air/. k9y-0:air/. k9y-1:air/R k9y-2:rock-granite/. k9y-3:rock-granite/. k10y--1:air/. k10y-0:air/. k10y-1:air/r6 k10y-2:air/S k10y-3:rock-granite/."
+    },
+    "t300": {
+      "y-0": "R r6 r5 r4 r3 r2 r1 . . . . . . . . . . . . . . . . . . . . . . .",
+      "y-1": ". R R R R R R R R R r6 r5 r4 r3 r2 r1 . . . . . . . . . . . . . .",
+      "y-2": ". . . . . . . . . . S R R R R R R R R r6 r5 . . . . . . . . .",
+      "y-3": ". . . . . . . . . . . . . . . . . . . S S . . . . . . . . .",
+      "edges": "RR RR RR",
+      "all": {
+        "rapid-source": 105,
+        "rapid-flowing": 28,
+        "water-source": 7
+      },
+      "cells": "k8y--1:air/. k8y-0:air/. k8y-1:air/R k8y-2:rock-granite/. k8y-3:rock-granite/. k9y--1:air/. k9y-0:air/. k9y-1:air/R k9y-2:rock-granite/. k9y-3:rock-granite/. k10y--1:air/. k10y-0:air/. k10y-1:air/r6 k10y-2:air/S k10y-3:rock-granite/."
+    }
+  },
+  "chute_s9_ctrl": {
+    "t0": {
+      "y-0": "S . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+      "y-1": ". S S S S S S S S S . . . . . . . . . . . . . . . . . . . .",
+      "y-2": ". . . . . . . . . . S S S S S S S S S . . . . . . . . . . .",
+      "y-3": ". . . . . . . . . . . . . . . . . . . S S . . . . . . . . .",
+      "edges": "SS SS SS",
+      "all": {
+        "water-source": 112
+      },
+      "cells": "k8y--1:air/. k8y-0:air/. k8y-1:air/S k8y-2:rock-granite/. k8y-3:rock-granite/. k9y--1:air/. k9y-0:air/. k9y-1:air/S k9y-2:rock-granite/. k9y-3:rock-granite/. k10y--1:air/. k10y-0:air/. k10y-1:air/. k10y-2:air/S k10y-3:rock-granite/."
+    },
+    "t10": {
+      "y-0": "S w6 w5 w4 w3 w2 w1 . . . . . . . . . . . . . . . . . . . . . . .",
+      "y-1": ". S S S S S S S S S w6 w5 w4 w3 w2 w1 . . . . . . . . . . . . . .",
+      "y-2": ". . . . . . . . . . S S S S S S S S S . . . . . . . . . . .",
+      "y-3": ". . . . . . . . . . . . . . . . . . . S S . . . . . . . . .",
+      "edges": "SS SS SS",
+      "all": {
+        "water-source": 112,
+        "water-flowing": 24
+      },
+      "cells": "k8y--1:air/. k8y-0:air/. k8y-1:air/S k8y-2:rock-granite/. k8y-3:rock-granite/. k9y--1:air/. k9y-0:air/. k9y-1:air/S k9y-2:rock-granite/. k9y-3:rock-granite/. k10y--1:air/. k10y-0:air/. k10y-1:air/w6 k10y-2:air/S k10y-3:rock-granite/."
+    },
+    "t30": {
+      "y-0": "S w6 w5 w4 w3 w2 w1 . . . . . . . . . . . . . . . . . . . . . . .",
+      "y-1": ". S S S S S S S S S w6 w5 w4 w3 w2 w1 . . . . . . . . . . . . . .",
+      "y-2": ". . . . . . . . . . S S S S S S S S S . . . . . . . . . . .",
+      "y-3": ". . . . . . . . . . . . . . . . . . . S S . . . . . . . . .",
+      "edges": "SS SS SS",
+      "all": {
+        "water-source": 112,
+        "water-flowing": 24
+      },
+      "cells": "k8y--1:air/. k8y-0:air/. k8y-1:air/S k8y-2:rock-granite/. k8y-3:rock-granite/. k9y--1:air/. k9y-0:air/. k9y-1:air/S k9y-2:rock-granite/. k9y-3:rock-granite/. k10y--1:air/. k10y-0:air/. k10y-1:air/w6 k10y-2:air/S k10y-3:rock-granite/."
+    },
+    "t60": {
+      "y-0": "S w6 w5 w4 w3 w2 w1 . . . . . . . . . . . . . . . . . . . . . . .",
+      "y-1": ". S S S S S S S S S w6 w5 w4 w3 w2 w1 . . . . . . . . . . . . . .",
+      "y-2": ". . . . . . . . . . S S S S S S S S S . . . . . . . . . . .",
+      "y-3": ". . . . . . . . . . . . . . . . . . . S S . . . . . . . . .",
+      "edges": "SS SS SS",
+      "all": {
+        "water-source": 112,
+        "water-flowing": 24
+      },
+      "cells": "k8y--1:air/. k8y-0:air/. k8y-1:air/S k8y-2:rock-granite/. k8y-3:rock-granite/. k9y--1:air/. k9y-0:air/. k9y-1:air/S k9y-2:rock-granite/. k9y-3:rock-granite/. k10y--1:air/. k10y-0:air/. k10y-1:air/w6 k10y-2:air/S k10y-3:rock-granite/."
+    },
+    "t90": {
+      "y-0": "S w6 w5 w4 w3 w2 w1 . . . . . . . . . . . . . . . . . . . . . . .",
+      "y-1": ". S S S S S S S S S w6 w5 w4 w3 w2 w1 . . . . . . . . . . . . . .",
+      "y-2": ". . . . . . . . . . S S S S S S S S S . . . . . . . . . . .",
+      "y-3": ". . . . . . . . . . . . . . . . . . . S S . . . . . . . . .",
+      "edges": "SS SS SS",
+      "all": {
+        "water-source": 112,
+        "water-flowing": 24
+      },
+      "cells": "k8y--1:air/. k8y-0:air/. k8y-1:air/S k8y-2:rock-granite/. k8y-3:rock-granite/. k9y--1:air/. k9y-0:air/. k9y-1:air/S k9y-2:rock-granite/. k9y-3:rock-granite/. k10y--1:air/. k10y-0:air/. k10y-1:air/w6 k10y-2:air/S k10y-3:rock-granite/."
+    },
+    "t120": {
+      "y-0": "S w6 w5 w4 w3 w2 w1 . . . . . . . . . . . . . . . . . . . . . . .",
+      "y-1": ". S S S S S S S S S w6 w5 w4 w3 w2 w1 . . . . . . . . . . . . . .",
+      "y-2": ". . . . . . . . . . S S S S S S S S S . . . . . . . . . . .",
+      "y-3": ". . . . . . . . . . . . . . . . . . . S S . . . . . . . . .",
+      "edges": "SS SS SS",
+      "all": {
+        "water-source": 112,
+        "water-flowing": 24
+      },
+      "cells": "k8y--1:air/. k8y-0:air/. k8y-1:air/S k8y-2:rock-granite/. k8y-3:rock-granite/. k9y--1:air/. k9y-0:air/. k9y-1:air/S k9y-2:rock-granite/. k9y-3:rock-granite/. k10y--1:air/. k10y-0:air/. k10y-1:air/w6 k10y-2:air/S k10y-3:rock-granite/."
+    },
+    "t180": {
+      "y-0": "S w6 w5 w4 w3 w2 w1 . . . . . . . . . . . . . . . . . . . . . . .",
+      "y-1": ". S S S S S S S S S w6 w5 w4 w3 w2 w1 . . . . . . . . . . . . . .",
+      "y-2": ". . . . . . . . . . S S S S S S S S S . . . . . . . . . . .",
+      "y-3": ". . . . . . . . . . . . . . . . . . . S S . . . . . . . . .",
+      "edges": "SS SS SS",
+      "all": {
+        "water-source": 112,
+        "water-flowing": 24
+      },
+      "cells": "k8y--1:air/. k8y-0:air/. k8y-1:air/S k8y-2:rock-granite/. k8y-3:rock-granite/. k9y--1:air/. k9y-0:air/. k9y-1:air/S k9y-2:rock-granite/. k9y-3:rock-granite/. k10y--1:air/. k10y-0:air/. k10y-1:air/w6 k10y-2:air/S k10y-3:rock-granite/."
+    },
+    "t300": {
+      "y-0": "S w6 w5 w4 w3 w2 w1 . . . . . . . . . . . . . . . . . . . . . . .",
+      "y-1": ". S S S S S S S S S w6 w5 w4 w3 w2 w1 . . . . . . . . . . . . . .",
+      "y-2": ". . . . . . . . . . S S S S S S S S S . . . . . . . . . . .",
+      "y-3": ". . . . . . . . . . . . . . . . . . . S S . . . . . . . . .",
+      "edges": "SS SS SS",
+      "all": {
+        "water-source": 112,
+        "water-flowing": 24
+      },
+      "cells": "k8y--1:air/. k8y-0:air/. k8y-1:air/S k8y-2:rock-granite/. k8y-3:rock-granite/. k9y--1:air/. k9y-0:air/. k9y-1:air/S k9y-2:rock-granite/. k9y-3:rock-granite/. k10y--1:air/. k10y-0:air/. k10y-1:air/w6 k10y-2:air/S k10y-3:rock-granite/."
+    }
+  }
+}

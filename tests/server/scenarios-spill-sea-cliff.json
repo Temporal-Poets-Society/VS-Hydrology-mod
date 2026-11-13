@@ -1,0 +1,8 @@
+[
+  {"Name": "spill_salt_onsea", "Kind": "lab_spill", "Liquid": "saltwater", "Order": "sea", "Offset": [0, 0]},
+  {"Name": "spill_fresh_onsea", "Kind": "lab_spill", "Liquid": "water", "Order": "sea", "Offset": [0, 80]},
+  {"Name": "spill_salt_cliff2", "Kind": "lab_spill", "Liquid": "saltwater", "Order": "cliff", "Drop": 4, "Width": 2, "Offset": [0, 160]},
+  {"Name": "spill_salt_cliff1", "Kind": "lab_spill", "Liquid": "saltwater", "Order": "cliff", "Drop": 4, "Width": 1, "Offset": [80, 0]},
+  {"Name": "spill_fresh_cliff2", "Kind": "lab_spill", "Liquid": "water", "Order": "cliff", "Drop": 4, "Width": 2, "Offset": [80, 80]},
+  {"Name": "spill_mixed_cliff2", "Kind": "lab_spill", "Liquid": "saltwater", "SpillLiquid": "water", "Order": "cliff", "Drop": 4, "Width": 2, "Offset": [80, 160]}
+]

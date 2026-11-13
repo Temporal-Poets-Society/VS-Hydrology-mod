@@ -1,0 +1,7 @@
+{
+  "worldconfig-category-earth": "Earth",
+  "worldattribute-hydrologyFlooding": "Water flooding",
+  "worldattribute-hydrologyFlooding-desc": "Enable communicating vessels: deep canals and basins fill toward the feeding water level. Earth's natural river columns stay protected where its river query is available. Can be changed later; reload the world after changing it.",
+  "worldconfig-hydrologyFlooding-true": "Enabled",
+  "worldconfig-hydrologyFlooding-false": "Disabled"
+}

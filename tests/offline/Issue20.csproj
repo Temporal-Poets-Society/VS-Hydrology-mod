@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>12</LangVersion>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <StartupObject>Issue20Tests.Suite</StartupObject>
+    <FillingSource Condition="'$(FillingSource)' == ''">../../src/Rules/H2Filling.cs</FillingSource>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../tools/watersim/src/*.cs" />
+    <Compile Include="$(FillingSource)" />
+    <Compile Include="*.cs" />
+  </ItemGroup>
+</Project>

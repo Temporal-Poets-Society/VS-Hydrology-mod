@@ -1,0 +1,16 @@
+light: vanilla 21573.7, hydrology-0.1.3 5870.2
+heavy round: 13 rule sets, 3 seeds x (400 pokes + 1000 sequences) per scene
+      501.0  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,LevelRelax=1,WakeEdgesOnNewSource=1,RapidSourceSheet=1,LoneVertical=1,RefillOnSource=3,WakeOnFallLabel=1  fail=0 loops=0 float=0+0 seq=1340/36000 pokes=3/757/11238 diff=468
+      502.0  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,RapidSourceSheet=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3,WakeOnFallLabel=1  fail=0 loops=0 float=0+0 seq=1463/36000 pokes=3/757/11238 diff=468
+      504.2  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3,WakeOnFallLabel=1  fail=0 loops=0 float=0+0 seq=1621/36000 pokes=3/757/11238 diff=468
+      507.5  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,WakeOnFallLabel=1  fail=0 loops=0 float=0+0 seq=2176/36000 pokes=3/757/11238 diff=468
+      511.2  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3  fail=0 loops=0 float=0+0 seq=2599/36000 pokes=3/757/11238 diff=468
+      513.3  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,LevelRelax=1,RefillOnSource=3,WakeOnFallLabel=1  fail=0 loops=0 float=0+0 seq=1975/36000 pokes=3/757/11238 diff=468
+     3563.8  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,RefillOnSource=3,WakeOnFallLabel=1  fail=3 loops=0 float=0+0 seq=3364/36000 pokes=11/757/11238 diff=513
+     4017.8  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallLabel=1,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3,WakeOnFallLabel=1  fail=3 loops=1 float=0+0 seq=3324/36000 pokes=3/757/11238 diff=468
+     7002.2  hydrology-0.1.3+SurvivalContained=0,FallLabel=1,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3,WakeOnFallLabel=1  fail=6 loops=0 float=8+0 seq=2038/36000 pokes=0/757/11238 diff=468
+    13506.6  hydrology-0.1.3+Survival=1,FallLabel=1,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3,WakeOnFallLabel=1  fail=0 loops=26 float=0+0 seq=1685/36000 pokes=31/801/11238 diff=468
+    16544.1  hydrology-0.1.3+Survival=1,SurvivalContained=0,FallingFeedsSideways=0,RapidSourceSheet=1,LoneVertical=1,WakeEdgesOnNewSource=1,LevelRelax=1,RefillOnSource=3,WakeOnFallLabel=1  fail=12 loops=1 float=57+0 seq=2969/36000 pokes=3/757/11238 diff=468
+    61005.4  vanilla  fail=48 loops=0 float=111+72 seq=8372/36000 pokes=10/745/11238 diff=1311
+   122995.7  hydrology-0.1.3  fail=12 loops=217 float=30+0 seq=4934/36000 pokes=8/757/11238 diff=513
+[17.7 s]

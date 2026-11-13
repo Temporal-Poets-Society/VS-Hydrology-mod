@@ -1,0 +1,6 @@
+[
+  {"Name": "ticino_bellinzona", "Kind": "river_poke", "Sites": [[46.1706, 8.9602]]},
+  {"Name": "ticino_sesto", "Kind": "river_poke", "Sites": [[45.7142, 8.6634], [45.7155, 8.6610]]},
+  {"Name": "congo_rapids", "Kind": "river_poke", "Sites": [[-5.60, 13.60]]},
+  {"Name": "congo_rapids2", "Kind": "river_poke", "Sites": [[-5.543, 13.605]]}
+]

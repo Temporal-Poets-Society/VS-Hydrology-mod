@@ -1,0 +1,14 @@
+HYDROLOGY LOGO - GENERATION PROMPT
+Created 31 October 2026 with the built-in image-generation tool.
+The original image is preserved as hydrology-logo-master.png.
+The upload export is hydrology-logo-moddb-480.png (480 x 480 PNG), resized without cropping.
+This is generated graphic artwork, not an in-game screenshot.
+
+Use case: logo-brand.
+Asset type: finished square ModDB logo for the Vintage Story mod Hydrology, intended for a 480 x 480 pixel upload.
+Primary request: a restrained, deliberately designed two-colour graphic identity for a mod about the water mechanics of rivers. It must look like a practical human-designed cartographic mark, clean and understated, not generative fantasy illustration.
+Composition: a single strong river symbol in the upper two thirds, and the exact word HYDROLOGY centred below in the lower third. The symbol is an overhead map view of one broad gently winding river channel, with a single smaller tributary joining it. Use a coherent, memorable silhouette with smooth deliberate curves and clear negative space. The river should read immediately as a river, not an ocean wave, tree, lightning bolt, flame, or water droplet. Large simple shapes, generous outer margins and balanced optical alignment. No enclosing badge or circle.
+Style and colours: flat dark navy ink on a solid warm off-white square background; exactly two flat colours, crisp vector-like edges. Restrained European map-signage graphic design. Simple bold uppercase sans-serif typography with careful letter spacing. All the letters must remain clearly readable at the final 480-pixel size.
+Text (verbatim): "HYDROLOGY". Spell H Y D R O L O G Y accurately. No other text.
+Avoid: gradients, glow, shadows, reflections, bevels, stone letters, painterly texture, fake paper texture, 3D, voxel illustration, landscapes, mountains, rocks, foam, photographic water, decorative crests, ornaments, fine outlines, technical schematics, extra symbols, slogans, version numbers, watermarks, mockups.
+Deliver one finished opaque square image, not a presentation sheet or a grid of options.

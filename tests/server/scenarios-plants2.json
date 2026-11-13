@@ -1,0 +1,7 @@
+[
+  {"Name": "lab_chute_plain", "Kind": "lab_chute", "ShapeCheck": true, "Spacing": 3, "Offset": [0, 0]},
+  {"Name": "lab_chute_pool_seaweed", "Kind": "lab_chute", "ShapeCheck": true, "Spacing": 3, "PoolPlant": "seaweed-top", "Offset": [80, 0]},
+  {"Name": "lab_chute_pool_reeds", "Kind": "lab_chute", "ShapeCheck": true, "Spacing": 3, "PoolPlant": "tallplant-coopersreed-water-normal-free", "Offset": [160, 0]},
+  {"Name": "lab_chute_s5_plain", "Kind": "lab_chute", "ShapeCheck": true, "Spacing": 5, "Offset": [0, 60]},
+  {"Name": "lab_chute_s5_pool_seaweed", "Kind": "lab_chute", "ShapeCheck": true, "Spacing": 5, "PoolPlant": "seaweed-top", "Offset": [80, 60]}
+]

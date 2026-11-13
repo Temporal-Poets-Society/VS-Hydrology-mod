@@ -1,0 +1,9 @@
+[
+  {"Name": "ramp", "Kind": "ramp", "Sites": [[56.61, 25.345], [51.055, 13.74]]},
+  {"Name": "rapids_poke", "Kind": "rapids_poke", "Sites": [[-5.543, 13.605], [50.32, 7.531], [-25.607, -54.6]]},
+  {"Name": "chute_poke_congo", "Kind": "chute_poke", "Sites": [[-5.6, 13.6]]},
+  {"Name": "chute_poke_rhine", "Kind": "chute_poke", "Sites": [[50.3199, 7.5307]]},
+  {"Name": "fall_poke_victoria", "Kind": "fall_poke", "StonesAtSec": 20, "Sites": [[-17.9252, 25.8437], [-17.924, 25.857]]},
+  {"Name": "fall_poke_niagara", "Kind": "fall_poke", "StonesAtSec": 20, "Sites": [[43.0796, -79.0763], [43.0773, -79.0753]]},
+  {"Name": "ramp_congo", "Kind": "ramp", "Sites": [[-4.9, 14.5], [-5.2, 14.0]]}
+]

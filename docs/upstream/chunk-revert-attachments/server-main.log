@@ -1,0 +1,479 @@
+25.10.2026 17:28:07 [Notification] Server logger started.
+25.10.2026 17:28:07 [Notification] Game Version: v1.22.7 (Stable)
+25.10.2026 17:28:07 [Notification] C# Framework: .net 10.0.8
+25.10.2026 17:28:07 [Notification] Zstd Version: 1.5.7
+25.10.2026 17:28:07 [Notification] Operating System: Windows 10.0.26300.0
+25.10.2026 17:28:07 [Notification] CPU Cores: 32
+25.10.2026 17:28:07 [Notification] CPU: AMD Ryzen 9 7950X3D 16-Core Processor          
+25.10.2026 17:28:07 [Notification] Available RAM: 64680 MB
+25.10.2026 17:28:07 [Event] It begins...
+25.10.2026 17:28:07 [Event] Launching server...
+25.10.2026 17:28:07 [Event] It senses...
+25.10.2026 17:28:07 [Event] Server v1.22.7, network v1.22.6, api v1.22.0
+25.10.2026 17:28:07 [Notification] Entering runphase Initialization
+25.10.2026 17:28:07 [Event] Loading configuration...
+25.10.2026 17:28:07 [Notification] Entering runphase Configuration
+25.10.2026 17:28:07 [Notification] Using world seed: 386217
+25.10.2026 17:28:07 [Notification] Loading savegame
+25.10.2026 17:28:07 [Notification] Create new save game data. Playstyle: surviveandbuild
+25.10.2026 17:28:07 [Notification] Savegame C:\VS mods\Hydrology\testruns\vfast2\Saves\watertest.vcdbs loaded
+25.10.2026 17:28:07 [Notification] World size = 1024000 256 1024000
+25.10.2026 17:28:07 [Notification] Start discovering assets
+25.10.2026 17:28:07 [Notification] Found 2 base assets in category blocktypes
+25.10.2026 17:28:07 [Notification] Found 0 base assets in category itemtypes
+25.10.2026 17:28:07 [Notification] Found 35 base assets in category lang
+25.10.2026 17:28:07 [Notification] Found 0 base assets in category patches
+25.10.2026 17:28:07 [Notification] Found 24 base assets in category config
+25.10.2026 17:28:07 [Notification] Found 0 base assets in category worldproperties
+25.10.2026 17:28:07 [Notification] Found 49 base assets in category sounds
+25.10.2026 17:28:07 [Notification] Found 230 base assets in category shapes
+25.10.2026 17:28:07 [Notification] Found 182 base assets in category textures
+25.10.2026 17:28:07 [Notification] Found 0 base assets in category recipes
+25.10.2026 17:28:07 [Notification] Found 0 base assets in category worldgen
+25.10.2026 17:28:07 [Notification] Found 3 base assets in category entities
+25.10.2026 17:28:07 [Notification] Found 525 base assets in total
+25.10.2026 17:28:07 [Event] Building assets...
+25.10.2026 17:28:07 [Notification] Entering runphase LoadAssets
+25.10.2026 17:28:07 [Notification] Will search the following paths for mods:
+25.10.2026 17:28:07 [Notification]     %appdata%\Vintagestory\Mods
+25.10.2026 17:28:07 [Notification]     C:\VS mods\Hydrology\testruns\vfast2\Mods
+25.10.2026 17:28:07 [Notification] Found 4 mods (0 disabled)
+25.10.2026 17:28:07 [Notification] Mods, sorted by dependency: game, reverttest, creative, survival
+25.10.2026 17:28:07 [Notification] Instantiated 149 mod systems from 4 enabled mods
+25.10.2026 17:28:07 [Notification] External Origins in load order: modorigin@%appdata%\Vintagestory\assets\creative\, modorigin@%appdata%\Vintagestory\assets\survival\
+25.10.2026 17:28:07 [Notification] Found 541 external assets in category blocktypes
+25.10.2026 17:28:07 [Notification] Found 315 external assets in category itemtypes
+25.10.2026 17:28:07 [Notification] Found 0 external assets in category lang
+25.10.2026 17:28:07 [Notification] Found 10 external assets in category patches
+25.10.2026 17:28:07 [Notification] Found 128 external assets in category config
+25.10.2026 17:28:07 [Notification] Found 25 external assets in category worldproperties
+25.10.2026 17:28:07 [Notification] Found 681 external assets in category sounds
+25.10.2026 17:28:08 [Notification] Found 6123 external assets in category shapes
+25.10.2026 17:28:08 [Notification] Found 9459 external assets in category textures
+25.10.2026 17:28:08 [Notification] Found 419 external assets in category recipes
+25.10.2026 17:28:08 [Notification] Found 1455 external assets in category worldgen
+25.10.2026 17:28:08 [Notification] Found 74 external assets in category entities
+25.10.2026 17:28:08 [Notification] Found 0 external assets in category compatibility
+25.10.2026 17:28:08 [Notification] Reloaded lang file with mod assets
+25.10.2026 17:28:08 [Notification] Compatibility lib: 0 assets added, 0 assets replaced.
+25.10.2026 17:28:08 [Notification] JsonPatch Loader: 14 patches total, successfully applied 14 patches, unmet conditions on 23 patches, no errors
+25.10.2026 17:28:09 [Event] It remembers...
+25.10.2026 17:28:09 [Notification] Loaded 4468 unique items
+25.10.2026 17:28:09 [Event] All that came before...
+25.10.2026 17:28:12 [Notification] Loaded 14089 unique blocks
+25.10.2026 17:28:12 [Notification] Loaded 820 unique entitiess
+25.10.2026 17:28:12 [Notification] BlockLoader: Entities, Blocks and Items loaded
+25.10.2026 17:28:12 [Event] Remapping blocks and items...
+25.10.2026 17:28:12 [Event] 15 cooking recipes loaded
+25.10.2026 17:28:12 [Event] Taste and smell...
+25.10.2026 17:28:12 [Event] 9 metal alloys loaded
+25.10.2026 17:28:12 [Event] Glimmers in the soil...
+25.10.2026 17:28:14 [Event] 1152 grid recipes loaded from 268 files
+25.10.2026 17:28:14 [Event] Grand inventions...
+25.10.2026 17:28:14 [Event] 44 smithing recipes loaded from 43 files
+25.10.2026 17:28:14 [Event] Burning sparks...
+25.10.2026 17:28:14 [Event] 31 clay forming recipes loaded from 31 files
+25.10.2026 17:28:14 [Event] Molded forms...
+25.10.2026 17:28:14 [Event] 12 knapping recipes loaded from 12 files
+25.10.2026 17:28:14 [Event] Simple tools...
+25.10.2026 17:28:14 [Event] 90 barrel recipe recipes loaded from 41 files
+25.10.2026 17:28:14 [Notification] Tags registry was locked.
+25.10.2026 17:28:14 [Notification] Entering runphase AssetsFinalize
+25.10.2026 17:28:14 [Event] Server assets loaded, parsed, registered and finalized
+25.10.2026 17:28:14 [Event] Initialising systems...
+25.10.2026 17:28:14 [Notification] Entering runphase LoadGamePre
+25.10.2026 17:28:14 [Notification] Reloaded 19 weather patterns, 5 wind patterns and 5 weather events
+25.10.2026 17:28:14 [Notification] Started 126 systems on Server:
+25.10.2026 17:28:14 [Notification]     Mod 'VSEssentials.dll' (game):
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.Core
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenTerra
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenSnowLayer
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.EntityPartitioning
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ErrorReporter
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenTerraPostProcess
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.ModCompatiblityUtil
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.NoObf.ModJsonPatchLoader
+25.10.2026 17:28:14 [Notification]         FluffyClouds.FluffyCloudsModSystem
+25.10.2026 17:28:14 [Notification]         Vintagestory.Systems.ModSystemTfEditFromAttributes
+25.10.2026 17:28:14 [Notification]         Vintagestory.Essentials.PathfindSystem
+25.10.2026 17:28:14 [Notification]         Vintagestory.Essentials.PathFindDebug
+25.10.2026 17:28:14 [Notification]         Vintagestory.Essentials.PathfindingAsync
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.JsonExport
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.ModBasicBlocksLoader
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenMaps
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenRockStrataNew
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenHotSprings
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenCreatures
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.ModSystemWorldGenStructures
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemItemRendererOptimizer
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.AiRuntimeConfig
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemSyncHarvestableDropsToClient
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemEmotes
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.LeafBlockDecay
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.POIRegistry
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.RoomRegistry
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.WeatherSystemCommands
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.WeatherSystemServer
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.SystemRemotePlayerTracking
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.WorldMapManager
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenDeposits
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.NoObf.ModRegistryObjectTypeLoader
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.LoadColorMaps
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenCaves
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenStructures
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.WgenCommands
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenBlockLayers
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenPonds
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ClothManager
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenStructuresPosPass
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenVegetationAndPatches
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenRivulets
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenLightSurvival
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.CollectibleBuffDebug
+25.10.2026 17:28:14 [Notification]     Mod 'VSSurvivalMod.dll' (survival):
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemControlPoints
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.SurvivalCoreSystem
+25.10.2026 17:28:14 [Notification]         Vintagestory.Systems.StoryLockableDoor
+25.10.2026 17:28:14 [Notification]         Vintagestory.Client.NoObf.StoryGenFailedSystem
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.UpgradeTasks
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.ChiselBlockBulkSetMaterial
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.ModSystemDetailModeSync
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.NpcControl
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.ModSystemTiledDungeons
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemExplosionAffectedStability
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.MyceliumSystem
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModsystemButterflySpawnCondsExtra
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemFishInstaFlee
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemCatchCreature
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.FishingSupportModSystem
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemGliding
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemSnowShoveling
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemSubTongsDurability
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemSwoopDev
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.Timeswitch
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ClutterBookshelfUtil
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ScreenshakeToClientModSystem
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemResoArchiveCommands
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.StoryStructuresSpawnConditions
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemNPCHairStyling
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemSkinnableAdditions
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemVillagerDebug
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemAuction
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemBlockReinforcement
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.Core
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemBoatingSoundAndRatlineStamina
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.CharacterSystem
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.CustomSpawnConditions
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.VariablesModSystem
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModsystemElevator
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ActivityModSystem
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ActivityEditorSystem
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemFarming
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemCommandHandbook
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemTutorial
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.HeldItemMouseInputHandler
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemCorpseReturnTeleporter
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemNightVision
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.TobiasTeleporter
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModJournal
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.LiquidItemStackRenderer
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemStructureLocator
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModLootRandomizer
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemEntityOwnership
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemRifts
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemRiftWeather
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSleeping
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemSupportBeamPlacer
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.TeleporterManager
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModTemperature
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.SystemTemporalStability
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.TemporalStabilityEffects
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemClimateSpecificTraderTypes
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemWearableStats
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemEditableBook
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.Mechanics.ModSystemWindTurbulence
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.Mechanics.MechanicalPowerMod
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenDungeons
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.GenStoryStructures
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.WgenCommandsExt
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenDevastationLayer
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.RecipeRegistrySystem
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.RecipeLoader
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemFishDepletion
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemWormGrunting
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemFireFromLightning
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemOreMap
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemSnowballs
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.HumanoidOutfits
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.ModSystemDevastationEffects
+25.10.2026 17:28:14 [Notification]         Vintagestory.GameContent.DisableRecipeRegisteringSystem
+25.10.2026 17:28:14 [Notification]     Mod 'VSCreativeMod.dll' (creative):
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.Core
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.WorldEdit.WorldEdit
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenBlockLayersFlat
+25.10.2026 17:28:14 [Notification]         Vintagestory.ServerMods.GenLightCreative
+25.10.2026 17:28:14 [Notification]     Mod 'reverttest' (reverttest):
+25.10.2026 17:28:14 [Notification]         RevertTest.RevertTestSystem
+25.10.2026 17:28:14 [Event] 26 traits loaded from 1 files
+25.10.2026 17:28:14 [Event] 6 classes loaded from 1 files
+25.10.2026 17:28:16 [Notification] Server map set
+25.10.2026 17:28:16 [Event] A world unbroken...
+25.10.2026 17:28:16 [Notification] Entering runphase GameReady
+25.10.2026 17:28:16 [Notification] Entering runphase WorldReady
+25.10.2026 17:28:16 [Event] The center unfolding...
+25.10.2026 17:28:16 [Event] Starting world generators...
+25.10.2026 17:28:20 [Notification] Reloaded 35 tree generators
+25.10.2026 17:28:20 [Event] Loading 7x7x8 spawn chunks...
+25.10.2026 17:28:20 [Event] 0% (49 in queue)
+25.10.2026 17:28:20 [Event] The carved mountains...
+25.10.2026 17:28:21 [Notification] Dungeon with 104 schematics generated
+25.10.2026 17:28:22 [Event] 0% (49 in queue)
+25.10.2026 17:28:22 [Event] The rolling hills...
+25.10.2026 17:28:24 [Event] 0% (113 in queue)
+25.10.2026 17:28:24 [Event] The sheer cliffs...
+25.10.2026 17:28:25 [Event] 0% (178 in queue)
+25.10.2026 17:28:25 [Event] The endless plains...
+25.10.2026 17:28:26 [Event] Begin game ticking...
+25.10.2026 17:28:26 [Event] ... it calls to you
+25.10.2026 17:28:26 [Notification] Entering runphase RunGame
+25.10.2026 17:28:26 [Notification] Starting server threads
+25.10.2026 17:28:26 [Event] Dedicated Server now running on Port 42752 and ip 127.0.0.1!
+25.10.2026 17:28:26 [Event] Return again.
+25.10.2026 17:28:26 [Notification] Please be aware that as of 1.20, servers default configurations have changed - servers no longer register themselves to the public servers list and are invite-only (whitelisted) out of the box. If you desire so, you can enable server advertising with '/serverconfig advertise on' and disable the whitelist mode with '/serverconfig whitelistmode off'
+25.10.2026 17:28:31 [Notification] [reverttest] REVERTTEST spawn 512000,512000; loading 3 cluster spots, then 10 far spots
+25.10.2026 17:28:31 [Notification] [reverttest] REVERTTEST spot 512000,512000 loaded in 0s
+25.10.2026 17:28:32 [Notification] [reverttest] REVERTTEST spot 512120,512040 loaded in 1s
+25.10.2026 17:28:33 [Notification] [reverttest] REVERTTEST spot 511940,512130 loaded in 1s
+25.10.2026 17:28:33 [Notification] Dungeon with 81 schematics generated
+25.10.2026 17:28:34 [Notification] Dungeon with 114 schematics generated
+25.10.2026 17:28:37 [Notification] [reverttest] REVERTTEST spot 532000,512000 loaded in 5s
+25.10.2026 17:28:39 [Notification] Dungeon with 87 schematics generated
+25.10.2026 17:28:39 [Notification] Dungeon with 115 schematics generated
+25.10.2026 17:28:41 [Notification] [reverttest] REVERTTEST spot 492000,517000 loaded in 4s
+25.10.2026 17:28:42 [Notification] Dungeon with 117 schematics generated
+25.10.2026 17:28:46 [Notification] [reverttest] REVERTTEST spot 518000,537000 loaded in 5s
+25.10.2026 17:28:46 [Notification] Dungeon with 121 schematics generated
+25.10.2026 17:28:46 [Notification] Dungeon with 114 schematics generated
+25.10.2026 17:28:51 [Notification] [reverttest] REVERTTEST spot 503000,488000 loaded in 4s
+25.10.2026 17:28:51 [Notification] Dungeon with 124 schematics generated
+25.10.2026 17:28:56 [Notification] [reverttest] REVERTTEST spot 552000,552000 loaded in 6s
+25.10.2026 17:28:57 [Notification] Dungeon with 103 schematics generated
+25.10.2026 17:29:01 [Notification] [reverttest] REVERTTEST spot 467000,542000 loaded in 5s
+25.10.2026 17:29:07 [Notification] [reverttest] REVERTTEST spot 542000,470000 loaded in 5s
+25.10.2026 17:29:07 [Notification] Dungeon with 107 schematics generated
+25.10.2026 17:29:09 [Notification] Dungeon with 113 schematics generated
+25.10.2026 17:29:11 [Notification] [reverttest] REVERTTEST spot 477000,474000 loaded in 5s
+25.10.2026 17:29:16 [Notification] [reverttest] REVERTTEST spot 582000,507000 loaded in 4s
+25.10.2026 17:29:18 [Notification] Dungeon with 116 schematics generated
+25.10.2026 17:29:21 [Notification] [reverttest] REVERTTEST spot 510000,582000 loaded in 4s
+25.10.2026 17:29:41 [Notification] [reverttest] REVERTTEST edited at water 512000,110,512000
+25.10.2026 17:29:41 [Notification] [reverttest] REVERTTEST edited at water 512074,108,511991
+25.10.2026 17:29:41 [Notification] [reverttest] REVERTTEST edited at water 511937,111,512127
+25.10.2026 17:29:41 [Notification] [reverttest] REVERTTEST 202 blocks edited
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: bed 512074,108,511991 is game:muddygravel again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: bed 512075,109,511991 is game:sand-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: bed 512076,111,511991 is game:tallgrass-medium-free again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512075,108,511991 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512075,107,511991 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512075,109,511992 is game:sand-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512075,108,511992 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512075,107,511992 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512076,110,511991 is game:soil-low-normal again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512076,109,511991 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512076,108,511991 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512076,107,511991 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512076,110,511992 is game:soil-low-normal again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512076,109,511992 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512076,108,511992 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512076,107,511992 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512077,112,511991 is game:tallgrass-medium-free again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512077,111,511991 is game:soil-low-normal again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512077,110,511991 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512077,109,511991 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512077,108,511991 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512077,107,511991 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512077,113,511992 is game:tallgrass-medium-free again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512077,112,511992 is game:soil-low-normal again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512077,111,511992 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512077,110,511992 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512077,109,511992 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512077,108,511992 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512077,107,511992 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512078,114,511991 is game:tallgrass-medium-free again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512078,113,511991 is game:soil-low-normal again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512078,112,511991 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512078,111,511991 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512078,110,511991 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512078,109,511991 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512078,108,511991 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512078,107,511991 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512078,115,511992 is game:tallgrass-medium-free again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512078,114,511992 is game:soil-low-normal again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512078,113,511992 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512078,112,511992 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512078,111,511992 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512078,110,511992 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512078,109,511992 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512078,108,511992 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512078,107,511992 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,116,511991 is game:tallgrass-medium-free again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,115,511991 is game:soil-low-normal again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,114,511991 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,113,511991 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,112,511991 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,111,511991 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,110,511991 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,109,511991 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,108,511991 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,107,511991 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,116,511992 is game:tallgrass-mediumshort-free again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,115,511992 is game:soil-low-normal again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,114,511992 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,113,511992 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,112,511992 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,111,511992 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,110,511992 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,109,511992 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,108,511992 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512079,107,511992 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,117,511991 is game:tallgrass-mediumshort-free again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,116,511991 is game:soil-low-normal again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,115,511991 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,114,511991 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,113,511991 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,112,511991 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,111,511991 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,110,511991 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,109,511991 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,108,511991 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,107,511991 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,117,511992 is game:tallgrass-medium-free again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,116,511992 is game:soil-low-normal again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,115,511992 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,114,511992 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,113,511992 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,112,511992 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,111,511992 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,110,511992 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,109,511992 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,108,511992 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 512080,107,511992 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511938,115,512128 is game:tallgrass-mediumshort-free again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511938,114,512128 is game:soil-medium-normal again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511938,113,512128 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511938,112,512128 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511939,120,512128 is game:tallgrass-veryshort-free again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511939,119,512128 is game:soil-medium-normal again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511939,118,512128 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511939,117,512128 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511939,116,512128 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511939,115,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511939,114,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511939,113,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511939,112,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511940,122,512128 is game:tallgrass-short-free again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511940,121,512128 is game:soil-medium-normal again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511940,120,512128 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511940,119,512128 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511940,118,512128 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511940,117,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511940,116,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511940,115,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511940,114,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511940,113,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511940,112,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511941,123,512128 is game:loosestones-granite-free again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511941,122,512128 is game:soil-medium-normal again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511941,121,512128 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511941,120,512128 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511941,119,512128 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511941,118,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511941,117,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511941,116,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511941,115,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511941,114,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511941,113,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511941,112,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511942,123,512128 is game:tallgrass-medium-free again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511942,122,512128 is game:soil-medium-normal again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511942,121,512128 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511942,120,512128 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511942,119,512128 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511942,118,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511942,117,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511942,116,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511942,115,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511942,114,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511942,113,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511942,112,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511943,122,512128 is game:tallgrass-short-free again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511943,121,512128 is game:soil-medium-normal again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511943,120,512128 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511943,119,512128 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511943,118,512128 is game:soil-low-none again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511943,117,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511943,116,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511943,115,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511943,114,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511943,113,512128 is game:rock-granite again
+25.10.2026 17:29:45 [Notification] [reverttest] REVERTTEST REVERTED at 24.1s: canal 511943,112,512128 is game:rock-granite again
+25.10.2026 17:33:12 [Notification] Server ticking has been suspended
+25.10.2026 17:33:12 [Notification] Autosaving game world. Notifying mods, then systems of save...
+25.10.2026 17:33:12 [Notification] Defragmented listener lists
+25.10.2026 17:33:12 [Event] Mods and systems notified, now saving everything...
+25.10.2026 17:33:12 [Event] It pauses.
+25.10.2026 17:33:12 [Event] Will do offthread savegamedata saving...
+25.10.2026 17:33:12 [Event] One last gaze...
+25.10.2026 17:33:12 [Event] Saved player world data...
+25.10.2026 17:33:12 [Event] Saved map regions...
+25.10.2026 17:33:12 [Event] Then all goes quiet...
+25.10.2026 17:33:12 [Event] Saved map chunks...
+25.10.2026 17:33:12 [Event] The waters recede...
+25.10.2026 17:33:12 [Event] World saved! Saved 0 chunks, 0 mapchunks, 30 mapregions.
+25.10.2026 17:33:12 [Event] It sighs...
+25.10.2026 17:33:12 [Notification] Server ticking has been resumed
+25.10.2026 17:33:12 [Event] Saved 300 chunks...
+25.10.2026 17:33:12 [Event] Saved 600 chunks...
+25.10.2026 17:33:12 [Event] Saved 900 chunks...
+25.10.2026 17:33:12 [Event] Saved 1200 chunks...
+25.10.2026 17:33:12 [Event] Saved 1500 chunks...
+25.10.2026 17:33:12 [Event] Saved 1800 chunks...
+25.10.2026 17:33:12 [Event] Saved 2100 chunks...
+25.10.2026 17:33:12 [Event] Saved 2400 chunks...
+25.10.2026 17:33:12 [Event] Saved 2700 chunks...
+25.10.2026 17:33:12 [Event] Saved 3000 chunks...
+25.10.2026 17:33:12 [Event] Saved 3300 chunks...
+25.10.2026 17:33:12 [Event] Saved 3600 chunks...
+25.10.2026 17:33:12 [Event] Saved 3900 chunks...
+25.10.2026 17:33:12 [Event] Saved 4200 chunks...
+25.10.2026 17:33:12 [Event] Saved 4500 chunks...
+25.10.2026 17:33:12 [Event] Offthread save of 4768 chunks done.
+25.10.2026 17:33:12 [Notification] Offthread save of 0 generating chunks done.
+25.10.2026 17:33:12 [Event] Offthread save of 596 map chunks done.
+25.10.2026 17:33:12 [Event] Offthread save of savegame done.
+25.10.2026 17:33:41 [Notification] [reverttest] REVERTTEST done: 147 of 202 edited blocks reverted
+25.10.2026 17:33:50 [Notification] Server stop requested, begin shutdown sequence. Stop reason: Forced: Shutdown through Server API
+25.10.2026 17:33:50 [Notification] Server ticking has been suspended
+25.10.2026 17:33:50 [Notification] Entering runphase Shutdown
+25.10.2026 17:33:50 [Event] Mods and systems notified, now saving everything...
+25.10.2026 17:33:50 [Event] It pauses.
+25.10.2026 17:33:50 [Event] One last gaze...
+25.10.2026 17:33:50 [Event] Saved player world data...
+25.10.2026 17:33:50 [Event] Saved map regions...
+25.10.2026 17:33:50 [Event] Then all goes quiet...
+25.10.2026 17:33:50 [Event] Saved map chunks...
+25.10.2026 17:33:50 [Event] The waters recede...
+25.10.2026 17:33:50 [Event] Saved loaded chunks...
+25.10.2026 17:33:50 [Event] The mountains fade...
+25.10.2026 17:33:50 [Event] The dark settles in.
+25.10.2026 17:33:50 [Event] Saved generating chunks...
+25.10.2026 17:33:50 [Event] Saved savegamedata...2
+25.10.2026 17:33:50 [Event] World saved! Saved 71 chunks, 0 mapchunks, 30 mapregions.
+25.10.2026 17:33:50 [Event] It sighs...
+25.10.2026 17:33:50 [Event] Shutting down 10 server threads... 
+25.10.2026 17:33:50 [Event] Killed console thread
+25.10.2026 17:33:50 [Event] Alone again...
+25.10.2026 17:33:50 [Event] All threads gracefully shut down
+25.10.2026 17:33:50 [Event] Time to rest.
+25.10.2026 17:33:50 [Event] Doing last tick...
+25.10.2026 17:33:50 [Event] Stopped the server!
