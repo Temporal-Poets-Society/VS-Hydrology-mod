@@ -5,7 +5,7 @@ and add channel filling, smoother drops, rapids and working mill races. Earth su
 handles the water. This release is intended for Earth worlds. Standalone gameplay outside Earth has not been tested
 for this release; historical synthetic lab controls do not establish standalone compatibility.
 
-Current version: **0.6.2-rc.6**, the release candidate for Earth 2.0 (calm rivers with Earth's river query version 3;
+Current version: **0.6.2-rc.8**, the release candidate for Earth 2.0 (calm rivers with Earth's river query version 3;
 [release notes](docs/release-0.6.2.md), [decision 0004](docs/decisions/0004-release-0.6.2.md)). What changed in each
 version is in the [changelog](CHANGELOG.md).
 
@@ -14,7 +14,7 @@ version is in the [changelog](CHANGELOG.md).
 | Rule | In the game |
 |---|---|
 | **H1** Supported sources stay put | Falling water does not replace a supported pool source with falling water. Unsupported sources can drain under the settling rules. |
-| **H2** Filling | A 2-wide channel dug from a river, lake or the sea fills with source water to its end, opened last or dug outward, fresh or salt. A 1-wide channel still carries 6 blocks of flowing water, unless vessels are enabled and water encloses it. With vessels enabled, uneven beds also fill from wide source sheets through continuous water up to 15 blocks above the supported cell: salt water, or fresh water outside Earth's natural river columns. Natural river steps keep their levels. With vessels enabled (0.6.2), an enclosed pocket fills too: a basin dug into a river's edge where it overlaps the river, or a 1-wide nook or ditch enclosed by water. Water fills only where its level is held (0.6.2-rc.3): the space at and below it must close against walls and water, so the sea, open lakes and open land never rise. |
+| **H2** Filling | A 2-wide channel dug from a river, lake or the sea fills with source water to its end, opened last or dug outward, fresh or salt. A 1-wide channel still carries 6 blocks of flowing water, unless vessels are enabled and water encloses it. With vessels enabled, uneven beds also fill from wide source sheets through continuous water up to 15 blocks above the supported cell: salt water, or fresh water outside Earth's natural river columns. Natural river steps keep their levels. With vessels enabled, an enclosed pocket fills too: a basin dug into a river's edge where it overlaps the river, or a 1-wide nook or ditch enclosed by water. Water fills only where its level is held: the space at and below it must close against walls and water, so the sea, open lakes and open land never rise. A space fills only from water that could fill it: the water bounding it, from the space's floor up, must be at least half the space, unless it is a natural river, so a canal dug from a lake, a pool, the sea or a river fills. A pond a player opens (a rim or bank broken) loses its water above the opening: the water runs downhill and collects where it comes to rest, the same amount; the sea, rivers and large lakes (4,096 sources or more) take it without rising; with no lower land within 8 blocks of the opening the pond keeps it. |
 | **H3** 1-block drops are flattened | Water stepping down one block onto lower water settles into a ramp of flowing water (heights 6 to 1) on the lower pool, with no vertical face. Water in the air is falling water: no column of still water stands in a waterfall. |
 | **H4** A fall of 2 or more makes rapids | Where the water surface falls 2 or more blocks within a few blocks of a source's edge, the edge becomes a rapid-water source. That is a single drop of 2 or more (any height), or a chute of 1-block steps up to 3 blocks apart, as Earth draws rapids of up to 4 blocks. Below it run rapid water: falls, and rapid ramps on each step. Fill the fall back to less than 2 and the edges become ordinary source water again (where Earth's river query marks rapids, the water stays rapid). A lone 1-block step stays an ordinary ramp (H3). Vanilla water wheels turn in such water: a mill race needs only a 2-block drop. |
 | **H5** Local and cheap | It hooks vanilla's own liquid updates (a neighbour change schedules a delayed update). Searches are bounded, still water is never ticked, and the server decides everything; clients see ordinary block changes. |
@@ -30,10 +30,9 @@ rivulet spring) is left as it is.
   of their code is used.
 - Vanilla blocks only: removing Hydrology leaves no unknown blocks.
 - Server-side water rules. Since 0.6.1 the mod is required on clients too (Earth is client-required and depends on it);
-  on the client it only reduces rapid-water foam and calm-river specks. Use matching releases with Earth: Earth
-  2.0.0-rc.3 needs Hydrology 0.6.2-rc.4 or newer with river query version 3 (rc.1 to rc.3 could let the sea flood the
-  map; 2.0.0-rc.2 needed 0.6.2-rc.1, 2.0.0-rc.1 needed 0.6.1), so every new Earth world gets calm rivers (pool layout
-  11). Standalone gameplay is outside this release's tested scope.
+  on the client it only reduces rapid-water foam and calm-river specks. Use matching releases with Earth: Earth 2.0
+  needs Hydrology 0.6.2 with river query version 3, so every new Earth world gets calm rivers (pool layout 11).
+  Standalone gameplay is outside this release's tested scope.
 - Game updates: every Harmony patch and every reflection on the game's non-public members goes through one registry
   (`src/GamePatches.cs`). If a game update removes or changes a target, Hydrology logs one warning naming the feature and
   switches off only that feature (the water rules as a whole, a refinement of them, the wheels, the foam, or the
@@ -51,6 +50,8 @@ rivulet spring) is left as it is.
 | `VesselsDepth`, `VesselsContained` | true | H2's vessels case fills only from water as deep as the water under the cell, and only a cell with no dry ledge beside it |
 | `FillPockets` | true | H2 (0.6.2, with the vessels case on): enclosed pockets fill, in natural river water too |
 | `RefillOnSource` | 3 | H2: a flowing cell on a source with this many source sides becomes a source (0: off) |
+| `SupplyFactor` | 2 | H2: a held space fills only when the water bounding it, from the space's floor up, is at least 1/SupplyFactor of the space, or stands in a natural river column (0: off; decision 0006) |
+| `PondRelease` | true | H2: a pond a player opens loses its water above the opening, which collects at the lowest point its flow reaches; the sea, rivers and large lakes take it without rising (decision 0007) |
 | `Flatten` | true | H3 (sideways spreading on lower water; falling water in the air has no switch) |
 | `Rapids` | true | H4 |
 | `MaxDropScan` | 384 | H4: the deepest drop measured below an edge, in blocks; also bounds H3's and H4's walks along a column |

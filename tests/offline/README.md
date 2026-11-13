@@ -44,6 +44,14 @@ For 0.6.2 the suite adds, compiled out in baseline mode (`BASELINE`, which 0.1.1
   rises) and walled all round (the basin fills to the spring's level); a trench dug from that sea beside the open land
   fills; a canal 3 x 3 x 501 dug out whole from a reservoir and opened fills completely. The outlet cases are decided by
   the 4096-cell bound (the lowland is more open space than H2 follows), as the sea is in the game.
+- supplied spaces (`PondCases`, decision 0006): a pond 7 x 7 x 2 broken 2 wide on a mound over a walled hollow fills
+  nothing outside it (5,054 sources without the rule), nor onto flat land at its level; a lake of 1,628 sources fills the
+  hollow;
+- pond release (`ReleaseCases`, decision 0007; the rule `src/Rules/H2Release.cs` is compiled in too): the same pond,
+  each break followed by `H2Release.Opened` as the server's player break event runs it: its top layer collects on the
+  hollow's floor; onto flat land, or a plateau whose edge is 20 blocks off, nothing moves; onto a ledge whose edge is 5
+  blocks off, the water falls and collects at the foot; the lake's top layer fills the hollow around it; over river
+  water (the query), the river takes it without rising.
 - world options: a world asking for vessels only with Earth's query keeps them off while the query is not bound (rc.4).
 
 Out-of-bounds cells read as solid here, the opposite of the game, where unloaded chunks read as air.

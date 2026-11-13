@@ -1,4 +1,4 @@
-# Hydrology 0.6.2 — calm rivers for Earth 2.0 (release candidate 0.6.2-rc.5)
+# Hydrology 0.6.2 — calm rivers for Earth 2.0 (release candidate 0.6.2-rc.8)
 
 Prepared 8 November 2026 on `claude/rc-0.6.2`: `release/0.6` (0.6.1, `433f44c`) with the calm-rivers work
 (`claude/calm-rivers`, 0.6.2-rivers.7, `be9d859`) merged at `1d91e7e`, then reviewed, tidied, fixed and baked. Built for
@@ -7,7 +7,10 @@ Prepared 8 November 2026 on `claude/rc-0.6.2`: `release/0.6` (0.6.1, `433f44c`) 
 fixes what rc.1 had left, with Earth-side changes on Earth branch `claude/rc-2.0-hydrology-leftovers`, merged into
 Earth 2.0.0-rc.2 (`d50f2ae`). rc.3 (9 November)
 fixes a flood a player reported on 0.6.1 ([decision 0005](decisions/0005-held-levels.md)); rc.4 (the same day) follows a
-second review and an in-game water playtest; rc.5 handles Earth 2.0.0-rc.3's "not ready yet".
+second review and an in-game water playtest; rc.5 handles Earth 2.0.0-rc.3's "not ready yet"; rc.6 (13 November) logs
+the world's Water flooding and brings the server tests to Earth 2.0, with no change to the water; rc.7 (the same day) stops
+a broken pond from flooding the land below it ([decision 0006](decisions/0006-water-volume.md), HY-0007); rc.8 (the same
+day) lets the water of a pond a player opens run downhill and collect below ([decision 0007](decisions/0007-pond-release.md)).
 
 ## Release notes
 
@@ -34,6 +37,29 @@ second review and an in-game water playtest; rc.5 handles Earth 2.0.0-rc.3's "no
   half-patched (and the chunk-pack fix skipped). In singleplayer each side now removes only its own patches.
 - An unreadable `hydrology.json` is no longer overwritten with the defaults; `/hydrology stats` counts since the world
   started; the release zip holds a fixed list of files.
+
+### 0.6.2-rc.8
+
+- **New: an opened pond lets its water out.** The author: "if pond is drained then it should end up in lowest point by
+  flow". When a player breaks a pond's rim or bank, the pond's sources above the opening go, and as many sources stand
+  where that water comes to rest: it runs along the opening's level to an edge up to 8 blocks away, falls, and pools
+  where it lands, spilling on over any edge its flowing water would reach; a hollow it fills to the walls it fills
+  layer by layer. The sea, rivers (Earth's query) and lakes of 4,096 sources or more take it without rising, and are
+  never drained themselves. With no lower land within 8 blocks of the opening, or a basin too small for the water, the
+  pond keeps its water and lets out flowing water, as rc.7. Only a player's break starts it (the server's break event);
+  config `PondRelease` (true). The move is immediate; volume is kept to the layer (a partly filled last layer may be
+  completed by H2 under decision 0006). One log line per release says where the water went.
+- **Docs:** the changelog's release-candidate entries are one 0.6.2 entry, and the README states current behaviour.
+
+### 0.6.2-rc.7
+
+- **Fixed: a small pond no longer floods the land below it.** A player broke the rim of a small pond on high ground,
+  and the land below flooded several blocks deep. Hydrology filled any closed space under a source to the source's
+  level, however little water stood behind it. A space now fills only from water that could fill it: the water bounding
+  it, counted from the space's floor up, must be at least half the space, unless it is a natural river (Earth's river
+  query). A broken pond lets out flowing water and keeps its own; a lake, the sea and rivers still fill what they
+  bound; a canal dug from a lake or a pool fills as before. A bucket emptied over a closed sea or pond no longer raises
+  it. New config `SupplyFactor` (2; 0 turns the check off).
 
 ### 0.6.2-rc.5
 
@@ -197,6 +223,48 @@ All on Vintage Story 1.22.7 (Windows), against the merge `1d91e7e` (0.6.2-rivers
   - **The rc.5 zip itself** with Earth 2.0.0-rc.3 (`f6778b0e`) at 1:10: the same water as the rc.4 zip with Earth
     2.0.0-rc.2, 0 water and 0 label cells different in 7,500 columns, every site's counts identical; nothing waited
     (the bench's Earth data is complete); no errors; Hydrology's own time 195 ms.
+  - **rc.7** (Debug, 13 November; Water flooding on in every run; vanilla worlds, seed 386217): the new pond labs
+    (`lab_pond`, `scenarios-pond.json`, with a fake river query of version 3 so fresh water seeds an uneven basin as on
+    Earth). On rc.6, a pond 7 x 7 x 2 (98 sources) in a mound 4 above a walled lowland, its rim broken 2 wide, filled the
+    lowland with 3,818 sources to the pond's level, and the same pond broken onto closed flat land at its level flooded
+    it with 956; salt water the same; a rim broken 1 wide, or a lowland with an outlet, kept flowing water only, as
+    vanilla does in every case. On rc.7 no pond case leaves a source outside the pond, and a lake 41 x 41 x 3 (5,043
+    sources) breaking into its hollow still fills it (6,514 sources), as on rc.6. Paired with rc.6 runs: of the 61
+    regular labs 56 end identical and the wheels read 14.92, 14.92 and 7.24 in both; the four chute labs keep their
+    last step, which rc.6 drowned with Water flooding on and no river query (the lowest pool rose to the step above
+    it); `lab_drop5`'s pool (72 sources) no longer fills the edge of its 5-deep pit (168 cells), so the edge stays
+    flowing water instead of two rapid sources. The 10 fake-query labs: 9 identical, the river chute one cell
+    different (as runs differ among themselves), its wheel 21.73 in both. The 32 spill labs: those with an outlet as
+    on rc.6; the 10 closed ones, which rc.3 to rc.6 raised to the spring's level (255 sources for a bucket on the sea,
+    up to 1,035 for a pool falling into it, 180 for two springs on a field), raise nothing. Time per liquid update in
+    the labs: 18.7 µs (rc.7), 19.4 µs (rc.6). Caves under rivers (HY-0004's check) on a new 1:10 Earth world (Earth
+    2.0.0-rc.12, Cylinder World 1.1.0-rc.4): 44 openings carved under six rivers all filled with source water within
+    60 s of the wake, every river column stayed, and the new check refused nothing. Offline: 14,360 checks, with new
+    pond cases (the rc.6 rule floods a hollow with 5,054 sources from a pond of 98; rc.7 none) and the walled-sea,
+    long-canal and sheet cases changed as decision 0006 records. Registry 65/65. No server errors in any run.
+  - **rc.8** (Debug, 13 November; Water flooding on, vanilla worlds, seed 386217). Lab breaks do not raise the server's
+    player break event, so `lab_pond`'s breaks run the release as the event does (WaterAudit's `PlayerBreak`), and
+    `WA_PLAYER_BREAKS=1` makes every lab break do so. The pond labs (fake river query 3): the ponds 7 x 7 x 2 broken 1
+    or 2 wide over the walled hollow, fresh or salt, and the one over a lowland with an outlet, each keep 49 sources and
+    49 stand on the lowland's floor (with 167 flowing cells round them); onto flat land at the pond's level, with or
+    without an outlet, nothing moves (98 stay); the lake of 5,043 sources is unlimited and fills its hollow as on rc.7
+    (6,514). The 61 regular labs, two plain runs (identical to each other in all 61) against a run with player breaks:
+    56 identical; the five that differ are the labs whose pool a break opens onto lower ground, as the decision intends:
+    `lab_drop3_wheel` and `lab_drop5` (the 72-source pool and its channel, 84 sources, lie in the race below and the
+    race runs dry), `lab_fall_stones` (each stone pulled from the pool's edge lets one 72-source layer fall into the
+    plunge basin, where H2 completes each partly filled layer: 224 sources stand for 144), and the two canals dug
+    inward from a 99-source pool (the pool drops into the 3-deep canal: 120 stand, H2 completing the last layer). Of
+    1,044 player breaks beside water, 6 moved water and 1,038 left it (a trench opening onto land at the pool's level).
+    A first build forgot H2's remembered held answers everywhere on a release, which changed two other labs
+    (`lab_drop2_wheel`, `lab_salt_w1_d2_p3_out`); forgetting them only around the moved water leaves those identical.
+    The 10 fake-query labs with player breaks: 8 identical, the control canal fed from a 90-source pool drains into it,
+    and the river chute differs by one rapid source (as runs differ among themselves; its wheel 21.73 in both); no river
+    lost water. The spill hole lab (a break under the sea's floor) identical with player breaks. Time per liquid update
+    in the labs: 14.0 µs with player breaks, 15.3 µs without. Offline: 14,377 checks, with `ReleaseCases` (hollow,
+    flat, lake of 1,628 sources: 814 moved and 816 stand, river, a ledge whose edge is 5 blocks off: the water falls and
+    collects at its foot, a plateau whose edge is 20 blocks off: nothing moves); `run.ps1 -Baseline` builds and fails
+    as expected. No server errors in any run. Earth worlds were not run: rivers and lakes over 4,096 sources are never
+    drained, and nothing else in H2 changed.
 - **Water playtest in the game** (AgentBridge bench, Earth 2.0.0-rc.2 as installed, Cylinder World 1.0.4, a new 1:10
   world; rc.3, then a recheck with rc.4):
   - the Olt at Racovița, a calm river: a bucket taken from it heals at once; poured onto its bank, a source with a little
@@ -216,7 +284,16 @@ All on Vintage Story 1.22.7 (Windows), against the merge `1d91e7e` (0.6.2-rivers
   - The bench itself: three client crashes in AgentBridge's aiming ("Given pos contained NaN" for the player), while
     blocks were broken through its hover command; the world's unsaved changes were lost with each. Not Hydrology's or
     the game's; reported to the sessions using the bench.
-- **Package:** `release/hydrology-0.6.2-rc.5.zip` (built from `dc73ab7` in the `rc-0.6.2` worktree, which was removed in
+- **Package (rc.8):** `release/hydrology-0.6.2-rc.8.zip`, built from `4f91ac4` on `main` (13 November), 67,439 bytes,
+  SHA-256 `33fd8e09213eacd3f15837ebcb90b109bb139e690fa984c670fdbb34e1662a29`: the same six files (modinfo 0.6.2-rc.8).
+  The extracted zip on the pond labs: as the Debug build (each pond 49 kept and 49 below, flat land 98 kept, the lake
+  6,514), "pond release=True" in the start log, no errors. Not installed in the author's game; `main` is not pushed.
+- **Package (rc.7):** `release/hydrology-0.6.2-rc.7.zip`, built from `59bc8b6` on `main` (13 November), 62,259 bytes,
+  SHA-256 `a8ec205f0b8d55e63e6919c5612bc5859a571d380fd884dffcb33938a8346673`: the same six files as rc.5 (modinfo
+  0.6.2-rc.7). The extracted zip on the pond labs: as the Debug build (no pond case leaves a source outside the pond;
+  the lake fills its hollow with 6,514), "supply factor 2" in the start log, no errors. Not installed in the author's
+  game; `main` is not pushed. `release/hydrology-0.6.2-rc.6.zip` was built from `827e8ac`.
+- **Package (rc.5):** `release/hydrology-0.6.2-rc.5.zip` (built from `dc73ab7` in the `rc-0.6.2` worktree, which was removed in
   the 12 November tidy-up; the zip survives as installed in the author's `VintagestoryData\Mods`), 61,226 bytes,
   SHA-256 `98673f8d36c468f0a705d4b6007720d9e6ec18b1a241afd9a209b27275f52a96`: Hydrology.dll and .pdb, modinfo.json
   (0.6.2-rc.5, required on client and server, game 1.22.0+), worldconfig.json, LICENSE,

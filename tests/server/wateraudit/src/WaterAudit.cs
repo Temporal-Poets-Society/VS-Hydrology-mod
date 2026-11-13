@@ -18,7 +18,7 @@ namespace WaterAudit
     {
         /// <summary>
         /// Lab kinds, built from stone and water in the air above the terrain, so they run the same on any world:
-        /// lab_trench, lab_step, lab_stepchannel, lab_drop, lab_bucket, lab_chute, lab_fall, lab_ice, lab_spill.
+        /// lab_trench, lab_step, lab_stepchannel, lab_drop, lab_bucket, lab_chute, lab_fall, lab_ice, lab_spill, lab_pond.
         /// Earth kinds, on Earth's real rivers and coasts (need Earth Map): river_trench, sea_trench, ramp, rapids_poke,
         /// chute_poke, fall_poke, wheel, step_break.
         /// </summary>
@@ -70,6 +70,12 @@ namespace WaterAudit
         /// <summary>Lab kinds, with the fake river query mod (tests/server/fakeriverquery, FAKE_QUERY=1): register the lab as
         /// natural river water, "lab" (all of it) or "pool" (lab_trench: the pool only, not the trench).</summary>
         public string QueryRiver;
+        /// <summary>lab_pond (HY-0007): the pond's side, a square <see cref="PondSize"/> x <see cref="PondSize"/> and
+        /// <see cref="PoolDepth"/> deep in a mound whose top, the pond's surface, is <see cref="Drop"/> above the lowland
+        /// around it; the lowland runs <see cref="Length"/> past the mound on the side the rim is broken (Width cells wide).
+        /// Order "flat": the lowland is raised to the pond's bed level, so the broken rim opens onto flat land at the pond's
+        /// level. <see cref="Outlet"/>: a slot through the far rim, so the lowland drains off the lab.</summary>
+        public int PondSize = 7;
         /// <summary>With <see cref="QueryRiver"/>: the region is a rapids reach; its slope (block per block) and discharge (m³/s).</summary>
         public bool QueryRapids;
         public double QuerySlope = 0.02, QueryDischarge = 100;
@@ -115,6 +121,9 @@ namespace WaterAudit
         /// <summary>With scenarios: at the end, every plan's square of this half-width (fluids per column, as ProbeArea) goes
         /// to area-plans.json, 0 = off.</summary>
         public int PlanAreaRadius;
+        /// <summary>rc.8: every lab break also runs what the server's break event runs for a player (Hydrology's pond
+        /// release); lab_pond always does.</summary>
+        public bool PlayerBreaks;
         /// <summary>Squares [x, z, half]: Earth's river query (RiverAt, RiverFlowAt) and its model column (river fields) for
         /// every column, to query.json, written with the probe (for comparing what the query says with what was drawn).</summary>
         public List<int[]> QueryProbe = new();
@@ -992,6 +1001,7 @@ namespace WaterAudit
                 case "lab_chute": k1 = 23; w1 = 8; depth = 10; break;
                 case "lab_fall": k1 = 16; w1 = 8; depth = 12; break;
                 case "lab_spill": k0 = -14; k1 = 14; w0 = -8; w1 = 8; break;
+                case "lab_pond": { int h = s.PondSize / 2; k0 = -h - 9; k1 = h + 1 + s.Length; w0 = -h - 9; w1 = h + 9; break; }
             }
             int top = 0;
             for (int k = k0; k <= k1; k++)
@@ -1150,6 +1160,26 @@ namespace WaterAudit
                         p["seaLength"] = sea;
                         break;
                     }
+                case "lab_pond":
+                    {
+                        // HY-0007 (a player broke the rim of a small pond on high ground and the land below flooded several
+                        // blocks deep): a pond PondSize square and PoolDepth deep in a mound Drop high over a lowland (the
+                        // slab's top, water at ly + 1 and up), a rim wall 8 high around the lowland (the lowland a closed
+                        // hollow unless Outlet). Built without updates; Apply breaks Width cells of the bank at the pond's level.
+                        int h = s.PondSize / 2, ptop = ly + Math.Clamp(s.Drop, 1, 7), pd = Math.Clamp(s.PoolDepth, 1, s.Drop);
+                        if (s.Order == "flat")
+                            for (int k = k0; k <= k1; k++) for (int w = w0; w <= w1; w++) for (int y = ly + 1; y < ptop; y++) SetCell(ox + k, y, oz + w, stone, 0);
+                        for (int k = -h - 1; k <= h + 1; k++) for (int w = -h - 1; w <= h + 1; w++) for (int y = ly + 1; y <= ptop; y++) SetCell(ox + k, y, oz + w, stone, 0);
+                        for (int k = -h; k <= h; k++) for (int w = -h; w <= h; w++) for (int y = ptop - pd + 1; y <= ptop; y++) SetCell(ox + k, y, oz + w, 0, water);
+                        for (int k = k0; k <= k1; k++)
+                            for (int w = w0; w <= w1; w++)
+                                if (k == k0 || k == k1 || w == w0 || w == w1)
+                                    for (int y = ly + 1; y <= ly + 8; y++) SetCell(ox + k, y, oz + w, stone, 0);
+                        if (s.Outlet) for (int y = ly + 1; y <= ly + 8; y++) SetCell(ox + k1, y, oz, 0, 0);
+                        p["pondHalf"] = h; p["pondTop"] = ptop; p["pondDepth"] = pd; p["outlet"] = s.Outlet;
+                        p["pondSources"] = (2 * h + 1) * (2 * h + 1) * pd;
+                        break;
+                    }
             }
             return p;
         }
@@ -1163,6 +1193,31 @@ namespace WaterAudit
             if (ba.GetBlock(pos, BlockLayersAccess.SolidBlocks).Id == 0) return;
             ba.BreakBlock(pos, null, 0);
             broken++;
+            if (cfg.PlayerBreaks) Release(pos);
+        }
+
+        int released;
+
+        /// <summary>
+        /// A break as a player's (rc.8): <see cref="Break"/>, then what the server's break event runs, which BreakBlock
+        /// does not raise: Hydrology's pond release (H2Release.Opened), when this Hydrology has it.
+        /// </summary>
+        void PlayerBreak(int x, int y, int z)
+        {
+            int before = broken;
+            Break(x, y, z);
+            if (broken != before && !cfg.PlayerBreaks) Release(new BlockPos(x, y, z));
+        }
+
+        void Release(BlockPos pos)
+        {
+            var opened = Type.GetType("Hydrology.Rules.H2Release, Hydrology")?.GetMethod("Opened", BindingFlags.Public | BindingFlags.Static);
+            if (opened == null) return;
+            if (opened.Invoke(null, new object[] { api.World, pos }) is int n && n > 0)
+            {
+                released += n;
+                Log("release at {0},{1},{2}: {3} sources", pos.X, pos.Y, pos.Z, n);
+            }
         }
 
         void Place(int x, int y, int z, int id)
@@ -1194,6 +1249,7 @@ namespace WaterAudit
         void Apply(Dictionary<string, object> p)
         {
             broken = 0;
+            released = 0;
             int x = I(p, "x"), z = I(p, "z"), wt = I(p, "wt"), ly = wt;
             switch ((string)p["kind"])
             {
@@ -1320,6 +1376,14 @@ namespace WaterAudit
                             ba.TriggerNeighbourBlockUpdate(pos);
                             api.World.GetBlock(src).OnNeighbourBlockChange(api.World, pos, pos.UpCopy());
                         }
+                        break;
+                    }
+                case "lab_pond":
+                    {
+                        // the player's break: Width cells of the bank at the pond's surface level, beside the pond's middle
+                        int h = I(p, "pondHalf"), top = I(p, "pondTop");
+                        for (int w = 0; w < Math.Max(1, I(p, "width")); w++) PlayerBreak(X(p, h + 1), top, Z(p, w));
+                        Log("{0}: broke {1} bank cells, {2} sources let out", p["name"], broken, released);
                         break;
                     }
                 case "lab_spill":
@@ -1532,6 +1596,30 @@ namespace WaterAudit
                             r["L+" + d] = $"{sS}S {sF}s {wS}W {wF}w";
                         }
                         r["highestSource"] = highest;
+                        break;
+                    }
+                case "lab_pond":
+                    {
+                        // per layer from the lowland's first water layer (L+1) to the pond's surface and one above: sources
+                        // (W) and flowing cells (w) outside the pond, inside the rim; the pond's own sources
+                        int h = I(p, "pondHalf"), top = I(p, "pondTop"), k0 = I(p, "k0") + 1, k1 = I(p, "k1") - 1, w0 = I(p, "w0") + 1, w1 = I(p, "w1") - 1;
+                        int outS = 0, pond = 0;
+                        for (int y = ly + 1; y <= top + 1; y++)
+                        {
+                            int wS = 0, wF = 0;
+                            for (int k = k0; k <= k1; k++)
+                                for (int w = w0; w <= w1; w++)
+                                {
+                                    var f = Fluid(X(p, k), y, Z(p, w));
+                                    if (!f.IsLiquid()) continue;
+                                    bool inPond = Math.Abs(k) <= h && Math.Abs(w) <= h;
+                                    if (f.LiquidLevel == 7) { if (inPond) pond++; else wS++; } else if (!inPond) wF++;
+                                }
+                            outS += wS;
+                            r["L+" + (y - ly)] = $"{wS}W {wF}w";
+                        }
+                        r["sourcesOutside"] = outS;
+                        r["pondSources"] = pond;
                         break;
                     }
                 case "lab_bucket":

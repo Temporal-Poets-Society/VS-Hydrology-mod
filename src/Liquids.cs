@@ -146,6 +146,9 @@ namespace Hydrology
                 && s.GetLiquidBarrierHeightOnSide(BlockFacing.DOWN, p) < 1f;
         }
 
+        /// <summary>The chunk holding <paramref name="p"/> is loaded (an unloaded chunk reads as air).</summary>
+        public static bool Loaded(IBlockAccessor ba, BlockPos p) => ba.GetChunkAtBlockPos(p) != null;
+
         /// <summary>The block under <paramref name="p"/> holds liquid up (solid ground).</summary>
         public static bool GroundBelow(IBlockAccessor ba, BlockPos p)
         {

@@ -71,6 +71,8 @@ namespace Hydrology
             H2Filling.VesselsContained = Config.VesselsContained;
             H2Filling.Pockets = Config.FillPockets;
             H2Filling.RefillOnSource = Math.Max(0, Config.RefillOnSource);
+            H2Filling.SupplyFactor = Math.Max(0, Config.SupplyFactor);
+            H2Release.Enabled = Config.PondRelease;
             H7Settling.Survival = Config.Survival;
             H7Settling.FallLabel = Config.FallLabel;
             H7Settling.NoSideFeedFromFalling = Config.NoSideFeedFromFalling;
@@ -120,9 +122,19 @@ namespace Hydrology
                 Config.Fill, Config.FillVessels, Config.Flatten, Config.Rapids, H4Rapids.MaxDropScan,
                 Config.WorldMayFillVessels, Config.VesselsDepth, Config.VesselsContained);
             Mod.Logger.Notification("Hydrology: H7 survival={0}, fall label={1}, no side feed from falling={2}, wake on fall label={3}, level relax={4}; " +
-                "H2 refill on {5} sources; H4 rapid source sheets={6}, wake edges on a new source={7}, lone vertical={8}",
+                "H2 refill on {5} sources, supply factor {9}, pond release={10}; H4 rapid source sheets={6}, wake edges on a new source={7}, lone vertical={8}",
                 Config.Survival, Config.FallLabel, Config.NoSideFeedFromFalling, Config.WakeOnFallLabel, Config.LevelRelax,
-                Config.RefillOnSource, Config.RapidSourceSheets, Config.WakeEdgesOnNewSource, Config.LoneVertical);
+                Config.RefillOnSource, Config.RapidSourceSheets, Config.WakeEdgesOnNewSource, Config.LoneVertical, H2Filling.SupplyFactor,
+                H2Release.Enabled);
+            // HY-0007: a pond a player opens lets its water out downhill (the server's break event fires for players only)
+            H2Release.Log = line => Mod.Logger.Notification(line);
+            H2Release.LogKept = line => Mod.Logger.VerboseDebug(line);
+            api.Event.DidBreakBlock += (player, oldBlockId, sel) =>
+            {
+                if (sel?.Position == null || !H2Release.Enabled || !Config.Fill) return;
+                try { H2Release.Opened(api.World, sel.Position); }
+                catch (Exception e) { Mod.Logger.Error("Hydrology: pond release at {0} failed: {1}", sel.Position, e); }
+            };
             // after every mod's SaveGameLoaded: Earth has fixed the world's query version by then
             api.Event.ServerRunPhase(EnumServerRunPhase.RunGame, () =>
             {

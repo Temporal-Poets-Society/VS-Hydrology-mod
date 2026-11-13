@@ -45,6 +45,8 @@ namespace Issue20Tests
             BarrierCases();
             HeldCases();
             HeldTrenchAndLongCanal();
+            PondCases();
+            ReleaseCases();
 #endif
             RiverRegressions();
             Console.WriteLine($"{checks - failures}/{checks} checks passed; {failures} failed");
@@ -179,6 +181,15 @@ namespace Issue20Tests
             Check(!H2Filling.TryFill(world, p, new Block { Id = salt }), "source behind barrier cannot feed sheet");
             w.SetSolid(4, 8, 4, false);
             w.SetFluid(4, 8, 4, source);
+            // HY-0007: the space up to the sheet's top (the open air around the sheet, in this unwalled world) is far more
+            // than its two sources could fill
+            Check(!H2Filling.TryFill(world, p, new Block { Id = salt }), "a sheet fed by 2 sources does not fill the open space around it");
+            // walled round, the sheet and its basin are 10 cells, and a pool of 6 sources feeds them
+            for (int y = 5; y <= 8; y++)
+                foreach (var (x, z) in new[] { (6, 4), (6, 5), (5, 3), (5, 6) }) w.SetSolid(x, y, z, true);
+            for (int y = 5; y <= 7; y++) { w.SetSolid(4, y, 4, true); w.SetSolid(4, y, 5, true); }
+            foreach (var (x, z) in new[] { (3, 4), (3, 5), (2, 4), (2, 5) }) w.SetFluid(x, 8, z, source);
+            H2Filling.ResetWorld();
             Check(H2Filling.TryFill(world, p, new Block { Id = salt }), "supported salt sheet seeds lower layer");
             // (a sheet landing on a level that is not held seeds nothing: HeldCases)
             // A column longer than the fixed scan cannot cause an unbounded search.
@@ -360,10 +371,9 @@ namespace Issue20Tests
                 for (int x = 0; x < w.SX; x++) for (int z = 0; z < w.SZ; z++) for (int y = L + 1; y < w.SY; y++)
                     if (F.IsSource(w.Get(x, y, z))) raised++;
                 raised -= springs.Length;
-                // walled all round: the sea's next level holds up to the spring's (the bucket's and the field's: the level
-                // above the sea, 12 x 20 over the sea and the land around it; the cliff's: three levels over the sea and
-                // the pit-less rim, then the plateau)
-                Check(outlet ? raised == 0 : raised > 200, name + $": {raised} sources raised");
+                // walled all round, the levels over the sea are held, but only the springs' water stands at them, far too
+                // little to fill them (HY-0007, decision 0006; rc.3 to rc.6 raised the sea to the springs' level here)
+                Check(raised == 0, name + $": {raised} sources raised");
                 Console.WriteLine($"{name}: {raised} sources raised, updates={sim.Updates}");
             }
         }
@@ -416,6 +426,19 @@ namespace Issue20Tests
             w2.FillSolid(0, 0, 0, 519, 5, 9);
             for (int x = 1; x <= 9; x++) for (int z = 1; z <= 8; z++) for (int y = 3; y <= 5; y++)
             { w2.SetSolid(x, y, z, false); w2.SetFluid(x, y, z, fresh); }
+            // HY-0007: the reservoir (216 sources) is too small to fill the canal; its water flows in and stays flowing
+            var w3 = w2.Clone();
+            var sim3 = new Sim(w3, r, 1);
+            var g3 = new GameWorld(sim3);
+            g3.Config.Flooding = true;
+            EarthRiverQuery.Active = true;
+            for (int x = 510; x >= 10; x--) for (int z = 3; z <= 5; z++) for (int y = 3; y <= 5; y++) sim3.BreakBlock(x, y, z);
+            Check(sim3.Settle(1_800_000, 5_000_000), "long canal from a small reservoir: settles");
+            int c3 = Sources(w3, 10, 510, 3, 5, 3, 5);
+            Check(c3 <= 2 * 216, $"long canal from a small reservoir: fills no more than its water allows ({c3}/{501 * 9})");
+            Console.WriteLine($"long canal 3 x 3 x 501 from a reservoir of 216: {c3}/{501 * 9} sources, updates={sim3.Updates}");
+            // as from a river (the issue #20 use): the reservoir's columns are natural river water
+            EarthRiverQuery.IsRiver = q => q.X <= 9;
             var sim2 = new Sim(w2, r, 1);
             var g2 = new GameWorld(sim2);
             g2.Config.Flooding = true;
@@ -427,6 +450,154 @@ namespace Issue20Tests
             Check(c == 501 * 9, $"long canal: 3 x 3 x 501 dug out whole and opened fills ({c}/{501 * 9})");
             Console.WriteLine($"long canal 3 x 3 x 501: {c}/{501 * 9} sources, updates={sim2.Updates}");
             EarthRiverQuery.Active = false;
+            EarthRiverQuery.IsRiver = _ => false;
+        }
+#endif
+
+#if !BASELINE
+        /// <summary>
+        /// HY-0007 (decision 0006): a pond on high ground whose rim is broken. A pond 7 x 7 x 2 (98 sources) in a mound
+        /// whose top is 4 above a walled lowland, the rim broken 2 wide at the pond's level: the lowland is a closed hollow
+        /// ("hollow"), or raised to the pond's bed so the rim opens onto flat land ("flat"). With the supply rule off (rc.6)
+        /// the hollow fills to the pond's level; with it on, neither the hollow nor the flat land takes a source. A lake
+        /// (1,628 sources) breaking into a smaller hollow still fills it.
+        /// </summary>
+        static void PondCases()
+        {
+            H2Filling.Enabled = true;
+            H2Filling.Vessels = false;
+            EarthRiverQuery.Active = true; // as on Earth: fresh water seeds an uneven basin under a falling sheet
+            EarthRiverQuery.IsRiver = _ => false;
+            int fresh = F.Make(F.Water, F.Still, 7);
+            foreach (var (shape, factor) in new[] { ("hollow", 0), ("hollow", 2), ("flat", 2), ("lake", 2) })
+            {
+                H2Filling.SupplyFactor = factor;
+                H2Filling.ResetWorld();
+                var w = new World(50, 14, 30);
+                w.FillSolid(0, 0, 0, 49, 3, 29);
+                w.FillSolid(0, 4, 0, 49, 12, 0); w.FillSolid(0, 4, 29, 49, 12, 29);
+                w.FillSolid(0, 4, 0, 0, 12, 29); w.FillSolid(49, 4, 0, 49, 12, 29);
+                bool lake = shape == "lake";
+                int x0 = 3, x1 = lake ? 41 : 11, z0 = lake ? 3 : 11, z1 = lake ? 26 : 19;
+                if (shape == "flat") w.FillSolid(1, 4, 1, 48, 6, 28);
+                w.FillSolid(x0, 4, z0, x1, 7, z1);
+                int pond = 0;
+                for (int x = x0 + 1; x < x1; x++) for (int z = z0 + 1; z < z1; z++) for (int y = 6; y <= 7; y++)
+                { w.SetSolid(x, y, z, false); w.SetFluid(x, y, z, fresh); pond++; }
+                var r = RuleSet.Parse(Sweep.RecommendedSpec + ",FillVessels=1,VesselsDepth=1,VesselsContained=1");
+                r.WakeOnNewSource = true;
+                var sim = new Sim(w, r, 1);
+                var g = new GameWorld(sim);
+                g.Config.Flooding = true;
+                sim.BreakBlock(x1, 7, 15);
+                sim.BreakBlock(x1, 7, 16);
+                string name = $"pond {shape} ({pond} sources) supply factor {factor}";
+                Check(sim.Settle(600_000, 3_000_000), name + ": settles");
+                int outside = 0, inPond = 0;
+                for (int x = 1; x <= 48; x++) for (int z = 1; z <= 28; z++) for (int y = 4; y <= 8; y++)
+                {
+                    if (!F.IsSource(w.Get(x, y, z))) continue;
+                    if (x > x0 && x < x1 && z > z0 && z < z1) inPond++; else outside++;
+                }
+                Check(inPond == pond, name + $": the pond keeps its water ({inPond}/{pond})");
+                if (lake) Check(outside > 500, name + $": the hollow fills ({outside} sources outside the lake)");
+                else if (factor == 0) Check(outside > 1000, name + $": the hollow floods without the rule ({outside} sources)");
+                else Check(outside == 0, name + $": no source outside the pond ({outside})");
+                Console.WriteLine($"{name}: {outside} sources outside, updates={sim.Updates}");
+            }
+            H2Filling.SupplyFactor = 2;
+            H2Filling.ResetWorld();
+            EarthRiverQuery.Active = false;
+        }
+#endif
+
+#if !BASELINE
+        /// <summary>
+        /// H2 release (rc.8, decision 0007): the pond of <see cref="PondCases"/>, its rim broken 2 wide at its surface, each
+        /// break followed by the server's break event. Hollow: the top layer (49) collects at the lowland's floor, the
+        /// pond keeps its lower layer. Flat land at the pond's level: nothing moves. A lake of 1,628 sources (below the
+        /// unlimited size): its top layer fills the hollow around it, volume kept. A lowland of river water (the query
+        /// calls part of it river): the river takes the water and does not rise. Land at the pond's level beyond the opening:
+        /// the water runs to an edge 5 blocks away and falls (ledge); an edge 20 blocks away is beyond its run (plateau).
+        /// </summary>
+        static void ReleaseCases()
+        {
+            H2Filling.Enabled = true;
+            H2Filling.Vessels = false;
+            H2Filling.SupplyFactor = 2;
+            H2Release.Enabled = true;
+            EarthRiverQuery.Active = true;
+            int fresh = F.Make(F.Water, F.Still, 7);
+            foreach (var shape in new[] { "hollow", "flat", "lake", "river", "ledge", "plateau" })
+            {
+                EarthRiverQuery.IsRiver = shape == "river" ? q => q.X >= 40 : _ => false;
+                H2Filling.ResetWorld();
+                var w = new World(50, 14, 30);
+                w.FillSolid(0, 0, 0, 49, 3, 29);
+                w.FillSolid(0, 4, 0, 49, 12, 0); w.FillSolid(0, 4, 29, 49, 12, 29);
+                w.FillSolid(0, 4, 0, 0, 12, 29); w.FillSolid(49, 4, 0, 49, 12, 29);
+                bool lake = shape == "lake";
+                int x0 = 3, x1 = lake ? 41 : 11, z0 = lake ? 3 : 11, z1 = lake ? 26 : 19;
+                if (shape == "flat") w.FillSolid(1, 4, 1, 48, 6, 28);
+                // land at the pond's level beyond the opening, its edge 5 (ledge) or 20 (plateau) blocks away
+                if (shape == "ledge") w.FillSolid(1, 4, 1, 15, 6, 28);
+                if (shape == "plateau") w.FillSolid(1, 4, 1, 30, 6, 28);
+                w.FillSolid(x0, 4, z0, x1, 7, z1);
+                int lowland = 0;
+                if (shape == "river")
+                    for (int x = 1; x <= 48; x++) for (int z = 1; z <= 28; z++)
+                        if (!(x >= x0 && x <= x1 && z >= z0 && z <= z1)) { w.SetFluid(x, 4, z, fresh); lowland++; }
+                int pond = 0, top = 0;
+                for (int x = x0 + 1; x < x1; x++) for (int z = z0 + 1; z < z1; z++) for (int y = 6; y <= 7; y++)
+                { w.SetSolid(x, y, z, false); w.SetFluid(x, y, z, fresh); pond++; if (y == 7) top++; }
+                var r = RuleSet.Parse(Sweep.RecommendedSpec + ",FillVessels=1,VesselsDepth=1,VesselsContained=1");
+                r.WakeOnNewSource = true;
+                var sim = new Sim(w, r, 1);
+                var g = new GameWorld(sim);
+                g.Config.Flooding = true;
+                long absorbed0 = HydrologyStats.ReleaseAbsorbed;
+                sim.BreakBlock(x1, 7, 15);
+                int moved = H2Release.Opened(g, new BlockPos(x1, 7, 15));
+                sim.BreakBlock(x1, 7, 16);
+                moved += H2Release.Opened(g, new BlockPos(x1, 7, 16));
+                string name = $"release {shape} ({pond} sources)";
+                Check(sim.Settle(600_000, 3_000_000), name + ": settles");
+                int outside = 0, inPond = 0, above = 0;
+                for (int x = 1; x <= 48; x++) for (int z = 1; z <= 28; z++) for (int y = 4; y <= 8; y++)
+                {
+                    if (!F.IsSource(w.Get(x, y, z))) continue;
+                    if (x > x0 && x < x1 && z > z0 && z < z1) inPond++; else { outside++; if (y > 4) above++; }
+                }
+                switch (shape)
+                {
+                    case "hollow":
+                        Check(moved == top && inPond == pond - top, name + $": the top layer lets out ({moved} moved, {inPond} stay)");
+                        Check(outside == top && above == 0, name + $": the water collects on the lowland's floor ({outside} sources, {above} above it)");
+                        break;
+                    case "ledge":
+                        Check(moved == top && inPond == pond - top, name + $": the water runs 5 blocks to the edge and falls ({moved} moved, {inPond} stay)");
+                        Check(outside == top && above == 0, name + $": it collects at the foot ({outside} sources, {above} above the floor)");
+                        break;
+                    case "plateau":
+                    case "flat":
+                        Check(moved == 0 && inPond == pond && outside == 0, name + $": nothing moves onto land at the pond's level ({moved} moved, {inPond} stay, {outside} outside)");
+                        break;
+                    case "lake":
+                        Check(moved == top && inPond == pond - top, name + $": the lake's top layer lets out ({moved} moved, {inPond} stay)");
+                        // the last, partly filled layer may be completed by H2 when decision 0006 allows: within a layer
+                        Check(outside >= top && outside <= top + 408, name + $": the hollow takes the water ({outside} sources for {top})");
+                        break;
+                    case "river":
+                        Check(moved == top && inPond == pond - top, name + $": the top layer lets out ({moved} moved, {inPond} stay)");
+                        Check(outside == lowland && above == 0, name + $": the river takes it and does not rise ({outside} sources for {lowland}, {above} above)");
+                        Check(HydrologyStats.ReleaseAbsorbed - absorbed0 == top, name + ": counted as absorbed");
+                        break;
+                }
+                Console.WriteLine($"{name}: moved {moved}, {inPond} in the pond, {outside} outside ({above} above the floor), updates={sim.Updates}");
+            }
+            EarthRiverQuery.IsRiver = _ => false;
+            EarthRiverQuery.Active = false;
+            H2Filling.ResetWorld();
         }
 #endif
 

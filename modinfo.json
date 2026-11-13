@@ -2,7 +2,7 @@
   "type": "code",
   "modid": "hydrology",
   "name": "Hydrology",
-  "version": "0.6.2-rc.6",
+  "version": "0.6.2-rc.8",
   "description": "Water mechanics built for Earth's rivers: channel filling, smoother drops, rapids, deep canals and working mill races. Includes Earth river-flow and water-wheel integration and a per-world Water flooding option. Standalone gameplay outside Earth has not been tested for this release. Bucket source transport follows vanilla settings; enabling Prevent liquid source transport by buckets is strongly recommended. Vanilla blocks only. Not compatible with Realistic Water or Realistic Rapids.",
   "authors": [
     "Andris"

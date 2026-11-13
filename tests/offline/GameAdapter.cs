@@ -64,7 +64,8 @@ namespace Hydrology
     }
     public static class HydrologyStats
     {
-        public static long Filled, Refilled, FilledVessels, VesselsRefused, VesselsInRiverRefused, FilledPockets, Unheld;
+        public static long Filled, Refilled, FilledVessels, VesselsRefused, VesselsInRiverRefused, FilledPockets, Unheld, Unsupplied,
+            Released, ReleasedCells, ReleaseAbsorbed, ReleaseKept;
     }
     public static class Liquids
     {
@@ -76,6 +77,7 @@ namespace Hydrology
         public static Block Fluid(IBlockAccessor ba, BlockPos p) => ba.Fluid(p);
         public static bool GroundBelow(IBlockAccessor ba, BlockPos p) => ba.Solid(p.DownCopy());
         public static bool Open(IBlockAccessor ba, BlockPos p) => !ba.Solid(p);
+        public static bool Loaded(IBlockAccessor ba, BlockPos p) => true;
         public static bool Passes(IBlockAccessor ba, BlockPos p, BlockPos n, BlockFacing face) => !ba.Solid(p) && !ba.Solid(n);
         public static BlockPos Below(BlockPos p) => p.DownCopy();
         public static BlockPos Side2(BlockPos p) => p.Copy();

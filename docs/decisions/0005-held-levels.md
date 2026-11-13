@@ -66,7 +66,8 @@ Refill (three source sides, vanilla's own rule) and the enclosed pocket (which h
   36 flowing cells in the lab against vanilla's 4).
 - A closed basin under a source fills to the source's level (walled all round, the lab's sea still rises to a bucket
   emptied onto it; so does a pond in a hollow closed above its surface): with vanilla's endless sources, that is where
-  the water stands.
+  the water stands. Superseded in 0.6.2-rc.7 by [0006](0006-water-volume.md): a space fills only from water that could
+  fill it, so a bucket no longer raises a closed basin and a broken pond no longer floods a hollow below it.
 - A basin with more than 4096 open cells at a fill's level or 16,384 in all, dug out at once before it is opened, no
   longer fills by H2 in one go; dug outward from the water, as players dig, each step is small and fills.
 - The search runs only when a fill's own conditions hold. Over the sea or open land it walks its whole limit before it

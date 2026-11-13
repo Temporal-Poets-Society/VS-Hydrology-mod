@@ -10,6 +10,8 @@
   <ItemGroup>
     <Compile Include="../../tools/watersim/src/*.cs" />
     <Compile Include="$(FillingSource)" />
+    <!-- the baseline build (run.ps1 -Baseline) compiles an older H2Filling.cs without the release rule -->
+    <Compile Include="../../src/Rules/H2Release.cs" Condition="!$(DefineConstants.Contains('BASELINE'))" />
     <Compile Include="*.cs" />
   </ItemGroup>
 </Project>

@@ -29,6 +29,12 @@ namespace Hydrology
         /// <summary>H2 (0.6.2-rc.3): fills refused because nothing holds water at the cell's level (an outlet, or open
         /// water or land beyond the search).</summary>
         public static long Unheld;
+        /// <summary>H2 (0.6.2-rc.7, HY-0007): fills refused because the water bounding a held space is too little to fill it
+        /// (a pond breaking into a hollow below it).</summary>
+        public static long Unsupplied;
+        /// <summary>H2 release (0.6.2-rc.8, HY-0007): ponds a player opened that let their water out; the sources they lost;
+        /// of those, the sources the sea, a river or a large lake took; openings beside a pond whose water stayed.</summary>
+        public static long Released, ReleasedCells, ReleaseAbsorbed, ReleaseKept;
         /// <summary>0.1.8, Earth's river query: vessels fills refused in natural river columns; sources made rapid in a
         /// rapids reach; wheel readings raised on rivers.</summary>
         public static long VesselsInRiverRefused, RapidSourcesByQuery, FlowLabelsKept, WheelsRaised;
@@ -51,7 +57,7 @@ namespace Hydrology
         public static long RapidSources, RapidSourcesReverted, MadeRapid, MadeOrdinary;
 
         public static string Summary() =>
-            $"since the world started: updates {Updates} ({Ticks * 1000.0 / System.Diagnostics.Stopwatch.Frequency:0.0} ms), filled {Filled} ({FilledVessels} on water, {VesselsRefused} refused as too shallow, {VesselsInRiverRefused} refused in river water, {FilledPockets} in pockets, {Unheld} refused as not held), made falling {MadeFalling}, " +
+            $"since the world started: updates {Updates} ({Ticks * 1000.0 / System.Diagnostics.Stopwatch.Frequency:0.0} ms), filled {Filled} ({FilledVessels} on water, {VesselsRefused} refused as too shallow, {VesselsInRiverRefused} refused in river water, {FilledPockets} in pockets, {Unheld} refused as not held, {Unsupplied} as too little water), ponds let out {Released} ({ReleasedCells} sources, {ReleaseAbsorbed} into large water; {ReleaseKept} kept their water), made falling {MadeFalling}, " +
             $"rapid edges {RapidSources} (reverted {RapidSourcesReverted}), cells made rapid {MadeRapid} / ordinary {MadeOrdinary}, " +
             $"drains refused {DrainsRefused}, same-level removals refused {RemovalsRefused}, refilled {Refilled}, " +
             $"unsupported sources drained {SourcesDrained}, labelled falling {Labelled}, relaxed {Relaxed}; " +

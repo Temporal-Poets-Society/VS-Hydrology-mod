@@ -79,6 +79,13 @@ namespace Hydrology
         public bool LevelRelax = true;
         /// <summary>H2: a flowing cell on a source with this many source sides becomes a source (0: off).</summary>
         public int RefillOnSource = 3;
+        /// <summary>H2 (0.6.2-rc.7, HY-0007): a held space fills only when the water bounding it, from the space's floor up,
+        /// is at least 1/SupplyFactor of the space, or stands in a natural river column (decision 0006; 0: off).</summary>
+        public int SupplyFactor = 2;
+        /// <summary>H2 release (0.6.2-rc.8, HY-0007): a pond a player opens loses its water above the opening, and the water
+        /// collects at the lowest point its flow reaches; the sea, rivers and large lakes take it without rising (decision
+        /// 0007).</summary>
+        public bool PondRelease = true;
         /// <summary>H4: a rapid source with a source beside it spreads to all sides.</summary>
         public bool RapidSourceSheets = true;
         /// <summary>H4: a cell that has just become a source wakes the edges near it.</summary>

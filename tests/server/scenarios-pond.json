@@ -1,0 +1,9 @@
+[
+  {"Name": "pond_hollow2", "Kind": "lab_pond", "Width": 2, "Drop": 4, "PoolDepth": 2, "PondSize": 7, "Length": 30, "Offset": [0, 0]},
+  {"Name": "pond_hollow1", "Kind": "lab_pond", "Width": 1, "Drop": 4, "PoolDepth": 2, "PondSize": 7, "Length": 30, "Offset": [80, 0]},
+  {"Name": "pond_flat2", "Kind": "lab_pond", "Order": "flat", "Width": 2, "Drop": 4, "PoolDepth": 2, "PondSize": 7, "Length": 30, "Offset": [160, 0]},
+  {"Name": "pond_hollow2_out", "Kind": "lab_pond", "Width": 2, "Drop": 4, "PoolDepth": 2, "PondSize": 7, "Length": 30, "Outlet": true, "Offset": [0, 80]},
+  {"Name": "pond_flat2_out", "Kind": "lab_pond", "Order": "flat", "Width": 2, "Drop": 4, "PoolDepth": 2, "PondSize": 7, "Length": 30, "Outlet": true, "Offset": [80, 80]},
+  {"Name": "lake_hollow2", "Kind": "lab_pond", "Width": 2, "Drop": 4, "PoolDepth": 3, "PondSize": 41, "Length": 12, "Offset": [160, 80]},
+  {"Name": "pond_salt_hollow2", "Kind": "lab_pond", "Liquid": "saltwater", "Width": 2, "Drop": 4, "PoolDepth": 2, "PondSize": 7, "Length": 30, "Offset": [0, 160]}
+]

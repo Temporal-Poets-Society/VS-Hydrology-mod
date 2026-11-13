@@ -379,8 +379,10 @@ namespace Hydrology.Rules
         /// passes into (a fence, a slab, a water wheel) are part of the space, and what lies beyond them decides. So a
         /// trench, a canal with a pit in its bed, a port or a walled basin is held, and its water rises to the level of the
         /// water it is dug from; the sea, a lake with an outflow or open shores, a field whose edge drops away down a
-        /// hillside, a floor open to a cave below are not. A pond in a hollow closed above its surface is held: a source
-        /// over it fills the hollow to the source's level, as vanilla's endless sources would.
+        /// hillside, a floor open to a cave below are not. A held space must also be fed (rc.7, <see cref="Supplied"/>): a
+        /// pond in a hollow closed above its surface is held, but a source over it no longer fills the hollow to its level.
+        /// The <paramref name="level"/> is the top of the space (the uneven basin: the falling sheet's top), the cell's
+        /// own by default.
         ///
         /// rc.4: the level and the whole space have their own limits (a canal 3 x 3 x 500 dug out and then opened was
         /// refused at its surface, counted with its unfilled depths, and never asked again); answers are remembered
@@ -393,8 +395,9 @@ namespace Hydrology.Rules
         /// land flooded all of it at their level (the ground rule). Each was reproduced in the headless lab (lab_spill),
         /// on 0.6.1 as on 0.6.2-rc.2.
         /// </summary>
-        static bool Held(IBlockAccessor ba, BlockPos pos, Block b)
+        static bool Held(IBlockAccessor ba, BlockPos pos, Block b, int level = int.MinValue)
         {
+            int top = level == int.MinValue ? pos.Y : level;
             long now = System.Environment.TickCount64;
             int gen = heldGeneration;
             var key = (pos.dimension, pos.X, pos.Y, pos.Z);
@@ -410,7 +413,9 @@ namespace Hydrology.Rules
             queue.Clear();
             seen.Add((pos.X, pos.Y, pos.Z));
             queue.Enqueue((pos.X, pos.Y, pos.Z));
-            int atLevel = 1;
+            var seeds = heldSeeds ??= new List<(int x, int y, int z)>();
+            seeds.Clear();
+            int atLevel = pos.Y == top ? 1 : 0, floor = pos.Y;
             var p = new BlockPos(pos.dimension);
             var n = new BlockPos(pos.dimension);
             while (queue.Count > 0)
@@ -421,11 +426,16 @@ namespace Hydrology.Rules
                     p.Set(x, y, z);
                     n.Set(p).Add(face);
                     // nothing above the level; the world's floor and a liquid-tight face are walls
-                    if (n.Y > pos.Y || n.Y < 0 || seen.Contains((n.X, n.Y, n.Z)) || !Liquids.Passes(ba, p, n, face)) continue;
+                    if (n.Y > top || n.Y < 0 || seen.Contains((n.X, n.Y, n.Z)) || !Liquids.Passes(ba, p, n, face)) continue;
                     var f = Liquids.Fluid(ba, n);
-                    // a source of the liquid is water already held; a source of another liquid is a wall
-                    if (Liquids.IsSource(f)) continue;
-                    if ((n.Y == pos.Y && ++atLevel > MaxHeldLevel) || seen.Count >= MaxHeldSpace)
+                    // a source of the liquid is water already held (and part of a body that would feed the space: HY-0007);
+                    // a source of another liquid is a wall
+                    if (Liquids.IsSource(f))
+                    {
+                        if (Liquids.Same(f, b) && seeds.Count < MaxSeeds) seeds.Add((n.X, n.Y, n.Z));
+                        continue;
+                    }
+                    if ((n.Y == top && ++atLevel > MaxHeldLevel) || seen.Count >= MaxHeldSpace)
                     {
                         if (unheldMemo.Count > 4096) unheldMemo.Clear();
                         unheldMemo[key] = (now + UnheldMemoMs, gen);
@@ -434,7 +444,15 @@ namespace Hydrology.Rules
                     }
                     seen.Add((n.X, n.Y, n.Z));
                     queue.Enqueue((n.X, n.Y, n.Z));
+                    if (n.Y < floor) floor = n.Y;
                 }
+            }
+            if (!Supplied(ba, b, pos.dimension, seeds, floor, seen.Count))
+            {
+                if (unheldMemo.Count > 4096) unheldMemo.Clear();
+                unheldMemo[key] = (now + UnheldMemoMs, gen);
+                HydrologyStats.Unsupplied++;
+                return false;
             }
             // every cell the search covered is held at its own height too: what it reaches below that is part of this space
             if (heldMemo.Count + seen.Count > 65536) heldMemo.Clear();
@@ -442,8 +460,75 @@ namespace Hydrology.Rules
             return true;
         }
 
+        /// <summary>
+        /// HY-0007 (decision 0006; a player broke the rim of a small pond on high ground, and the land below flooded several
+        /// blocks deep): a held space fills only from water that could fill it. Sources stay endless, as in vanilla, so this
+        /// bounds what one opening floods; it does not balance volumes. The water of the bodies bounding the space, counted
+        /// from the space's floor up (water below the floor cannot rise into it), must be at least 1/<see cref="SupplyFactor"/>
+        /// of the open space. A body with a natural river column (Earth's query) feeds any space, as a river is fed from
+        /// upstream; the sea and a large lake pass by their size. So a pond breaking into a hollow below it, or onto closed
+        /// flat land at its level, leaves flowing water there; a canal dug from a lake or a pool fills as before; a bucket
+        /// emptied over a closed pond no longer raises it (the water at the new level is the bucket's). 0 turns it off.
+        /// </summary>
+        public static int SupplyFactor = 2;
+        const int MaxSeeds = 1024;
+        [System.ThreadStatic] static List<(int x, int y, int z)> heldSeeds;
+        [System.ThreadStatic] static HashSet<(int, int, int)> bodySeen;
+        [System.ThreadStatic] static HashSet<(int, int)> bodyColumns;
+        [System.ThreadStatic] static Queue<(int x, int y, int z)> bodyQueue;
+
+        /// <summary>The sources of <paramref name="b"/>'s liquid joined to <paramref name="seeds"/> at or above
+        /// <paramref name="floor"/> are at least <paramref name="space"/> / <see cref="SupplyFactor"/>, or one of them stands
+        /// in a natural river column.</summary>
+        static bool Supplied(IBlockAccessor ba, Block b, int dim, List<(int x, int y, int z)> seeds, int floor, int space)
+        {
+            if (SupplyFactor <= 0) return true;
+            int need = (space + SupplyFactor - 1) / SupplyFactor;
+            var seen = bodySeen ??= new HashSet<(int, int, int)>();
+            var columns = bodyColumns ??= new HashSet<(int, int)>();
+            var queue = bodyQueue ??= new Queue<(int x, int y, int z)>();
+            seen.Clear();
+            columns.Clear();
+            queue.Clear();
+            bool river = EarthRiverQuery.Active && dim == 0;
+            foreach (var c in seeds) if (c.y >= floor && seen.Add(c)) queue.Enqueue(c);
+            var p = new BlockPos(dim);
+            var n = new BlockPos(dim);
+            while (queue.Count > 0)
+            {
+                if (seen.Count >= need) return true;
+                var (x, y, z) = queue.Dequeue();
+                p.Set(x, y, z);
+                if (river && columns.Add((x, z)) && EarthRiverQuery.River(p)) return true;
+                foreach (var face in BlockFacing.ALLFACES)
+                {
+                    n.Set(p).Add(face);
+                    if (n.Y < floor || seen.Contains((n.X, n.Y, n.Z)) || !Liquids.Passes(ba, p, n, face)) continue;
+                    var f = Liquids.Fluid(ba, n);
+                    if (!Liquids.IsSource(f) || !Liquids.Same(f, b)) continue;
+                    seen.Add((n.X, n.Y, n.Z));
+                    queue.Enqueue((n.X, n.Y, n.Z));
+                }
+            }
+            return seen.Count >= need;
+        }
+
         /// <summary>A new world in the same process (singleplayer): no remembered answer carries over.</summary>
         static void ForgetHeld() { System.Threading.Interlocked.Increment(ref heldGeneration); }
+
+        /// <summary>The water moved in a box (H2 release): what was held or fed there a moment ago may not be. Only the box:
+        /// forgetting every answer would change fills elsewhere that are still running on remembered answers.</summary>
+        public static void ForgetHeldNear(int dim, int x0, int y0, int z0, int x1, int y1, int z1)
+        {
+            foreach (var memo in new[] { heldMemo, unheldMemo })
+            {
+                var drop = new List<(int, int, int, int)>();
+                foreach (var key in memo.Keys)
+                    if (key.Item1 == dim && key.Item2 >= x0 && key.Item2 <= x1 && key.Item3 >= y0 && key.Item3 <= y1
+                        && key.Item4 >= z0 && key.Item4 <= z1) drop.Add(key);
+                foreach (var key in drop) memo.Remove(key);
+            }
+        }
 
         static bool IsSourceOf(Block f, Block b) => Liquids.IsSource(f) && Liquids.Same(f, b);
 
@@ -488,8 +573,9 @@ namespace Hydrology.Rules
                         || !Liquids.IsSource(ds) || !Liquids.Same(ds, b)) continue;
                     if (!Liquids.Passes(ba, p, side, H[i]) || !Liquids.Passes(ba, p, across, H[j])
                         || !Liquids.Passes(ba, side, diagonal, H[j]) || !Liquids.Passes(ba, across, diagonal, H[i])) continue;
-                    // the sheet's own level does not hold the water it lands in (a fall into the open sea)
-                    if (!Held(ba, pos, b)) return false;
+                    // the sheet's own level does not hold the water it lands in (a fall into the open sea); the space up
+                    // to the sheet's top is what the water above it would have to fill (HY-0007)
+                    if (!Held(ba, pos, b, p.Y)) return false;
                     Fill(world, pos, b);
                     return true;
                 }

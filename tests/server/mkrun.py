@@ -9,6 +9,7 @@
 #   and area-end.json around a scenario run. WA_SHAPE_RADIUS: the shape check's half-width.
 # SEED=<world seed> (default 386217).
 # WA_PLAN_AREA=<half-width>: every plan's square of fluids at the end (area-plans.json).
+# WA_PLAYER_BREAKS=1: every lab break also runs Hydrology's pond release, as a player's break does (rc.8; lab_pond always).
 # FAKE_QUERY=1 adds tests/server/fakeriverquery (Earth's river query, version 1, over the labs' QueryRiver areas).
 # WORLD_ATTRS='{"hydrologyFillVessels": true}' adds world-config attributes (as Earth 0.16.8 sets on its worlds).
 # WA_BEDSCAN='[[lat,lon,half],...]' (Earth worlds; HY-0004): probe mode that lists every fresh-water cell with open
@@ -119,6 +120,7 @@ if os.environ.get("WA_WAKE_AREA"): ac["WakeProbeAreaSec"] = int(os.environ["WA_W
 if os.environ.get("WA_POKE"): ac["ProbePoke"] = json.loads(os.environ["WA_POKE"])  # with WA_WAKE_AREA: [x, y, z] poked instead
 if os.environ.get("WA_SHAPE_RADIUS"): ac["ShapeRadius"] = int(os.environ["WA_SHAPE_RADIUS"])
 if os.environ.get("WA_PLAN_AREA"): ac["PlanAreaRadius"] = int(os.environ["WA_PLAN_AREA"])
+if os.environ.get("WA_PLAYER_BREAKS"): ac["PlayerBreaks"] = os.environ["WA_PLAYER_BREAKS"] == "1"
 if os.environ.get("WA_DUMPS"): ac["DumpAtSec"] = [int(v) for v in os.environ["WA_DUMPS"].split(",")]
 if os.environ.get("WA_BEDSCAN"): ac["BedScan"] = json.loads(os.environ["WA_BEDSCAN"])
 if os.environ.get("WA_BEDSCAN_WAKE"): ac["BedScanWakeSec"] = int(os.environ["WA_BEDSCAN_WAKE"])
