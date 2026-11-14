@@ -309,7 +309,21 @@ namespace Hydrology.Rules
         internal static void WakeEdgesAround(IWorldAccessor world, BlockPos pos)
         {
             var ba = world.BlockAccessor;
-            var p = new BlockPos(pos.dimension);
+            // HY-0017: a cell is woken at most once in a window of WakeWindowMs, however many new sources appear near it
+            // (filling a basin woke the same rim sources once per filled cell nearby), and a centre scanned in the window is
+            // not scanned again. The window is shorter than the shortest delay of a liquid's own update (rapid water's
+            // 50 ms), so a woken cell's update always runs after the changes the window merged: no wake is lost. (The
+            // first build keyed it on the server's millisecond clock, which merged only within one millisecond.)
+            long now = world.ElapsedMilliseconds;
+            if (now - wokenTick >= WakeWindowMs || now < wokenTick || woken.Count > MaxWokenPerTick)
+            {
+                wokenTick = now;
+                woken.Clear();
+                scanned.Clear();
+            }
+            if (!scanned.Add((pos.dimension, pos.X, pos.Y, pos.Z))) return;
+            var p = wakeP ??= new BlockPos(0);
+            p.dimension = pos.dimension;
             for (int dx = -Reach; dx <= Reach; dx++)
                 for (int dz = -Reach; dz <= Reach; dz++)
                 {
@@ -319,15 +333,31 @@ namespace Hydrology.Rules
                         p.Set(pos.X + dx, pos.Y + dy, pos.Z + dz);
                         var f = Liquids.Fluid(ba, p);
                         if (!Liquids.IsFresh(f) || !Liquids.IsSource(f)) continue;
+                        if (woken.Contains((p.dimension, p.X, p.Y, p.Z))) continue;
                         if (!Liquids.IsRapid(f) && !HasOpenSide(ba, p)) continue;
+                        woken.Add((p.dimension, p.X, p.Y, p.Z));
+                        HydrologyStats.EdgeWakes++;
                         f.OnNeighbourBlockChange(world, p.Copy(), pos);
                     }
                 }
         }
 
+        // HY-0017: the cells woken and the centres scanned in the current server tick (the main thread only)
+        static readonly HashSet<(int, int, int, int)> woken = new(), scanned = new();
+        // far in the past without overflowing now - wokenTick (long.MinValue overflowed: the window never reset, and the sets
+        // only cleared at MaxWokenPerTick, so wakes were skipped for long stretches; found by the offline H4 case)
+        static long wokenTick = long.MinValue / 2;
+        const int MaxWokenPerTick = 65536;
+
+        /// <summary>A new world: the wake window starts empty (Fable's pass, R1).</summary>
+        public static void ResetWorld() { woken.Clear(); scanned.Clear(); wokenTick = long.MinValue / 2; }
+        const long WakeWindowMs = 40;
+        [ThreadStatic] static BlockPos wakeP, sideP;
+
         static bool HasOpenSide(IBlockAccessor ba, BlockPos pos)
         {
-            var n = new BlockPos(pos.dimension);
+            var n = sideP ??= new BlockPos(0);
+            n.dimension = pos.dimension;
             for (int i = 0; i < 4; i++)
             {
                 n.Set(pos).Add(H[i]);
@@ -355,9 +385,12 @@ namespace Hydrology.Rules
             return Liquids.IsRapid(b) && Liquids.IsSource(b) && !Lone(ba, pos, b);
         }
 
+        [ThreadStatic] static BlockPos loneN, sheetN, wantN;
+
         static bool Lone(IBlockAccessor ba, BlockPos pos, Block b)
         {
-            var n = new BlockPos(pos.dimension);
+            var n = loneN ??= new BlockPos(0);
+            n.dimension = pos.dimension;
             if (LoneVertical)
                 for (int dy = -1; dy <= 1; dy += 2)
                 {
@@ -386,8 +419,9 @@ namespace Hydrology.Rules
             if (!Enabled) return false;
             var b = Liquids.Fluid(ba, pos);
             if (!Liquids.IsRapid(b) || Liquids.IsSource(b)) return false;
-            if (Liquids.Same(Liquids.Fluid(ba, pos.DownCopy()), b)) return true;
-            var n = new BlockPos(pos.dimension);
+            if (Liquids.Same(Liquids.Fluid(ba, Liquids.Below(pos)), b)) return true;
+            var n = sheetN ??= new BlockPos(0);
+            n.dimension = pos.dimension;
             for (int i = 0; i < 4; i++)
             {
                 n.Set(pos).Add(H[i]);
@@ -435,11 +469,12 @@ namespace Hydrology.Rules
         {
             ordinarySource = null;
             if (RapidsByQuery(pos)) return true;
-            var above = Liquids.Fluid(ba, pos.UpCopy());
+            var above = Liquids.Fluid(ba, Liquids.Above(pos));
             if (Liquids.Same(above, b)) return Liquids.IsRapid(above);
             bool? wantRapid = null;
             int best = b.LiquidLevel;
-            var n = new BlockPos(pos.dimension);
+            var n = wantN ??= new BlockPos(0);
+            n.dimension = pos.dimension;
             for (int i = 0; i < 4; i++)
             {
                 n.Set(pos).Add(H[i]);

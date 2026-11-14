@@ -1,0 +1,13 @@
+[
+  {"Name": "reach_lake3", "Kind": "lab_reach", "Width": 2, "Drop": 3, "PoolDepth": 3, "PondSize": 41, "UpperLength": 6, "Length": 30, "Offset": [0, 0]},
+  {"Name": "reach_lake1", "Kind": "lab_reach", "Width": 2, "Drop": 1, "PoolDepth": 3, "PondSize": 41, "UpperLength": 6, "Length": 30, "Offset": [100, 0]},
+  {"Name": "reach_lake_level", "Kind": "lab_reach", "Width": 2, "Drop": 0, "PoolDepth": 3, "PondSize": 41, "UpperLength": 6, "Length": 40, "Offset": [200, 0]},
+  {"Name": "reach_lake3_short", "Kind": "lab_reach", "Width": 2, "Drop": 3, "PoolDepth": 3, "PondSize": 41, "UpperLength": 3, "Length": 30, "Offset": [300, 0]},
+  {"Name": "reach_lake3_out", "Kind": "lab_reach", "Width": 2, "Drop": 3, "PoolDepth": 3, "PondSize": 41, "UpperLength": 6, "Length": 30, "Outlet": true, "Offset": [400, 0]},
+  {"Name": "reach_pond3", "Kind": "lab_reach", "Width": 2, "Drop": 3, "PoolDepth": 2, "PondSize": 7, "UpperLength": 6, "Length": 30, "Offset": [0, 100]},
+  {"Name": "reach_pond3_short", "Kind": "lab_reach", "Width": 2, "Drop": 3, "PoolDepth": 2, "PondSize": 7, "UpperLength": 3, "Length": 30, "Offset": [100, 100]},
+  {"Name": "reach_pond_level", "Kind": "lab_reach", "Width": 2, "Drop": 0, "PoolDepth": 2, "PondSize": 7, "UpperLength": 6, "Length": 30, "Offset": [200, 100]},
+  {"Name": "reach_biglake3", "Kind": "lab_reach", "Width": 2, "Drop": 3, "PoolDepth": 3, "PondSize": 81, "UpperLength": 6, "Length": 30, "Offset": [0, 300]},
+  {"Name": "reach_lake_dam", "Kind": "lab_reach", "Order": "dam", "Width": 2, "Drop": 3, "DamHeight": 2, "PoolDepth": 3, "PondSize": 81, "UpperLength": 3, "Length": 30, "Outlet": true, "Offset": [300, 300]},
+  {"Name": "reach_lake_dam_hand", "Kind": "lab_reach", "Order": "dam", "Width": 2, "Drop": 3, "DamHeight": 2, "DamStepMs": 1000, "PoolDepth": 3, "PondSize": 81, "UpperLength": 3, "Length": 30, "Outlet": true, "Offset": [0, 500]}
+]

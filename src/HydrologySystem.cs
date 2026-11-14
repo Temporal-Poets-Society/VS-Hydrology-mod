@@ -17,6 +17,13 @@ namespace Hydrology
         static readonly string[] Incompatible = { "realisticwater", "realisticrapids" };
 
         public HydrologyConfig Config { get; private set; } = new();
+        /// <summary>The save's key for the pond drains still running (rc.9).</summary>
+        const string DrainsKey = "hydrology:drains";
+        /// <summary>HY-0012: runtime breakers for H2 release (drains, dams, river pools: the break, place and tick handlers) and
+        /// for H2's timed retries; 50 errors within a minute switch the feature off for the world, logged once.</summary>
+        static readonly GamePatches.Breaker Release = new("H2 release (pond drains, dams, river pools)"), Retries = new("H2's timed retries");
+        /// <summary>The break, place and tick policy of H2's release and retries (Fable's pass, R2).</summary>
+        ReleaseDriver driver;
         /// <summary>The server's effective vessels setting, also sent to modded clients on joining.</summary>
         public bool Flooding { get; private set; }
         const string SettingsChannel = "hydrology-world-settings";
@@ -49,11 +56,8 @@ namespace Hydrology
                 C1RapidFoam.CalmSourceShare = c.CalmSourceSpecks;
                 return;
             }
-            // a new world in this process (singleplayer) starts clean, whatever happens below
-            GamePatches.NewWorld();
-            H2Filling.ResetWorld();
-            EarthRiverQuery.Unbind();
-            HydrologyStats.Reset();
+            // a new world in this process (singleplayer) starts clean, whatever happens below (one list: Fable's pass, R1)
+            RuleState.ResetWorld();
             bool readable = true;
             try { Config = api.LoadModConfig<HydrologyConfig>("hydrology.json") ?? new HydrologyConfig(); }
             catch (Exception e)
@@ -73,6 +77,11 @@ namespace Hydrology
             H2Filling.RefillOnSource = Math.Max(0, Config.RefillOnSource);
             H2Filling.SupplyFactor = Math.Max(0, Config.SupplyFactor);
             H2Release.Enabled = Config.PondRelease;
+            H2Release.DrainRate = Math.Max(0, Config.PondDrainRate);
+            H2Release.UnlimitedSeconds = Math.Max(1, Config.PondUnlimitedSeconds);
+            H2DamPools.Enabled = Config.DamFill;
+            H2DamPools.FillPerCubic = Math.Max(0, Config.DamFillPerCubic);
+            H2DamPools.FillMax = Math.Max(1, Config.DamFillMax);
             H7Settling.Survival = Config.Survival;
             H7Settling.FallLabel = Config.FallLabel;
             H7Settling.NoSideFeedFromFalling = Config.NoSideFeedFromFalling;
@@ -122,19 +131,49 @@ namespace Hydrology
                 Config.Fill, Config.FillVessels, Config.Flatten, Config.Rapids, H4Rapids.MaxDropScan,
                 Config.WorldMayFillVessels, Config.VesselsDepth, Config.VesselsContained);
             Mod.Logger.Notification("Hydrology: H7 survival={0}, fall label={1}, no side feed from falling={2}, wake on fall label={3}, level relax={4}; " +
-                "H2 refill on {5} sources, supply factor {9}, pond release={10}; H4 rapid source sheets={6}, wake edges on a new source={7}, lone vertical={8}",
+                "H2 refill on {5} sources, supply factor {9}, pond release={10} ({11} sources/s per cell and block, unlimited over {12} s a layer); H4 rapid source sheets={6}, wake edges on a new source={7}, lone vertical={8}",
                 Config.Survival, Config.FallLabel, Config.NoSideFeedFromFalling, Config.WakeOnFallLabel, Config.LevelRelax,
                 Config.RefillOnSource, Config.RapidSourceSheets, Config.WakeEdgesOnNewSource, Config.LoneVertical, H2Filling.SupplyFactor,
-                H2Release.Enabled);
+                H2Release.Enabled, H2Release.DrainRate, H2Release.UnlimitedSeconds);
             // HY-0007: a pond a player opens lets its water out downhill (the server's break event fires for players only)
             H2Release.Log = line => Mod.Logger.Notification(line);
             H2Release.LogKept = line => Mod.Logger.VerboseDebug(line);
+            H2DamPools.Log = line => Mod.Logger.Notification(line);
+            // HY-0012: drains, dams and river pools run only while the water rules they rely on are on, and their errors go
+            // to a breaker (50 within a minute switch them off, logged once) instead of the log at every call; the policy is
+            // ReleaseDriver's (Fable's pass, R2)
+            Release.Reset(Mod.Logger);
+            Retries.Reset(Mod.Logger);
+            driver = new ReleaseDriver(Release, Retries, () => Config.Fill, () => H5LiquidHooks.WaterRulesOn,
+                line => Mod.Logger.Warning(line), line => Mod.Logger.Error(line));
+            // the clients are told when Earth's query was unbound at run time (Fable re-review)
+            driver.Unbound = world =>
+            {
+                Flooding = H2Filling.VesselsActive(world);
+                foreach (var player in api.World.AllOnlinePlayers)
+                    if (player is IServerPlayer sp) channel?.SendPacket(new HydrologyWorldSettings { Flooding = Flooding }, sp);
+            };
             api.Event.DidBreakBlock += (player, oldBlockId, sel) =>
             {
-                if (sel?.Position == null || !H2Release.Enabled || !Config.Fill) return;
-                try { H2Release.Opened(api.World, sel.Position); }
-                catch (Exception e) { Mod.Logger.Error("Hydrology: pond release at {0} failed: {1}", sel.Position, e); }
+                GamePatches.AssertMainThread("the break event");
+                driver.OnBreak(api.World, sel?.Position);
             };
+            // rc.9 (dams): a block placed by a player beside water wakes the reach it may close
+            api.Event.DidPlaceBlock += (player, oldBlockId, sel, stack) =>
+            {
+                GamePatches.AssertMainThread("the place event");
+                driver.OnPlace(api.World, sel?.Position);
+            };
+            // rc.9: drains run over time, and are kept with the world (planned again when it is loaded)
+            bool threadSet = false;
+            api.Event.RegisterGameTickListener(dt =>
+            {
+                if (!threadSet) { GamePatches.SetMainThread(Mod.Logger); threadSet = true; }
+                driver.OnTick(api.World, dt);
+            }, 500);
+            api.Event.SaveGameLoaded += () => H2Release.Load(api.WorldManager.SaveGame.GetData(DrainsKey));
+            // never unsubscribed: the server saves after the mods are disposed
+            api.Event.GameWorldSave += () => api.WorldManager.SaveGame.StoreData(DrainsKey, H2Release.Save());
             // after every mod's SaveGameLoaded: Earth has fixed the world's query version by then
             api.Event.ServerRunPhase(EnumServerRunPhase.RunGame, () =>
             {
@@ -142,6 +181,11 @@ namespace Hydrology
                 // read the world's vessels flags again now the query is bound: SaveGameLoaded's read (query not yet bound)
                 // would otherwise stand for up to a second
                 H2Filling.ResetWorld();
+                // decision 0011: a world without the Water flooding setting gets it, with the value it already had
+                var written = H2Filling.WriteMissingFlooding(api.World);
+                if (written.HasValue)
+                    Mod.Logger.Notification("Hydrology: this world had no Water flooding setting ({0}); it is now set to {1}, as the legacy policy decided, and can be changed in the world settings",
+                        H2Filling.FloodingKey, written.Value);
                 Flooding = H2Filling.VesselsActive(api.World);
                 LogWorldFlooding(api);
                 if (!EarthRiverQuery.Active) return;

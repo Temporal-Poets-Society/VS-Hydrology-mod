@@ -51,7 +51,11 @@ For 0.6.2 the suite adds, compiled out in baseline mode (`BASELINE`, which 0.1.1
   each break followed by `H2Release.Opened` as the server's player break event runs it: its top layer collects on the
   hollow's floor; onto flat land, or a plateau whose edge is 20 blocks off, nothing moves; onto a ledge whose edge is 5
   blocks off, the water falls and collects at the foot; the lake's top layer fills the hollow around it; over river
-  water (the query), the river takes it without rising.
+  water (the query), the river takes it without rising; at `PondDrainRate` 1 (`hollow-rate`, decision 0008) two opened
+  cells let out 2 sources in the first second, the emptied cells stay empty, and the drain ends within 30 s with the
+  same water below (the other shapes run at rate 0, all at once);
+- a falling sheet fed by 2 sources fills the 2-cell basin it lands in (`DirectGuards`; decision 0008: measured at its own
+  level and fed through the sheet; rc.7 refused it, measuring the open air up to the sheet's top).
 - world options: a world asking for vessels only with Earth's query keeps them off while the query is not bound (rc.4).
 
 Out-of-bounds cells read as solid here, the opposite of the game, where unloaded chunks read as air.

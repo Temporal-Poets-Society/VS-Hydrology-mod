@@ -10,8 +10,18 @@
   <ItemGroup>
     <Compile Include="../../tools/watersim/src/*.cs" />
     <Compile Include="$(FillingSource)" />
+    <!-- HY-0018: H2Filling's held searches, memos, fed channels and supply (partial class); the baseline's older H2Filling.cs has them inside -->
+    <Compile Include="../../src/Rules/H2Held.cs" Condition="!$(DefineConstants.Contains('BASELINE'))" />
     <!-- the baseline build (run.ps1 -Baseline) compiles an older H2Filling.cs without the release rule -->
     <Compile Include="../../src/Rules/H2Release.cs" Condition="!$(DefineConstants.Contains('BASELINE'))" />
+    <Compile Include="../../src/Rules/H2DamPools.cs" Condition="!$(DefineConstants.Contains('BASELINE'))" />
+    <Compile Include="../../src/Rules/H2Drains.cs" Condition="!$(DefineConstants.Contains('BASELINE'))" />
+    <Compile Include="../../src/Rules/H2Dams.cs" Condition="!$(DefineConstants.Contains('BASELINE'))" />
+    <!-- HY-0019: the production H4 and H7 rules, driven directly by H4H7Cases (the sim's own engine still runs watersim's ports) -->
+    <Compile Include="../../src/Rules/H4Rapids.cs" />
+    <Compile Include="../../src/Rules/H7Settling.cs" />
+    <!-- Fable's pass (R2): the break, place and tick policy the game runs -->
+    <Compile Include="../../src/Rules/ReleaseDriver.cs" Condition="!$(DefineConstants.Contains('BASELINE'))" />
     <Compile Include="*.cs" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,8 @@
 # 0007: An opened pond lets its water out
 
-Date: 2026-11-13. Status: in release candidate **0.6.2-rc.8** (HY-0007), on `main`, not pushed, not installed. Code:
+Date: 2026-11-13. Status: in release candidate **0.6.2-rc.8** (HY-0007), on `main`, not pushed, not installed.
+Since rc.9 ([0008](0008-fed-reaches-drains-dams.md)) the water drains at a rate instead of at once, and the fixed
+4,096-source limit for an unlimited body is replaced by the time its top layer would take. Code:
 `src/Rules/H2Release.cs`, config `PondRelease`. The headless lab is `lab_pond` (`tests/server/scenarios-pond.json`), whose
 break now runs the release as a player's break does; the offline cases are `ReleaseCases`.
 

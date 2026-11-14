@@ -23,7 +23,16 @@ raises that one cell. Hydrology keeps this behaviour and patches six of its meth
 
 Every rule is its own class in [src/Rules](../src/Rules), and reads a bounded neighbourhood: a few cells, one column, or
 H2's and H4's small searches. Changes are written with `Liquids.SetAndWake`: the block, its own delayed update and its
-neighbours' updates, the same way vanilla wakes a cell. Hydrology registers no tick listener and no callbacks of its own.
+neighbours' updates, the same way vanilla wakes a cell.
+
+Since 0.6.2 Hydrology also keeps a little state of its own, all of it event-driven: delayed retries for water waiting on
+Earth's query (rc.5) and for fed channels (rc.9); the server's break and place events, which start pond drains, mark
+dammed river columns, start dammed river pools and forget remembered "held" answers beside the change (decisions 0007 to
+0010, HY-0014); a 500 ms tick that advances running drains and filling river pools and asks the retries again; and one
+save key for the drains and pools (its first line a format version, `hydrology-drains 1`). The events and the tick go
+through `ReleaseDriver` (the gate, the breakers, ending drains when the rules go off), and `RuleState.ResetWorld` is the
+one list of what a new world starts without. Still water, full pools and calm rivers cost nothing. The rules behind them are in
+the decisions: supply (0006), drains and dams (0007, 0008), basins, valleys and river dams (0009), river pools (0010).
 
 The patches are applied on the server only (in singleplayer once for the shared process); each side removes only its
 own patches when it stops (0.6.2).

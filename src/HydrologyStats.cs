@@ -32,6 +32,16 @@ namespace Hydrology
         /// <summary>H2 (0.6.2-rc.7, HY-0007): fills refused because the water bounding a held space is too little to fill it
         /// (a pond breaking into a hollow below it).</summary>
         public static long Unsupplied;
+        /// <summary>Channels held because a large body or a river feeds them (HY-0008).</summary>
+        public static long FedChannel;
+        /// <summary>Placed blocks that woke a reach's water (dams, rc.9).</summary>
+        public static long DamsWoken;
+        /// <summary>rc.13 (HY-0011): layers planned and sources placed by dammed river pools filling from the river's flow.</summary>
+        public static long DamLayers, DamSources;
+        /// <summary>HY-0017: edge sources H4 woke after a change near them (at most once per server tick each).</summary>
+        public static long EdgeWakes;
+        /// <summary>rc.10: sources vanilla made in a draining pond's emptied cells or openings, emptied again.</summary>
+        public static long DrainSourcesRefused;
         /// <summary>H2 release (0.6.2-rc.8, HY-0007): ponds a player opened that let their water out; the sources they lost;
         /// of those, the sources the sea, a river or a large lake took; openings beside a pond whose water stayed.</summary>
         public static long Released, ReleasedCells, ReleaseAbsorbed, ReleaseKept;
@@ -50,6 +60,8 @@ namespace Hydrology
 #if DEBUG
         /// <summary>Debug builds: updates per cell ("x,y,z"), for the server tests' list of the busiest cells.</summary>
         public static readonly System.Collections.Generic.Dictionary<string, int> Hot = new();
+        /// <summary>Cells <see cref="Hot"/> keeps at most (Debug builds).</summary>
+        public const int MaxHot = 65536;
 #endif
         /// <summary>H3: still cells in the air turned into falling water.</summary>
         public static long MadeFalling;
@@ -57,7 +69,7 @@ namespace Hydrology
         public static long RapidSources, RapidSourcesReverted, MadeRapid, MadeOrdinary;
 
         public static string Summary() =>
-            $"since the world started: updates {Updates} ({Ticks * 1000.0 / System.Diagnostics.Stopwatch.Frequency:0.0} ms), filled {Filled} ({FilledVessels} on water, {VesselsRefused} refused as too shallow, {VesselsInRiverRefused} refused in river water, {FilledPockets} in pockets, {Unheld} refused as not held, {Unsupplied} as too little water), ponds let out {Released} ({ReleasedCells} sources, {ReleaseAbsorbed} into large water; {ReleaseKept} kept their water), made falling {MadeFalling}, " +
+            $"since the world started: updates {Updates} ({Ticks * 1000.0 / System.Diagnostics.Stopwatch.Frequency:0.0} ms), filled {Filled} ({FilledVessels} on water, {VesselsRefused} refused as too shallow, {VesselsInRiverRefused} refused in river water, {FilledPockets} in pockets, {Unheld} refused as not held, {Unsupplied} as too little water, {FedChannel} channels fed by large water), ponds let out {Released} ({ReleasedCells} sources, {ReleaseAbsorbed} into large water; {ReleaseKept} kept their water; {Rules.H2Release.Running} draining), reaches woken by placed blocks {DamsWoken}, dammed river pools {DamLayers} layers ({DamSources} sources, {Rules.H2DamPools.Running} filling), edge wakes {EdgeWakes}, sources refused in drains {DrainSourcesRefused}, made falling {MadeFalling}, " +
             $"rapid edges {RapidSources} (reverted {RapidSourcesReverted}), cells made rapid {MadeRapid} / ordinary {MadeOrdinary}, " +
             $"drains refused {DrainsRefused}, same-level removals refused {RemovalsRefused}, refilled {Refilled}, " +
             $"unsupported sources drained {SourcesDrained}, labelled falling {Labelled}, relaxed {Relaxed}; " +

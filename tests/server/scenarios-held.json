@@ -1,0 +1,57 @@
+[
+ {
+  "Name": "held_trench_ctrl",
+  "Kind": "lab_trench",
+  "Width": 2,
+  "Length": 40,
+  "Order": "in",
+  "Depth": 3,
+  "PoolDepth": 4,
+  "Offset": [
+   0,
+   0
+  ]
+ },
+ {
+  "Name": "held_trench_open3",
+  "Kind": "lab_trench",
+  "Width": 2,
+  "Length": 40,
+  "Order": "in",
+  "Depth": 3,
+  "PoolDepth": 4,
+  "OpenEndMs": 3000,
+  "Offset": [
+   80,
+   0
+  ]
+ },
+ {
+  "Name": "held_trench_open8",
+  "Kind": "lab_trench",
+  "Width": 2,
+  "Length": 40,
+  "Order": "in",
+  "Depth": 3,
+  "PoolDepth": 4,
+  "OpenEndMs": 8000,
+  "Offset": [
+   160,
+   0
+  ]
+ },
+ {
+  "Name": "held_trench_out_open",
+  "Kind": "lab_trench",
+  "Width": 2,
+  "Length": 40,
+  "Order": "out",
+  "Depth": 3,
+  "PoolDepth": 4,
+  "OpenEndMs": 44000,
+  "Offset": [
+   240,
+   0
+  ]
+ }
+]

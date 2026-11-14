@@ -65,8 +65,78 @@ namespace Hydrology
         /// bridge over the river, a cave pool under its bed) is no river water.
         /// </summary>
         const int SpanAbove = 2;
-        static readonly Dictionary<long, Answer> cache = new(new ColumnKey());
-        const int CacheLimit = 65536;
+        // HY-0016: answers kept per chunk column (32 x 32), the least recently used chunk evicted past MaxChunks (about 10 MB),
+        // instead of the whole cache emptied at 65,536 columns
+        sealed class ChunkAnswers
+        {
+            public readonly Answer[] answers = new Answer[1024];
+            public readonly ulong[] has = new ulong[16];
+            public long used;
+        }
+        static readonly Dictionary<long, ChunkAnswers> cache = new(new ColumnKey());
+        const int MaxChunks = 256;
+        static long useClock;
+        /// <summary>HY-0016: columns whose RiverAt threw (not "not ready"), not asked again until the time kept (ms).</summary>
+        static readonly Dictionary<long, long> failedUntil = new(new ColumnKey());
+        const long FailedRetryMs = 5000;
+        /// <summary>HY-0016: Earth's errors in a breaker: 50 within a minute unbind the query (the rules run as without Earth).</summary>
+        static readonly GamePatches.Breaker Failures = new("Earth's river query", () =>
+        {
+            log?.Error("Hydrology: Earth's river query keeps failing: it is unbound for this world, and the water rules run as without Earth");
+            Unbind();
+            // Fable re-review: a world without the hydrologyFlooding key whose vessels came from Earth's "with the river
+            // query" flag kept them on (cached) while the river guards went off with the query: the sill-less steps could
+            // flood. The vessels answer is read again (now without the query) and the clients are told, on the game's next
+            // tick (the second re-review: not in the middle of the liquid update whose query call failed)
+            // (Fable's third re-review) the cached vessels answer goes at once: two field writes, safe inside a liquid update;
+            // without them vessels could fill river columns for up to half a second with the river guards already off
+            Rules.H2Filling.ForgetWorldVessels();
+            unboundPending = true;
+        });
+
+        static volatile bool unboundPending;
+
+        /// <summary>The query was unbound at run time (its breaker) since the last call: the game re-reads what depends on
+        /// it. True once per unbinding.</summary>
+        public static bool TakeUnbound()
+        {
+            if (!unboundPending) return false;
+            unboundPending = false;
+            return true;
+        }
+
+        static bool CacheGet(long key, int x, int z, out Answer a)
+        {
+            long ck = ((long)(x >> 5) << 32) ^ (uint)(z >> 5);
+            int i = ((z & 31) << 5) | (x & 31);
+            if (cache.TryGetValue(ck, out var c) && (c.has[i >> 6] & (1UL << (i & 63))) != 0)
+            {
+                c.used = ++useClock;
+                a = c.answers[i];
+                return true;
+            }
+            a = default;
+            return false;
+        }
+
+        static void CachePut(int x, int z, Answer a)
+        {
+            long ck = ((long)(x >> 5) << 32) ^ (uint)(z >> 5);
+            int i = ((z & 31) << 5) | (x & 31);
+            if (!cache.TryGetValue(ck, out var c))
+            {
+                if (cache.Count >= MaxChunks)
+                {
+                    long oldest = 0, when = long.MaxValue;
+                    foreach (var kv in cache) if (kv.Value.used < when) { when = kv.Value.used; oldest = kv.Key; }
+                    cache.Remove(oldest);
+                }
+                cache[ck] = c = new ChunkAnswers();
+            }
+            c.answers[i] = a;
+            c.has[i >> 6] |= 1UL << (i & 63);
+            c.used = ++useClock;
+        }
 
         /// <summary>A column's key, X in the high half and Z in the low; hashed with a multiply, since long's own hash
         /// (X ^ Z) gives one bucket to every column on a diagonal and long chains in a compact area.</summary>
@@ -84,6 +154,8 @@ namespace Hydrology
         {
             Unbind();
             log = logger;
+            Failures.Reset(logger);
+            unboundPending = false;
             try
             {
                 var earth = api.ModLoader.GetModSystem("EarthMap.EarthMapSystem");
@@ -149,7 +221,7 @@ namespace Hydrology
             Version = 0;
             failureLogged = false;
             notReadyLogged = maxWaitLogged = false;
-            lock (cache) cache.Clear();
+            lock (cache) { cache.Clear(); failedUntil.Clear(); }
             lock (notReady) notReady.Clear();
             Reads = CacheHits = 0;
         }
@@ -257,18 +329,35 @@ namespace Hydrology
             if (f == null || pos.dimension != 0) return false;
             long key = ((long)pos.X << 32) ^ (uint)pos.Z;
             lock (cache)
-                if (cache.TryGetValue(key, out a))
+            {
+                if (CacheGet(key, pos.X, pos.Z, out a))
                 {
                     CacheHits++;
                     return true;
                 }
+                // HY-0016: a column whose RiverAt threw is not asked again for a few seconds (each throw costs more than an update)
+                if (failedUntil.Count > 0 && failedUntil.TryGetValue(key, out long until))
+                {
+                    if (Environment.TickCount64 < until) return false;
+                    failedUntil.Remove(key);
+                }
+            }
             Reads++;
             // an Earth that throws gives no answer this time, and nothing is kept: the column is asked again next time;
             // "not ready yet" (rc.5) is no failure: it is noted, so the column's water waits (Defer)
             try { a.River = f(pos.X, pos.Z, out a.Rapids, out a.Slope, out a.Discharge); }
             catch (Exception e)
             {
-                if (IsNotReady(e)) MarkNotReady(key); else Failed("RiverAt", e);
+                if (IsNotReady(e)) MarkNotReady(key);
+                else
+                {
+                    lock (cache)
+                    {
+                        if (failedUntil.Count >= MaxChunks * 1024) failedUntil.Clear();
+                        failedUntil[key] = Environment.TickCount64 + FailedRetryMs;
+                    }
+                    Failed("RiverAt", e);
+                }
                 return false;
             }
             a.Flow = -1;
@@ -293,23 +382,32 @@ namespace Hydrology
             else { a = default; a.Flow = -1; a.Bed = NoSpan; }
             if (notReady.Count > 0) lock (notReady) notReady.Remove(key);
             if (!keep) return true;
-            lock (cache)
-            {
-                if (cache.Count >= CacheLimit) cache.Clear();
-                cache[key] = a;
-            }
+            lock (cache) CachePut(pos.X, pos.Z, a);
             return true;
         }
 
         static void Failed(string call, Exception e)
         {
+            Failures.Fault(e);
             if (failureLogged) return;
             failureLogged = true;
-            log?.Warning("Hydrology: Earth's river query ({0}) failed; it is asked again each time (logged once): {1}", call, e);
+            // the breaker has logged the error with its stack trace; this says which call and what happens next
+            log?.Warning("Hydrology: Earth's river query ({0}) failed (the error is logged above); a failing column rests 5 s, and 50 failures within a minute unbind the query", call);
         }
 
         /// <summary>The column is natural river water as Earth generated it.</summary>
         public static bool River(BlockPos pos) => At(pos, out _, out _, out _);
+
+        /// <summary>
+        /// rc.11 (EA-0066, decision 0009): <paramref name="pos"/> is in the river's own water, at or below its generated
+        /// surface (with Earth's span; without it, at any height in the column, as before). Water a dam holds above the
+        /// surface is not: Earth's query describes the river as generated, and what players raise over it is ordinary water
+        /// that stands where it is held and drains when the dam opens.
+        /// </summary>
+        public static bool RiverWater(BlockPos pos) => At(pos, out _, out _, out _, out _, 0);
+
+        /// <summary>The column is a natural river's, at any height (rc.11: water a dam raised over the river stands in it).</summary>
+        public static bool RiverColumn(BlockPos pos) => ColumnAnswer(pos, out var a) && a.River;
 
         /// <summary>The column is natural river water in a rapids reach (version 3: where Earth drew rapid water); for a source
         /// (<paramref name="source"/>) only up to the river's surface.</summary>

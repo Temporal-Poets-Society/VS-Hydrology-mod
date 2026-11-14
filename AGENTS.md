@@ -47,6 +47,9 @@ Suite rules: `C:\VS mods\AGENTS.md`. Current state: the card `C:\VS mods\overvie
 - Keep `ChunkPackFix` until the engine fix is verified (repro material in `docs\upstream\`).
 - Water stands only where something holds it (decision 0005) and fills a space only from water that could fill it
   (decision 0006): never let spilled water raise the sea or open lakes, or a small pond flood the land below it. A pond a
-  player opens moves its water downhill at the break (decision 0007, `H2Release`); lab breaks run it only through
-  WaterAudit's `PlayerBreak` or `WA_PLAYER_BREAKS=1`, because `BreakBlock` does not raise the player break event.
+  player opens drains downhill over time (decisions 0007 and 0008, `H2Release`; drains are saved with the world); lab
+  breaks run it only through WaterAudit's `PlayerBreak` or `WA_PLAYER_BREAKS=1`, because `BreakBlock` does not raise the
+  player break event, and lab places reach the dam rule (`H2Release.Placed`) only through `PlayerPlace` (`DamStepMs` builds a lab dam a block at a time, as a player does). A channel is
+  held below an open level only when a large body or a river feeds it and every edge is a lip of ground (`FedChannel`):
+  loosening that floods terraces or fills free-draining trenches to their banks (both seen in `lab_reach`).
 - Realistic Water and Realistic Rapids are not compatible (Hydrology warns at start).

@@ -2,6 +2,7 @@
 // resolves and is patched (H5's water rules and refinements, H8, C1), the chunk-pack fix's targets resolve, and a
 // missing, changed or refused target switches off only its feature, logged once, with nothing left half-patched.
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -61,8 +62,46 @@ namespace RegistryTests
             RealTargets();
             Failures();
             RiverSpan();
+            QueryFailures();
             Console.WriteLine($"{checks - failures}/{checks} checks passed; {failures} failed");
             return failures == 0 ? 0 : 1;
+        }
+
+        /// <summary>
+        /// HY-0015: the bodies of the vanilla methods Hydrology patches or re-implements (H7's feed check replaces
+        /// GetMaxNeighbourLiquidLevel; H5's prefixes encode vanilla's control flow). A game update can keep a signature and
+        /// change what a method does: each body's IL is hashed and compared with il-hashes.txt for the running game version.
+        /// A version not in the file is recorded there (commit it after re-reading the methods in devtools/vs-ref).
+        /// </summary>
+        static void ILBodies((MethodInfo m, string name)[] methods)
+        {
+            string version = GamePatches.RunningGameVersion();
+            string file = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "il-hashes.txt"));
+            var known = new Dictionary<string, string>();
+            if (File.Exists(file))
+                foreach (var line in File.ReadAllLines(file))
+                {
+                    var parts = line.Split(' ');
+                    if (parts.Length == 3 && parts[0] == version) known[parts[1]] = parts[2];
+                }
+            var record = new List<string>();
+            foreach (var (m, name) in methods)
+            {
+                if (m == null) continue;
+                var il = m.GetMethodBody()?.GetILAsByteArray() ?? Array.Empty<byte>();
+                string hash = Convert.ToHexString(System.Security.Cryptography.SHA256.HashData(il)).ToLowerInvariant();
+                if (known.TryGetValue(name, out var expected))
+                    Check(expected == hash, $"game {version}: {name}'s body is the one Hydrology was written against" +
+                        (expected == hash ? "" : $" (it changed: re-read {name} in devtools/vs-ref before releasing)"));
+                else record.Add($"{version} {name} {hash}");
+            }
+            if (record.Count > 0)
+            {
+                File.AppendAllLines(file, record);
+                // Fable re-review: a new game version is the case this test exists for: the run fails until the bodies are
+                // read again (the next run compares against what this one recorded)
+                Check(false, $"game {version}: {record.Count} method bodies recorded in {file}; re-read them in devtools/vs-ref, then commit the file and run again");
+            }
         }
 
         static void RealTargets()
@@ -80,6 +119,8 @@ namespace RegistryTests
             foreach (var (m, n) in new[] { (spread, "TrySpreadDownwards"), (remove, "RemoveOtherLowerNeighbours"), (update, "OnDelayedWaterUpdateCheck"),
                          (label, "GetLiquidBlockId"), (feed, "GetMaxNeighbourLiquidLevel"), (flowDir, "updateOwnFlowDir"), (wheel, "CheckWater") })
                 Check(m != null, "game 1.22: " + n + " exists with the signature Hydrology patches");
+            ILBodies(new[] { (spread, "TrySpreadDownwards"), (remove, "RemoveOtherLowerNeighbours"), (update, "OnDelayedWaterUpdateCheck"),
+                (label, "GetLiquidBlockId"), (feed, "GetMaxNeighbourLiquidLevel"), (flowDir, "updateOwnFlowDir"), (wheel, "CheckWater") });
 
             H5LiquidHooks.Apply(log);
             const string Id = "hydrology.liquids";
@@ -96,7 +137,21 @@ namespace RegistryTests
             Check(log.Lines.Any(l => l.text.Contains("liquid hooks applied")), "the start-up line says the hooks are applied");
             Check(H7Settling.FallLabel && H7Settling.NoSideFeedFromFalling && H7Settling.WakeOnFallLabel && H4Rapids.QueryFlowLabels,
                 "every refinement's switch stays on");
+            // HY-0015: the side-feed hook's breaker trips: level relax goes off with it
+            var feedBreaker = (GamePatches.Breaker)typeof(H5LiquidHooks).GetField("Feed", BindingFlags.NonPublic | BindingFlags.Static).GetValue(null);
+            H7Settling.LevelRelax = true;
+            for (int i = 0; i < GamePatches.MaxFaults; i++) feedBreaker.Fault(new InvalidOperationException("test"));
+            Check(!H7Settling.NoSideFeedFromFalling && !H7Settling.LevelRelax, "HY-0015: with the side-feed rule off, level relax is off too");
+            H7Settling.NoSideFeedFromFalling = true; H7Settling.LevelRelax = true;
+            Check(H5LiquidHooks.WaterRulesOn, "HY-0012: the water rules are on once applied");
+            // their breaker trips (50 errors within a minute): H2 release, which relies on them, sees them off
+            var water = (GamePatches.Breaker)typeof(H5LiquidHooks).GetField("Water", BindingFlags.NonPublic | BindingFlags.Static).GetValue(null);
+            for (int i = 0; i < GamePatches.MaxFaults; i++) water.Fault(new InvalidOperationException("test"));
+            Check(water.Off && !H5LiquidHooks.WaterRulesOn, "HY-0012: the water rules' breaker tripped: they read as off");
+            H5LiquidHooks.Apply(log);
+            Check(H5LiquidHooks.WaterRulesOn, "HY-0012: a new world's apply resets the breaker");
             H5LiquidHooks.Remove();
+            Check(!H5LiquidHooks.WaterRulesOn, "HY-0012: removed, the water rules read as off");
             Check(new[] { spread, remove, update, label, feed, flowDir, wheel }.All(m => !PatchedBy(m, Id, "prefix") && !PatchedBy(m, Id, "postfix")),
                 "Remove unpatches every server hook");
 
@@ -155,6 +210,77 @@ namespace RegistryTests
         /// a wheel's answer needs its rim to reach that water (rc.4); a span that failed is asked again, not kept (rc.4); a
         /// span whose bed lies over its surface is no span (rc.4); without the span every height of a river column answers,
         /// as before.</summary>
+        static int throwCalls;
+        static bool ThrowingRiverAt(int x, int z, out bool rapids, out double slope, out double discharge)
+        {
+            throwCalls++;
+            throw new InvalidOperationException("Earth broke");
+        }
+        static int countCalls;
+        static bool CountingRiverAt(int x, int z, out bool rapids, out double slope, out double discharge)
+        {
+            countCalls++;
+            rapids = false; slope = 0; discharge = 1;
+            return true;
+        }
+
+        /// <summary>
+        /// HY-0016: a column whose RiverAt throws is not asked again for a few seconds; 50 failures within a minute unbind the
+        /// query (the rules run as without Earth), logged once; answers are kept per chunk and the least recently used chunk
+        /// goes past the cache's size, so a wide area no longer empties the whole cache.
+        /// </summary>
+        static void QueryFailures()
+        {
+            var q = typeof(EarthRiverQuery);
+            void Set(string field, object value) => q.GetField(field, BindingFlags.NonPublic | BindingFlags.Static).SetValue(null, value);
+            var riverAtType = q.GetNestedType("RiverAtFn", BindingFlags.NonPublic);
+            var log = new TestLogger();
+            EarthRiverQuery.Unbind();
+            Set("log", log);
+            ((GamePatches.Breaker)q.GetField("Failures", BindingFlags.NonPublic | BindingFlags.Static).GetValue(null)).Reset(log);
+            Set("riverAt", Delegate.CreateDelegate(riverAtType, typeof(Program).GetMethod(nameof(ThrowingRiverAt), BindingFlags.NonPublic | BindingFlags.Static)));
+            throwCalls = 0;
+            for (int i = 0; i < 10; i++) EarthRiverQuery.River(new BlockPos(5, 100, 5));
+            Check(throwCalls == 1, $"query failure: a throwing column is asked once, then rests ({throwCalls} calls for 10 questions)");
+            Check(EarthRiverQuery.Active, "query failure: one failing column leaves the query bound");
+            // Fable re-review: the legacy vessels answer (a world without hydrologyFlooding, vessels from Earth's "with the
+            // river query" flag) is read again when the query is unbound, not kept on without the river guards
+            var h2 = typeof(Hydrology.Rules.H2Filling);
+            h2.GetField("worldVessels", BindingFlags.NonPublic | BindingFlags.Static).SetValue(null, true);
+            h2.GetField("worldVesselsCheckedMs", BindingFlags.NonPublic | BindingFlags.Static).SetValue(null, 0L);
+            for (int x = 0; x < GamePatches.MaxFaults; x++) EarthRiverQuery.River(new BlockPos(100 + x, 100, 5));
+            Check(!EarthRiverQuery.Active, "query failure: 50 failures within a minute unbind the query");
+            Check(!(bool)h2.GetField("worldVessels", BindingFlags.NonPublic | BindingFlags.Static).GetValue(null)
+                && (long)h2.GetField("worldVesselsCheckedMs", BindingFlags.NonPublic | BindingFlags.Static).GetValue(null) == long.MinValue,
+                "query failure: the cached vessels answer is dropped at once (the third re-review); the memo reset waits for the tick");
+            Check(EarthRiverQuery.TakeUnbound() && !EarthRiverQuery.TakeUnbound(),
+                "query failure: the game's next tick learns once that the query was unbound (it re-reads the vessels answer and tells the clients)");
+            Hydrology.Rules.H2Filling.ResetWorld();
+            Check(!(bool)h2.GetField("worldVessels", BindingFlags.NonPublic | BindingFlags.Static).GetValue(null),
+                "query failure: the reset the tick runs drops the remembered vessels answer");
+            Check(log.Lines.Count(l => l.text.Contains("keeps failing")) == 1, "query failure: the unbinding is logged once");
+
+            EarthRiverQuery.Unbind();
+            Set("riverAt", Delegate.CreateDelegate(riverAtType, typeof(Program).GetMethod(nameof(CountingRiverAt), BindingFlags.NonPublic | BindingFlags.Static)));
+            countCalls = 0;
+            // 300 chunks of 4 columns each: more chunks than the cache keeps
+            for (int c = 0; c < 300; c++) for (int k = 0; k < 4; k++) EarthRiverQuery.River(new BlockPos(c * 32 + k, 100, 0));
+            int first = countCalls;
+            EarthRiverQuery.River(new BlockPos(299 * 32, 100, 0));
+            Check(countCalls == first, "cache: a recent chunk is still answered from the cache");
+            EarthRiverQuery.River(new BlockPos(0, 100, 0));
+            Check(countCalls == first + 1, "cache: the least recently used chunk was evicted and is asked again");
+            // 70,000 columns in a few chunks no longer empty the cache: 4 x 4 chunks hold 16,384 columns
+            countCalls = 0;
+            EarthRiverQuery.Unbind();
+            Set("riverAt", Delegate.CreateDelegate(riverAtType, typeof(Program).GetMethod(nameof(CountingRiverAt), BindingFlags.NonPublic | BindingFlags.Static)));
+            for (int x = 0; x < 128; x++) for (int z = 0; z < 128; z++) EarthRiverQuery.River(new BlockPos(x, 100, z));
+            int filled = countCalls;
+            for (int x = 0; x < 128; x++) for (int z = 0; z < 128; z++) EarthRiverQuery.River(new BlockPos(x, 100, z));
+            Check(filled == 16384 && countCalls == filled, $"cache: 16,384 columns asked once each ({filled}, then {countCalls - filled} more)");
+            EarthRiverQuery.Unbind();
+        }
+
         static void RiverSpan()
         {
             var q = typeof(EarthRiverQuery);
@@ -261,6 +387,16 @@ namespace RegistryTests
             Check(PatchedBy(a, h.Id, "prefix") && PatchedBy(b, h.Id, "prefix"), "all targets: both patched");
             h.UnpatchAll(h.Id);
 
+            // HY-0019: errors spread over two one-minute windows never switch a feature off
+            int spreadOffs = 0;
+            var spread2 = new GamePatches.Breaker("breaker spread", () => spreadOffs++);
+            spread2.Reset(log);
+            var window = typeof(GamePatches.Breaker).GetField("windowStart", BindingFlags.NonPublic | BindingFlags.Instance);
+            for (int i = 0; i < 40; i++) spread2.Fault(new InvalidOperationException("test"));
+            window.SetValue(spread2, (long)window.GetValue(spread2) - GamePatches.FaultWindowMs - 1);
+            for (int i = 0; i < 40; i++) spread2.Fault(new InvalidOperationException("test"));
+            Check(!spread2.Off && spreadOffs == 0, "breaker: 80 errors over two windows leave the feature on");
+
             // fields and members a feature's own code uses
             Check(GamePatches.Field<BEBehaviorMPWaterWheel, float>(log, "field gone", "flowRateRenamed") == null && log.Warnings("field gone") == 1, "missing field: null, logged");
             Check(GamePatches.Field<BEBehaviorMPWaterWheel, double>(log, "field retyped", "flowRate") == null && log.Warnings("field retyped") == 1, "retyped field: null, logged");
@@ -275,8 +411,13 @@ namespace RegistryTests
             breaker.Reset(log);
             for (int i = 0; i < GamePatches.MaxFaults - 1; i++) breaker.Fault(new InvalidOperationException("test " + i));
             Check(!breaker.Off && offs == 0, "breaker: still on below the limit");
-            Check(log.Lines.Count(l => l.type == EnumLogType.Error && l.text.Contains("breaker test threw")) == 1
-                && log.Lines.Any(l => l.text.Contains("InvalidOperationException")), "breaker: the first error is logged once, with its exception");
+            // each distinct error once, five at most (Fable's pass: only the very first was logged)
+            Check(log.Lines.Count(l => l.type == EnumLogType.Error && l.text.Contains("breaker test threw")) == 5
+                && log.Lines.Any(l => l.text.Contains("InvalidOperationException")), "breaker: distinct errors are logged once each, five at most, with their exceptions");
+            var same = new GamePatches.Breaker("breaker same", null);
+            same.Reset(log);
+            for (int i = 0; i < 10; i++) same.Fault(new InvalidOperationException("the same"));
+            Check(log.Lines.Count(l => l.text.Contains("breaker same threw")) == 1, "breaker: the same error is logged once");
             breaker.Fault(new InvalidOperationException("last"));
             breaker.Fault(new InvalidOperationException("after"));
             Check(breaker.Off && offs == 1, "breaker: off at the limit, its switch-off action run once");

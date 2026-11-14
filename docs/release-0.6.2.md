@@ -1,4 +1,8 @@
-# Hydrology 0.6.2 — calm rivers for Earth 2.0 (release candidate 0.6.2-rc.8)
+# Hydrology 0.6.2 — calm rivers for Earth 2.0
+
+**0.6.2** (14 November 2026) is rc.13 with the code review's fixes and refactors (HY-0012 to HY-0027, re-reviewed by
+the Fable reviewer until nothing was open) and decision 0011; its checks are under
+[0.6.2, the release](#062-the-release) in Verification. The history of the candidates follows.
 
 Prepared 8 November 2026 on `claude/rc-0.6.2`: `release/0.6` (0.6.1, `433f44c`) with the calm-rivers work
 (`claude/calm-rivers`, 0.6.2-rivers.7, `be9d859`) merged at `1d91e7e`, then reviewed, tidied, fixed and baked. Built for
@@ -10,7 +14,11 @@ fixes a flood a player reported on 0.6.1 ([decision 0005](decisions/0005-held-le
 second review and an in-game water playtest; rc.5 handles Earth 2.0.0-rc.3's "not ready yet"; rc.6 (13 November) logs
 the world's Water flooding and brings the server tests to Earth 2.0, with no change to the water; rc.7 (the same day) stops
 a broken pond from flooding the land below it ([decision 0006](decisions/0006-water-volume.md), HY-0007); rc.8 (the same
-day) lets the water of a pond a player opens run downhill and collect below ([decision 0007](decisions/0007-pond-release.md)).
+day) lets the water of a pond a player opens run downhill and collect below ([decision 0007](decisions/0007-pond-release.md));
+rc.9 (the same day) lets channels from lakes and rivers run on past drops, drains opened ponds over time and makes dams
+work ([decision 0008](decisions/0008-fed-reaches-drains-dams.md), HY-0008 and the first steps of HY-0009); rc.10
+(14 November) fixes two dam faults found in the lab and in game, after the author's "fix then", "look yourself" and
+"install but do in game test by yourself by building dam".
 
 ## Release notes
 
@@ -37,6 +45,133 @@ day) lets the water of a pond a player opens run downhill and collect below ([de
   half-patched (and the chunk-pack fix skipped). In singleplayer each side now removes only its own patches.
 - An unreadable `hydrology.json` is no longer overwritten with the defaults; `/hydrology stats` counts since the world
   started; the release zip holds a fixed list of files.
+
+### 0.6.2 (after rc.13: the code review's fixes and refactors)
+
+- **Fixes from the code review of rc.12** (`docs/code-review-2026-11-14.md`, HY-0012 to HY-0019):
+  - H2 release (drains, dams, river pools) and H2's retries run only while the water rules are applied and their
+    breaker has not tripped; when they go off, running drains and pools end once, logged. A drain whose tick throws
+    releases all its guarded cells, the other drains still tick, and errors go to a breaker (HY-0012).
+  - A pond reaching an unloaded chunk is not measured: a player's break keeps the water, and a drain saved with the
+    world waits for its land to load (asked again every 5 s, 60 times at most) instead of measuring a lake as a pond. A
+    drain's step waits while the cell its source will stand at is unloaded, instead of losing the source (HY-0013).
+  - A player's break or placement forgets every remembered "held" search with a cell within one block of it, and the
+    refusals there; the memo is keyed by liquid. A trench whose far end is broken open while it fills stops filling
+    (HY-0014).
+  - Level relax goes off with the side-feed rule; the registry test hashes the seven vanilla methods H5, H7 and H8
+    patch or re-implement and names a changed body (HY-0015).
+  - A column whose Earth query throws rests 5 s; 50 failures within a minute unbind the query (the rules run as without
+    Earth); answers are kept per chunk (256 chunks, the least recently used evicted) (HY-0016).
+  - Tidy and docs: shared scratch, dead code, class summaries, design.md, the decision index; H2Release and H2Filling
+    split into partial files (H2Drains, H2Dams, H2Held) without code changes (HY-0018).
+- **Second batch** (after the Fable reviewer's re-review of the first): Earth's river query unbound at run time also drops
+  the world's remembered vessels answer and tells the clients (a world without `hydrologyFlooding` could keep vessels on
+  without the river guards); remembered held searches that share a cell are forgotten together; a drain forgets by
+  search beside each cell it changes instead of scanning the whole memo; a saved drain's restart runs in its own try and
+  logs when it gives up; a game version new to the registry's method hashes fails the run once; a query failure is
+  logged once. H4 merges the wakes of a basin's rim (HY-0017): filling a basin woke the same rim sources once per
+  filled cell nearby; `/hydrology stats` counts the wakes. (This batch keyed the merge by the millisecond, which merged
+  almost nothing; the third batch made it a 40 ms window.)
+- **Third batch** (the Fable reviewer's second and third re-reviews):
+  - H2's held search no longer recurses when it forgets linked searches (a long chain of them overflowed the stack);
+    links are kept only between live searches of the same generation (HY-0014).
+  - H4's wake merge is a 40 ms window of edge cells, at most a fixed number per window (HY-0017). Its first version
+    started the window at `long.MinValue`, which overflowed, so the window never reset: the new offline test found it.
+  - The production H4 and H7 rules are compiled into the offline suite and driven on small scenes: rapid edges and their
+    revert, a 1-block step, unloaded windows, the wake window, sources over air, falling labels, the side-feed rule and
+    level relax (HY-0019 c).
+  - Earth's river query unbound at run time drops the cached vessels answer at once; a later bind clears the pending
+    reset. Hooks assert they run on the main thread (Debug builds). H5's map of hot cells is capped.
+- **Fourth batch** (the reviewer's fourth pass):
+  - A river pool planned over cells a drain was emptying looped for ever on the main thread (critical). Pools and drains
+    now use one test for a cell a pool may take; a draining cell opens the pool's layer; a planned layer that places
+    nothing ends the pool; unloaded land makes a pool wait (2 minutes at most) instead of ending it; a dam's pool waits
+    while a drain runs in its columns; a pool restarts after a world load only when the land around it is loaded.
+  - Ending the rules keeps the saved drains and pools (they were dropped from the save when the rules went off).
+  - A body found large (a sea) is remembered for 30 s, so blocks broken along its shore are not measured again each
+    time (offline: 15 ms, then 0.06 ms); another liquid keeps the water before the body beyond it is measured.
+  - Liquids' handled and fresh-water tests read a table by block id; the breaker logs each distinct error once (five at
+    most); the dam mark cap is logged once.
+  - Refactors (R1 to R5): one world reset (`RuleState`, which now also resets H4's wake window); the break, place and
+    tick policy in `ReleaseDriver`, driven by the offline suite; one "can take water" test for drains and pools; the
+    drains' save starts with a format version (a save without it reads as before, a newer one is refused and logged);
+    every block fact the rules ask is a table lookup in `Liquids`; Held and Body read a cell's own solid block once.
+    Ended pools keep their river marks: the marks also let H2's own fill stand above the river surface, which a pool's
+    count of raised sources does not see.
+- **Fifth batch** (the reviewer's re-reviews of the fourth): a dam whose river runs on into unloaded land starts its
+  pool over the columns it could mark and, while the river beyond is not known, takes an unmarked river column for a
+  wait, not an outlet, marking again before it plans (a pool marked over part of a long reach ended as soon as the rest
+  loaded; waiting for all of it kept a dam below a step from ever starting); waiting dams are one entry per dam,
+  asked again with the river's marks and the pool alone, logged once, capped and given up after 20 minutes; a pool keeps
+  at most a second of its river's water while it places nothing; a block added to a filling pool is planned with; a pool
+  that waited too long for land goes back to waiting; a block placed beside a remembered large body forgets it (a break
+  keeps it: it only joins water); no
+  flooding setting is written while a world's legacy answer needs Earth's query and it is not bound.
+- **Decision 0011** (option 3, the release coordinator, no behaviour change): a world without `hydrologyFlooding` gets
+  it written at RunGame with the legacy policy's answer, logged once; the README says how to have flooding in a new
+  dedicated-server world. Offline `FloodingKeyCase`.
+- **River pools** (decision 0010): flowing holes in a river's own water hold a layer up as the river does (in game the
+  layer over a crest was taken for open above the Rhine falls); a pool that stops below its crest names its outlets in
+  the log.
+
+### 0.6.2-rc.13
+
+- **A river fills the pool behind a player's dam from its own flow** (decision 0010, HY-0011): layer by layer to the
+  crest, then one layer runs over it and falls past the dam as rapid water. Config `DamFill` (true), `DamFillPerCubic`
+  (0.1 sources a second per m³/s of Earth's discharge), `DamFillMax` (64). Pools are kept with the world; at most 8 fill
+  at once; `/hydrology stats` counts their layers and sources.
+
+### 0.6.2-rc.12
+
+- **Fixed: a dam's water over an Earth river never drained when levees enclosed bank strips** (decision 0009 point 5,
+  found in game below the Rhine falls): the strip between a levee and the river filled to the upper pool's level beside
+  it, and the whole raised body counted as a channel fed by the river. A body holding water raised over the river's own
+  columns now always drains when the dam opens.
+
+### 0.6.2-rc.11
+
+- **Closed basins fill to their sill** (decision 0009, HY-0009). A pond opened over a basin that holds only part of its
+  water lets out the whole layers the basin holds and keeps the rest (before, it kept everything).
+- **Ponds run off down open valleys** (decision 0009). A pond's water that has fallen from the opening and reaches
+  unloaded land or the end of the search runs off there, as into the sea (before, the pond kept it). Lakes of 4,096
+  sources or more keep their water there, so a channel dug from them still carries it to the drop.
+- **Dams on Earth's rivers** (decision 0009, EA-0066). A block placed beside a natural river marks the river's columns a
+  dam there can back up; in them the pool may rise above the generated surface, only where the level is held and only as
+  high as the water feeding it (the next step up). Breaking the dam's top course lets the raised water drain into the
+  river. Earth's river query is unchanged (version 3). On a calm river with no step near the dam nothing rises yet.
+- **Less garbage** (HY-0010): `H2Release` reuses its searches' sets and positions; a block placed on dry land
+  allocates nothing, one beside a pond nothing (was 10.9 KB), a kept opening 2.4 KB (was 37 KB).
+
+### 0.6.2-rc.10
+
+- **Fixed: a dam built by hand raised nothing.** Placing a dam a block at a time, the first block woke the reach while
+  the dam was still open; H2 refused and remembered that for 2 s, and the last block's wake got the same answer. A
+  placed block now makes H2 forget what it remembered about the reach before it is asked again.
+- **Fixed: water stayed standing behind a lowered dam.** When a dam's top course was taken away, vanilla made new
+  sources in the gap from the water over the crest falling beside the full reach; they closed the reach again, and part
+  of the raised layer (22 of 38 sources in the lab) stayed. While a pond drains, its emptied cells and openings take no
+  new sources; the reach goes back to its natural level.
+
+### 0.6.2-rc.9
+
+- **Fixed: channels from lakes stopped after a few blocks, and nothing filled below a drop** (the author's rc.8 play
+  test, HY-0008). A channel at a lake's level that ends at a drop was refused as open (decision 0005), so vanilla's
+  flowing water died about five blocks out; the reach below a drop was measured up to the water above it (rc.7) and its
+  supply counted only sources joined to it. Now the supply follows the flowing water upstream across falls and rapids;
+  the reach below a drop is measured at its own level; and a channel fed by a lake of 4,096 sources or more or a river
+  is held to where it falls, as long as it is closed sideways and leaves only over lips of ground (at most 8 edge cells).
+  A trench with a free outfall carries one layer; a terrace all edge holds nothing; a pond's channel stays flowing water.
+- **New: a pond drains over time** (HY-0009). One source a second per block of the breach's width and per block of
+  water over the opening's floor (`PondDrainRate`); the stream runs out through the opening while the pond drops, and the drained
+  cells stay empty. A body whose top layer would take longer than `PondUnlimitedSeconds` (2,880 s, a game day) keeps
+  its water, as a lake; the fixed 4,096-source limit is gone, so a lake of 41 x 41 drains its top layer through a
+  2-wide breach in about 14 minutes. Drains are saved with the world and resumed. Closing every opening ends a drain
+  once the layer it is draining has gone. Water landing on a pool runs on over it to the pool's outfall.
+- **New: dams** (HY-0009; the author: "work on dams also after or include logic in pipeline"). A block a player places
+  beside water wakes the reach it may close: a reach fed through a fall rises to the dam's top, and when a lake or a
+  river feeds it one more layer spills over the crest, falling past the dam. Taking the dam's top course away drains the
+  raised water downstream; the course left holds one layer. Earth's natural river columns keep their generated levels.
+  Needs Water flooding.
 
 ### 0.6.2-rc.8
 
@@ -133,6 +268,31 @@ headless labs. Earth's side (a stand-in rapids answer Hydrology keeps, its cost 
 chute columns, Earth's Hydrology minimum) went to the Earth RC session.
 
 ## Verification
+
+### 0.6.2, the release
+
+Vintage Story 1.22.7 (Windows), the commit of the version bump on `main` (see the card for the hash), paired with the
+rc.13 zip as the baseline.
+
+- **Builds:** Debug and Release, 0 warnings, 0 errors.
+- **Offline suite:** 14,522/14,522 (the review's cases: a pool over a running drain on a thread with a time limit, a
+  long pool and three stepped pools on partly loaded land, a sea's shore through the release driver, the versioned
+  save, the flooding attribute, production H4 and H7).
+- **Registry test:** 89/89 (IL hashes of the vanilla bodies Hydrology rewrites, breakers, the query's failures).
+- **Headless labs**, the release zip's DLL against rc.13's: regular 239 of 243 end states the same (the differences in
+  `lab_drop2_wheel`'s ramp and `lab_fall_stones`' column labels, which vary run to run); wheels 14.92, 0 and 7.24 as
+  before; query 54 of 55 (one edge source of the river chute ordinary instead of rapid), the river wheel 21.73 as
+  before; reach 70 of 70; pond 47 of 49 (one lake one source higher, a few flowing cells); held: trenches opened while
+  filling stop (rc.13 filled them on, HY-0014). Liquid updates within 3 % of rc.13's. No errors in any log.
+- **Server smoke:** the release zip on a new Earth 1:10 world (Earth `main` `cac542d` as a test zip, Cylinder World
+  1.1.0-rc.4): Earth's query version 3 bound with its span, Water flooding read from the world, the calm-river sites
+  with rc.13's counts exactly (22 updates, 2 pockets filled, 92 flow labels kept), no errors.
+- **In game** (own AgentBridge bench, the release zip, the same Earth): a dam on the Rhine below its falls fills layer
+  148 (214 cells) and stops, naming its outlets; a dam across the Inn at Innsbruck (5,467 river columns) waits quietly,
+  its next layer reaching land beyond the loaded area (rc.13 ended there, raising nothing too); saved and restarted,
+  the pool is back among the filling ones without a new "backs up" line. No errors.
+
+### The candidates
 
 All on Vintage Story 1.22.7 (Windows), against the merge `1d91e7e` (0.6.2-rivers.7) as the behaviour benchmark.
 
@@ -242,6 +402,94 @@ All on Vintage Story 1.22.7 (Windows), against the merge `1d91e7e` (0.6.2-rivers
     60 s of the wake, every river column stayed, and the new check refused nothing. Offline: 14,360 checks, with new
     pond cases (the rc.6 rule floods a hollow with 5,054 sources from a pond of 98; rc.7 none) and the walled-sea,
     long-canal and sheet cases changed as decision 0006 records. Registry 65/65. No server errors in any run.
+  - **Second batch and HY-0017** (14 November). Offline 14,473 (`LinkedSearchCases`), registry 87 (the vessels answer
+    dropped with the query). HY-0017 paired with main (`a072356`): the 61 regular labs 59 identical (`lab_drop2_wheel`'s
+    ramp and `lab_fall_stones`' plunge column, as before), every chute and wheel the same (14.92, 0, 7.24), the 10 query
+    labs identical; liquid updates 47,474 -> 45,880 in the regular labs (-3.4 %), 13,219 -> 13,339 in the query labs,
+    tick mean the same. The whole batch paired with main: reach 11/11 and query 10/10 identical, pond 6/7 (two flowing
+    cells), the held trenches stop as on main (a cell or two apart). In game (own bench, Earth main `c37f45e`): the step
+    below the Rhine falls, its edge block broken and put back, kept its white ramp and settled back exactly.
+  - **After rc.13: code review fixes HY-0012 to HY-0016, HY-0018, HY-0019** (14 November). Offline 14,470 (new
+    `LoadedLandCases`, `SaveLoadCases`); registry 85 (water rules on/off, breaker windows, the vanilla method bodies'
+    hashes for 1.22.7, level relax following the side-feed rule, query failures resting and unbinding, the per-chunk
+    cache). Headless, paired with rc.13 (`87a0303`, every lab break a player's except the held labs): reach 11/11, query
+    10/10, spill-hole and spill-outlet 11/11 identical; pond 5/7 (a few flowing cells and one source, run noise); the 61
+    regular labs 60 (`lab_drop2_wheel`'s ramp), wheels 14.92, 0 and 7.24 and tick mean 47.2 ms on both. The new held
+    lab (`scenarios-held.json`): a trench whose far end is broken open 3 s or 8 s after the dig kept filling on rc.13
+    (32 cells of 40 standing at its top) and stops on main (3 and 8). In game (own bench, Earth main `27c460f`): a
+    trench dug from the Rhine and opened at its far end fills to its outfall (a fed channel, decision 0008); a dam
+    below the falls fills its reach and spills over its crest in one go (a fix found there: holes in the river's own
+    water held the layer over the crest for open). No Hydrology errors.
+  - **rc.13** (14 November). Offline 14,455 (`RiverFlowDamCases`: a calm river with no step, dams 1 and 2 high and one
+    standing already: the pool fills to the crest and 390 over it, nothing below, 0.3 to 7 ms for a whole pool; breaking
+    the top course lets 774 out). Headless, paired with rc.12 (`9d06264`): the 11 reach labs end identical; the 10 query labs 9, the river chute two
+    sources different; the 61 regular labs 58, `lab_drop2_wheel`'s ramp, `lab_fall_stones`' plunge column and one canal's
+    flowing tip different (no dammed pool started in any lab: run noise, as these labs varied before); wheels 14.92, 0
+    and 7.24 on both; tick mean 46.55 ms on both. In game (own bench, Earth main `6371e32` as
+    2.0.0-rc.13-hydam.1, 1:10; decision 0010): below the Rhine falls the river filled the reach and 266 cells over the
+    crest in about 4 s, falling past the dam as rapid water, and drained back (508 sources in 21 s) when two blocks of
+    the top course were broken; on the Inn a dam with low banks raised nothing, and with walls round 28 blocks of the
+    reach the river filled 186 cells and 324 over the crest. No Hydrology errors. Package
+    `release/hydrology-0.6.2-rc.13.zip` (84,065 bytes, SHA-256 `db22cab4fbe871334993a6c70b8801614ca3e4aad85a76a4e996fb81ddeb836c`), not installed.
+  - **rc.12** (14 November). Offline 14,434 (`RiverDamCases` with bank strips: rc.11 0 let out and 192 stay raised,
+    rc.12 214 let out and none stay). Headless, paired with rc.11 (`4840f88`): the 10 query labs and the 11 reach labs
+    end identical. In game (own bench, Earth main `ebceed0` as 2.0.0-rc.12-hylook.1, 1:10; decision 0009 "In game"): a
+    dam below the Rhine falls raised its reach to the dam's top and drained it back, 254 sources in 127 s through 2
+    cells and 254 s through 1; a pond over a closed pit let out its top layer and kept the rest; a pond on the slope
+    above the river drained all 98 into it. No Hydrology errors. Package `release/hydrology-0.6.2-rc.12.zip` (79,590 bytes, SHA-256
+    `bbba72a04029ceb4beb617fa6e1864b61cb0949bf4b3060103361ef341434a42`), not
+    installed.
+  - **rc.11** (Debug, 14 November; vanilla worlds, seed 386217, every lab break a player's, fake river query 3 for the
+    reach, pond and query labs), paired with rc.10 (`234bf6c`): the 11 reach labs, the 7 pond labs and the 10 query labs
+    end identical (differences only at 10-30 s, run timing); the 61 regular labs: 60 identical, `lab_drop2_wheel`'s ramp
+    a few flowing cells shorter (the lab varies between runs), wheels 14.92, 0 and 7.24 on both; tick mean 47.1 ms
+    (rc.10 47.3). A first rc.11 build let the reach labs' 41 x 41 and 72 x 72 lakes run off through their channels
+    into the lab's unloaded edge (channel dry 5 blocks from the lake, the reach below empty); the final build keeps
+    lakes of 4,096 sources or more there (decision 0009). Offline 14,424 checks: `BasinCases` (pit, pit-small,
+    pit-deep, valley, loaded valley), `RiverDamCases` (1 and 2 high), `RiverRegressions` with Earth's span,
+    `AllocCases` (HY-0010: placed on dry land 136 -> 0 B, beside a pond 10,896 -> 0 B, a kept opening 37,128 -> 2,408
+    B). In game (own AgentBridge bench, Earth 2.0.0-rc.12-karstflint.1, 1:10, a pre-fix rc.11 build with the same river
+    rules): a dam 1 over the surface across the Inn at Innsbruck (47.2687 N 11.3935 E, a calm pool with no step within
+    reach) raised nothing, as decision 0009 says; no Hydrology errors. Spill labs not run: they make no player breaks or
+    places, and H2 outside river columns did not change. Package `release/hydrology-0.6.2-rc.11.zip` (79,480 bytes,
+    SHA-256 `d6c257c065f2a4dca8be7d63dbcae36f79ba156615483aa4d8e7734ba8b9351f`), not installed.
+  - **rc.10** (14 November). Headless (as rc.9): the dam lab, built at once and a block a second, raises 38 sources
+    behind the dam and 38 over the crest, and after the top course is broken the reach is as before the dam (0 raised;
+    rc.9: 22 stayed, and the hand-built dam raised only 12 over the crest); vanilla's source in the gap is refused once.
+    Paired with rc.9 (its zip): 60 of 61 regular labs identical (one flowing level in `lab_drop2_wheel`'s ramp, which
+    varies between runs), the wheels 14.92, 0 and 7.24 on both, the 10 query labs and 32 spill labs identical; reach and
+    pond labs as rc.9 (the 41 x 41 lake kept its water in this run: its drain's plan met chunks not loaded yet). Offline
+    14,391. No server errors. **In game** (the AgentBridge bench, its own data folder; Earth 2.0.0-rc.12-karstflint.1,
+    Cylinder World 1.1.0-rc.4, a new 1:10 world, Water flooding on), at the author's lake at 61.8155 N, 8.9425 E
+    (surface y 196): a channel 2 wide dug from the shore, its last two cells broken as a player, runs 6 blocks at the
+    lake's level to a 3-block drop and 58 blocks below it to an outfall; after a minute every cell of the channel is
+    source water to the drop and the whole lower reach is source water to the outfall, where it falls off. A dam of 2
+    courses placed by hand a block at a time across the lower reach: with the first rc.10 build (without the second
+    fix) nothing rose until the reach was woken again; with the final build the reach behind a new dam rose to the
+    dam's top with a layer over the crest falling past it, and the channel's fall onto the raised water became a ramp.
+    Breaking the top course let out 38 sources and left the reach exactly as before the dam; breaking the old dam's
+    bottom course closed the gap with source water. No Hydrology errors in the logs.
+  - **rc.9** (Debug, 13 November; Water flooding on, vanilla worlds, seed 386217, every lab break a player's). The new
+    `lab_reach` (`scenarios-reach.json`, fake river query 3): a channel 2 wide from a lake of 81 x 81 x 3 (holds: its
+    top layer would take 55 minutes through 2 cells) runs 6 blocks to a 3-block drop and the reach below fills to its
+    banks (upper 12/12, lower 60/60 and the layer over it 60); with a 1-block drop, at the lake's level and with a
+    3-block upper reach the same; with an outlet at the lower reach's end the lower reach carries one layer (the layer
+    over it stays flowing water); from a 7 x 7 pond the channel stays flowing and the pond lets its 49-source top layer
+    out over time. A 41 x 41 lake is finite: its top layer (1,681) drains through the 2-wide channel at 2 sources a
+    second and stands in the reach below. The dam (`reach_lake_dam`, 81 x 81 lake, 2 courses placed by a player at
+    60 s, the top course broken at 100 s): 0 raised before, 38 sources raised behind the dam and 38 over the crest with
+    it; after the top course goes, 78 sources drain in 14 s (19 land in cells the stream had already filled) and 22
+    of the 38 cells over the remaining course stay as sources, steady to 280 s (the offline dam case leaves none; open
+    point in HY-0009). Save and resume: the lake lab saved 60 s into a 1,681-source drain (120 out) is planned again
+    on load with the 1,561 left, through the same 2 cells, at the same rate. A save from an earlier rc.9 build, whose
+    openings had refilled, now counts its saved openings as the breach. The 61 regular labs paired with rc.8: 55
+    identical; the four chute labs fill their closed bottom trough, fed through the falls from the head pool, up to
+    the last step's lip (that step's edge reads SS instead of SR); `lab_drop2_wheel`'s ramp below and `lab_fall_stones`'
+    plunge column (falling water instead of sources while the pool drains) differ; the wheels read 14.92, 0 and 7.24 on
+    both. The 10 fake-query labs: 9 identical, the river chute one source different (run noise; rivers keep their
+    water). The 32 spill labs identical to rc.8. Pond labs: each 7 x 7 pond lets out its 49-source top layer in about
+    49 s and it collects below; flat land keeps 98. Offline 14,391 checks (`DamCases`, the `hollow-rate` and
+    `hollow-closed` release shapes, the sheet case now filling). No server errors in any run.
   - **rc.8** (Debug, 13 November; Water flooding on, vanilla worlds, seed 386217). Lab breaks do not raise the server's
     player break event, so `lab_pond`'s breaks run the release as the event does (WaterAudit's `PlayerBreak`), and
     `WA_PLAYER_BREAKS=1` makes every lab break do so. The pond labs (fake river query 3): the ponds 7 x 7 x 2 broken 1
@@ -284,6 +532,14 @@ All on Vintage Story 1.22.7 (Windows), against the merge `1d91e7e` (0.6.2-rivers
   - The bench itself: three client crashes in AgentBridge's aiming ("Given pos contained NaN" for the player), while
     blocks were broken through its hover command; the world's unsaved changes were lost with each. Not Hydrology's or
     the game's; reported to the sessions using the bench.
+- **Package (rc.10):** `release/hydrology-0.6.2-rc.10.zip`, built from `a494fba` (14 November), 77,586 bytes,
+  SHA-256 `355ebf20f5ee969f62e025a69f09de31b0d32930dd421302f0a6222f7f3d388d`: the same six files (modinfo 0.6.2-rc.10).
+  This zip ran the in-game check above. Installed in the author's game on the author's word ("install"), replacing
+  rc.8, which is backed up in `VintagestoryData\Backups\hydrology-before-0.6.2-rc.10-20261114-0040`; `main` is not pushed.
+- **Package (rc.9):** `release/hydrology-0.6.2-rc.9.zip`, built from `bff10c7` (13 November), 77,109 bytes,
+  SHA-256 `4dd99e51e162a7d7369c9c2305f5e66b4f78667159c3f292badac0fda1ad46a9`: the same six files (modinfo 0.6.2-rc.9).
+  The extracted zip on the pond labs: as the Debug build (each 7 x 7 pond lets out 49 and they collect below, the lake
+  drains through its breach), no errors. Not installed in the author's game; `main` is not pushed.
 - **Package (rc.8):** `release/hydrology-0.6.2-rc.8.zip`, built from `4f91ac4` on `main` (13 November), 67,439 bytes,
   SHA-256 `33fd8e09213eacd3f15837ebcb90b109bb139e690fa984c670fdbb34e1662a29`: the same six files (modinfo 0.6.2-rc.8).
   The extracted zip on the pond labs: as the Debug build (each pond 49 kept and 49 below, flat land 98 kept, the lake

@@ -76,6 +76,18 @@ namespace WaterAudit
         /// Order "flat": the lowland is raised to the pond's bed level, so the broken rim opens onto flat land at the pond's
         /// level. <see cref="Outlet"/>: a slot through the far rim, so the lowland drains off the lab.</summary>
         public int PondSize = 7;
+        /// <summary>lab_reach (HY-0008): a reservoir <see cref="PondSize"/> square and <see cref="PoolDepth"/> deep, a channel
+        /// Width wide at its level for <see cref="UpperLength"/> cells, then a drop of <see cref="Drop"/> (0: none) into a
+        /// lower reach <see cref="Length"/> long whose banks stand one block over its water and the land beside it lower than
+        /// the reservoir, as on a slope. Built dug, closed only by the cells beside the reservoir, which Apply breaks.
+        /// Order "dam": no drop; Apply also places a dam Drop high (DamHeight) across the channel's far end later.</summary>
+        public int UpperLength = 6;
+        public int DamHeight = 0;
+        /// <summary>Milliseconds between the dam's blocks (0: all at once); a player builds a block at a time.</summary>
+        public int DamStepMs = 0;
+        /// <summary>lab_trench (HY-0014): this many milliseconds after the dig, a player breaks the trench's far end open to the
+        /// lab's edge (the water then runs off the slab), while the trench may still be filling. 0: never.</summary>
+        public int OpenEndMs = 0;
         /// <summary>With <see cref="QueryRiver"/>: the region is a rapids reach; its slope (block per block) and discharge (m³/s).</summary>
         public bool QueryRapids;
         public double QuerySlope = 0.02, QueryDischarge = 100;
@@ -1002,6 +1014,7 @@ namespace WaterAudit
                 case "lab_fall": k1 = 16; w1 = 8; depth = 12; break;
                 case "lab_spill": k0 = -14; k1 = 14; w0 = -8; w1 = 8; break;
                 case "lab_pond": { int h = s.PondSize / 2; k0 = -h - 9; k1 = h + 1 + s.Length; w0 = -h - 9; w1 = h + 9; break; }
+                case "lab_reach": { int h = s.PondSize / 2; k0 = -s.PondSize - 1; k1 = 1 + s.UpperLength + s.Length + 3; w0 = -h - 2; w1 = h + 2; depth = Math.Max(8, s.Drop + s.PoolDepth + 4); break; }
             }
             int top = 0;
             for (int k = k0; k <= k1; k++)
@@ -1023,6 +1036,8 @@ namespace WaterAudit
                 case "lab_trench":
                     for (int d = 0; d < Math.Max(1, s.PoolDepth); d++) Pool(-8, 0, -4, s.Width + 3, ly - d);
                     p["depth"] = Math.Max(1, s.Depth);
+                    p["openEndMs"] = s.OpenEndMs;
+                    p["k1"] = k1;
                     break;
                 case "lab_step":
                     // upper pool at ly; lower pool one block down beyond a 1-block lip at k = 1, open air above it
@@ -1160,6 +1175,29 @@ namespace WaterAudit
                         p["seaLength"] = sea;
                         break;
                     }
+                case "lab_reach":
+                    {
+                        // HY-0008: reservoir k -PondSize..-1 (w -h..h), the wall k = 0 (w 0..Width-1) broken by Apply, the upper
+                        // reach k 1..U at the water level ly (floor ly - 1), the lower reach k U+1..U+Length with its water at
+                        // ly - Drop, its far end closed; the land beside the lower reach lowered to one block over its water
+                        int h = s.PondSize / 2, wd = Math.Max(1, s.Width), U = s.UpperLength, L = s.Length, dr = Math.Max(0, s.Drop);
+                        for (int d = 0; d < Math.Max(1, s.PoolDepth); d++) Pool(-s.PondSize, -1, -h, h, ly - d);
+                        Carve(1, U, 0, wd - 1, ly, ly);
+                        Carve(U + 1, U + L, 0, wd - 1, ly - dr, ly);
+                        // Outlet: the lower reach runs on to the lab's edge and off it (a reach that drains on down a slope)
+                        if (s.Outlet) Carve(U + L + 1, k1, 0, wd - 1, ly - dr, ly);
+                        // the dam's reach keeps its banks (the water it raises needs them)
+                        if (dr >= 2 && s.Order != "dam")
+                            for (int k = U + 1; k <= k1; k++)
+                                for (int w = w0; w <= w1; w++)
+                                    if (w < 0 || w >= wd) for (int y = ly - dr + 2; y <= ly; y++) SetCell(ox + k, y, oz + w, 0, 0);
+                        p["upper"] = U; p["lower"] = L; p["drop"] = dr; p["width"] = wd; p["half"] = h;
+                        p["reservoir"] = s.PondSize * (2 * h + 1) * Math.Max(1, s.PoolDepth);
+                        p["order"] = s.Order;
+                        p["damHeight"] = s.DamHeight;
+                        p["damStepMs"] = s.DamStepMs;
+                        break;
+                    }
                 case "lab_pond":
                     {
                         // HY-0007 (a player broke the rim of a small pond on high ground and the land below flooded several
@@ -1193,6 +1231,7 @@ namespace WaterAudit
             if (ba.GetBlock(pos, BlockLayersAccess.SolidBlocks).Id == 0) return;
             ba.BreakBlock(pos, null, 0);
             broken++;
+            Forget(pos);
             if (cfg.PlayerBreaks) Release(pos);
         }
 
@@ -1209,6 +1248,14 @@ namespace WaterAudit
             if (broken != before && !cfg.PlayerBreaks) Release(new BlockPos(x, y, z));
         }
 
+        /// <summary>HY-0014: what the server's break and place events run for every player change: H2 forgets its remembered
+        /// answers beside it (H2Filling.ForgetAround), when this Hydrology has it. A lab break stands for a player's.</summary>
+        void Forget(BlockPos pos)
+        {
+            var forget = Type.GetType("Hydrology.Rules.H2Filling, Hydrology")?.GetMethod("ForgetAround", BindingFlags.Public | BindingFlags.Static);
+            forget?.Invoke(null, new object[] { pos.dimension, pos.X, pos.Y, pos.Z });
+        }
+
         void Release(BlockPos pos)
         {
             var opened = Type.GetType("Hydrology.Rules.H2Release, Hydrology")?.GetMethod("Opened", BindingFlags.Public | BindingFlags.Static);
@@ -1218,6 +1265,16 @@ namespace WaterAudit
                 released += n;
                 Log("release at {0},{1},{2}: {3} sources", pos.X, pos.Y, pos.Z, n);
             }
+        }
+
+        /// <summary>A block placed as a player's (rc.9): <see cref="Place"/>, then what the server's place event runs:
+        /// Hydrology's dam rule (H2Release.Placed), when this Hydrology has it.</summary>
+        void PlayerPlace(int x, int y, int z, int id)
+        {
+            Place(x, y, z, id);
+            Forget(new BlockPos(x, y, z));
+            var placed = Type.GetType("Hydrology.Rules.H2Release, Hydrology")?.GetMethod("Placed", BindingFlags.Public | BindingFlags.Static);
+            placed?.Invoke(null, new object[] { api.World, new BlockPos(x, y, z) });
         }
 
         void Place(int x, int y, int z, int id)
@@ -1312,6 +1369,13 @@ namespace WaterAudit
                         foreach (int k in outward ? Enumerable.Range(1, len) : Enumerable.Range(1, len).Reverse())
                         { int kk = k; rows.Add(() => { for (int w = 0; w < width; w++) for (int d = 0; d < depth; d++) Break(X(p, kk), ly - d, Z(p, w)); }); }
                         Rows(rows, outward);
+                        // HY-0014: the far end broken open to the lab's edge later, while the trench may still be filling
+                        int openMs = p.ContainsKey("openEndMs") ? I(p, "openEndMs") : 0, kEnd = p.ContainsKey("k1") ? I(p, "k1") : len + 3;
+                        if (openMs > 0)
+                            api.Event.RegisterCallback(_ =>
+                            {
+                                for (int k = len + 1; k <= kEnd; k++) for (int w = 0; w < width; w++) for (int d = 0; d < depth; d++) Break(X(p, k), ly - d, Z(p, w));
+                            }, openMs);
                         break;
                     }
                 case "lab_step":
@@ -1375,6 +1439,40 @@ namespace WaterAudit
                             ba.SetBlock(src, pos, BlockLayersAccess.Fluid);
                             ba.TriggerNeighbourBlockUpdate(pos);
                             api.World.GetBlock(src).OnNeighbourBlockChange(api.World, pos, pos.UpCopy());
+                        }
+                        break;
+                    }
+                case "lab_reach":
+                    {
+                        // the player opens the channel: the wall cells beside the reservoir, as a player's breaks
+                        for (int w = 0; w < I(p, "width"); w++) PlayerBreak(X(p, 0), wt, Z(p, w));
+                        Log("{0}: opened {1} cells, {2} sources let out", p["name"], broken, released);
+                        if ((string)p["order"] == "dam" && I(p, "damHeight") > 0)
+                        {
+                            // later, a dam across the channel at its far third: DamHeight blocks from the floor, placed by a player
+                            int kd = I(p, "upper") + 2 * I(p, "lower") / 3, hd = I(p, "damHeight"), wdd = I(p, "width");
+                            int cobble = api.World.GetBlock(new AssetLocation("game:cobblestone-granite")).Id;
+                            // DamStepMs > 0: one block at a time, bottom course first, as a player builds it (rc.10: the first
+                            // block's refusal was remembered when the last one went in)
+                            int step = I(p, "damStepMs"), placedBlocks = 0;
+                            for (int w = 0; w < wdd; w++)
+                                for (int y = wt - I(p, "drop"); y < wt - I(p, "drop") + hd; y++)
+                                {
+                                    int ww = w, yy = y, at = 60000 + (step > 0 ? step * ((y - (wt - I(p, "drop"))) * wdd + w) : 0);
+                                    api.Event.RegisterCallback(_ =>
+                                    {
+                                        PlayerPlace(X(p, kd), yy, Z(p, ww), cobble);
+                                        if (++placedBlocks == wdd * hd) Log("{0}: dam placed at k={1}, {2} high", p["name"], kd, hd);
+                                    }, at);
+                                }
+                            // later still, the player takes the dam's top course away again: the raised water drains to the
+                            // crest that is left
+                            api.Event.RegisterCallback(_ =>
+                            {
+                                int yt = wt - I(p, "drop") + hd - 1;
+                                for (int w = 0; w < wdd; w++) PlayerBreak(X(p, kd), yt, Z(p, w));
+                                Log("{0}: dam's top course broken at y={1}", p["name"], yt);
+                            }, 100000);
                         }
                         break;
                     }
@@ -1596,6 +1694,36 @@ namespace WaterAudit
                             r["L+" + d] = $"{sS}S {sF}s {wS}W {wF}w";
                         }
                         r["highestSource"] = highest;
+                        break;
+                    }
+                case "lab_reach":
+                    {
+                        // sources (S) and flowing cells (f) in each reach, column w = 0 along k, per water layer; the reservoir
+                        int U = I(p, "upper"), L = I(p, "lower"), dr = I(p, "drop"), wd = I(p, "width"), h = I(p, "half");
+                        int up = 0, low = 0, lowFlow = 0, res = 0, lowAbove = 0;
+                        for (int k = 1; k <= U; k++) for (int w = 0; w < wd; w++) if (Fluid(X(p, k), ly, Z(p, w)).LiquidLevel == 7) up++;
+                        for (int k = U + 1; k <= U + L; k++)
+                            for (int w = 0; w < wd; w++)
+                            {
+                                var f = Fluid(X(p, k), ly - dr, Z(p, w));
+                                if (f.LiquidLevel == 7) low++; else if (f.IsLiquid()) lowFlow++;
+                                for (int y = ly - dr + 1; y <= ly; y++) if (Fluid(X(p, k), y, Z(p, w)).LiquidLevel == 7) lowAbove++;
+                            }
+                        for (int k = -1; k >= -(2 * h + 1); k--) for (int w = -h; w <= h; w++) for (int y = ly - 4; y <= ly; y++) if (Fluid(X(p, k), y, Z(p, w)).LiquidLevel == 7) res++;
+                        r["upper"] = $"{up}/{U * wd}";
+                        r["lower"] = $"{low}/{L * wd} ({lowFlow} flowing)";
+                        r["lowerAbove"] = lowAbove;
+                        r["reservoir"] = res;
+                        if (I(p, "damHeight") > 0)
+                        {
+                            // sources over the reach's water upstream of the dam, per layer above it
+                            int kd = U + 2 * L / 3;
+                            r["damUp"] = string.Join(" ", Enumerable.Range(1, I(p, "damHeight") + 1).Select(dy =>
+                                Enumerable.Range(U + 1, kd - U - 1).Sum(k => Enumerable.Range(0, wd).Count(w => Fluid(X(p, k), ly - dr + dy, Z(p, w)).LiquidLevel == 7))));
+                            r["rowDam"] = Row(Enumerable.Range(U + 1, L).Select(k => Code(Fluid(X(p, k), ly - dr + I(p, "damHeight"), Z(p, 0)))));
+                        }
+                        r["row"] = Row(Enumerable.Range(1, U + L).Select(k => Code(Fluid(X(p, k), k <= U ? ly : ly - dr, Z(p, 0)))));
+                        r["rowUp1"] = Row(Enumerable.Range(U + 1, L).Select(k => Code(Fluid(X(p, k), ly - dr + 1, Z(p, 0)))));
                         break;
                     }
                 case "lab_pond":

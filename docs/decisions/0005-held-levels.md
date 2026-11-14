@@ -77,3 +77,8 @@ Refill (three source sides, vanilla's own rule) and the enclosed pocket (which h
 - Unloaded chunks read as air: a search that reaches one counts it as open and refuses.
 - Worlds already flooded by an older version keep their water; nothing drains it (old saves do not matter for this
   release, the author, 8 November).
+
+After rc.13 (HY-0014, the code review of 14 November): the answers this decision's search remembers for 20 s are
+forgotten when a player breaks or places a block within a block of any cell they cover (the whole search goes), and
+they are kept per liquid. In the lab a trench opened at its far end 3 s after it was dug kept filling for the memo's
+20 s (30 of 40 cells); now it stops (3).

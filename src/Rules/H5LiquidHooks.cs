@@ -34,8 +34,16 @@ namespace Hydrology.Rules
         // the runtime breakers (GamePatches.Breaker): a hook that keeps throwing switches off its feature only; the three
         // refinements also stop when the water rules stop, and their rule switches go off so the rest agrees with vanilla
         static readonly GamePatches.Breaker Water = new(WaterRules);
+        static bool waterApplied;
+
+        /// <summary>HY-0012: the water rules are patched and their breaker has not tripped. H2 release (drains, dams, river
+        /// pools) and H2's retries rely on them (the guard on a draining pond's holes, H2's refusal to fill drained cells), so
+        /// they stop when this is false.</summary>
+        public static bool WaterRulesOn => waterApplied && !Water.Off;
         static readonly GamePatches.Breaker Labels = new(LabelsFeature, () => { H7Settling.FallLabel = false; H4Rapids.QueryFlowLabels = false; });
-        static readonly GamePatches.Breaker Feed = new(FeedFeature, () => H7Settling.NoSideFeedFromFalling = false);
+        // HY-0015: level relax counts feeders as the side-feed rule does; without that rule it would raise cells vanilla lowers
+        // (at lake-ice edges), so it goes off with it
+        static readonly GamePatches.Breaker Feed = new(FeedFeature, () => { H7Settling.NoSideFeedFromFalling = false; H7Settling.LevelRelax = false; });
         static readonly GamePatches.Breaker Wake = new(WakeFeature, () => H7Settling.WakeOnFallLabel = false);
 
         /// <summary>
@@ -64,6 +72,7 @@ namespace Hydrology.Rules
             var t = typeof(BlockBehaviorFiniteSpreadingLiquid);
             var me = typeof(H5LiquidHooks);
             Water.Reset(log); Labels.Reset(log); Feed.Reset(log); Wake.Reset(log);
+            waterApplied = false;
             // All or nothing: H2's and H4's sources survive only with H1's guards, and the update's prefix switches a rapid
             // cell to sheet spreading that its postfix switches back. The hooks' own code also uses these public members.
             bool water = GamePatches.HasField(log, WaterRules, t, nameof(BlockBehaviorFiniteSpreadingLiquid.multiplySpread), typeof(bool), false)
@@ -81,6 +90,7 @@ namespace Hydrology.Rules
                 log.Error("Hydrology: its water rules are not applied: water behaves as in vanilla in this world (see the warning above)");
                 return;
             }
+            waterApplied = true;
             // each of these only refines the rules above; without its hook the rule's own switch goes off, so the rest agrees
             // with vanilla (H7's level relax counts the same feeders as vanilla's lowering once the side-feed rule is off)
             if (!GamePatches.Apply(harmony, log, LabelsFeature,
@@ -92,7 +102,10 @@ namespace Hydrology.Rules
             if (!GamePatches.Apply(harmony, log, FeedFeature,
                     GamePatches.On(t, "GetMaxNeighbourLiquidLevel", new[] { typeof(Block), typeof(IWorldAccessor), typeof(BlockPos), typeof(bool).MakeByRefType() }, typeof(int),
                         me, prefix: nameof(MaxNeighbourPrefix))))
+            {
                 H7Settling.NoSideFeedFromFalling = false;
+                H7Settling.LevelRelax = false;
+            }
             if (!GamePatches.Apply(harmony, log, WakeFeature,
                     GamePatches.On(t, "updateOwnFlowDir", new[] { typeof(Block), typeof(IWorldAccessor), typeof(BlockPos) }, typeof(void),
                         me, postfix: nameof(UpdateOwnFlowDirPostfix))))
@@ -105,6 +118,7 @@ namespace Hydrology.Rules
         {
             harmony?.UnpatchAll(HarmonyId);
             harmony = null;
+            waterApplied = false;
         }
 
         // Each hook below is a thin wrapper: the feature's breaker, then its work in a method of its own inside a try (so
@@ -157,6 +171,7 @@ namespace Hydrology.Rules
         static bool BeforeUpdate(BlockBehaviorFiniteSpreadingLiquid __instance, IWorldAccessor world, BlockPos pos, out UpdateState __state)
         {
             __state = default;
+            if (world.Side == EnumAppSide.Server) GamePatches.AssertMainThread("a liquid update");
             // lava and boiling water use the same behaviour: their updates are none of Hydrology's (vanilla's rivulet springs,
             // liquid code water, turn into water sources on their first update and stay Hydrology's)
             if (world.Side != EnumAppSide.Server || Water.Off || !IsWater(__instance)) return true;
@@ -261,9 +276,12 @@ namespace Hydrology.Rules
         /// held a little water was never woken again, and stayed beside an empty cell (seen after filling a chute's step
         /// back in under load, 2026-10-22).
         /// </summary>
+        [ThreadStatic] static BlockPos wakeBesideN;
+
         static void WakeSourcesBeside(IWorldAccessor world, BlockPos pos)
         {
-            var n = new BlockPos(pos.dimension);
+            var n = wakeBesideN ??= new BlockPos(0);
+            n.dimension = pos.dimension;
             foreach (var face in BlockFacing.HORIZONTALS)
             {
                 n.Set(pos).Add(face);
@@ -284,8 +302,12 @@ namespace Hydrology.Rules
             finally
             {
 #if DEBUG
-                string key = pos.X + "," + pos.Y + "," + pos.Z;
-                HydrologyStats.Hot[key] = HydrologyStats.Hot.TryGetValue(key, out int hot) ? hot + 1 : 1;
+                // HY-0017 (finding 15): capped, so a long lab does not grow it for ever (the labs read the hottest cells)
+                if (HydrologyStats.Hot.Count < HydrologyStats.MaxHot || HydrologyStats.Hot.ContainsKey(pos.X + "," + pos.Y + "," + pos.Z))
+                {
+                    string key = pos.X + "," + pos.Y + "," + pos.Z;
+                    HydrologyStats.Hot[key] = HydrologyStats.Hot.TryGetValue(key, out int hot) ? hot + 1 : 1;
+                }
 #endif
                 HydrologyStats.Updates++;
                 HydrologyStats.Ticks += Stopwatch.GetTimestamp() - t0;
@@ -296,6 +318,26 @@ namespace Hydrology.Rules
         static void After(BlockBehaviorFiniteSpreadingLiquid __instance, IWorldAccessor world, BlockPos pos, UpdateState __state, bool singleStream)
         {
             var b = world.BlockAccessor.GetBlock(pos, BlockLayersAccess.Fluid);
+            // rc.10: while a pond drains, its emptied cells and openings hold no new sources. Vanilla makes one where a source
+            // spreads down into a cell beside two sources, or where a cell has three source neighbours: behind a dam whose top
+            // course was just taken away, the water over the crest dropped sources into the gap, which closed the reach again
+            // and kept 22 sources standing over the course left. The cell is emptied; vanilla spreads flowing water into it.
+            if (H2Release.Running > 0)
+            {
+                var under = Liquids.Below(pos).Copy();
+                var u = world.BlockAccessor.GetBlock(under, BlockLayersAccess.Fluid);
+                if (Liquids.IsSource(b) && Liquids.Same(u, b) && Liquids.IsSource(u) && H2Release.Draining(under))
+                {
+                    Liquids.SetAndWake(world, under, 0);
+                    HydrologyStats.DrainSourcesRefused++;
+                }
+                if (Liquids.IsSource(b) && __state.Before is Block was && !Liquids.IsSource(was) && H2Release.Draining(pos))
+                {
+                    Liquids.SetAndWake(world, pos, 0);
+                    HydrologyStats.DrainSourcesRefused++;
+                    return;
+                }
+            }
             if (!Liquids.Handles(b))
             {
                 // the cell emptied: the water above it may have lost or gained a drop

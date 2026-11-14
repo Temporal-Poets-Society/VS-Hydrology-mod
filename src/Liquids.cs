@@ -22,6 +22,14 @@ namespace Hydrology
         // indexed by block id: a fresh-water source's flow label (1..8 for n, ne, e, se, s, sw, w, nw; 0 still, falling or
         // not a fresh source); per flow label, the ordinary and the rapid source with it (0.1.10)
         static byte[] flowOf = new byte[0];
+        // HY-0017 (finding 9): indexed by block id, a handled liquid's flow kind: 1 still, 2 falling ("d"), 3 directional;
+        // replaces Variant["flow"] (a string lookup) in H3's and H7's per-cell loops
+        static byte[] kindOf = new byte[0];
+        // Fable's pass (F4): indexed by block id, 1 not handled, 2 handled salt water, 3 handled fresh water (ordinary or
+        // rapid); Handles read the code's first part (a string split) about 15-25 times per liquid update and up to 765 times
+        // per wake scan. With R5 the rules ask Liquids every fact about a block (handled, fresh, salt, rapid, still, falling,
+        // flow label); no Variant, code part or liquid code test is left in them (C1, client side, reads its own code)
+        static byte[] handledOf = new byte[0];
         static readonly int[] waterSourceByFlow = new int[9], rapidSourceByFlow = new int[9];
         static readonly string[] Flows = { "n", "ne", "e", "se", "s", "sw", "w", "nw" };
 
@@ -36,12 +44,20 @@ namespace Hydrology
             toWater = new int[max + 1];
             toFalling = new int[max + 1];
             flowOf = new byte[max + 1];
+            kindOf = new byte[max + 1];
+            var handled = new byte[max + 1];
+            foreach (var b in world.Blocks)
+                if (b != null && b.Id > 0) handled[b.Id] = (byte)(!HandlesByCode(b) ? 1 : b.LiquidCode == "water" ? 3 : 2);
+            handledOf = handled;
             // a world in the same process may lack a variant the previous one had
             System.Array.Clear(waterSourceByFlow);
             System.Array.Clear(rapidSourceByFlow);
             foreach (var b in world.Blocks)
             {
-                if (b == null || !Handles(b) || b.Variant["height"] == null) continue;
+                if (b == null || !Handles(b)) continue;
+                string flow = b.Variant["flow"];
+                kindOf[b.Id] = (byte)(flow == "still" ? 1 : flow == "d" ? 2 : flow == null ? 0 : 3);
+                if (b.Variant["height"] == null) continue;
                 var d = world.GetBlock(b.CodeWithParts("d", b.Variant["height"]));
                 if (d != null && d.Id > 0) toFalling[b.Id] = d.Id;
             }
@@ -66,13 +82,46 @@ namespace Hydrology
         /// <summary>Vanilla water, salt water or rapid water (rapid water's liquid code is "water").</summary>
         public static bool Handles(Block b)
         {
+            if (b == null || b.Id == 0) return false;
+            var t = handledOf;
+            return b.Id < t.Length && t[b.Id] != 0 ? t[b.Id] >= 2 : HandlesByCode(b);
+        }
+
+        /// <summary>The test itself, by the block's code (before <see cref="Init"/>, and to build its table).</summary>
+        static bool HandlesByCode(Block b)
+        {
             if (b == null || b.Id == 0 || b.Code?.Domain != "game" || !b.IsLiquid()) return false;
             string first = b.FirstCodePart();
             return first == "water" || first == "saltwater" || first == "rapidwater";
         }
 
+        /// <summary>A cell water of <paramref name="liquid"/> may stand in: open, and empty or flowing water of that liquid
+        /// (Fable's pass, R3: shared by a drain's step and a river pool's plan and step).</summary>
+        public static bool CanTake(IBlockAccessor ba, BlockPos p, Block liquid)
+        {
+            if (!Open(ba, p)) return false;
+            var f = Fluid(ba, p);
+            return f.Id == 0 || (Same(f, liquid) && !IsSource(f));
+        }
+
         /// <summary>Fresh water, ordinary or rapid. Only fresh water makes rapids: vanilla has no salt rapid water.</summary>
-        public static bool IsFresh(Block b) => Handles(b) && b.LiquidCode == "water";
+        public static bool IsFresh(Block b)
+        {
+            if (b == null || b.Id == 0) return false;
+            var t = handledOf;
+            return b.Id < t.Length && t[b.Id] != 0 ? t[b.Id] == 3 : HandlesByCode(b) && b.LiquidCode == "water";
+        }
+
+        /// <summary>Vanilla salt water (Fable's pass, R5).</summary>
+        public static bool IsSalt(Block b)
+        {
+            if (b == null || b.Id == 0) return false;
+            var t = handledOf;
+            return b.Id < t.Length && t[b.Id] != 0 ? t[b.Id] == 2 : HandlesByCode(b) && b.LiquidCode == "saltwater";
+        }
+
+        /// <summary>The still source of a handled liquid's kind: salt water's for salt water, ordinary water's otherwise.</summary>
+        public static Block SourceOf(Block b) => IsSalt(b) ? SaltSource : WaterSource;
 
         public static bool IsRapid(Block b) => b.Id < toWater.Length && toWater[b.Id] != 0;
 
@@ -80,6 +129,12 @@ namespace Hydrology
         public static int FallingOf(int id) => id > 0 && id < toFalling.Length ? toFalling[id] : 0;
 
         public static bool IsSource(Block b) => b.LiquidLevel == SourceLevel;
+
+        /// <summary>A handled liquid labelled still (its flow variant "still").</summary>
+        public static bool IsStill(Block b) => b.Id < kindOf.Length && kindOf[b.Id] == 1;
+
+        /// <summary>A handled liquid labelled falling (its flow variant "d").</summary>
+        public static bool IsFalling(Block b) => b.Id < kindOf.Length && kindOf[b.Id] == 2;
 
         /// <summary>A fresh-water source's flow label, 0..7 for n, ne, e, se, s, sw, w, nw (rapidwater-s-7: 4); -1 for still,
         /// falling or not a fresh source (0.1.10).</summary>
@@ -160,9 +215,13 @@ namespace Hydrology
         }
 
         /// <summary>Liquid can pass from <paramref name="p"/> to its neighbour on <paramref name="face"/> (no wall on either side).</summary>
-        public static bool Passes(IBlockAccessor ba, BlockPos p, BlockPos n, BlockFacing face)
+        public static bool Passes(IBlockAccessor ba, BlockPos p, BlockPos n, BlockFacing face) => Passes(ba, Solid(ba, p), p, n, face);
+
+        /// <summary><see cref="Passes(IBlockAccessor, BlockPos, BlockPos, BlockFacing)"/> with <paramref name="p"/>'s solid
+        /// block read once by the caller for all its faces (Fable's pass, F13: a third fewer reads in the largest searches).</summary>
+        public static bool Passes(IBlockAccessor ba, Block pSolid, BlockPos p, BlockPos n, BlockFacing face)
         {
-            return Solid(ba, p).GetLiquidBarrierHeightOnSide(face, p) < 1f
+            return pSolid.GetLiquidBarrierHeightOnSide(face, p) < 1f
                 && Solid(ba, n).GetLiquidBarrierHeightOnSide(face.Opposite, n) < 1f;
         }
 

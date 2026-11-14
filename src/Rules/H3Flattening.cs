@@ -1,3 +1,4 @@
+using System;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 
@@ -34,11 +35,16 @@ namespace Hydrology.Rules
         /// Seen at Victoria Falls with Hydrology 0.1.2 (2026-10-22): stones put into the curtain and taken out again left
         /// columns of <c>rapidwater-still-6</c> standing in the air, each cell held up by the water under it.
         /// </summary>
+        [ThreadStatic] static BlockPos flatP, flatQ;
+
         public static bool FallsInAir(IWorldAccessor world, BlockPos pos, Block b)
         {
             if (!Liquids.Handles(b) || Liquids.IsSource(b)) return false;
             var ba = world.BlockAccessor;
-            var p = pos.Copy();
+            // HY-0017 (finding 9): scratch positions, the falling variant from Liquids' table, the flow kind from its byte
+            var p = flatP ??= new BlockPos(0);
+            p.dimension = pos.dimension;
+            p.Set(pos);
             int top = pos.Y, bottom = pos.Y;
             for (int i = 0; i < H4Rapids.MaxDropScan; i++)
             {
@@ -53,23 +59,21 @@ namespace Hydrology.Rules
                 bottom--;
             }
             int changed = 0;
-            var q = pos.Copy();
+            var q = flatQ ??= new BlockPos(0);
+            q.dimension = pos.dimension;
             for (int y = top; y >= bottom; y--)
             {
                 p.Set(pos.X, y, pos.Z);
                 var c = Liquids.Fluid(ba, p);
-                if (c.Variant["flow"] != "still") continue;
+                if (!Liquids.IsStill(c)) continue;
                 // water in a block with its own floor (a bottom slab, stairs) is held up, as H7's fall label and vanilla
                 // read it (rc.4, audit: a pool floored with slabs over air flipped between still and falling for ever)
-                if (H7Settling.FloorInCell(ba, p)) continue;
                 if (!Liquids.Same(Liquids.Fluid(ba, q.Set(pos.X, y + 1, pos.Z)), c)) continue;
-                q.Set(pos.X, y - 1, pos.Z);
-                if (!Liquids.Open(ba, q)) continue;
-                var under = Liquids.Fluid(ba, q);
+                if (H7Settling.HeldByBlock(ba, p, out var under)) continue;
                 if (under.IsLiquid() && (Liquids.IsSource(under) || !Liquids.Same(under, c))) continue;
-                var falling = world.GetBlock(c.CodeWithParts("d", c.LiquidLevel.ToString()));
-                if (falling == null || falling.Id == 0) continue;
-                ba.SetBlock(falling.Id, p, BlockLayersAccess.Fluid);
+                int falling = Liquids.FallingOf(c.Id);
+                if (falling == 0) continue;
+                ba.SetBlock(falling, p, BlockLayersAccess.Fluid);
                 changed++;
             }
             if (changed == 0) return false;

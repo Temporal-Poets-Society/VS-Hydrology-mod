@@ -18,6 +18,30 @@ namespace Hydrology
     /// </summary>
     public static class GamePatches
     {
+        // HY-0018: the one invariant every rule's scratch (statics, [ThreadStatic] fields, H2Release's reused search, H4's
+        // wake sets) relies on: Hydrology's server code runs on the server's main thread, one liquid update, event or tick
+        // at a time (checked against 1.22.7: liquid updates are main-thread callbacks; the break and place events and the
+        // tick listener run there too). Debug builds (the labs) check it and log the first call from another thread.
+        static int mainThread;
+        static ILogger threadLog;
+        static int threadWarned;
+
+        /// <summary>The server's main thread is the calling one (the first tick).</summary>
+        public static void SetMainThread(ILogger log)
+        {
+            mainThread = Environment.CurrentManagedThreadId;
+            threadLog = log;
+            threadWarned = 0;
+        }
+
+        /// <summary>Debug builds: logs, once, a call from a thread other than the server's main thread.</summary>
+        [System.Diagnostics.Conditional("DEBUG")]
+        public static void AssertMainThread(string where)
+        {
+            if (mainThread == 0 || Environment.CurrentManagedThreadId == mainThread) return;
+            if (System.Threading.Interlocked.Exchange(ref threadWarned, 1) == 0)
+                threadLog?.Error("Hydrology: {0} ran on thread {1}, not the server's main thread ({2}); the rules' scratch assumes the main thread", where, Environment.CurrentManagedThreadId, mainThread);
+        }
         /// <summary>One patch of a feature: a method of the game and Hydrology's prefix, postfix and finalizer for it
         /// (static methods of <see cref="Patches"/>, by name).</summary>
         public sealed class Hook
@@ -159,7 +183,7 @@ namespace Hydrology
         /// <see cref="MaxFaults"/> within a minute the feature is switched off until the world restarts (logged once), which
         /// a game update that breaks a hook at run time reaches within seconds, and scattered odd cases never do.
         /// </summary>
-        public sealed class Breaker
+        public sealed class Breaker : Rules.ReleaseDriver.IFaults
         {
             public readonly string Feature;
             readonly Action onOff;
@@ -175,7 +199,10 @@ namespace Hydrology
             public bool Off => off;
 
             /// <summary>A new world: on again, with the world's logger.</summary>
-            public void Reset(ILogger logger) { log = logger; faults = 0; total = 0; windowStart = Environment.TickCount64; off = false; }
+            public void Reset(ILogger logger) { log = logger; faults = 0; total = 0; windowStart = Environment.TickCount64; off = false; lock (logged) logged.Clear(); }
+
+            // Fable's pass: each distinct error (type and message) is logged once, five at most, not only the first one
+            readonly HashSet<string> logged = new();
 
             public void Fault(Exception e)
             {
@@ -187,8 +214,10 @@ namespace Hydrology
                     System.Threading.Interlocked.Exchange(ref faults, 0);
                 }
                 int n = System.Threading.Interlocked.Increment(ref faults);
-                if (System.Threading.Interlocked.Increment(ref total) == 1)
-                    log?.Error("Hydrology: {0} threw an error; vanilla's code ran on for that call: {1}", Feature, e);
+                System.Threading.Interlocked.Increment(ref total);
+                bool first;
+                lock (logged) first = logged.Count < 5 && logged.Add(e.GetType().FullName + ": " + e.Message);
+                if (first) log?.Error("Hydrology: {0} threw an error; vanilla's code ran on for that call: {1}", Feature, e);
                 if (n == MaxFaults && !off)
                 {
                     off = true;

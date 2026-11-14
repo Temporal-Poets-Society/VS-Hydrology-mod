@@ -2,7 +2,7 @@
 
 Newest first. Verification for each release is in its release notes and server test reports under `docs/`.
 
-## 0.6.2 (13 November 2026, release candidate)
+## 0.6.2 (14 November 2026)
 
 Calm rivers for Earth 2.0, and water that stays where it belongs.
 
@@ -27,7 +27,46 @@ Calm rivers for Earth 2.0, and water that stays where it belongs.
 - **An opened pond lets its water out** ([decision 0007](docs/decisions/0007-pond-release.md), config `PondRelease`).
   When a player breaks a pond's rim or bank, the water above the opening runs downhill and collects where it comes to
   rest, the same amount of water; the sea, rivers and large lakes take it without rising. With no lower land within 8
-  blocks of the opening, the pond keeps it. A small pond broken on high ground no longer floods the land below it.
+  blocks of the opening, the pond keeps it. A small pond broken on high ground no longer floods the land below it. The
+  water goes over time ([decision 0008](docs/decisions/0008-fed-reaches-drains-dams.md), config `PondDrainRate`): one
+  source a second per block of the breach's width and per block of water over the opening, so the stream is seen; a
+  body whose top layer would take longer than a game day (`PondUnlimitedSeconds`) keeps its water, as a lake (a 7 x 7
+  pond's top layer goes in under a minute, a 41 x 41 lake's through a 2-wide breach in about 14 minutes, an 81 x 81
+  lake holds). Drains are kept with the world.
+- **Channels from lakes and rivers run on** (decision 0008). A channel dug from a large lake or a river carries the
+  water to where it falls, and the reach below a drop fills to its banks, fed from the water above the fall (before,
+  the water stopped a few blocks from the lake, and nothing filled below a 3-block drop). A pond's channel stays
+  flowing water.
+- **Dams** (decision 0008). A block placed across a fed reach raises it to the dam's top; a lake or river feeding it
+  spills over the crest, where the falling water makes rapids for a wheel. Taking the dam away lets the raised water
+  drain, back to the reach's natural level. A dam built a block at a time by hand works as one placed at once.
+- **Basins, valleys and river dams** ([decision 0009](docs/decisions/0009-basins-valleys-river-dams.md)). A pond whose
+  water falls into a closed basin too small for all of it lets out the whole layers the basin holds and keeps the rest;
+  a pond's water that runs down an open valley beyond the loaded land runs off there (lakes that feed a channel keep
+  their water). A dam across one of Earth's natural rivers may back its pool up above the river's generated surface,
+  as high as the water that feeds it (the next step up), and the raised water drains when the dam's top course is
+  taken away; a river with no step near the dam does not rise yet, and the river below a dam keeps its water. A placed
+  or broken block next to water no longer allocates new search sets each time. A dam's water over a river drains even
+  where it also fills bank strips beside the river.
+- **A river fills the pool behind a dam** ([decision 0010](docs/decisions/0010-river-fills-dammed-pool.md), config
+  `DamFill`, `DamFillPerCubic`, `DamFillMax`). A dam a player builds across one of Earth's rivers makes the river
+  fill the pool behind it from its own flow (Earth's discharge: 0.1 sources a second per m³/s, 1 to 64), layer by layer
+  up to the crest, then one layer runs over the crest and falls past the dam as rapid water, for a wheel. No step is
+  needed; the reach must be enclosed (a dam as high as the banks would flood the plain, so it raises nothing). The pool
+  rises over holes in the river's own water, waits while the land it reaches is unloaded or a drain runs in its columns,
+  and says in the log why it stops below a crest. Opening the dam drains it back.
+- **Robust drains, dams and pools** (the code review of 14 November, `docs/code-review-2026-11-14.md`). Drains, dams and
+  river pools stop when the water rules they rely on are off (the waiting ones stay saved), and their errors switch them
+  off after 50 in a minute instead of filling the log; a pond is measured only on loaded land, so a saved drain or pool
+  waits for its land after a restart; a remembered "held" answer is forgotten when a player opens or closes the space
+  (an opened trench no longer keeps filling); Earth's river query failures rest and, if they keep coming, unbind the
+  query; the query's answers are kept per chunk. A block broken along a sea's shore no longer measures the whole sea each
+  time, and H4 merges the wakes of a basin's rim (fewer updates when a basin fills). The drains' save starts with a
+  format version.
+- **Water flooding shown in every world** ([decision 0011](docs/decisions/0011-flooding-without-a-world-key.md)). A world
+  without the setting (a save from before 0.6.0, or a new world a dedicated server created without it) gets it written
+  at its first start with the value it already had, so it shows in the world settings and can be changed there
+  (`/worldconfig hydrologyFlooding true` on a server). Nothing changes in how the water behaves.
 - **Fixes.** Water behind a liquid-tight face (a waterlogged stair's back) no longer feeds a fill, and a pocket is not
   enclosed where a block lets water through; a source poured onto lake ice no longer drains, and water spreading over
   ice no longer updates for ever; no white water on a calm step beside an unloaded chunk; lava's updates no longer wake

@@ -26,11 +26,28 @@ namespace Hydrology.Rules
         /// the same liquid.</summary>
         static bool Supported(IBlockAccessor ba, BlockPos pos, Block b)
         {
-            if (FloorInCell(ba, pos)) return true;
-            var below = Liquids.Below(pos);
-            if (!Liquids.Open(ba, below)) return true;
-            var f = Liquids.Fluid(ba, below);
+            if (HeldByBlock(ba, pos, out var f)) return true;
             return Liquids.IsSource(f) && Liquids.Same(f, b);
+        }
+
+        [ThreadStatic] static BlockPos heldBelow;
+
+        /// <summary>
+        /// HY-0018: the one "held up from below" check: the cell's own block closes its bottom (<see cref="FloorInCell"/>) or
+        /// the cell under it is not open (a block, not air or a replaceable plant). Otherwise <paramref name="under"/> is the
+        /// liquid under it, and each rule decides which liquid holds it up (H7's survival a source of the same liquid, the
+        /// fall label any source, H3 any source or another liquid).
+        /// </summary>
+        internal static bool HeldByBlock(IBlockAccessor ba, BlockPos pos, out Block under)
+        {
+            under = null;
+            if (FloorInCell(ba, pos)) return true;
+            var below = heldBelow ??= new BlockPos(0);
+            below.dimension = pos.dimension;
+            below.Set(pos.X, pos.Y - 1, pos.Z);
+            if (!Liquids.Open(ba, below)) return true;
+            under = Liquids.Fluid(ba, below);
+            return false;
         }
 
         /// <summary>
@@ -57,11 +74,8 @@ namespace Hydrology.Rules
         /// <summary>Falling water still in the air: labelled falling, not a source, and nothing holding it from below.</summary>
         public static bool FallingInAir(IBlockAccessor ba, BlockPos pos, Block f)
         {
-            if (!Liquids.Handles(f) || Liquids.IsSource(f) || f.Variant["flow"] != "d") return false;
-            if (FloorInCell(ba, pos)) return false;
-            var below = Liquids.Below(pos);
-            if (!Liquids.Open(ba, below)) return false;
-            var u = Liquids.Fluid(ba, below);
+            if (!Liquids.Handles(f) || Liquids.IsSource(f) || !Liquids.IsFalling(f)) return false;
+            if (HeldByBlock(ba, pos, out var u)) return false;
             return !(u.IsLiquid() && Liquids.IsSource(u));
         }
 
@@ -75,10 +89,7 @@ namespace Hydrology.Rules
             int fall = Liquids.FallingOf(id);
             if (fall == 0 || fall == id) return id;
             var ba = world.BlockAccessor;
-            if (FloorInCell(ba, pos)) return id;
-            var below = Liquids.Below(pos);
-            if (!Liquids.Open(ba, below)) return id;
-            var u = Liquids.Fluid(ba, below);
+            if (HeldByBlock(ba, pos, out var u)) return id;
             if (u.IsLiquid() && Liquids.IsSource(u)) return id;
             HydrologyStats.Labelled++;
             return fall;
@@ -94,7 +105,7 @@ namespace Hydrology.Rules
             var ba = world.BlockAccessor;
             var solid = Liquids.Solid(ba, pos);
             var up = Liquids.Above(pos);
-            if (Liquids.Fluid(ba, up).LiquidCode == ourblock.LiquidCode
+            if (Liquids.Same(Liquids.Fluid(ba, up), ourblock)
                 && solid.GetLiquidBarrierHeightOnSide(BlockFacing.UP, pos) == 0f
                 && Liquids.Solid(ba, up).GetLiquidBarrierHeightOnSide(BlockFacing.DOWN, up) == 0f)
             {
@@ -108,7 +119,7 @@ namespace Hydrology.Rules
             {
                 n.Set(pos).Add(H[i]);
                 var f = Liquids.Fluid(ba, n);
-                if (f.LiquidCode != ourblock.LiquidCode) continue;
+                if (!Liquids.Same(f, ourblock)) continue;
                 if (NoSideFeedFromFalling && FallingInAir(ba, n, f)) continue;
                 int l = f.LiquidLevel;
                 if (l == level + 1) feeds = true;
@@ -129,7 +140,7 @@ namespace Hydrology.Rules
             if (!WakeOnFallLabel || !NoSideFeedFromFalling) return;
             var ba = world.BlockAccessor;
             var now = Liquids.Fluid(ba, pos);
-            if (now.Id == before.Id || !Liquids.Handles(now) || now.Variant["flow"] != "d" || before.Variant["flow"] == "d") return;
+            if (now.Id == before.Id || !Liquids.Handles(now) || !Liquids.IsFalling(now) || Liquids.IsFalling(before)) return;
             var n = new BlockPos(pos.dimension);
             for (int i = 0; i < 4; i++)
             {

@@ -86,6 +86,19 @@ namespace Hydrology
         /// collects at the lowest point its flow reaches; the sea, rivers and large lakes take it without rising (decision
         /// 0007).</summary>
         public bool PondRelease = true;
+        /// <summary>H2 release (0.6.2-rc.9, HY-0009): sources a second an opened pond lets out per opened cell and per block of
+        /// water over the opening's floor (decision 0008; 0: all at once, as rc.8).</summary>
+        public double PondDrainRate = 1.0;
+        /// <summary>H2 release (0.6.2-rc.9): a body whose top layer would take longer than this many seconds to let out holds
+        /// its water, as a lake does (2,880: a game day at the default speed).</summary>
+        public int PondUnlimitedSeconds = 2880;
+        /// <summary>H2 dams (0.6.2-rc.13, HY-0011): a river fills the pool behind a player's dam from its own flow, layer by
+        /// layer up to the crest, and one layer runs over it (decision 0010).</summary>
+        public bool DamFill = true;
+        /// <summary>Sources a second a dammed river pool takes per m3/s of the river's discharge (from 1 to DamFillMax).</summary>
+        public double DamFillPerCubic = 0.1;
+        /// <summary>The most sources a second one dammed pool takes.</summary>
+        public int DamFillMax = 64;
         /// <summary>H4: a rapid source with a source beside it spreads to all sides.</summary>
         public bool RapidSourceSheets = true;
         /// <summary>H4: a cell that has just become a source wakes the edges near it.</summary>

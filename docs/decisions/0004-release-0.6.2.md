@@ -1,6 +1,7 @@
 # 0004: Release candidate 0.6.2 for Earth 2.0: calm rivers, review fixes, one patch registry
 
-Date: 2026-11-08. Status: release candidate **0.6.2-rc.5**, baked on branch `claude/rc-0.6.2`, now Hydrology's `main` (pushed to
+Date: 2026-11-08. Status: **released as 0.6.2** (14 November 2026, built on `main` after rc.13 and the code review's fixes;
+the tag, push and uploads are the author's). Earlier: release candidate **0.6.2-rc.5**, baked on branch `claude/rc-0.6.2`, now Hydrology's `main` (pushed to
 the private origin; not uploaded to the Mod DB), after rc.1 and rc.2 the same evening, rc.3 on 9 November (item 7), rc.4 (item 8) and rc.5
 (item 9) the same day; see [the release notes](../release-0.6.2.md) for its checks. The Earth side of item 6 is on Earth branch
 `claude/rc-2.0-hydrology-leftovers`, merged into Earth's `claude/rc-2.0` at `d50f2ae` (Earth 2.0.0-rc.2), with which
